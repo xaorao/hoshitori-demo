@@ -76,7 +76,7 @@ export const COPY = {
       "No agent is shown to forecast better than chance.",
       "RYO's own read is built and tested, but RYO refused the key, so it is not in the record.",
       "The Desk, claim and Laboratory pages show invented examples, labelled on the page.",
-      "Not hosted yet. No study with people has been run.",
+      "The league runs on one machine; the site is a static export. No study with people has been run.",
     ],
     footerHead: "Every number in this film was read from docs/record/record.tar.gz at render time.",
     commit: "Commit",

@@ -27,4 +27,4 @@ What this project does not show, in one place. The per-unit limits are in `STATU
 
 ## Hosting
 
-- No host serves the site. Security headers are defined and tested as a policy; whether a given host sends them is read from its response once one exists.
+- The demo site at https://hoshitori-demo.vercel.app is a static export of the record, hosting the newest cycle's check bundle only; the league itself is not hosted and runs on the development machine. The site's headers were read from the live response (a Content-Security-Policy that allows only its own scripts, styles and data, and the usual companion headers).

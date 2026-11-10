@@ -11,9 +11,11 @@
 [![Python 3.12](https://img.shields.io/badge/python-3.12-0a0a0a.svg)](pyproject.toml)
 [![Node 22.18+](https://img.shields.io/badge/node-22.18%2B-0a0a0a.svg)](web/package.json)
 [![RYO-CHAN Hackathon](https://img.shields.io/badge/RYO--CHAN-Hackathon-047857.svg)](#hackathon-tracks)
-[![Status: exploratory](https://img.shields.io/badge/status-exploratory%2C%20not%20hosted-b45309.svg)](#what-is-real-and-what-is-not)
+[![Status: exploratory](https://img.shields.io/badge/status-exploratory%20run-b45309.svg)](#what-is-real-and-what-is-not)
 
-[Overview](#the-problem) · [Real record](#a-real-record-without-running-anything) · [How it works](#how-it-works) · [Screenshots](#screenshots) · [What is real](#what-is-real-and-what-is-not) · [Related work](#related-work) · [Run it](#run-it) · [Verify offline](#verify-a-record-offline) · [Tracks](#hackathon-tracks) · [Tests](#tests)
+**Demo video:** https://youtu.be/jHUVHBHvaws · **Judges' brief:** [Notion](https://congruous-neighbor-289.notion.site/Hoshitori-Brief-for-Users-Judges-Research-PMF-414dfbac05cc8127bad1ddc2dfa28f1e) · **Live demo:** https://hoshitori-demo.vercel.app (a static export of the record)
+
+[Overview](#the-problem) · [Real record](#a-real-record-without-running-anything) · [How it works](#how-it-works) · [Screenshots](#screenshots) · [Related work](#related-work) · [Run it](#run-it) · [Verify offline](#verify-a-record-offline) · [Tracks](#hackathon-tracks) · [Tests](#tests) · [Scope and limits](#what-is-real-and-what-is-not)
 
 <br>
 
@@ -23,15 +25,23 @@
 
 Built for the RYO-CHAN Hackathon on RYO's read-only market tools. Everything here is simulation or read-only research: nothing buys, sells or moves an asset. *Hoshitori* (星取) is the sumo win-loss tally; the mark is its two circles, one open and one filled.
 
-**The promise.** Hoshitori shows what an AI knew and what it decided before the outcome, what then happened, whether its reasoning made a difference, and whether it has earned trust next time. Where the record is too short to answer the last two, it says *not distinguishable yet* rather than ranking anyone.
+**The promise.** Hoshitori shows what an AI knew and what it decided before the outcome, what then happened, whether its reasoning made a difference, and whether it has earned trust next time. It ranks nobody before the evidence allows it.
+
+**Don't trust us. Check us.** One script, no install and no key, re-settles every published call from Binance's public candles (see [Check it in two minutes](#check-it-in-two-minutes)). A forged copy of a record, with every hash rebuilt and re-signed, is refused by the time-stamps, and the site shows it.
+
+| Real cycles | Receipts | Agents | Skills | Time-stamp authorities | Verifiers | Failure drills held |
+|---|---|---|---|---|---|---|
+| 40 | 2,234 | 4 | 7 | 2 | 2 | 16 of 16 |
+
+Figures are those of the packed record in `docs/record` at its last packing.
 
 ## Hackathon tracks
 
-| Track | A judge's path (about five minutes) | What it does not show |
-|---|---|---|
-| 1, Autonomous Agents | Calls, then one receipt (what the agent read, why it called, what would prove it wrong), then The Desk (each check and why it was chosen), then Failure drills. Code: `src/hoshitori/league.py`, `desk_live.py` | No agent is shown to forecast better than chance |
-| 2, Dashboards and Interfaces | Today (what changed, ranked), a receipt, Check a record (verify in the browser), For judges. Code: `web/src` | No study with people has been run |
-| 3, New Skills | `skills/address-flag-check` first (the gap RYO's own tools leave: addresses, not symbols), then `indicator-condition-check`, then `exit-liquidity-check` (what closing a position costs; every RYO tool answers only the entry question; adapted from another entry's published method, MIT and disclosed in `NOTICE.md`); every skill is also served in the shape of the platform's own skill API; each README installs and answers in a few minutes | The organisers' skill contract is not published, so conformance to it cannot be shown |
+| Track | A judge's path (about five minutes) |
+|---|---|
+| 1, Autonomous Agents | Calls, then one receipt (what the agent read, why it called, what would prove it wrong), then The Desk (each check and why it was chosen), then Failure drills. Code: `src/hoshitori/league.py`, `desk_live.py` |
+| 2, Dashboards and Interfaces | Today (what changed, ranked), a receipt, Check a record (verify in the browser), For judges. Code: `web/src` |
+| 3, New Skills | `skills/address-flag-check` first (the gap RYO's own tools leave: addresses, not symbols), then `indicator-condition-check`, then `exit-liquidity-check` (what closing a position costs; every RYO tool answers only the entry question; adapted from another entry's published method, MIT and disclosed in `NOTICE.md`); every skill is also served in the shape of the platform's own skill API; each README installs and answers in a few minutes |
 
 The seven skills are read-only, standalone packages, each with its own README and tests:
 
@@ -44,6 +54,30 @@ The seven skills are read-only, standalone packages, each with its own README an
 | [`evidence-delta`](skills/evidence-delta) | What is different between two reads of the same tool, and what could not be compared? A missing value is never read as no change. |
 | [`evidence-sensitivity`](skills/evidence-sensitivity) | Which pieces of evidence does a rule-based call rest on? |
 | [`research-integrity-check`](skills/research-integrity-check) | What is a market claim made of, and what has nothing checked yet? |
+
+Both tracks' pages and every skill also answer the two common lines of the rubric. **Combining sources:** each receipt lists the exchange data, the computed measures and (with a key) the RYO fields behind one decision, and what was not read. **Coping with failure:** the Failure drills page, the missed cycles on the Track record page, and a failed source reported as failed, never as a value.
+
+## Everything in the product
+
+| Part | What it does |
+|---|---|
+| The league | Hourly cycles: collect, decide, seal, settle |
+| Agents | Rules, a single model judgment, a bull, bear and judge debate, and a same-budget control |
+| Grounding gate | Refuses a model call whose numbers the evidence does not hold |
+| RYO's read, scored | RYO's verdict sealed beside the agents and counted right or wrong |
+| Record and time-stamps | Signed, hash-chained log; two independent authorities before the window opens |
+| Settlement | Two exchanges, rules written twice (Python and Node) |
+| Verification | Two offline verifiers and the browser; a forged copy shown being refused |
+| Evidence challenge | Removes a source and asks again, with controls |
+| The Desk | Picks checks, tries to disprove its call, gates only shrink it |
+| On-demand ledger | Seals and settles a Desk call or a person's own forecast |
+| Practice books | A simulated portfolio per agent at three cost levels |
+| Claim reader | Cuts a claim into typed parts tied to its words |
+| Hypothesis Laboratory | A plain-language idea becomes a typed, testable rule |
+| Voices and whales | Independent voices after echo detection; wallet counts per token |
+| Outcome review, alerts, Follow | How a settled call went; alerts only when a decision changes |
+| Interface | Today, Calls, Receipt, Track record, Check a record, Failure drills, For judges and more |
+| Seven skills | Listed above |
 
 ## Highlights
 
@@ -131,23 +165,6 @@ Taken from the packed real record in `docs/record`: real cycles, calls and settl
 </table>
 
 Start at **Today**: what changed in the latest cycle, with a "How this works" note that defines every term the pages use. **For judges** says where each line of the rubric can be checked, and where the evidence stops. **Evidence of quality** lists every unit with its status and its limit.
-
-## What is real, and what is not
-
-Built and tested: the league, the record and its two verifiers, settlement in two implementations, the Desk, the claim reader, the interface, seven standalone skills, and a separate ledger on which a Desk call or a person's own forecast can be sealed, time-stamped and settled. That ledger was run live once, for one forecast a person entered; it settled on real candles and was checked by hand and by both verifiers.
-
-Not shown, said plainly:
-
-* **Forecast skill is not measured.** A league running on the development machine has begun settling calls of the rules agent and the model agents, but far too few have settled to rank any of them.
-* **The impact ranking on Today is provisional.** It has not been compared with labels from independent experts.
-* **No independent human review.** The code has not been audited by a person other than its author, and no screen-reader, comprehension or Japanese-reader study has been run.
-* **Not hosted.** Deployment files are prepared and untested on a server; a real-network load test and a power-loss test have not been run.
-* **The Desk has not yet produced a forecast of its own to commit.** Its live run abstained, and a later attempt was refused by RYO's monthly call allowance. Inside the league it now runs by itself on an event the league admits when the token then moves, or when two agents stand on opposite sides of a call (at most three runs a day in all; a run on a disagreement has no event time, so some of its tests cannot be done and its confidence is capped), commits a long call to the on-demand ledger and has it settled there; that is tested against a loopback league only, and the event route has admitted no event in the record so far.
-* **RYO's own read has not been run live.** It is tested end to end against a loopback RYO; RYO refuses the key's calls (on 9 Nov RYO's own key status (read without spending a call) reported 200 calls a month, none used, and allowed: false), so no live read is in the record.
-* **The running record has one unplanned stop.** On 9 November the league's process stopped for about five hours (five hourly cycles are listed as missed on the Track record page) because the development machine's disk filled and nothing restarted the process; the cause was a browser test that wrote a large number of site copies, and it is fixed. The ledger stayed intact and the export read it without error. Missed cycles are shown, and are left out of the availability figure with a note on the page. The service units in `deploy/` restart it on a host; on the development machine there is no supervisor.
-* RYO's tools are off in league cycles by default (when on, one cycle a day may read them, so a monthly allowance lasts); no RYO response is committed to this repository.
-
-`docs/STATUS.md` lists every unit with its evidence and its limit.
 
 ## Related work
 
@@ -247,6 +264,23 @@ Most modules also have a mutation sweep (`tests/mutation_sweep.py`): it makes on
 * No real credential is committed. `.env.example` lists every credential and endpoint the code reads (`tests/test_env_example.py` keeps it so), and `scripts/secret_scan.py` fails if a credential-looking string is present in a committable file.
 * No fabricated or placeholder data is shown as real. Recorded fixtures are labelled recorded, and replayed data reports `data_mode: unknown`.
 * The interface says what was not checked next to what was.
+
+## What is real, and what is not
+
+Built and tested: the league, the record and its two verifiers, settlement in two implementations, the Desk, the claim reader, the interface, seven standalone skills, and a separate ledger on which a Desk call or a person's own forecast can be sealed, time-stamped and settled. That ledger was run live once, for one forecast a person entered; it settled on real candles and was checked by hand and by both verifiers.
+
+Not shown, said plainly:
+
+* **Forecast skill is not measured.** A league running on the development machine has begun settling calls of the rules agent and the model agents, but far too few have settled to rank any of them.
+* **The impact ranking on Today is provisional.** It has not been compared with labels from independent experts.
+* **No independent human review.** The code has not been audited by a person other than its author, and no screen-reader, comprehension or Japanese-reader study has been run.
+* **The league is not hosted.** It runs on the development machine. The demo site is a static export of its record, served at https://hoshitori-demo.vercel.app (the newest cycle's check bundle only; the full record is in this repository), and is refreshed by exporting and deploying again. Deployment files for a server are prepared and untested; a real-network load test and a power-loss test have not been run.
+* **The Desk has not yet produced a forecast of its own to commit.** Its live run abstained, and a later attempt was refused by RYO's monthly call allowance. Inside the league it now runs by itself on an event the league admits when the token then moves, or when two agents stand on opposite sides of a call (at most three runs a day in all; a run on a disagreement has no event time, so some of its tests cannot be done and its confidence is capped), commits a long call to the on-demand ledger and has it settled there; that is tested against a loopback league only, and the event route has admitted no event in the record so far.
+* **RYO's own read has not been run live.** It is tested end to end against a loopback RYO; RYO refuses the key's calls (on 9 Nov RYO's own key status (read without spending a call) reported 200 calls a month, none used, and allowed: false), so no live read is in the record.
+* **The running record has one unplanned stop.** On 9 November the league's process stopped for about five hours (five hourly cycles are listed as missed on the Track record page) because the development machine's disk filled and nothing restarted the process; the cause was a browser test that wrote a large number of site copies, and it is fixed. The ledger stayed intact and the export read it without error. Missed cycles are shown, and are left out of the availability figure with a note on the page. The service units in `deploy/` restart it on a host; on the development machine there is no supervisor.
+* RYO's tools are off in league cycles by default (when on, one cycle a day may read them, so a monthly allowance lasts); no RYO response is committed to this repository.
+
+`docs/STATUS.md` lists every unit with its evidence and its limit.
 
 ## Layout
 

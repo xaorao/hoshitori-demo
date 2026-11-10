@@ -21,5 +21,3 @@ web/public/data/
 .hypothesis/
 .coverage
 htmlcov/
-site_out/
-.record_work/
