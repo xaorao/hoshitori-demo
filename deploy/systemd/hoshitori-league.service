@@ -1,0 +1,39 @@
+# The league: the one process that writes the ledger. Prepared, never deployed; see docs/DEPLOYMENT.md for the layout this assumes.
+# Directives as documented in systemd.service(5), systemd.exec(5), systemd.kill(5) and systemd.unit(5) (freedesktop.org, "latest").
+[Unit]
+Description=Hoshitori league writer
+Documentation=file:///opt/hoshitori/app/docs/DEPLOYMENT.md file:///opt/hoshitori/app/docs/RUNBOOK.md
+# The cycles read exchanges and time-stamp authorities: start once the network is up (systemd.special, network-online.target), and
+# after the clock is set, since the ledger refuses commits when the clock moves back by more than a second (systemd.timer names
+# time-sync.target; it waits for a real synchronisation only when systemd-time-wait-sync.service is enabled).
+Wants=network-online.target
+After=network-online.target time-sync.target
+
+[Service]
+# exec: the unit fails at once when the binary or the user is missing (systemd.service, Type=).
+Type=exec
+User=hoshitori
+Group=hoshitori
+WorkingDirectory=/var/lib/hoshitori/league
+ExecStart=/opt/hoshitori/venv/bin/hoshitori-league run /var/lib/hoshitori/league/settings.json
+# hoshitori-league exits 1 for a failure of the run and 2 for settings that cannot run: restart after the first, never loop on the second.
+Restart=on-failure
+RestartSec=30s
+RestartPreventExitStatus=2
+# SIGTERM is the default first signal; `run` stops after the tick it is in. A tick waits on the network (the settings' wait_s per call,
+# the attestation window), so it is given five minutes before SIGKILL. That length is a prior, not a measurement; a kill is safe:
+# the ledger's recovery runs on every open (process kills tested, tests/test_ledger_kill.py), and the cycle in progress is abandoned
+# and counted.
+TimeoutStopSec=300s
+# /var/lib/hoshitori (league folder, backups, drill scratch), created for and owned by the service user; nothing else is writable.
+StateDirectory=hoshitori
+StateDirectoryMode=0700
+UMask=0077
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+
+[Install]
+WantedBy=multi-user.target

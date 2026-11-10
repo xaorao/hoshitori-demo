@@ -1,0 +1,180 @@
+{
+ "machine": {
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "python": "3.9.6",
+  "sqlite": "3.51.0",
+  "cpu_count": 10,
+  "fs": "/dev/disk3s5   228Gi   137Gi    67Gi    67%    2.8M  707M    0%   /System/Volumes/Data"
+ },
+ "seconds_per_case": 3.0,
+ "writer_rate": [
+  {
+   "synchronous": "FULL",
+   "rows_per_tx": 1,
+   "tx_per_s": 5649.3,
+   "rows_per_s": 5649.3,
+   "commit_p50_ms": 0.141,
+   "commit_p99_ms": 1.055,
+   "commit_max_ms": 4.38
+  },
+  {
+   "synchronous": "FULL",
+   "rows_per_tx": 20,
+   "tx_per_s": 2673.3,
+   "rows_per_s": 53466.7,
+   "commit_p50_ms": 0.244,
+   "commit_p99_ms": 1.393,
+   "commit_max_ms": 5.938
+  },
+  {
+   "synchronous": "FULL",
+   "rows_per_tx": 200,
+   "tx_per_s": 1041.7,
+   "rows_per_s": 208333.3,
+   "commit_p50_ms": 0.814,
+   "commit_p99_ms": 3.901,
+   "commit_max_ms": 5.438
+  },
+  {
+   "synchronous": "NORMAL",
+   "rows_per_tx": 1,
+   "tx_per_s": 45820.3,
+   "rows_per_s": 45820.3,
+   "commit_p50_ms": 0.012,
+   "commit_p99_ms": 0.06,
+   "commit_max_ms": 6.835
+  },
+  {
+   "synchronous": "NORMAL",
+   "rows_per_tx": 20,
+   "tx_per_s": 8272.0,
+   "rows_per_s": 165440.0,
+   "commit_p50_ms": 0.061,
+   "commit_p99_ms": 2.844,
+   "commit_max_ms": 22.946
+  },
+  {
+   "synchronous": "NORMAL",
+   "rows_per_tx": 200,
+   "tx_per_s": 1633.0,
+   "rows_per_s": 326600.0,
+   "commit_p50_ms": 0.403,
+   "commit_p99_ms": 6.214,
+   "commit_max_ms": 18.865
+  }
+ ],
+ "writer_with_readers": [
+  {
+   "synchronous": "FULL",
+   "rows_per_tx": 1,
+   "tx_per_s": 2292.7,
+   "rows_per_s": 2292.7,
+   "commit_p50_ms": 0.283,
+   "commit_p99_ms": 2.674,
+   "commit_max_ms": 34.467,
+   "readers": 0,
+   "reads_per_s_total": 0,
+   "read_p99_ms": null,
+   "wal_bytes_at_end": 0
+  },
+  {
+   "synchronous": "FULL",
+   "rows_per_tx": 1,
+   "tx_per_s": 2978.0,
+   "rows_per_s": 2978.0,
+   "commit_p50_ms": 0.296,
+   "commit_p99_ms": 0.745,
+   "commit_max_ms": 18.393,
+   "readers": 4,
+   "reads_per_s_total": 49010,
+   "read_p99_ms": 0.405,
+   "wal_bytes_at_end": 0
+  },
+  {
+   "synchronous": "FULL",
+   "rows_per_tx": 1,
+   "tx_per_s": 644.3,
+   "rows_per_s": 644.3,
+   "commit_p50_ms": 0.409,
+   "commit_p99_ms": 10.305,
+   "commit_max_ms": 15.178,
+   "readers": 16,
+   "reads_per_s_total": 154780,
+   "read_p99_ms": 0.433,
+   "wal_bytes_at_end": 0
+  }
+ ],
+ "long_reader_starvation": {
+  "wal_before": 37112,
+  "wal_while_reader_pinned": 1373430872,
+  "passive_checkpoint(busy,log,checkpointed)": [
+   0,
+   333357,
+   9
+  ],
+  "truncate_after_reader_closed(busy,log,checkpointed)": [
+   0,
+   0,
+   0
+  ],
+  "wal_after_truncate": 0,
+  "writer_tx_per_s": 12311.0
+ },
+ "multi_writer": [
+  {
+   "writers": 2,
+   "begin_mode": "immediate",
+   "busy_timeout_ms": 200,
+   "committed_tx_per_s": 2245.3,
+   "busy_errors": 0,
+   "busy_error_share": 0.0
+  },
+  {
+   "writers": 8,
+   "begin_mode": "immediate",
+   "busy_timeout_ms": 200,
+   "committed_tx_per_s": 2433.0,
+   "busy_errors": 0,
+   "busy_error_share": 0.0
+  },
+  {
+   "writers": 2,
+   "begin_mode": "deferred",
+   "busy_timeout_ms": 200,
+   "committed_tx_per_s": 1947.3,
+   "busy_errors": 202882,
+   "busy_error_share": 0.972
+  },
+  {
+   "writers": 8,
+   "begin_mode": "deferred",
+   "busy_timeout_ms": 200,
+   "committed_tx_per_s": 2611.7,
+   "busy_errors": 428644,
+   "busy_error_share": 0.982
+  }
+ ],
+ "crash_recovery": {
+  "kill_rounds": 40,
+  "integrity_check": "ok",
+  "events": 9010,
+  "ledger_rows": 9010,
+  "ledger_rows_without_event": 0,
+  "done_without_ledger": 0,
+  "ledger_row_but_outbox_not_done (torn between two commits)": 0,
+  "pending_outbox_after_crash": 17,
+  "replay_finished": 17,
+  "second_replay_changed": 0,
+  "outbox_rows": 9010,
+  "events_equal_outbox_equal_ledger_after_replay": true,
+  "all_outbox_done_after_replay": true
+ },
+ "backup": {
+  "db_bytes": 8724480,
+  "online_backup_api_seconds": 0.447,
+  "backup_integrity": "ok",
+  "backup_rows": 23792,
+  "vacuum_into_seconds": 0.012
+ },
+ "wall_seconds": 63.8
+}

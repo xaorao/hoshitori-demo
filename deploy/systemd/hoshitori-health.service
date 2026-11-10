@@ -1,0 +1,18 @@
+# The health probe (src/hoshitori/host_probe.py): reads the league folder and the backups and writes nothing. It exits 1 when a finding
+# is bad, so the unit enters the "failed" state, which `systemctl --failed` lists and to which an OnFailure= alert can be attached once
+# the owner has chosen where alerts go. Started every minute by hoshitori-health.timer.
+[Unit]
+Description=Hoshitori health probe
+
+[Service]
+Type=oneshot
+User=hoshitori
+Group=hoshitori
+ExecStart=/opt/hoshitori/venv/bin/python -m hoshitori.host_probe /var/lib/hoshitori/league/settings.json --backups /var/lib/hoshitori/backups
+# No StateDirectory= here: with ProtectSystem=strict every path is read-only for the probe, so it cannot write even by mistake.
+UMask=0077
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes

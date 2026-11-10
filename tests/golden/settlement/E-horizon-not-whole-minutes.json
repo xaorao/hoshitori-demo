@@ -1,0 +1,69 @@
+{
+ "basis": null,
+ "expected": {
+  "error": "invalid"
+ },
+ "finer": {},
+ "forecast": {
+  "forecast_id": "f-E-horizon-not-whole-minutes",
+  "horizon_ms": 3630000,
+  "origin_ms": 1793268120000,
+  "quote_class": "USDT"
+ },
+ "id": "E-horizon-not-whole-minutes",
+ "kind": "directional",
+ "note": "A horizon that is not a whole number of minutes.",
+ "pair": {
+  "pair_id": "A",
+  "primary": {
+   "bars": [
+    [
+     1793268060000,
+     "100.00",
+     "100.00",
+     "100.00",
+     "100.00"
+    ],
+    [
+     1793271690000,
+     "101.00",
+     "101.00",
+     "101.00",
+     "101.00"
+    ]
+   ],
+   "instrument": "BTCUSDT",
+   "multiplier": "1",
+   "quote_class": "USDT",
+   "server_time_ms": 1793271870000,
+   "tick": "0.01",
+   "venue": "binance-spot"
+  },
+  "second": {
+   "bars": [
+    [
+     1793268060000,
+     "100.00",
+     "100.00",
+     "100.00",
+     "100.00"
+    ],
+    [
+     1793271690000,
+     "101.00",
+     "101.00",
+     "101.00",
+     "101.00"
+    ]
+   ],
+   "instrument": "BTC-USDT",
+   "multiplier": "1",
+   "quote_class": "USDT",
+   "server_time_ms": 1793271870000,
+   "tick": "0.01",
+   "venue": "okx"
+  }
+ },
+ "retries_exhausted": false,
+ "section": "2"
+}

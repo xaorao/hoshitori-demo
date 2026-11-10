@@ -1,0 +1,99 @@
+{
+ "trials": 800,
+ "scenarios": {
+  "A": "true announcement effect",
+  "B": "move under way 40 minutes before",
+  "C": "market-wide move",
+  "D": "no effect"
+ },
+ "results": {
+  "A": {
+   "T_ONSET": {
+    "FAVOURS_ORIGINAL": 0.36,
+    "FAVOURS_ALTERNATIVE": 0.245,
+    "INCONCLUSIVE": 0.395
+   },
+   "T_ONSET2": {
+    "FAVOURS_ORIGINAL": 0.401,
+    "FAVOURS_ALTERNATIVE": 0.049,
+    "INCONCLUSIVE": 0.55
+   },
+   "T_MARKET": {
+    "FAVOURS_ORIGINAL": 0.986,
+    "FAVOURS_ALTERNATIVE": 0.001,
+    "INCONCLUSIVE": 0.013
+   },
+   "T_PLACEBO_TIME": {
+    "FAVOURS_ORIGINAL": 0.89,
+    "FAVOURS_ALTERNATIVE": 0.028,
+    "INCONCLUSIVE": 0.083
+   }
+  },
+  "B": {
+   "T_ONSET": {
+    "FAVOURS_ORIGINAL": 0.122,
+    "FAVOURS_ALTERNATIVE": 0.501,
+    "INCONCLUSIVE": 0.376
+   },
+   "T_ONSET2": {
+    "FAVOURS_ORIGINAL": 0.005,
+    "FAVOURS_ALTERNATIVE": 0.451,
+    "INCONCLUSIVE": 0.544
+   },
+   "T_MARKET": {
+    "FAVOURS_ORIGINAL": 0.068,
+    "FAVOURS_ALTERNATIVE": 0.031,
+    "INCONCLUSIVE": 0.901
+   },
+   "T_PLACEBO_TIME": {
+    "FAVOURS_ORIGINAL": 0.051,
+    "FAVOURS_ALTERNATIVE": 0.801,
+    "INCONCLUSIVE": 0.147
+   }
+  },
+  "C": {
+   "T_ONSET": {
+    "FAVOURS_ORIGINAL": 0.339,
+    "FAVOURS_ALTERNATIVE": 0.274,
+    "INCONCLUSIVE": 0.388
+   },
+   "T_ONSET2": {
+    "FAVOURS_ORIGINAL": 0.421,
+    "FAVOURS_ALTERNATIVE": 0.04,
+    "INCONCLUSIVE": 0.539
+   },
+   "T_MARKET": {
+    "FAVOURS_ORIGINAL": 0.056,
+    "FAVOURS_ALTERNATIVE": 0.699,
+    "INCONCLUSIVE": 0.245
+   },
+   "T_PLACEBO_TIME": {
+    "FAVOURS_ORIGINAL": 0.871,
+    "FAVOURS_ALTERNATIVE": 0.035,
+    "INCONCLUSIVE": 0.094
+   }
+  },
+  "D": {
+   "T_ONSET": {
+    "FAVOURS_ORIGINAL": 0.018,
+    "FAVOURS_ALTERNATIVE": 0.273,
+    "INCONCLUSIVE": 0.71
+   },
+   "T_ONSET2": {
+    "FAVOURS_ORIGINAL": 0.01,
+    "FAVOURS_ALTERNATIVE": 0.02,
+    "INCONCLUSIVE": 0.97
+   },
+   "T_MARKET": {
+    "FAVOURS_ORIGINAL": 0.05,
+    "FAVOURS_ALTERNATIVE": 0.036,
+    "INCONCLUSIVE": 0.914
+   },
+   "T_PLACEBO_TIME": {
+    "FAVOURS_ORIGINAL": 0.051,
+    "FAVOURS_ALTERNATIVE": 0.809,
+    "INCONCLUSIVE": 0.14
+   }
+  }
+ }
+}

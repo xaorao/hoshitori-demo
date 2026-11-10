@@ -1,0 +1,882 @@
+{
+"profile": "record",
+"source": "hand-built vectors (RFC 8785 samples, hostile inputs); expect_hex null means the input must be rejected",
+"vectors": [
+{
+"id": "rfc-3.2.2",
+"input_hex": "7b226e756d62657273223a5b3333333333333333332e33333333333332392c314533302c342e35302c32652d332c302e3030303030303030303030303030303030303030303030303030315d2c22737472696e67223a225c7532306163245c75303030465c753030306141275c75303034325c75303032325c75303035635c5c5c225c2f222c226c69746572616c73223a5b6e756c6c2c747275652c66616c73655d7d",
+"expect_hex": null,
+"note": "RFC sample; record profile has no floats"
+},
+{
+"id": "rfc-3.2.3-sort",
+"input_hex": "7b225c7532306163223a224575726f205369676e222c225c72223a2243617272696167652052657475726e222c225c7566623333223a22486562726577204c65747465722044616c6574205769746820446167657368222c2231223a224f6e65222c225c75643833645c7564653030223a22456d6f6a693a204772696e6e696e672046616365222c225c7530303830223a22436f6e74726f6c222c225c7530306636223a224c6174696e20536d616c6c204c6574746572204f205769746820446961657265736973227d",
+"expect_hex": null,
+"note": "UTF-16 code unit order: U+20AC sorts before U+1F600 (surrogate D83D) before U+FB33; U+FB33 is not NFC-stable, so the record profile rejects it"
+},
+{
+"id": "appxB-0000000000000000-17sig",
+"input_hex": "7b226e223a302e3030303030303030303030303030303030652b30307d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-0000000000000000-repr",
+"input_hex": "7b226e223a302e307d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-8000000000000000-17sig",
+"input_hex": "7b226e223a2d302e3030303030303030303030303030303030652b30307d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-8000000000000000-repr",
+"input_hex": "7b226e223a2d302e307d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-0000000000000001-17sig",
+"input_hex": "7b226e223a342e3934303635363435383431323436353434652d3332347d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-0000000000000001-repr",
+"input_hex": "7b226e223a35652d3332347d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-8000000000000001-17sig",
+"input_hex": "7b226e223a2d342e3934303635363435383431323436353434652d3332347d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-8000000000000001-repr",
+"input_hex": "7b226e223a2d35652d3332347d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-7fefffffffffffff-17sig",
+"input_hex": "7b226e223a312e3739373639333133343836323331353731652b3330387d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-7fefffffffffffff-repr",
+"input_hex": "7b226e223a312e37393736393331333438363233313537652b3330387d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-ffefffffffffffff-17sig",
+"input_hex": "7b226e223a2d312e3739373639333133343836323331353731652b3330387d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-ffefffffffffffff-repr",
+"input_hex": "7b226e223a2d312e37393736393331333438363233313537652b3330387d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-4340000000000000-17sig",
+"input_hex": "7b226e223a392e3030373139393235343734303939323030652b31357d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-4340000000000000-repr",
+"input_hex": "7b226e223a393030373139393235343734303939322e307d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-c340000000000000-17sig",
+"input_hex": "7b226e223a2d392e3030373139393235343734303939323030652b31357d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-c340000000000000-repr",
+"input_hex": "7b226e223a2d393030373139393235343734303939322e307d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-4430000000000000-17sig",
+"input_hex": "7b226e223a322e3935313437393035313739333532383236652b32307d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-4430000000000000-repr",
+"input_hex": "7b226e223a322e39353134373930353137393335323833652b32307d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-44b52d02c7e14af5-17sig",
+"input_hex": "7b226e223a392e3939393939393939393939393939373438652b32327d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-44b52d02c7e14af5-repr",
+"input_hex": "7b226e223a392e393939393939393939393939393937652b32327d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-44b52d02c7e14af6-17sig",
+"input_hex": "7b226e223a392e3939393939393939393939393939393136652b32327d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-44b52d02c7e14af6-repr",
+"input_hex": "7b226e223a31652b32337d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-44b52d02c7e14af7-17sig",
+"input_hex": "7b226e223a312e3030303030303030303030303030303038652b32337d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-44b52d02c7e14af7-repr",
+"input_hex": "7b226e223a312e30303030303030303030303030303031652b32337d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-444b1ae4d6e2ef4e-17sig",
+"input_hex": "7b226e223a392e3939393939393939393939393939373338652b32307d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-444b1ae4d6e2ef4e-repr",
+"input_hex": "7b226e223a392e393939393939393939393939393937652b32307d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-444b1ae4d6e2ef4f-17sig",
+"input_hex": "7b226e223a392e3939393939393939393939393939383639652b32307d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-444b1ae4d6e2ef4f-repr",
+"input_hex": "7b226e223a392e393939393939393939393939393939652b32307d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-444b1ae4d6e2ef50-17sig",
+"input_hex": "7b226e223a312e3030303030303030303030303030303030652b32317d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-444b1ae4d6e2ef50-repr",
+"input_hex": "7b226e223a31652b32317d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-3eb0c6f7a0b5ed8c-17sig",
+"input_hex": "7b226e223a392e3939393939393939393939393939373433652d30377d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-3eb0c6f7a0b5ed8c-repr",
+"input_hex": "7b226e223a392e393939393939393939393939393937652d30377d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-3eb0c6f7a0b5ed8d-17sig",
+"input_hex": "7b226e223a392e3939393939393939393939393939393535652d30377d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-3eb0c6f7a0b5ed8d-repr",
+"input_hex": "7b226e223a31652d30367d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-41b3de4355555553-17sig",
+"input_hex": "7b226e223a332e3333333333333333333333333333313934652b30387d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-41b3de4355555553-repr",
+"input_hex": "7b226e223a3333333333333333332e333333333333327d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-41b3de4355555554-17sig",
+"input_hex": "7b226e223a332e3333333333333333333333333333323534652b30387d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-41b3de4355555554-repr",
+"input_hex": "7b226e223a3333333333333333332e33333333333332357d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-41b3de4355555555-17sig",
+"input_hex": "7b226e223a332e3333333333333333333333333333333133652b30387d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-41b3de4355555555-repr",
+"input_hex": "7b226e223a3333333333333333332e333333333333337d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-41b3de4355555556-17sig",
+"input_hex": "7b226e223a332e3333333333333333333333333333333733652b30387d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-41b3de4355555556-repr",
+"input_hex": "7b226e223a3333333333333333332e333333333333347d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-41b3de4355555557-17sig",
+"input_hex": "7b226e223a332e3333333333333333333333333333343333652b30387d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-41b3de4355555557-repr",
+"input_hex": "7b226e223a3333333333333333332e33333333333334337d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-becbf647612f3696-17sig",
+"input_hex": "7b226e223a2d332e3333333333333333333333333333333332652d30367d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-becbf647612f3696-repr",
+"input_hex": "7b226e223a2d332e33333333333333333333333333333333652d30367d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "appxB-43143ff3c1cb0959-17sig",
+"input_hex": "7b226e223a312e3432343935333932333738313230363235652b31357d",
+"expect_hex": null,
+"note": "number given as 17-digit exponent form"
+},
+{
+"id": "appxB-43143ff3c1cb0959-repr",
+"input_hex": "7b226e223a313432343935333932333738313230362e327d",
+"expect_hex": null,
+"note": "number given as Python repr"
+},
+{
+"id": "num-0-1E30",
+"input_hex": "7b226e223a314533307d",
+"expect_hex": null,
+"note": "number respelling"
+},
+{
+"id": "num-1-4.50",
+"input_hex": "7b226e223a342e35307d",
+"expect_hex": null,
+"note": "number respelling"
+},
+{
+"id": "num-2--0",
+"input_hex": "7b226e223a2d307d",
+"expect_hex": null,
+"note": "number respelling"
+},
+{
+"id": "num-3--0.0",
+"input_hex": "7b226e223a2d302e307d",
+"expect_hex": null,
+"note": "number respelling"
+},
+{
+"id": "num-4-0e0",
+"input_hex": "7b226e223a3065307d",
+"expect_hex": null,
+"note": "number respelling"
+},
+{
+"id": "num-5-1e-7",
+"input_hex": "7b226e223a31652d377d",
+"expect_hex": null,
+"note": "number respelling"
+},
+{
+"id": "num-6-0.0000001",
+"input_hex": "7b226e223a302e303030303030317d",
+"expect_hex": null,
+"note": "number respelling"
+},
+{
+"id": "num-7-123456789012345678901",
+"input_hex": "7b226e223a3132333435363738393031323334353637383930317d",
+"expect_hex": null,
+"note": "number respelling"
+},
+{
+"id": "num-8-1e21",
+"input_hex": "7b226e223a316532317d",
+"expect_hex": null,
+"note": "number respelling"
+},
+{
+"id": "num-9-1e20",
+"input_hex": "7b226e223a316532307d",
+"expect_hex": null,
+"note": "number respelling"
+},
+{
+"id": "num-10-12.0",
+"input_hex": "7b226e223a31322e307d",
+"expect_hex": null,
+"note": "number respelling"
+},
+{
+"id": "num-11-0.1",
+"input_hex": "7b226e223a302e317d",
+"expect_hex": null,
+"note": "number respelling"
+},
+{
+"id": "num-12-1.0e+2",
+"input_hex": "7b226e223a312e30652b327d",
+"expect_hex": null,
+"note": "number respelling"
+},
+{
+"id": "num-13-5E-324",
+"input_hex": "7b226e223a35452d3332347d",
+"expect_hex": null,
+"note": "number respelling"
+},
+{
+"id": "num-14-2.2250738585072014e-308",
+"input_hex": "7b226e223a322e32323530373338353835303732303134652d3330387d",
+"expect_hex": null,
+"note": "number respelling"
+},
+{
+"id": "num-15-9007199254740993",
+"input_hex": "7b226e223a393030373139393235343734303939337d",
+"expect_hex": null,
+"note": "number respelling"
+},
+{
+"id": "int-0-0",
+"input_hex": "7b226e223a307d",
+"expect_hex": "7b226e223a307d",
+"note": "safe integer"
+},
+{
+"id": "int-1-1",
+"input_hex": "7b226e223a317d",
+"expect_hex": "7b226e223a317d",
+"note": "safe integer"
+},
+{
+"id": "int-2--1",
+"input_hex": "7b226e223a2d317d",
+"expect_hex": "7b226e223a2d317d",
+"note": "safe integer"
+},
+{
+"id": "int-3-9007199254740991",
+"input_hex": "7b226e223a393030373139393235343734303939317d",
+"expect_hex": "7b226e223a393030373139393235343734303939317d",
+"note": "safe integer"
+},
+{
+"id": "int-4--9007199254740991",
+"input_hex": "7b226e223a2d393030373139393235343734303939317d",
+"expect_hex": "7b226e223a2d393030373139393235343734303939317d",
+"note": "safe integer"
+},
+{
+"id": "int-5-1000000",
+"input_hex": "7b226e223a313030303030307d",
+"expect_hex": "7b226e223a313030303030307d",
+"note": "safe integer"
+},
+{
+"id": "int-unsafe-2^53",
+"input_hex": "7b226e223a393030373139393235343734303939327d",
+"expect_hex": null,
+"note": "record profile limit is 2^53-1"
+},
+{
+"id": "int-neg-zero-record",
+"input_hex": "7b226e223a2d307d",
+"expect_hex": null,
+"note": "record profile refuses the -0 spelling"
+},
+{
+"id": "int-leading-zero",
+"input_hex": "7b226e223a30317d",
+"expect_hex": null,
+"note": "invalid JSON"
+},
+{
+"id": "str-all-controls",
+"input_hex": "7b2273223a20225c75303030305c75303030315c75303030325c75303030335c75303030345c75303030355c75303030365c75303030375c625c745c6e5c75303030625c665c725c75303030655c75303030665c75303031305c75303031315c75303031325c75303031335c75303031345c75303031355c75303031365c75303031375c75303031385c75303031395c75303031615c75303031625c75303031635c75303031645c75303031655c7530303166227d",
+"expect_hex": "7b2273223a225c75303030305c75303030315c75303030325c75303030335c75303030345c75303030355c75303030365c75303030375c625c745c6e5c75303030625c665c725c75303030655c75303030665c75303031305c75303031315c75303031325c75303031335c75303031345c75303031355c75303031365c75303031375c75303031385c75303031395c75303031615c75303031625c75303031635c75303031645c75303031655c7530303166227d",
+"note": ""
+},
+{
+"id": "str-del-and-c1",
+"input_hex": "7b2273223a225c75303037665c75303038305c7530303966227d",
+"expect_hex": "7b2273223a227fc280c29f227d",
+"note": ""
+},
+{
+"id": "str-line-separators",
+"input_hex": "7b2273223a225c75323032385c7532303239227d",
+"expect_hex": "7b2273223a22e280a8e280a9227d",
+"note": ""
+},
+{
+"id": "str-solidus-escape",
+"input_hex": "7b2273223a22615c2f62227d",
+"expect_hex": "7b2273223a22612f62227d",
+"note": ""
+},
+{
+"id": "str-astral-escaped-pair",
+"input_hex": "7b2273223a225c75643833645c7564653030227d",
+"expect_hex": "7b2273223a22f09f9880227d",
+"note": ""
+},
+{
+"id": "str-astral-raw",
+"input_hex": "7b2273223a22f09f9880227d",
+"expect_hex": "7b2273223a22f09f9880227d",
+"note": ""
+},
+{
+"id": "str-quote-backslash",
+"input_hex": "7b2273223a225c225c5c227d",
+"expect_hex": "7b2273223a225c225c5c227d",
+"note": ""
+},
+{
+"id": "str-combining-not-nfc",
+"input_hex": "7b2273223a2265cc81227d",
+"expect_hex": null,
+"note": "JCS does not normalise; the record profile rejects non-NFC"
+},
+{
+"id": "str-nfc-precomposed",
+"input_hex": "7b2273223a22c3a9227d",
+"expect_hex": "7b2273223a22c3a9227d",
+"note": ""
+},
+{
+"id": "str-empty-key",
+"input_hex": "7b22223a312c2261223a327d",
+"expect_hex": "7b22223a312c2261223a327d",
+"note": ""
+},
+{
+"id": "str-key-prefixes",
+"input_hex": "7b226162223a312c2261223a322c226161223a332c22223a347d",
+"expect_hex": "7b22223a342c2261223a322c226161223a332c226162223a317d",
+"note": ""
+},
+{
+"id": "str-numeric-keys",
+"input_hex": "7b223130223a312c2239223a322c2232223a332c2231223a347d",
+"expect_hex": "7b2231223a342c223130223a312c2232223a332c2239223a327d",
+"note": "string order, not numeric"
+},
+{
+"id": "str-proto-key",
+"input_hex": "7b225f5f70726f746f5f5f223a312c2261223a327d",
+"expect_hex": "7b225f5f70726f746f5f5f223a312c2261223a327d",
+"note": "must not touch the prototype"
+},
+{
+"id": "str-constructor-key",
+"input_hex": "7b22636f6e7374727563746f72223a312c22746f537472696e67223a327d",
+"expect_hex": "7b22636f6e7374727563746f72223a312c22746f537472696e67223a327d",
+"note": ""
+},
+{
+"id": "str-key-escape-spelling",
+"input_hex": "7b225c7530303631223a317d",
+"expect_hex": "7b2261223a317d",
+"note": ""
+},
+{
+"id": "struct-empty-obj",
+"input_hex": "7b7d",
+"expect_hex": "7b7d",
+"note": ""
+},
+{
+"id": "struct-empty-top-array",
+"input_hex": "5b5d",
+"expect_hex": null,
+"note": "record must be an object"
+},
+{
+"id": "struct-nested-order",
+"input_hex": "7b2262223a5b7b227a223a312c2261223a327d2c7b2279223a5b5d7d5d2c2261223a7b2264223a7b7d2c2263223a7b2266223a312c2265223a327d7d7d",
+"expect_hex": "7b2261223a7b2263223a7b2265223a322c2266223a317d2c2264223a7b7d7d2c2262223a5b7b2261223a322c227a223a317d2c7b2279223a5b5d7d5d7d",
+"note": ""
+},
+{
+"id": "struct-array-order-kept",
+"input_hex": "7b2261223a5b332c312c322c2262222c2261225d7d",
+"expect_hex": "7b2261223a5b332c312c322c2262222c2261225d7d",
+"note": ""
+},
+{
+"id": "struct-whitespace",
+"input_hex": "200a097b20226122203a205b2031202c2032205d202c0d0a20226222203a206e756c6c207d200a",
+"expect_hex": "7b2261223a5b312c325d2c2262223a6e756c6c7d",
+"note": ""
+},
+{
+"id": "struct-booleans-null",
+"input_hex": "7b2274223a747275652c2266223a66616c73652c226e223a6e756c6c7d",
+"expect_hex": "7b2266223a66616c73652c226e223a6e756c6c2c2274223a747275657d",
+"note": ""
+},
+{
+"id": "struct-top-scalar-string",
+"input_hex": "227822",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "struct-top-scalar-number",
+"input_hex": "31",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "struct-depth-64",
+"input_hex": "7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d",
+"expect_hex": "7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d",
+"note": "exactly at the limit"
+},
+{
+"id": "struct-depth-70",
+"input_hex": "7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b2261223a7b7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d",
+"expect_hex": null,
+"note": "both profiles cap nesting at 64 so a verifier cannot be exhausted"
+},
+{
+"id": "hostile-dup-key",
+"input_hex": "7b2261223a312c2261223a327d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-dup-key-escaped-spelling",
+"input_hex": "7b2261223a312c225c7530303631223a327d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-dup-key-nested",
+"input_hex": "7b226f223a7b226b223a312c226b223a317d7d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-lone-high-surrogate",
+"input_hex": "7b2273223a225c7564383030227d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-lone-low-surrogate",
+"input_hex": "7b2273223a225c7564633030227d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-reversed-surrogate-pair",
+"input_hex": "7b2273223a225c75646530305c7564383364227d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-lone-surrogate-in-key",
+"input_hex": "7b225c7564383030223a317d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-nan",
+"input_hex": "7b226e223a4e614e7d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-infinity",
+"input_hex": "7b226e223a496e66696e6974797d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-neg-infinity",
+"input_hex": "7b226e223a2d496e66696e6974797d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-overflow-1e400",
+"input_hex": "7b226e223a31653430307d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-trailing-comma-obj",
+"input_hex": "7b2261223a312c7d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-trailing-comma-arr",
+"input_hex": "7b2261223a5b312c5d7d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-single-quotes",
+"input_hex": "7b2761273a317d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-comment",
+"input_hex": "7b2261223a317d2f2a782a2f",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-line-comment",
+"input_hex": "7b2261223a317d2f2f78",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-trailing-garbage",
+"input_hex": "7b2261223a317d2078",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-two-documents",
+"input_hex": "7b2261223a317d7b2262223a327d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-unquoted-key",
+"input_hex": "7b613a317d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-empty-input",
+"input_hex": "",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-only-whitespace",
+"input_hex": "2020",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-raw-newline-in-string",
+"input_hex": "7b2273223a22610a62227d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-raw-tab-in-string",
+"input_hex": "7b2273223a22610962227d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-bad-escape",
+"input_hex": "7b2273223a225c783431227d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-short-unicode-escape",
+"input_hex": "7b2273223a225c753132227d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-plus-number",
+"input_hex": "7b226e223a2b317d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-dot-number",
+"input_hex": "7b226e223a2e357d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-trailing-dot",
+"input_hex": "7b226e223a312e7d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-hex-number",
+"input_hex": "7b226e223a307831307d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-unterminated-string",
+"input_hex": "7b2273223a22616263",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-unterminated-object",
+"input_hex": "7b2261223a31",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-missing-colon",
+"input_hex": "7b22612220317d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-undefined",
+"input_hex": "7b2261223a756e646566696e65647d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-bytes-bom",
+"input_hex": "efbbbf7b2261223a317d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-bytes-invalid-utf8-continuation",
+"input_hex": "7b2273223a2280227d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-bytes-overlong-slash",
+"input_hex": "7b2273223a22c0af227d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-bytes-cesu8-surrogate",
+"input_hex": "7b2273223a22eda080227d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-bytes-truncated-multibyte",
+"input_hex": "7b2273223a22e282227d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-bytes-utf16-le-bom",
+"input_hex": "fffe7b007d00",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-bytes-null-byte-outside-string",
+"input_hex": "7b2261223a317d00",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-bytes-latin1-e-acute",
+"input_hex": "7b2273223a22e9227d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-bytes-code-point-above-10ffff",
+"input_hex": "7b2273223a22f4908080227d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-deep-5000",
+"input_hex": "5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d",
+"expect_hex": null,
+"note": "must not crash the verifier"
+},
+{
+"id": "hostile-huge-exponent-digits",
+"input_hex": "7b226e223a3165393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939397d",
+"expect_hex": null,
+"note": ""
+},
+{
+"id": "hostile-long-digit-run",
+"input_hex": "7b226e223a39393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939393939397d",
+"expect_hex": null,
+"note": "overflows to infinity as a double"
+},
+{
+"id": "hostile-record-float",
+"input_hex": "7b227072696365223a312e357d",
+"expect_hex": null,
+"note": ""
+}
+]
+}

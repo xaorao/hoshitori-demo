@@ -1,0 +1,20 @@
+# Exact versions of every development and test package (the skill itself has no run-time dependency).
+# Install with:  uv pip install -c constraints.txt -e ".[dev]"
+# pytest, ruff and mypy match ryo-agent-league's frozen pins; jsonschema and its dependencies match the indicator skill's pins.
+attrs==26.1.0
+iniconfig==2.3.1
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+librt==0.16.0
+mypy==2.4.1
+mypy-extensions==1.1.0
+packaging==26.3
+pathspec==1.1.1
+pluggy==1.7.0
+pygments==2.21.0
+pytest==9.2.0
+referencing==0.37.0
+rpds-py==2026.9.1
+ruff==0.17.3
+typing-extensions==4.16.0
+ast-serialize==0.13.1

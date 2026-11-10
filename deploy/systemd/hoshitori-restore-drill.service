@@ -1,0 +1,23 @@
+# The scheduled restore drill (OPERATIONS_ARCHITECTURE section 2: "a backup never restored is not a backup"): restore the newest backup
+# into a scratch folder with the ledger's and the capture store's own recovery, report what was found and how long it took, remove the
+# folder. Unanchored on purpose: on this host nothing is kept away from it, so the drill proves that the backup restores, not that it is
+# the latest history; a restore after a loss uses an anchor kept off the host (docs/RUNBOOK.md).
+[Unit]
+Description=Hoshitori restore drill
+
+[Service]
+Type=oneshot
+User=hoshitori
+Group=hoshitori
+WorkingDirectory=/var/lib/hoshitori
+ExecStart=/opt/hoshitori/venv/bin/python -m hoshitori.backup drill --newest-in /var/lib/hoshitori/backups --scratch /var/lib/hoshitori/drill --trusted-root /var/lib/hoshitori/league/root.json --log-key /etc/hoshitori/log.key --unanchored
+StateDirectory=hoshitori hoshitori/drill
+StateDirectoryMode=0700
+UMask=0077
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+Nice=10
+IOSchedulingClass=idle

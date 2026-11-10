@@ -1,0 +1,264 @@
+{
+ "summary": {
+  "positive_cases": 18,
+  "positive_failures": [],
+  "errors": [],
+  "curves": [
+   "k256"
+  ],
+  "negatives_all_rejected": true,
+  "negative_cases": 70
+ },
+ "rows": [
+  {
+   "handle": "bsky.app",
+   "rkey": "3myi3k45jh22z",
+   "curve": "k256",
+   "result": "VERIFIED",
+   "commit_rev": "3myt5zvrq2a2i",
+   "record_created_at": "2026-10-22T16:30:02.437Z",
+   "negatives": {
+    "flip_record_byte": "REJECT: block hash mismatch",
+    "change_rev": "REJECT: signature does not verify",
+    "malleate_high_s": "REJECT: high-S signature rejected (required by the specification)"
+   }
+  },
+  {
+   "handle": "bsky.app",
+   "rkey": "3myi2ihquwk26",
+   "curve": "k256",
+   "result": "VERIFIED",
+   "commit_rev": "3myt5zvrq2a2i",
+   "record_created_at": "2026-10-22T16:11:13.754Z",
+   "negatives": {
+    "flip_record_byte": "REJECT: block hash mismatch",
+    "change_rev": "REJECT: signature does not verify",
+    "malleate_high_s": "REJECT: high-S signature rejected (required by the specification)"
+   }
+  },
+  {
+   "handle": "atproto.com",
+   "rkey": "3myidcyrgv22f",
+   "curve": "k256",
+   "result": "VERIFIED",
+   "commit_rev": "3myidd2wmch2s",
+   "record_created_at": "2026-10-22T18:49:13.949Z",
+   "negatives": {
+    "flip_record_byte": "REJECT: block hash mismatch",
+    "change_rev": "REJECT: signature does not verify",
+    "malleate_high_s": "REJECT: high-S signature rejected (required by the specification)",
+    "wrong_key": "REJECT: signature does not verify"
+   }
+  },
+  {
+   "handle": "atproto.com",
+   "rkey": "3myfmql3biy2h",
+   "curve": "k256",
+   "result": "VERIFIED",
+   "commit_rev": "3myidd2wmch2s",
+   "record_created_at": "2026-10-21T16:59:52Z",
+   "negatives": {
+    "flip_record_byte": "REJECT: block hash mismatch",
+    "change_rev": "REJECT: signature does not verify",
+    "malleate_high_s": "REJECT: high-S signature rejected (required by the specification)",
+    "wrong_key": "REJECT: signature does not verify"
+   }
+  },
+  {
+   "handle": "atproto.com",
+   "rkey": "3myfm52br2k2c",
+   "curve": "k256",
+   "result": "VERIFIED",
+   "commit_rev": "3myidd2wmch2s",
+   "record_created_at": "2026-10-21T16:48:58.666Z",
+   "negatives": {
+    "flip_record_byte": "REJECT: block hash mismatch",
+    "change_rev": "REJECT: signature does not verify",
+    "malleate_high_s": "REJECT: high-S signature rejected (required by the specification)",
+    "wrong_key": "REJECT: signature does not verify"
+   }
+  },
+  {
+   "handle": "jay.bsky.team",
+   "rkey": "3mxz7faqa5s2f",
+   "curve": "k256",
+   "result": "VERIFIED",
+   "commit_rev": "3my27crnbls2g",
+   "record_created_at": "2026-10-16T18:28:58.362Z",
+   "negatives": {
+    "flip_record_byte": "REJECT: block hash mismatch",
+    "change_rev": "REJECT: signature does not verify",
+    "malleate_high_s": "REJECT: high-S signature rejected (required by the specification)",
+    "wrong_key": "REJECT: signature does not verify"
+   }
+  },
+  {
+   "handle": "pfrazee.com",
+   "rkey": "3myt4pjo74k2a",
+   "curve": "k256",
+   "result": "VERIFIED",
+   "commit_rev": "3mytagwticz2p",
+   "record_created_at": "2026-10-27T01:50:15.249Z",
+   "negatives": {
+    "flip_record_byte": "REJECT: block hash mismatch",
+    "change_rev": "REJECT: signature does not verify",
+    "malleate_high_s": "REJECT: high-S signature rejected (required by the specification)",
+    "wrong_key": "REJECT: signature does not verify"
+   }
+  },
+  {
+   "handle": "pfrazee.com",
+   "rkey": "3myslz6sqnk2h",
+   "curve": "k256",
+   "result": "VERIFIED",
+   "commit_rev": "3mytagwticz2p",
+   "record_created_at": "2026-10-26T20:51:25.799Z",
+   "negatives": {
+    "flip_record_byte": "REJECT: block hash mismatch",
+    "change_rev": "REJECT: signature does not verify",
+    "malleate_high_s": "REJECT: high-S signature rejected (required by the specification)",
+    "wrong_key": "REJECT: signature does not verify"
+   }
+  },
+  {
+   "handle": "pfrazee.com",
+   "rkey": "3mysgjotiv22h",
+   "curve": "k256",
+   "result": "VERIFIED",
+   "commit_rev": "3mytagwticz2p",
+   "record_created_at": "2026-10-26T19:13:17.020Z",
+   "negatives": {
+    "flip_record_byte": "REJECT: block hash mismatch",
+    "change_rev": "REJECT: signature does not verify",
+    "malleate_high_s": "REJECT: high-S signature rejected (required by the specification)",
+    "wrong_key": "REJECT: signature does not verify"
+   }
+  },
+  {
+   "handle": "why.bsky.team",
+   "rkey": "3myeacaauf22b",
+   "curve": "k256",
+   "result": "VERIFIED",
+   "commit_rev": "3myt2yjspk22s",
+   "record_created_at": "2026-10-21T03:44:28.061Z",
+   "negatives": {
+    "flip_record_byte": "REJECT: block hash mismatch",
+    "change_rev": "REJECT: signature does not verify",
+    "malleate_high_s": "REJECT: high-S signature rejected (required by the specification)",
+    "wrong_key": "REJECT: signature does not verify"
+   }
+  },
+  {
+   "handle": "why.bsky.team",
+   "rkey": "3mybr66d5m22p",
+   "curve": "k256",
+   "result": "VERIFIED",
+   "commit_rev": "3myt2yjspk22s",
+   "record_created_at": "2026-10-20T04:08:26.217Z",
+   "negatives": {
+    "flip_record_byte": "REJECT: block hash mismatch",
+    "change_rev": "REJECT: signature does not verify",
+    "malleate_high_s": "REJECT: high-S signature rejected (required by the specification)",
+    "wrong_key": "REJECT: signature does not verify"
+   }
+  },
+  {
+   "handle": "why.bsky.team",
+   "rkey": "3mybeoc2sj22p",
+   "curve": "k256",
+   "result": "VERIFIED",
+   "commit_rev": "3myt2yjspk22s",
+   "record_created_at": "2026-10-20T00:24:48.356Z",
+   "negatives": {
+    "flip_record_byte": "REJECT: block hash mismatch",
+    "change_rev": "REJECT: signature does not verify",
+    "malleate_high_s": "REJECT: high-S signature rejected (required by the specification)",
+    "wrong_key": "REJECT: signature does not verify"
+   }
+  },
+  {
+   "handle": "nytimes.com",
+   "rkey": "3mytcz6muro22",
+   "curve": "k256",
+   "result": "VERIFIED",
+   "commit_rev": "3mytcz6myoo22",
+   "record_created_at": "2026-10-27T03:43:01.623448Z",
+   "negatives": {
+    "flip_record_byte": "REJECT: block hash mismatch",
+    "change_rev": "REJECT: signature does not verify",
+    "malleate_high_s": "REJECT: high-S signature rejected (required by the specification)",
+    "wrong_key": "REJECT: signature does not verify"
+   }
+  },
+  {
+   "handle": "nytimes.com",
+   "rkey": "3mytctu2rsf2v",
+   "curve": "k256",
+   "result": "VERIFIED",
+   "commit_rev": "3mytcz6myoo22",
+   "record_created_at": "2026-10-27T03:40:02.714472Z",
+   "negatives": {
+    "flip_record_byte": "REJECT: block hash mismatch",
+    "change_rev": "REJECT: signature does not verify",
+    "malleate_high_s": "REJECT: high-S signature rejected (required by the specification)",
+    "wrong_key": "REJECT: signature does not verify"
+   }
+  },
+  {
+   "handle": "nytimes.com",
+   "rkey": "3mytan74flu22",
+   "curve": "k256",
+   "result": "VERIFIED",
+   "commit_rev": "3mytcz6myoo22",
+   "record_created_at": "2026-10-27T03:00:31.919802Z",
+   "negatives": {
+    "flip_record_byte": "REJECT: block hash mismatch",
+    "change_rev": "REJECT: signature does not verify",
+    "malleate_high_s": "REJECT: high-S signature rejected (required by the specification)",
+    "wrong_key": "REJECT: signature does not verify"
+   }
+  },
+  {
+   "handle": "theverge.com",
+   "rkey": "3mysvfqiwy22o",
+   "curve": "k256",
+   "result": "VERIFIED",
+   "commit_rev": "3mysvfqizvs2o",
+   "record_created_at": "2026-10-26T23:39:29.081463Z",
+   "negatives": {
+    "flip_record_byte": "REJECT: block hash mismatch",
+    "change_rev": "REJECT: signature does not verify",
+    "malleate_high_s": "REJECT: high-S signature rejected (required by the specification)",
+    "wrong_key": "REJECT: signature does not verify"
+   }
+  },
+  {
+   "handle": "theverge.com",
+   "rkey": "3myspvwabjq2y",
+   "curve": "k256",
+   "result": "VERIFIED",
+   "commit_rev": "3mysvfqizvs2o",
+   "record_created_at": "2026-10-26T22:01:09.549604Z",
+   "negatives": {
+    "flip_record_byte": "REJECT: block hash mismatch",
+    "change_rev": "REJECT: signature does not verify",
+    "malleate_high_s": "REJECT: high-S signature rejected (required by the specification)",
+    "wrong_key": "REJECT: signature does not verify"
+   }
+  },
+  {
+   "handle": "theverge.com",
+   "rkey": "3myspdu6cva23",
+   "curve": "k256",
+   "result": "VERIFIED",
+   "commit_rev": "3mysvfqizvs2o",
+   "record_created_at": "2026-10-26T21:51:03.562775Z",
+   "negatives": {
+    "flip_record_byte": "REJECT: block hash mismatch",
+    "change_rev": "REJECT: signature does not verify",
+    "malleate_high_s": "REJECT: high-S signature rejected (required by the specification)",
+    "wrong_key": "REJECT: signature does not verify"
+   }
+  }
+ ]
+}

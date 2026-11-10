@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "indicator-condition-check"
+version = "0.2.0"
+description = "Read-only research skill: evaluate a user-defined technical condition on live exchange candles, with provenance and honest failure states."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "jsonschema>=4.21", "ruff>=0.5", "mypy>=1.10"]
+reference = ["TA-Lib>=0.6"]
+
+[project.scripts]
+indicator-condition-check = "indicator_condition_check.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["live: calls real exchange APIs; run with RUN_LIVE=1"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 140
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+ignore = ["E501", "SIM108", "B905"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true

@@ -1,0 +1,32 @@
+{
+ "sweep": {
+  "cases": 6804,
+  "violations": 0
+ },
+ "fuzz": {
+  "cases": 20000,
+  "python_vs_javascript_differences": 0,
+  "scan_vs_closed_form_differences": 0,
+  "state_counts": {
+   "SETTLED_0": 7155,
+   "VOID_TIE": 4315,
+   "SETTLED_1": 7299,
+   "UNSETTLEABLE_MISSING_H": 617,
+   "UNSETTLEABLE_MISSING_T0": 614
+  },
+  "node_stderr": ""
+ },
+ "worked_example": {
+  "eligible_after_s": 11.0,
+  "T0_hms": [
+   10,
+   2,
+   0
+  ]
+ },
+ "boundary_exact": {
+  "attested_ms": 420000,
+  "T0": 480000,
+  "expected": 480000
+ }
+}

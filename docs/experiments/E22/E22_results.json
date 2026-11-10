@@ -1,0 +1,89 @@
+{
+ "SQLITE_ONLY": {
+  "sqlite_restored_from_older_backup": {
+   "rounds": 150,
+   "rounds_with_silent_omission": 81,
+   "silently_omitted_commands": 199,
+   "duplicates": 0,
+   "failed_lost_records": 0,
+   "acked": 2994,
+   "pending_at_fault": 207
+  },
+  "sqlite_backup_and_journal_tail_lost": {
+   "rounds": 150,
+   "rounds_with_silent_omission": 81,
+   "silently_omitted_commands": 199,
+   "duplicates": 0,
+   "failed_lost_records": 0,
+   "acked": 2994,
+   "pending_at_fault": 207
+  },
+  "sqlite_and_journal_replaced_from_segment_replica": {
+   "rounds": 150,
+   "rounds_with_silent_omission": 81,
+   "silently_omitted_commands": 199,
+   "duplicates": 0,
+   "failed_lost_records": 0,
+   "acked": 2994,
+   "pending_at_fault": 207
+  }
+ },
+ "JOURNAL": {
+  "sqlite_restored_from_older_backup": {
+   "rounds": 150,
+   "rounds_with_silent_omission": 0,
+   "silently_omitted_commands": 0,
+   "duplicates": 0,
+   "failed_lost_records": 0,
+   "acked": 2994,
+   "pending_at_fault": 207
+  },
+  "sqlite_backup_and_journal_tail_lost": {
+   "rounds": 150,
+   "rounds_with_silent_omission": 81,
+   "silently_omitted_commands": 199,
+   "duplicates": 0,
+   "failed_lost_records": 0,
+   "acked": 2994,
+   "pending_at_fault": 207
+  },
+  "sqlite_and_journal_replaced_from_segment_replica": {
+   "rounds": 150,
+   "rounds_with_silent_omission": 81,
+   "silently_omitted_commands": 207,
+   "duplicates": 0,
+   "failed_lost_records": 0,
+   "acked": 2994,
+   "pending_at_fault": 207
+  }
+ },
+ "JOURNAL+RECEIPTS": {
+  "sqlite_restored_from_older_backup": {
+   "rounds": 150,
+   "rounds_with_silent_omission": 0,
+   "silently_omitted_commands": 0,
+   "duplicates": 0,
+   "failed_lost_records": 0,
+   "acked": 2994,
+   "pending_at_fault": 207
+  },
+  "sqlite_backup_and_journal_tail_lost": {
+   "rounds": 150,
+   "rounds_with_silent_omission": 0,
+   "silently_omitted_commands": 0,
+   "duplicates": 0,
+   "failed_lost_records": 199,
+   "acked": 2994,
+   "pending_at_fault": 207
+  },
+  "sqlite_and_journal_replaced_from_segment_replica": {
+   "rounds": 150,
+   "rounds_with_silent_omission": 0,
+   "silently_omitted_commands": 0,
+   "duplicates": 0,
+   "failed_lost_records": 207,
+   "acked": 2994,
+   "pending_at_fault": 207
+  }
+ }
+}

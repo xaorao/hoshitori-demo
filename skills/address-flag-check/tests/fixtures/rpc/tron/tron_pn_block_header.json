@@ -1,0 +1,16 @@
+{
+ "label": "recorded by B5A from https://tron-rpc.publicnode.com/wallet/getblock",
+ "source_url": "https://tron-rpc.publicnode.com/wallet/getblock",
+ "method": "POST",
+ "request_body": {
+  "detail": false
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json",
+  "date": "Sun, 01 Nov 2026 08:25:20 GMT"
+ },
+ "body_sha256": "f2ae3aea4b5de88c5919fdbcbef9a2a404dca7b2ee19c3398ee51316ec1dd939",
+ "body_bytes": 542,
+ "body": "{\"blockID\":\"000000000538ea19693ff1735665ab05865b8c3e6bfb244c292c52d2cd657425\",\"block_header\":{\"raw_data\":{\"timestamp\":1793521518000,\"txTrieRoot\":\"b67e25cb79910e5793a262e8d4fe8bddf9e65e107f5dbfcb1300df27da94390e\",\"parentHash\":\"000000000538ea1816bface76f2780d9e960f65bc3961be0afc8fe78aed0b2b7\",\"number\":87616025,\"witness_address\":\"4114f2c09d3de3fe82a71960da65d4935a30b24e1f\",\"version\":39},\"witness_signature\":\"b2d491addaab854e2e7ca39f5513c1f9bf1fddc2c9851195102cfff29ae2c5a23e22a6b4e4b8aec2325dd52f15cc8919d1a63481ef722f35a4822007b73d61d301\"}}\n"
+}

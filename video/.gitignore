@@ -1,0 +1,7 @@
+node_modules
+out
+.cache
+public/record
+public/dev
+public/sound/*.wav
+*.tsbuildinfo

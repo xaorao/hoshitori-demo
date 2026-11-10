@@ -1,0 +1,22 @@
+{
+ "label": "recorded by B5A from https://polygon-bor-rpc.publicnode.com",
+ "source_url": "https://polygon-bor-rpc.publicnode.com",
+ "method": "POST",
+ "request_body": {
+  "jsonrpc": "2.0",
+  "id": 5,
+  "method": "eth_getTransactionCount",
+  "params": [
+   "0x000000000000000000000000000000000000dead",
+   "0x5c1251f"
+  ]
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json",
+  "date": "Sun, 01 Nov 2026 08:25:03 GMT"
+ },
+ "body_sha256": "ebcc47e7f4fedbda79069366eccd97fb3cc2fb1c07f40bdd15315aa6d86f4630",
+ "body_bytes": 40,
+ "body": "{\"jsonrpc\":\"2.0\",\"id\":5,\"result\":\"0x0\"}\n"
+}

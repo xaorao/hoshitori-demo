@@ -1,0 +1,69 @@
+{
+ "basis": null,
+ "expected": {
+  "contract": "D",
+  "flags": [],
+  "outcome": null,
+  "outcome_price": null,
+  "p0": null,
+  "reason": "UNSETTLEABLE_MISSING",
+  "state": "UNSETTLEABLE",
+  "touch_open_ms": null
+ },
+ "finer": {},
+ "forecast": {
+  "forecast_id": "f-D-missing-outcome-final",
+  "horizon_ms": 3600000,
+  "origin_ms": 1793268120000,
+  "quote_class": "USDT"
+ },
+ "id": "D-missing-outcome-final",
+ "kind": "directional",
+ "note": "The outcome candle is missing after the retries.",
+ "pair": {
+  "pair_id": "A",
+  "primary": {
+   "bars": [
+    [
+     1793268060000,
+     "100.00",
+     "100.00",
+     "100.00",
+     "100.00"
+    ]
+   ],
+   "instrument": "BTCUSDT",
+   "multiplier": "1",
+   "quote_class": "USDT",
+   "server_time_ms": 1793271840000,
+   "tick": "0.01",
+   "venue": "binance-spot"
+  },
+  "second": {
+   "bars": [
+    [
+     1793268060000,
+     "100.00",
+     "100.00",
+     "100.00",
+     "100.00"
+    ],
+    [
+     1793271660000,
+     "101.00",
+     "101.00",
+     "101.00",
+     "101.00"
+    ]
+   ],
+   "instrument": "BTC-USDT",
+   "multiplier": "1",
+   "quote_class": "USDT",
+   "server_time_ms": 1793271840000,
+   "tick": "0.01",
+   "venue": "okx"
+  }
+ },
+ "retries_exhausted": true,
+ "section": "7"
+}

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- SYNTHETIC. Written by hand by B5A for the parser tests of address-flag-check, in the shape of OFAC's SDN advanced XML. It is not OFAC
+     data: every id, programme tag and entry below is made up, and the addresses are burn, test or well-known example addresses. -->
+<Sanctions xmlns="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ADVANCED_XML">
+  <DateOfIssue CalendarTypeID="1">
+    <Year>2026</Year>
+    <Month>1</Month>
+    <Day>2</Day>
+  </DateOfIssue>
+  <ReferenceValueSets>
+    <FeatureTypeValues>
+      <FeatureType ID="25" FeatureTypeGroupID="1">Website</FeatureType>
+      <FeatureType ID="344" FeatureTypeGroupID="1">Digital Currency Address - XBT</FeatureType>
+      <FeatureType ID="345" FeatureTypeGroupID="1">Digital Currency Address - ETH</FeatureType>
+      <FeatureType ID="444" FeatureTypeGroupID="1">Digital Currency Address - XMR</FeatureType>
+      <FeatureType ID="887" FeatureTypeGroupID="1">Digital Currency Address - USDT</FeatureType>
+      <FeatureType ID="992" FeatureTypeGroupID="1">Digital Currency Address - TRX</FeatureType>
+      <FeatureType ID="1167" FeatureTypeGroupID="1">Digital Currency Address - SOL</FeatureType>
+    </FeatureTypeValues>
+    <PartySubTypeValues>
+      <PartySubType ID="1" PartyTypeID="4">Vessel</PartySubType>
+      <PartySubType ID="3" PartyTypeID="2">Unknown</PartySubType>
+      <PartySubType ID="4" PartyTypeID="1">Unknown</PartySubType>
+      <PartySubType ID="9" PartyTypeID="5">Unknown</PartySubType>
+    </PartySubTypeValues>
+    <PartyTypeValues>
+      <PartyType ID="1">Individual</PartyType>
+      <PartyType ID="2">Entity</PartyType>
+      <PartyType ID="4">Transport</PartyType>
+      <PartyType ID="5">Other Entity</PartyType>
+    </PartyTypeValues>
+    <ReliabilityValues>
+      <Reliability ID="1560">Confirmed</Reliability>
+      <Reliability ID="91479">Reported</Reliability>
+      <Reliability ID="1">Unknown</Reliability>
+    </ReliabilityValues>
+    <SanctionsTypeValues>
+      <SanctionsType ID="1705">Block</SanctionsType>
+      <SanctionsType ID="1">Program</SanctionsType>
+    </SanctionsTypeValues>
+    <ListValues>
+      <List ID="1550">SDN List</List>
+    </ListValues>
+  </ReferenceValueSets>
+  <DistinctParties>
+    <DistinctParty FixedRef="9001">
+      <Profile ID="9001" PartySubTypeID="3">
+        <Feature ID="1" FeatureTypeID="345">
+          <FeatureVersion ID="11" ReliabilityID="1560">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">0x000000000000000000000000000000000000dEaD</VersionDetail>
+          </FeatureVersion>
+        </Feature>
+        <Feature ID="2" FeatureTypeID="887">
+          <FeatureVersion ID="12" ReliabilityID="91479">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb</VersionDetail>
+          </FeatureVersion>
+        </Feature>
+        <Feature ID="3" FeatureTypeID="25">
+          <FeatureVersion ID="13" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">www.example.org</VersionDetail>
+          </FeatureVersion>
+        </Feature>
+        <Feature ID="4" FeatureTypeID="344">
+          <FeatureVersion ID="14" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">TBXSw8fM4jpQkGc6zZjsVABFpVN7UvXPdV</VersionDetail>
+          </FeatureVersion>
+        </Feature>
+      </Profile>
+    </DistinctParty>
+    <DistinctParty FixedRef="9002">
+      <Profile ID="9002" PartySubTypeID="4">
+        <Feature ID="5" FeatureTypeID="344">
+          <FeatureVersion ID="15" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">1BitcoinEaterAddressDontSendf59kuE</VersionDetail>
+          </FeatureVersion>
+        </Feature>
+        <Feature ID="6" FeatureTypeID="345">
+          <FeatureVersion ID="16" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">0x000000000000000000000000000000000000dEaD</VersionDetail>
+          </FeatureVersion>
+        </Feature>
+        <Feature ID="7" FeatureTypeID="444">
+          <FeatureVersion ID="17" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">abababababababababababababababababababababababababababababababab</VersionDetail>
+          </FeatureVersion>
+        </Feature>
+      </Profile>
+    </DistinctParty>
+    <DistinctParty FixedRef="9003">
+      <Profile ID="9003" PartySubTypeID="1">
+        <Feature ID="8" FeatureTypeID="345">
+          <FeatureVersion ID="18" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">0x000000000000000000000000000000000000DeAD</VersionDetail>
+          </FeatureVersion>
+        </Feature>
+      </Profile>
+    </DistinctParty>
+    <DistinctParty FixedRef="9004">
+      <Profile ID="9004" PartySubTypeID="9">
+        <Feature ID="9" FeatureTypeID="1167">
+          <FeatureVersion ID="19" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">So11111111111111111111111111111111111111112</VersionDetail>
+          </FeatureVersion>
+        </Feature>
+      </Profile>
+    </DistinctParty>
+    <DistinctParty FixedRef="9005">
+      <Profile ID="9005" PartySubTypeID="3">
+        <Feature ID="10" FeatureTypeID="344">
+          <FeatureVersion ID="20" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq</VersionDetail>
+          </FeatureVersion>
+        </Feature>
+      </Profile>
+    </DistinctParty>
+    <DistinctParty FixedRef="9006">
+      <Profile ID="9006" PartySubTypeID="3">
+        <Feature ID="11" FeatureTypeID="345">
+          <FeatureVersion ID="21" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2</VersionDetail>
+          </FeatureVersion>
+        </Feature>
+      </Profile>
+    </DistinctParty>
+  </DistinctParties>
+  <SanctionsEntries>
+    <SanctionsEntry ID="9001" ProfileID="9001" ListID="1550">
+      <SanctionsMeasure ID="1" SanctionsTypeID="1705">
+        <Comment />
+      </SanctionsMeasure>
+      <SanctionsMeasure ID="2" SanctionsTypeID="1">
+        <Comment>SDGT</Comment>
+      </SanctionsMeasure>
+      <SanctionsMeasure ID="3" SanctionsTypeID="1">
+        <Comment>CYBER2</Comment>
+      </SanctionsMeasure>
+    </SanctionsEntry>
+    <SanctionsEntry ID="9002" ProfileID="9002" ListID="1550">
+      <SanctionsMeasure ID="4" SanctionsTypeID="1">
+        <Comment>IFSR</Comment>
+      </SanctionsMeasure>
+    </SanctionsEntry>
+    <SanctionsEntry ID="9003" ProfileID="9003" ListID="1550">
+      <SanctionsMeasure ID="5" SanctionsTypeID="1705">
+        <Comment>not a programme</Comment>
+      </SanctionsMeasure>
+    </SanctionsEntry>
+    <SanctionsEntry ID="9004" ProfileID="9004" ListID="1550">
+      <SanctionsMeasure ID="6" SanctionsTypeID="1">
+        <Comment>TCO</Comment>
+      </SanctionsMeasure>
+      <SanctionsMeasure ID="7" SanctionsTypeID="1">
+        <Comment>TCO</Comment>
+      </SanctionsMeasure>
+    </SanctionsEntry>
+  </SanctionsEntries>
+</Sanctions>

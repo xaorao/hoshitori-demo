@@ -1,0 +1,10 @@
+{
+  "name": "hoshitori-verifier",
+  "version": "0.0.1",
+  "description": "Independent offline verifier for Hoshitori records (second implementation; no dependencies).",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "bin": { "hoshitori-verify": "bin/verify_bundle.mjs" },
+  "scripts": { "test": "node --test test/*.test.mjs" }
+}

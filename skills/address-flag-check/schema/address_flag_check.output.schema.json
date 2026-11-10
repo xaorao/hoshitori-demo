@@ -1,0 +1,419 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "type": "string"
+    },
+    "availability": {
+      "additionalProperties": {
+        "enum": [
+          "available",
+          "stale",
+          "partial",
+          "unavailable",
+          "not_covered",
+          "not_requested"
+        ]
+      },
+      "type": "object"
+    },
+    "data": {
+      "properties": {
+        "address": {
+          "required": [
+            "normalized",
+            "display",
+            "chain",
+            "format",
+            "checksum"
+          ],
+          "type": "object"
+        },
+        "chain_facts": {
+          "properties": {
+            "reason": {
+              "enum": [
+                "timeout",
+                "rate_limited",
+                "server_error",
+                "network_error",
+                "bad_response",
+                "list_not_loaded",
+                "cooling_down",
+                "budget_exhausted",
+                "tls_error",
+                null
+              ]
+            },
+            "state": {
+              "enum": [
+                "observed",
+                "unavailable",
+                "not_requested",
+                "not_covered"
+              ]
+            }
+          },
+          "required": [
+            "state",
+            "chain"
+          ],
+          "type": "object"
+        },
+        "checks": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "block": {
+                "required": [
+                  "chain",
+                  "number",
+                  "age_seconds",
+                  "pinned"
+                ],
+                "type": [
+                  "object",
+                  "null"
+                ]
+              },
+              "entries": {
+                "items": {
+                  "properties": {
+                    "entry_id": {
+                      "type": "string"
+                    },
+                    "family": {
+                      "type": "string"
+                    },
+                    "format_ok": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "label": {
+                      "type": "string"
+                    },
+                    "party_type": {
+                      "enum": [
+                        "individual",
+                        "entity",
+                        "transport",
+                        "other"
+                      ]
+                    },
+                    "programs": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    "published_string": {
+                      "type": "string"
+                    },
+                    "reliability": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "entry_id",
+                    "party_type",
+                    "programs",
+                    "label",
+                    "published_string",
+                    "family",
+                    "format_ok",
+                    "reliability"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "entry": {
+                "anyOf": [
+                  {
+                    "properties": {
+                      "entry_id": {
+                        "type": "string"
+                      },
+                      "family": {
+                        "type": "string"
+                      },
+                      "format_ok": {
+                        "type": [
+                          "boolean",
+                          "null"
+                        ]
+                      },
+                      "label": {
+                        "type": "string"
+                      },
+                      "party_type": {
+                        "enum": [
+                          "individual",
+                          "entity",
+                          "transport",
+                          "other"
+                        ]
+                      },
+                      "programs": {
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "published_string": {
+                        "type": "string"
+                      },
+                      "reliability": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "entry_id",
+                      "party_type",
+                      "programs",
+                      "label",
+                      "published_string",
+                      "family",
+                      "format_ok",
+                      "reliability"
+                    ],
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "kind": {
+                "enum": [
+                  "sanctions_list",
+                  "issuer_freeze"
+                ]
+              },
+              "list": {
+                "required": [
+                  "name",
+                  "issued",
+                  "issued_age_days",
+                  "confirmed_current_age_seconds",
+                  "max_age_hours",
+                  "sha256",
+                  "address_strings",
+                  "copy"
+                ],
+                "type": [
+                  "object",
+                  "null"
+                ]
+              },
+              "raw_value": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "reason": {
+                "enum": [
+                  "timeout",
+                  "rate_limited",
+                  "server_error",
+                  "network_error",
+                  "bad_response",
+                  "list_not_loaded",
+                  "cooling_down",
+                  "budget_exhausted",
+                  "tls_error",
+                  null
+                ]
+              },
+              "source_id": {
+                "enum": [
+                  "ofac_sdn",
+                  "usdt_freeze_ethereum",
+                  "usdc_freeze_ethereum",
+                  "usdt_freeze_tron"
+                ]
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "stale": {
+                "type": "boolean"
+              },
+              "state": {
+                "enum": [
+                  "listed",
+                  "not_listed",
+                  "unavailable"
+                ]
+              }
+            },
+            "required": [
+              "source_id",
+              "kind",
+              "state",
+              "stale",
+              "list",
+              "block",
+              "entry",
+              "entries",
+              "raw_value",
+              "reason",
+              "source_url"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "counts": {
+          "required": [
+            "in_scope",
+            "listed",
+            "not_listed",
+            "stale",
+            "unavailable"
+          ],
+          "type": "object"
+        },
+        "not_covered": {
+          "items": {
+            "properties": {
+              "check": {
+                "enum": [
+                  "ofac_sdn",
+                  "usdt_freeze",
+                  "usdc_freeze",
+                  "chain_facts"
+                ]
+              },
+              "reason": {
+                "enum": [
+                  "not_available_on_chain",
+                  "not_requested"
+                ]
+              }
+            },
+            "required": [
+              "check",
+              "reason"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "sent_to": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "source_calls": {
+          "items": {
+            "required": [
+              "source",
+              "url",
+              "method",
+              "attempt",
+              "http_status",
+              "latency_ms",
+              "bytes",
+              "sha256",
+              "fetched_at",
+              "error_kind"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "verdict": {
+          "enum": [
+            "flagged",
+            "no_flag_found",
+            "incomplete",
+            null
+          ]
+        }
+      },
+      "required": [
+        "address",
+        "verdict",
+        "counts",
+        "checks",
+        "not_covered",
+        "chain_facts",
+        "sent_to",
+        "source_calls"
+      ],
+      "type": "object"
+    },
+    "data_mode": {
+      "enum": [
+        "live",
+        "mixed",
+        "simulated",
+        "unknown"
+      ]
+    },
+    "request": {
+      "type": "object"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "ok",
+        "partial",
+        "unavailable"
+      ]
+    },
+    "summary": {
+      "properties": {
+        "headline": {
+          "type": "string"
+        },
+        "key_points": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "headline",
+        "key_points"
+      ],
+      "type": "object"
+    },
+    "tool": {
+      "const": "address_flag_check"
+    },
+    "warnings": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "tool",
+    "status",
+    "data_mode",
+    "as_of",
+    "request",
+    "data",
+    "summary",
+    "availability",
+    "warnings"
+  ],
+  "type": "object"
+}

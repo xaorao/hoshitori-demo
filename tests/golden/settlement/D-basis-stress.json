@@ -1,0 +1,78 @@
+{
+ "basis": "0.0031",
+ "expected": {
+  "contract": "D",
+  "flags": [
+   "BASIS_STRESS"
+  ],
+  "outcome": "1",
+  "outcome_price": "101.00",
+  "p0": "100.00",
+  "reason": null,
+  "state": "SETTLED",
+  "touch_open_ms": null
+ },
+ "finer": {},
+ "forecast": {
+  "forecast_id": "f-D-basis-stress",
+  "horizon_ms": 3600000,
+  "origin_ms": 1793268120000,
+  "quote_class": "USDT"
+ },
+ "id": "D-basis-stress",
+ "kind": "directional",
+ "note": "0.31 percent marks the forecast BASIS_STRESS and shows it; the outcome is unchanged.",
+ "pair": {
+  "pair_id": "A",
+  "primary": {
+   "bars": [
+    [
+     1793268060000,
+     "100.00",
+     "100.00",
+     "100.00",
+     "100.00"
+    ],
+    [
+     1793271660000,
+     "101.00",
+     "101.00",
+     "101.00",
+     "101.00"
+    ]
+   ],
+   "instrument": "BTCUSDT",
+   "multiplier": "1",
+   "quote_class": "USDT",
+   "server_time_ms": 1793271840000,
+   "tick": "0.01",
+   "venue": "binance-spot"
+  },
+  "second": {
+   "bars": [
+    [
+     1793268060000,
+     "100.00",
+     "100.00",
+     "100.00",
+     "100.00"
+    ],
+    [
+     1793271660000,
+     "101.00",
+     "101.00",
+     "101.00",
+     "101.00"
+    ]
+   ],
+   "instrument": "BTC-USDT",
+   "multiplier": "1",
+   "quote_class": "USDT",
+   "server_time_ms": 1793271840000,
+   "tick": "0.01",
+   "venue": "okx"
+  }
+ },
+ "retries_exhausted": false,
+ "section": "7"
+}

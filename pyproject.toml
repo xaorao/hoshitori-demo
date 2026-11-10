@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hoshitori"
+version = "0.0.1"
+description = "Hoshitori: a forward-only, independently time-stamped record of market research decisions."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+dependencies = [
+    "cryptography>=43",
+    "asn1crypto>=1.5",
+]
+
+[project.scripts]
+hoshitori-verify = "hoshitori.cli:main"
+hoshitori-league = "hoshitori.league_cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "hypothesis>=6.100", "ruff==0.17.3", "mypy==2.4.1"]  # exact tool versions, so formatting and type results are reproducible
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q -ra -m 'not slow and not live'"
+filterwarnings = [
+    # cryptography warns about a malformed country attribute in some real authorities' certificates; the data is not ours to fix
+    "ignore:Attribute's length must be:UserWarning",
+    # the tests build certificates with serial numbers RFC 5280 forbids, to show that both verifiers refuse them
+    "ignore:Parsed a serial number which wasn't positive:cryptography.utils.CryptographyDeprecationWarning",
+]
+markers = [
+    "slow: long-running rounds (kill and restart, large property runs); run with -m slow",
+    "live: calls a real network service; never part of the offline suite",
+]
+
+[tool.ruff]
+line-length = 140
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S", "C4", "SIM", "RUF"]
+ignore = ["S101"]  # assert is the test idiom
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S105", "S106", "S108", "S311", "E501", "S603"]
+"web/tools/**" = ["E501", "B905"]  # the browser drivers hold long JavaScript expressions as strings, and run under the system Python 3.9, which has no zip(strict=)
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+files = ["src/hoshitori", "scripts"]
+
+[[tool.mypy.overrides]]
+module = ["tests", "tests.*"]
+ignore_errors = true  # test helpers are reached through imports from scripts; they are not part of the checked set
+
+[[tool.mypy.overrides]]
+module = ["indicator_condition_check", "indicator_condition_check.*"]
+ignore_missing_imports = true  # an optional skill: installed here or not, the import is guarded at run time
+
+[[tool.mypy.overrides]]
+module = ["hoshitori.lab"]
+warn_unused_ignores = false  # the guarded import above is flagged only where the skill is installed
+
+[[tool.mypy.overrides]]
+module = ["playwright", "playwright.*"]
+ignore_missing_imports = true  # a test and document tool, installed separately (see NOTICE.md), never a dependency of the package
+
+[[tool.mypy.overrides]]
+module = ["asn1crypto", "asn1crypto.*"]
+ignore_missing_imports = true  # asn1crypto ships no type information

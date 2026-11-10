@@ -1,0 +1,10 @@
+{
+  "name": "hoshitori-settlement",
+  "version": "0.0.1",
+  "description": "Second implementation of the settlement rules (contracts D and B), written in another language from the contract text; no dependencies.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "bin": { "hoshitori-settle": "bin/answer.mjs" },
+  "scripts": { "test": "node --test test/*.test.mjs" }
+}

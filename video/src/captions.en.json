@@ -1,0 +1,505 @@
+{
+ "main": [
+  {
+   "beat": "s0.call",
+   "start": 0.0,
+   "end": 1.9,
+   "lines": [
+    "A real call from the record."
+   ]
+  },
+  {
+   "beat": "s0.seal",
+   "start": 2.0,
+   "end": 3.5,
+   "lines": [
+    "Sealed by two independent",
+    "time-stamp authorities."
+   ]
+  },
+  {
+   "beat": "s0.open",
+   "start": 3.6,
+   "end": 4.9,
+   "lines": [
+    "Outcome unknown."
+   ]
+  },
+  {
+   "beat": "s0.name",
+   "start": 5.0,
+   "end": 5.9,
+   "lines": [
+    "Hoshitori"
+   ]
+  },
+  {
+   "beat": "s1.claim",
+   "start": 6.0,
+   "end": 8.4,
+   "lines": [
+    "A call usually arrives",
+    "as a screenshot."
+   ]
+  },
+  {
+   "beat": "s1.three",
+   "start": 8.5,
+   "end": 11.4,
+   "lines": [
+    "Three questions a screenshot",
+    "cannot answer."
+   ]
+  },
+  {
+   "beat": "s1.promise",
+   "start": 11.5,
+   "end": 13.9,
+   "lines": [
+    "The promise, in the product's words."
+   ]
+  },
+  {
+   "beat": "s2.loop",
+   "start": 14.0,
+   "end": 16.9,
+   "lines": [
+    "Five steps, every hour."
+   ]
+  },
+  {
+   "beat": "s2.times",
+   "start": 17.0,
+   "end": 21.9,
+   "lines": [
+    "Times from one real cycle."
+   ]
+  },
+  {
+   "beat": "s2.practice",
+   "start": 22.0,
+   "end": 23.9,
+   "lines": [
+    "Nothing is traded.",
+    "Every call is practice."
+   ]
+  },
+  {
+   "beat": "s2.tracks",
+   "start": 24.0,
+   "end": 25.9,
+   "lines": [
+    "Three tracks, one record."
+   ]
+  },
+  {
+   "beat": "s3.kicker",
+   "start": 26.0,
+   "end": 26.9,
+   "lines": [
+    "Track one: autonomous agents."
+   ]
+  },
+  {
+   "beat": "s3.head",
+   "start": 27.0,
+   "end": 29.9,
+   "lines": [
+    "One call's receipt."
+   ]
+  },
+  {
+   "beat": "s3.read",
+   "start": 30.0,
+   "end": 32.9,
+   "lines": [
+    "What the agent read, by digest.",
+    "Exchange data is kept private."
+   ]
+  },
+  {
+   "beat": "s3.prove",
+   "start": 33.0,
+   "end": 36.4,
+   "lines": [
+    "The call names its own kill conditions",
+    "before the hour starts."
+   ]
+  },
+  {
+   "beat": "s3.model",
+   "start": 36.5,
+   "end": 39.9,
+   "lines": [
+    "A gate refuses numbers the",
+    "evidence does not hold."
+   ]
+  },
+  {
+   "beat": "s3.disagree",
+   "start": 40.0,
+   "end": 42.4,
+   "lines": [
+    "Same evidence, two readings,",
+    "both on the record."
+   ]
+  },
+  {
+   "beat": "s3.snapshot",
+   "start": 42.5,
+   "end": 43.9,
+   "lines": [
+    "One frozen snapshot, no peeking."
+   ]
+  },
+  {
+   "beat": "s4.seal",
+   "start": 44.0,
+   "end": 47.9,
+   "lines": [
+    "A batch is signed into a hash-chained",
+    "log, then time-stamped by two operators."
+   ]
+  },
+  {
+   "beat": "s4.verify",
+   "start": 48.0,
+   "end": 50.9,
+   "lines": [
+    "Anyone can check a cycle in the browser,",
+    "against a root they bring themselves."
+   ]
+  },
+  {
+   "beat": "s4.logs",
+   "start": 51.0,
+   "end": 54.4,
+   "lines": [
+    "Two independent verifiers,",
+    "Python and Node, agree."
+   ]
+  },
+  {
+   "beat": "s4.forged",
+   "start": 54.5,
+   "end": 57.9,
+   "lines": [
+    "One digit edited, hashes rebuilt,",
+    "re-signed: the time-stamps refuse it."
+   ]
+  },
+  {
+   "beat": "s5.settle",
+   "start": 58.0,
+   "end": 61.9,
+   "lines": [
+    "Settled on real one-minute bars",
+    "from two exchanges. The miss stays."
+   ]
+  },
+  {
+   "beat": "s5.record",
+   "start": 62.0,
+   "end": 64.9,
+   "lines": [
+    "Counts, not a ranking. A score appears",
+    "only with how many calls are behind it."
+   ]
+  },
+  {
+   "beat": "s5.compare",
+   "start": 65.0,
+   "end": 67.9,
+   "lines": [
+    "Where the record is too short,",
+    "it says so instead of ranking."
+   ]
+  },
+  {
+   "beat": "s6.kicker",
+   "start": 68.0,
+   "end": 68.9,
+   "lines": [
+    "Track two: dashboards and interfaces."
+   ]
+  },
+  {
+   "beat": "s6.top",
+   "start": 69.0,
+   "end": 71.9,
+   "lines": [
+    "What changed and why, in one screen."
+   ]
+  },
+  {
+   "beat": "s6.changes",
+   "start": 72.0,
+   "end": 75.9,
+   "lines": [
+    "Flips first, then settled against,",
+    "stopped, settled as said, then moves."
+   ]
+  },
+  {
+   "beat": "s6.keyboard",
+   "start": 76.0,
+   "end": 79.9,
+   "lines": [
+    "Keyboard, forced colours, reduced motion",
+    "and phone layouts are all tested."
+   ]
+  },
+  {
+   "beat": "s6.phones",
+   "start": 80.0,
+   "end": 82.9,
+   "lines": [
+    "Each screen has a measured word budget."
+   ]
+  },
+  {
+   "beat": "s6.judges",
+   "start": 83.0,
+   "end": 84.9,
+   "lines": [
+    "A page that says where each rubric line",
+    "is checked, and where evidence stops."
+   ]
+  },
+  {
+   "beat": "s6.stop",
+   "start": 85.0,
+   "end": 85.9,
+   "lines": [
+    "{secs} seconds, three cards, one action."
+   ]
+  },
+  {
+   "beat": "s7.claim",
+   "start": 86.0,
+   "end": 88.4,
+   "lines": [
+    "A source goes down: the record says so."
+   ]
+  },
+  {
+   "beat": "s7.drills",
+   "start": 88.5,
+   "end": 93.4,
+   "lines": [
+    "{drills} sandbox drills on recorded data:",
+    "dead exchange, stale data, kill. All held."
+   ]
+  },
+  {
+   "beat": "s7.missed",
+   "start": 93.5,
+   "end": 96.9,
+   "lines": [
+    "The record shows its own outage,",
+    "not hidden, not smoothed."
+   ]
+  },
+  {
+   "beat": "s7.never",
+   "start": 97.0,
+   "end": 99.9,
+   "lines": [
+    "A failed read stays a failed read."
+   ]
+  },
+  {
+   "beat": "s8.names",
+   "start": 100.0,
+   "end": 103.4,
+   "lines": [
+    "Seven standalone, read-only skills.",
+    "Standard library only."
+   ]
+  },
+  {
+   "beat": "s8.gap",
+   "start": 103.5,
+   "end": 105.9,
+   "lines": [
+    "The gap: RYO's tools take symbols,",
+    "never an address."
+   ]
+  },
+  {
+   "beat": "s8.address",
+   "start": 106.0,
+   "end": 111.9,
+   "lines": [
+    "It never calls an address safe."
+   ]
+  },
+  {
+   "beat": "s8.envelope",
+   "start": 112.0,
+   "end": 115.4,
+   "lines": [
+    "RYO's own envelope. MCP over stdio",
+    "and HTTP, and a REST route."
+   ]
+  },
+  {
+   "beat": "s8.indicator",
+   "start": 115.5,
+   "end": 117.9,
+   "lines": [
+    "Your own condition, on the last closed",
+    "candle. True, false, or unknown."
+   ]
+  },
+  {
+   "beat": "s9.title",
+   "start": 118.0,
+   "end": 119.4,
+   "lines": [
+    "What this film does not show."
+   ]
+  },
+  {
+   "beat": "s9.lines",
+   "start": 119.5,
+   "end": 126.9,
+   "lines": [
+    "Said on every page, next to",
+    "what was checked."
+   ]
+  },
+  {
+   "beat": "s9.footer",
+   "start": 127.0,
+   "end": 129.9,
+   "lines": [
+    "Every number here was read",
+    "from the record at render time."
+   ]
+  },
+  {
+   "beat": "s10.check",
+   "start": 130.0,
+   "end": 135.9,
+   "lines": [
+    "Re-settle every call from public candles,",
+    "with nothing of ours but the record."
+   ]
+  },
+  {
+   "beat": "s10.close",
+   "start": 136.0,
+   "end": 139.9,
+   "lines": [
+    "Check any call yourself."
+   ]
+  }
+ ],
+ "cut30": [
+  {
+   "beat": "c30.call",
+   "start": 0.0,
+   "end": 3.9,
+   "lines": [
+    "A real call, sealed before its outcome."
+   ]
+  },
+  {
+   "beat": "c30.promise",
+   "start": 4.0,
+   "end": 7.9,
+   "lines": [
+    "The promise, in the product's words."
+   ]
+  },
+  {
+   "beat": "c30.prove",
+   "start": 8.0,
+   "end": 12.9,
+   "lines": [
+    "The call names its kill conditions first."
+   ]
+  },
+  {
+   "beat": "c30.verify",
+   "start": 13.0,
+   "end": 17.9,
+   "lines": [
+    "Two verifiers agree.",
+    "One forged digit is refused."
+   ]
+  },
+  {
+   "beat": "c30.settle",
+   "start": 18.0,
+   "end": 21.9,
+   "lines": [
+    "Settled on two exchanges.",
+    "The miss stays on the record."
+   ]
+  },
+  {
+   "beat": "c30.today",
+   "start": 22.0,
+   "end": 25.9,
+   "lines": [
+    "What changed, ranked, in one screen.",
+    "Keyboard and phone."
+   ]
+  },
+  {
+   "beat": "c30.skills",
+   "start": 26.0,
+   "end": 28.9,
+   "lines": [
+    "Seven skills RYO does not have."
+   ]
+  },
+  {
+   "beat": "c30.close",
+   "start": 29.0,
+   "end": 29.95,
+   "lines": [
+    "Hoshitori"
+   ]
+  }
+ ],
+ "cut10": [
+  {
+   "beat": "c10.seal",
+   "start": 0.0,
+   "end": 2.4,
+   "lines": [
+    "Sealed before the outcome."
+   ]
+  },
+  {
+   "beat": "c10.stamps",
+   "start": 2.5,
+   "end": 4.9,
+   "lines": [
+    "Two independent time-stamps.",
+    "Two verifiers."
+   ]
+  },
+  {
+   "beat": "c10.settle",
+   "start": 5.0,
+   "end": 7.4,
+   "lines": [
+    "Settled on real prices.",
+    "The miss stays."
+   ]
+  },
+  {
+   "beat": "c10.close",
+   "start": 7.5,
+   "end": 9.9,
+   "lines": [
+    "Agents forecast crypto in public.",
+    "Check any call yourself."
+   ]
+  }
+ ]
+}

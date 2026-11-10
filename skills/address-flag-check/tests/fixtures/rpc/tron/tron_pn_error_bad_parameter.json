@@ -1,0 +1,20 @@
+{
+ "label": "recorded by B5A from https://tron-rpc.publicnode.com/wallet/triggerconstantcontract",
+ "source_url": "https://tron-rpc.publicnode.com/wallet/triggerconstantcontract",
+ "method": "POST",
+ "request_body": {
+  "owner_address": "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+  "contract_address": "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+  "function_selector": "isBlackListed(address)",
+  "parameter": "zz",
+  "visible": true
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json",
+  "date": "Sun, 01 Nov 2026 08:25:44 GMT"
+ },
+ "body_sha256": "ab904225c06954f373925e67c8498fc0d90d2144ff340a6ec115001077c41e95",
+ "body_bytes": 178,
+ "body": "{\"result\":{\"code\":\"OTHER_ERROR\",\"message\":\"class org.bouncycastle.util.encoders.DecoderException : exception decoding Hex string: invalid characters encountered in Hex string\"}}\n"
+}

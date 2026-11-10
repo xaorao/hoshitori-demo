@@ -1,0 +1,181 @@
+{
+  "as_of": "2026-11-01T08:24:36Z",
+  "availability": {
+    "chain_facts": "unavailable",
+    "issuer_freeze": "unavailable",
+    "sanctions_list": "unavailable"
+  },
+  "data": {
+    "address": {
+      "chain": "ethereum",
+      "checksum": "eip55_valid",
+      "display": "0x000000000000000000000000000000000000dEaD",
+      "format": "evm_hex",
+      "normalized": "0x000000000000000000000000000000000000dead"
+    },
+    "chain_facts": {
+      "chain": "ethereum",
+      "reason": "network_error",
+      "source_url": "https://ethereum-rpc.publicnode.com",
+      "state": "unavailable"
+    },
+    "checks": [
+      {
+        "block": null,
+        "entries": [],
+        "entry": null,
+        "kind": "sanctions_list",
+        "list": null,
+        "raw_value": null,
+        "reason": "network_error",
+        "source_id": "ofac_sdn",
+        "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN_ADVANCED.ZIP",
+        "stale": false,
+        "state": "unavailable"
+      },
+      {
+        "block": null,
+        "entries": [],
+        "entry": null,
+        "kind": "issuer_freeze",
+        "list": null,
+        "raw_value": null,
+        "reason": "network_error",
+        "source_id": "usdt_freeze_ethereum",
+        "source_url": "https://ethereum-rpc.publicnode.com",
+        "stale": false,
+        "state": "unavailable"
+      },
+      {
+        "block": null,
+        "entries": [],
+        "entry": null,
+        "kind": "issuer_freeze",
+        "list": null,
+        "raw_value": null,
+        "reason": "network_error",
+        "source_id": "usdc_freeze_ethereum",
+        "source_url": "https://ethereum-rpc.publicnode.com",
+        "stale": false,
+        "state": "unavailable"
+      }
+    ],
+    "counts": {
+      "in_scope": 3,
+      "listed": 0,
+      "not_listed": 0,
+      "stale": 0,
+      "unavailable": 3
+    },
+    "not_covered": [],
+    "sent_to": [],
+    "source_calls": [
+      {
+        "attempt": 1,
+        "bytes": 0,
+        "error_kind": "network_error",
+        "fetched_at": "2026-11-01T08:24:36Z",
+        "http_status": null,
+        "latency_ms": 0,
+        "method": "GET",
+        "sha256": null,
+        "source": "ofac_sdn",
+        "url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN_ADVANCED.ZIP"
+      },
+      {
+        "attempt": 2,
+        "bytes": 0,
+        "error_kind": "network_error",
+        "fetched_at": "2026-11-01T08:24:36Z",
+        "http_status": null,
+        "latency_ms": 0,
+        "method": "GET",
+        "sha256": null,
+        "source": "ofac_sdn",
+        "url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN_ADVANCED.ZIP"
+      },
+      {
+        "attempt": 3,
+        "bytes": 0,
+        "error_kind": "network_error",
+        "fetched_at": "2026-11-01T08:24:37Z",
+        "http_status": null,
+        "latency_ms": 0,
+        "method": "GET",
+        "sha256": null,
+        "source": "ofac_sdn",
+        "url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN_ADVANCED.ZIP"
+      },
+      {
+        "attempt": 1,
+        "bytes": 0,
+        "error_kind": "network_error",
+        "fetched_at": "2026-11-01T08:24:37Z",
+        "http_status": null,
+        "latency_ms": 0,
+        "method": "POST",
+        "sha256": null,
+        "source": "evm_rpc_ethereum",
+        "url": "https://ethereum-rpc.publicnode.com"
+      },
+      {
+        "attempt": 2,
+        "bytes": 0,
+        "error_kind": "network_error",
+        "fetched_at": "2026-11-01T08:24:38Z",
+        "http_status": null,
+        "latency_ms": 0,
+        "method": "POST",
+        "sha256": null,
+        "source": "evm_rpc_ethereum",
+        "url": "https://ethereum-rpc.publicnode.com"
+      },
+      {
+        "attempt": 3,
+        "bytes": 0,
+        "error_kind": "network_error",
+        "fetched_at": "2026-11-01T08:24:39Z",
+        "http_status": null,
+        "latency_ms": 0,
+        "method": "POST",
+        "sha256": null,
+        "source": "evm_rpc_ethereum",
+        "url": "https://ethereum-rpc.publicnode.com"
+      }
+    ],
+    "verdict": null
+  },
+  "data_mode": "unknown",
+  "request": {
+    "address": "0x000000000000000000000000000000000000dEaD",
+    "chain": "ethereum",
+    "checks": [
+      "ofac_sdn",
+      "usdt_freeze",
+      "usdc_freeze",
+      "chain_facts"
+    ],
+    "defaults_applied": [
+      "checks",
+      "max_list_age_hours"
+    ],
+    "max_list_age_hours": 24,
+    "notes": []
+  },
+  "schema_version": "1.0",
+  "status": "unavailable",
+  "summary": {
+    "headline": "0x0000…dEaD on ethereum: no source could be checked (OFAC SDN list: the source could not be reached; USDT freeze: the source could not be reached; USDC freeze: the source could not be reached). No verdict.",
+    "key_points": [
+      "OFAC SDN list: not checked (the source could not be reached).",
+      "Tether USDT contract on ethereum: not checked (the source could not be reached).",
+      "Circle USDC contract on ethereum: not checked (the source could not be reached).",
+      "Chain facts on ethereum: not available (the source could not be reached)."
+    ]
+  },
+  "tool": "address_flag_check",
+  "warnings": [
+    "This tool reports published lists and issuer freezes only. It does not analyse transactions, counterparties or behaviour.",
+    "Answers came from an injected source (recorded or test data), not a live fetch in this call; data_mode is therefore unknown."
+  ]
+}

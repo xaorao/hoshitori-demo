@@ -1,0 +1,44 @@
+{
+ "1.4.3, 1.4.11": [
+  "page_test"
+ ],
+ "1.4.10": [
+  "page_test"
+ ],
+ "1.4.13": {
+  "verdict": "NOT TESTED",
+  "reason": "the pages have no tooltip and no content that appears only on hover or focus (a source search found none), so nothing fails today; no test would catch one added later"
+ },
+ "2.1.1, 2.1.2, 2.1.4": [
+  "keyboard_walk",
+  "skip_link"
+ ],
+ "2.2.2": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "no content on any page updates by itself (a source search found no timer); the live check results of an on-demand investigation are not built"
+ },
+ "2.4.11": [
+  "focus_covered"
+ ],
+ "2.5.7": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "no page has a drag action (a source search found none)"
+ },
+ "2.5.8": [
+  "small_targets"
+ ],
+ "3.2.6": [
+  "nav_inconsistencies"
+ ],
+ "3.3.7": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the only entry on any page is one trusted-root file chosen on the Verify page (a source search found no other input), so nothing is asked twice"
+ },
+ "3.3.8": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the product has no sign-in and no authentication step"
+ },
+ "4.1.3": [
+  "verify_flow_test"
+ ]
+}

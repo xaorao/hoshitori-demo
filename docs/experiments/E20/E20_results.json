@@ -1,0 +1,123 @@
+{
+ "NAIVE": {
+  "before_append": {
+   "rounds": 60,
+   "rounds_with_any_violation": 0,
+   "duplicate_lines_in_segment": 0,
+   "seq_not_gapless": 0,
+   "leaf_mismatch": 0,
+   "torn_tail": 0,
+   "index_differs_from_segment": 0,
+   "outbox_pending": 0
+  },
+  "mid_line": {
+   "rounds": 60,
+   "rounds_with_any_violation": 60,
+   "duplicate_lines_in_segment": 0,
+   "seq_not_gapless": 54,
+   "leaf_mismatch": 60,
+   "torn_tail": 0,
+   "index_differs_from_segment": 60,
+   "outbox_pending": 0
+  },
+  "after_write_before_fsync": {
+   "rounds": 60,
+   "rounds_with_any_violation": 60,
+   "duplicate_lines_in_segment": 60,
+   "seq_not_gapless": 60,
+   "leaf_mismatch": 0,
+   "torn_tail": 0,
+   "index_differs_from_segment": 60,
+   "outbox_pending": 0
+  },
+  "after_fsync_before_index": {
+   "rounds": 60,
+   "rounds_with_any_violation": 60,
+   "duplicate_lines_in_segment": 60,
+   "seq_not_gapless": 60,
+   "leaf_mismatch": 0,
+   "torn_tail": 0,
+   "index_differs_from_segment": 60,
+   "outbox_pending": 0
+  },
+  "after_index_commit": {
+   "rounds": 60,
+   "rounds_with_any_violation": 0,
+   "duplicate_lines_in_segment": 0,
+   "seq_not_gapless": 0,
+   "leaf_mismatch": 0,
+   "torn_tail": 0,
+   "index_differs_from_segment": 0,
+   "outbox_pending": 0
+  }
+ },
+ "RECONCILING": {
+  "before_append": {
+   "rounds": 60,
+   "rounds_with_any_violation": 0,
+   "duplicate_lines_in_segment": 0,
+   "seq_not_gapless": 0,
+   "leaf_mismatch": 0,
+   "torn_tail": 0,
+   "index_differs_from_segment": 0,
+   "outbox_pending": 0
+  },
+  "mid_line": {
+   "rounds": 60,
+   "rounds_with_any_violation": 0,
+   "duplicate_lines_in_segment": 0,
+   "seq_not_gapless": 0,
+   "leaf_mismatch": 0,
+   "torn_tail": 0,
+   "index_differs_from_segment": 0,
+   "outbox_pending": 0
+  },
+  "after_write_before_fsync": {
+   "rounds": 60,
+   "rounds_with_any_violation": 0,
+   "duplicate_lines_in_segment": 0,
+   "seq_not_gapless": 0,
+   "leaf_mismatch": 0,
+   "torn_tail": 0,
+   "index_differs_from_segment": 0,
+   "outbox_pending": 0
+  },
+  "after_fsync_before_index": {
+   "rounds": 60,
+   "rounds_with_any_violation": 0,
+   "duplicate_lines_in_segment": 0,
+   "seq_not_gapless": 0,
+   "leaf_mismatch": 0,
+   "torn_tail": 0,
+   "index_differs_from_segment": 0,
+   "outbox_pending": 0
+  },
+  "after_index_commit": {
+   "rounds": 60,
+   "rounds_with_any_violation": 0,
+   "duplicate_lines_in_segment": 0,
+   "seq_not_gapless": 0,
+   "leaf_mismatch": 0,
+   "torn_tail": 0,
+   "index_differs_from_segment": 0,
+   "outbox_pending": 0
+  }
+ },
+ "file_level_simulations_RECONCILING": {
+  "torn segment tail (index rows still present)": {
+   "rounds": 60,
+   "rounds_with_violation": 0,
+   "rounds_where_a_record_was_lost_from_the_final_segment": 0
+  },
+  "last index commits lost (segment intact)": {
+   "rounds": 60,
+   "rounds_with_violation": 0,
+   "rounds_where_a_record_was_lost_from_the_final_segment": 0
+  },
+  "byte flipped in the last line": {
+   "rounds": 60,
+   "rounds_with_violation": 0,
+   "rounds_where_a_record_was_lost_from_the_final_segment": 0
+  }
+ }
+}

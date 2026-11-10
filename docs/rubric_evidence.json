@@ -1,0 +1,14 @@
+{
+  "Combining sources": ["collect_checks", "snapshot_checks", "ryo_collect_checks", "desk_checks.check_checks"],
+  "Coping with failure": ["drill_checks", "recovery_checks", "gateway_checks", "breaker_checks", "test_sigkill_recovery"],
+  "Real thinking": ["desk_checks", "desk_gates_checks", "falsify_checks"],
+  "Cause and effect": ["intervention_checks", "rules_sensitivity_checks", "model_challenge_checks"],
+  "Repeatability": ["verify_checks", "test_verify_differential", "replay_checks"],
+  "Advanced execution": ["league_checks", "cycle_checks", "lifecycle_checks", "test_e2e_league"],
+  "Easy to read": ["page_test", "view_models_checks", "labels_checks"],
+  "Sorted by importance": ["view_models_checks.check_today", "page_test"],
+  "Works for everyone": ["page_test", "states_test"],
+  "Fills a gap": ["test_cli_and_fixtures"],
+  "Follows the spec": ["test_skill_catalogue_style"],
+  "Could we use it": ["test_cli_and_fixtures", "test_skill_catalogue_style"]
+}

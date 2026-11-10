@@ -1,0 +1,69 @@
+{
+ "basis": null,
+ "expected": {
+  "error": "invalid"
+ },
+ "finer": {},
+ "forecast": {
+  "forecast_id": "f-E-bad-horizon",
+  "horizon_ms": 1800000,
+  "origin_ms": 1793268120000,
+  "quote_class": "USDT"
+ },
+ "id": "E-bad-horizon",
+ "kind": "directional",
+ "note": "A horizon under an hour cannot be settled on one-minute candles.",
+ "pair": {
+  "pair_id": "A",
+  "primary": {
+   "bars": [
+    [
+     1793268060000,
+     "100.00",
+     "100.00",
+     "100.00",
+     "100.00"
+    ],
+    [
+     1793269860000,
+     "101.00",
+     "101.00",
+     "101.00",
+     "101.00"
+    ]
+   ],
+   "instrument": "BTCUSDT",
+   "multiplier": "1",
+   "quote_class": "USDT",
+   "server_time_ms": 1793270040000,
+   "tick": "0.01",
+   "venue": "binance-spot"
+  },
+  "second": {
+   "bars": [
+    [
+     1793268060000,
+     "100.00",
+     "100.00",
+     "100.00",
+     "100.00"
+    ],
+    [
+     1793269860000,
+     "101.00",
+     "101.00",
+     "101.00",
+     "101.00"
+    ]
+   ],
+   "instrument": "BTC-USDT",
+   "multiplier": "1",
+   "quote_class": "USDT",
+   "server_time_ms": 1793270040000,
+   "tick": "0.01",
+   "venue": "okx"
+  }
+ },
+ "retries_exhausted": false,
+ "section": "2"
+}

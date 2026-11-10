@@ -1,0 +1,50 @@
+{
+ "FILELOCK": {
+  "schedules": 1500,
+  "schedules_with_a_fork_among_all_released_checkpoints": 1103,
+  "schedules_with_a_fork_among_PUBLISHED_checkpoints": 1103,
+  "schedules_with_a_fork_among_ACCEPTED_checkpoints": 1103,
+  "promotions_refused": 0,
+  "schedules_where_the_replica_became_writer": 1472,
+  "simultaneous_second_promotions_won": 719,
+  "simultaneous_second_promotions_refused": 0,
+  "stale_primary_checkpoints_rejected": "not applicable: the file-lock design has no acceptance rule",
+  "stale_primary_checkpoints_accepted_as_harmless_prefix": "not applicable: the file-lock design has no acceptance rule"
+ },
+ "FILELOCK+leak": {
+  "schedules": 1500,
+  "schedules_with_a_fork_among_all_released_checkpoints": 1141,
+  "schedules_with_a_fork_among_PUBLISHED_checkpoints": 1103,
+  "schedules_with_a_fork_among_ACCEPTED_checkpoints": 1141,
+  "promotions_refused": 0,
+  "schedules_where_the_replica_became_writer": 1472,
+  "simultaneous_second_promotions_won": 719,
+  "simultaneous_second_promotions_refused": 0,
+  "stale_primary_checkpoints_rejected": "not applicable: the file-lock design has no acceptance rule",
+  "stale_primary_checkpoints_accepted_as_harmless_prefix": "not applicable: the file-lock design has no acceptance rule"
+ },
+ "FENCED": {
+  "schedules": 1500,
+  "schedules_with_a_fork_among_all_released_checkpoints": 0,
+  "schedules_with_a_fork_among_PUBLISHED_checkpoints": 0,
+  "schedules_with_a_fork_among_ACCEPTED_checkpoints": 0,
+  "promotions_refused": 507,
+  "schedules_where_the_replica_became_writer": 1354,
+  "simultaneous_second_promotions_won": 0,
+  "simultaneous_second_promotions_refused": 647,
+  "stale_primary_checkpoints_rejected": 0,
+  "stale_primary_checkpoints_accepted_as_harmless_prefix": 0
+ },
+ "FENCED+leak": {
+  "schedules": 1500,
+  "schedules_with_a_fork_among_all_released_checkpoints": 880,
+  "schedules_with_a_fork_among_PUBLISHED_checkpoints": 0,
+  "schedules_with_a_fork_among_ACCEPTED_checkpoints": 0,
+  "promotions_refused": 507,
+  "schedules_where_the_replica_became_writer": 1354,
+  "simultaneous_second_promotions_won": 0,
+  "simultaneous_second_promotions_refused": 647,
+  "stale_primary_checkpoints_rejected": 3503,
+  "stale_primary_checkpoints_accepted_as_harmless_prefix": 633
+ }
+}

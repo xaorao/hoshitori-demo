@@ -1,0 +1,19 @@
+{
+ "label": "recorded by B5A from https://arbitrum-one-rpc.publicnode.com",
+ "source_url": "https://arbitrum-one-rpc.publicnode.com",
+ "method": "POST",
+ "request_body": {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "eth_chainId",
+  "params": []
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json",
+  "date": "Sun, 01 Nov 2026 08:24:54 GMT"
+ },
+ "body_sha256": "91a950147615d1e67791f1b5fbebdd8e2e76cfcf83d781717b534cfe4eab0d71",
+ "body_bytes": 43,
+ "body": "{\"jsonrpc\":\"2.0\",\"result\":\"0xa4b1\",\"id\":1}\n"
+}

@@ -1,0 +1,657 @@
+{
+ "machine_clock_offset_note": "local clock measured with sntp against time.apple.com at the start of the run (see ledger)",
+ "per_tsa": {
+  "globalsign": {
+   "requests": 12,
+   "http_ok": 12,
+   "py_ok": 12,
+   "openssl_ok": 12,
+   "verifier_disagreements": 0,
+   "rtt_s": [
+    0.222,
+    0.258,
+    0.171,
+    0.173,
+    0.181,
+    0.181,
+    0.17,
+    0.174,
+    0.2,
+    0.175,
+    0.175,
+    0.185
+   ],
+   "excursion_s": [
+    -0.258,
+    -0.553,
+    -0.83,
+    -0.06,
+    -0.294,
+    -0.53,
+    -0.762,
+    0.013,
+    -0.216,
+    -0.444,
+    -0.675,
+    -0.911
+   ],
+   "microsecond_fractions_seen": 0,
+   "accuracy": {
+    "seconds": 1,
+    "millis": null,
+    "micros": null
+   },
+   "policy": "1.3.6.1.4.1.4146.2.3.2.2",
+   "signer_fingerprints": [
+    "832ad72e523fdeac83fa4694bce7c6cc261764882866566588c8adca3a838551"
+   ],
+   "ordering": false,
+   "excursion_summary_s": {
+    "n": 12,
+    "min": -0.911,
+    "median": -0.444,
+    "max": 0.013
+   },
+   "rtt_median_s": 0.181,
+   "disagreement_examples": []
+  },
+  "swisssign": {
+   "requests": 12,
+   "http_ok": 12,
+   "py_ok": 12,
+   "openssl_ok": 12,
+   "verifier_disagreements": 0,
+   "rtt_s": [
+    0.586,
+    0.67,
+    0.643,
+    0.658,
+    0.484,
+    0.651,
+    0.482,
+    0.468,
+    0.48,
+    0.474,
+    0.536,
+    0.532
+   ],
+   "excursion_s": [
+    -0.439,
+    -0.119,
+    0.169,
+    -0.518,
+    -0.145,
+    -0.766,
+    -0.381,
+    0.096,
+    -0.432,
+    0.038,
+    -0.51,
+    -0.086
+   ],
+   "microsecond_fractions_seen": 0,
+   "accuracy": {
+    "seconds": null,
+    "millis": 500,
+    "micros": null
+   },
+   "policy": "2.16.756.1.89.1.1.3.5",
+   "signer_fingerprints": [
+    "d81b7ad55e61c2b04a67bb28c6b490c06d32c5f937c2ed49ce875f850b639312"
+   ],
+   "ordering": false,
+   "excursion_summary_s": {
+    "n": 12,
+    "min": -0.766,
+    "median": -0.145,
+    "max": 0.169
+   },
+   "rtt_median_s": 0.536,
+   "disagreement_examples": []
+  },
+  "aimoda": {
+   "requests": 4,
+   "http_ok": 4,
+   "py_ok": 4,
+   "openssl_ok": 4,
+   "verifier_disagreements": 0,
+   "rtt_s": [
+    0.583,
+    0.452,
+    0.438,
+    0.451
+   ],
+   "excursion_s": [
+    -0.442,
+    -0.01,
+    -0.509,
+    -0.012
+   ],
+   "microsecond_fractions_seen": 0,
+   "accuracy": null,
+   "policy": "2.16.840.1.114412.7.1",
+   "signer_fingerprints": [
+    "2da09da7f4131f9fe72db6c5e6e9c9656755af043f1ea742cc0d2120e141ebfc"
+   ],
+   "ordering": false,
+   "excursion_summary_s": {
+    "n": 4,
+    "min": -0.509,
+    "median": -0.012,
+    "max": -0.01
+   },
+   "rtt_median_s": 0.452,
+   "disagreement_examples": []
+  },
+  "digicert": {
+   "requests": 12,
+   "http_ok": 12,
+   "py_ok": 12,
+   "openssl_ok": 12,
+   "verifier_disagreements": 0,
+   "rtt_s": [
+    0.656,
+    0.647,
+    0.517,
+    0.545,
+    0.526,
+    0.54,
+    0.515,
+    0.531,
+    0.525,
+    0.516,
+    0.542,
+    0.533
+   ],
+   "excursion_s": [
+    -0.476,
+    -0.165,
+    -0.783,
+    -0.359,
+    0.052,
+    -0.537,
+    -0.123,
+    -0.696,
+    -0.273,
+    0.154,
+    -0.43,
+    -0.017
+   ],
+   "microsecond_fractions_seen": 0,
+   "accuracy": null,
+   "policy": "2.16.840.1.114412.7.1",
+   "signer_fingerprints": [
+    "2da09da7f4131f9fe72db6c5e6e9c9656755af043f1ea742cc0d2120e141ebfc"
+   ],
+   "ordering": false,
+   "excursion_summary_s": {
+    "n": 12,
+    "min": -0.783,
+    "median": -0.273,
+    "max": 0.154
+   },
+   "rtt_median_s": 0.533,
+   "disagreement_examples": []
+  },
+  "apple": {
+   "requests": 12,
+   "http_ok": 12,
+   "py_ok": 0,
+   "openssl_ok": 12,
+   "verifier_disagreements": 12,
+   "rtt_s": [
+    0.694,
+    0.61,
+    0.535,
+    0.541,
+    0.551,
+    0.562,
+    0.521,
+    0.536,
+    0.523,
+    0.54,
+    0.525,
+    0.632
+   ],
+   "excursion_s": [
+    -0.497,
+    -0.179,
+    -0.786,
+    -0.367,
+    0.04,
+    -0.558,
+    -0.142,
+    -0.715,
+    -0.284,
+    0.139,
+    -0.431,
+    -0.066
+   ],
+   "microsecond_fractions_seen": 0,
+   "accuracy": {
+    "seconds": 1,
+    "millis": null,
+    "micros": null
+   },
+   "policy": "1.2.3",
+   "signer_fingerprints": [
+    "9a9c7e4279696e5c5b158319b14840e6d35c8f9869e3183709b462f338bedf6a",
+    "ee159bb70898fc37459e374f0f9095bf2761b2b989f64c6f94aab471085377d9"
+   ],
+   "ordering": false,
+   "excursion_summary_s": {
+    "n": 12,
+    "min": -0.786,
+    "median": -0.284,
+    "max": 0.139
+   },
+   "rtt_median_s": 0.541,
+   "disagreement_examples": [
+    {
+     "i": 0,
+     "py": {
+      "ordering": false,
+      "cms_signature_valid": false
+     },
+     "openssl": "Verification: OK\nUsing configuration from /opt/homebrew/etc/openssl@3/openssl.cnf"
+    },
+    {
+     "i": 1,
+     "py": {
+      "ordering": false,
+      "cms_signature_valid": false
+     },
+     "openssl": "Verification: OK\nUsing configuration from /opt/homebrew/etc/openssl@3/openssl.cnf"
+    },
+    {
+     "i": 2,
+     "py": {
+      "ordering": false,
+      "cms_signature_valid": false
+     },
+     "openssl": "Verification: OK\nUsing configuration from /opt/homebrew/etc/openssl@3/openssl.cnf"
+    }
+   ]
+  },
+  "entrust": {
+   "requests": 4,
+   "http_ok": 4,
+   "py_ok": 4,
+   "openssl_ok": 4,
+   "verifier_disagreements": 0,
+   "rtt_s": [
+    1.016,
+    0.517,
+    3.01,
+    3.268
+   ],
+   "excursion_s": [
+    0.343,
+    -0.476,
+    0.705,
+    0.509
+   ],
+   "microsecond_fractions_seen": 0,
+   "accuracy": null,
+   "policy": "1.3.6.1.4.1.6449.2.1.1",
+   "signer_fingerprints": [
+    "d14751ba71cd8883e560166406cf62cd229a5fe91e308d301976feb23ea90156"
+   ],
+   "ordering": false,
+   "excursion_summary_s": {
+    "n": 4,
+    "min": -0.476,
+    "median": 0.509,
+    "max": 0.705
+   },
+   "rtt_median_s": 3.01,
+   "disagreement_examples": []
+  },
+  "freetsa": {
+   "requests": 6,
+   "http_ok": 6,
+   "py_ok": 6,
+   "openssl_ok": 6,
+   "verifier_disagreements": 0,
+   "rtt_s": [
+    1.18,
+    1.06,
+    0.8,
+    1.066,
+    0.786,
+    1.479
+   ],
+   "excursion_s": [
+    -0.734,
+    0.091,
+    0.103,
+    0.114,
+    0.138,
+    -0.046
+   ],
+   "microsecond_fractions_seen": 0,
+   "accuracy": null,
+   "policy": "1.2.3.4.1",
+   "signer_fingerprints": [
+    "32e841a95cc1164101ffde41298ef2fc75c1c4372ef095e88a6bbd47dfb191fc"
+   ],
+   "ordering": true,
+   "excursion_summary_s": {
+    "n": 6,
+    "min": -0.734,
+    "median": 0.103,
+    "max": 0.138
+   },
+   "rtt_median_s": 1.066,
+   "disagreement_examples": []
+  },
+  "sectigo": {
+   "requests": 12,
+   "http_ok": 12,
+   "py_ok": 12,
+   "openssl_ok": 12,
+   "verifier_disagreements": 0,
+   "rtt_s": [
+    1.198,
+    3.428,
+    3.114,
+    2.729,
+    0.366,
+    0.501,
+    0.422,
+    0.723,
+    0.5,
+    0.755,
+    0.807,
+    0.756
+   ],
+   "excursion_s": [
+    -0.741,
+    0.895,
+    0.581,
+    0.611,
+    0.01,
+    -0.466,
+    0.019,
+    -0.611,
+    -0.279,
+    0.039,
+    -0.8,
+    -0.643
+   ],
+   "microsecond_fractions_seen": 0,
+   "accuracy": null,
+   "policy": "1.3.6.1.4.1.6449.2.1.1",
+   "signer_fingerprints": [
+    "d14751ba71cd8883e560166406cf62cd229a5fe91e308d301976feb23ea90156"
+   ],
+   "ordering": false,
+   "excursion_summary_s": {
+    "n": 12,
+    "min": -0.8,
+    "median": 0.01,
+    "max": 0.895
+   },
+   "rtt_median_s": 0.756,
+   "disagreement_examples": []
+  },
+  "certum": {
+   "requests": 12,
+   "http_ok": 12,
+   "py_ok": 12,
+   "openssl_ok": 12,
+   "verifier_disagreements": 0,
+   "rtt_s": [
+    1.2,
+    0.518,
+    0.536,
+    0.504,
+    0.539,
+    0.482,
+    0.471,
+    0.477,
+    0.527,
+    0.544,
+    0.478,
+    0.542
+   ],
+   "excursion_s": [
+    0.256,
+    -0.65,
+    -0.236,
+    -0.813,
+    -0.386,
+    0.05,
+    -0.477,
+    0.003,
+    -0.541,
+    -0.126,
+    -0.693,
+    -0.263
+   ],
+   "microsecond_fractions_seen": 0,
+   "accuracy": {
+    "seconds": 1,
+    "millis": null,
+    "micros": null
+   },
+   "policy": "1.2.616.1.113527.2.5.1.11",
+   "signer_fingerprints": [
+    "85be90e10ad2438d7cc928b6af48b09ab208177cecf8b0126c58d3910525c43c"
+   ],
+   "ordering": false,
+   "excursion_summary_s": {
+    "n": 12,
+    "min": -0.813,
+    "median": -0.263,
+    "max": 0.256
+   },
+   "rtt_median_s": 0.527,
+   "disagreement_examples": []
+  }
+ },
+ "independence": {
+  "same_signer_certificate": [
+   [
+    "aimoda",
+    "digicert"
+   ],
+   [
+    "entrust",
+    "sectigo"
+   ]
+  ],
+  "same_root": [
+   [
+    "aimoda",
+    "digicert"
+   ],
+   [
+    "entrust",
+    "sectigo"
+   ]
+  ]
+ },
+ "hostile": {
+  "cases": 903,
+  "both_reject": 903,
+  "both_accept": 0,
+  "disagree": 0,
+  "accepted_examples": [],
+  "disagreement_examples": [],
+  "by_class_tried_accepted_by_python": {
+   "wrong-digest": [
+    7,
+    0
+   ],
+   "wrong-nonce": [
+    7,
+    0
+   ],
+   "replay-old-token-for-new-query": [
+    7,
+    0
+   ],
+   "truncated": [
+    35,
+    0
+   ],
+   "trailing-garbage": [
+    7,
+    0
+   ],
+   "bit-flip": [
+    840,
+    0
+   ]
+  }
+ },
+ "pinned_roots": [
+  {
+   "name": "aimoda",
+   "subject": "CN=DigiCert Trusted Root G4,OU=www.digicert.com,O=DigiCert Inc,C=US",
+   "fp": "33846b545a49c9be4903c60e01713c1bd4e4ef31ea65cd95d69e62794f30b941",
+   "not_after": "2031-11-09T23:59:59+00:00",
+   "in_macos_system_store": false
+  },
+  {
+   "name": "apple",
+   "subject": "CN=Apple Root CA,OU=Apple Certification Authority,O=Apple Inc.,C=US",
+   "fp": "b0b1730ecbc7ff4505142c49f1295e6eda6bcaed7e2c68c5be91b5a11001f024",
+   "not_after": "2035-02-09T21:40:36+00:00",
+   "in_macos_system_store": true
+  },
+  {
+   "name": "certum",
+   "subject": "CN=Certum Trusted Network CA 2,OU=Certum Certification Authority,O=Unizeto Technologies S.A.,C=PL",
+   "fp": "08e7eac998a62c4155cc4cbc5eda32f5b41a12c012f29ab3433bd366348149f0",
+   "not_after": "2029-09-17T06:43:06+00:00",
+   "in_macos_system_store": false
+  },
+  {
+   "name": "digicert",
+   "subject": "CN=DigiCert Trusted Root G4,OU=www.digicert.com,O=DigiCert Inc,C=US",
+   "fp": "33846b545a49c9be4903c60e01713c1bd4e4ef31ea65cd95d69e62794f30b941",
+   "not_after": "2031-11-09T23:59:59+00:00",
+   "in_macos_system_store": false
+  },
+  {
+   "name": "entrust",
+   "subject": "CN=Sectigo Public Time Stamping Root R46,O=Sectigo Limited,C=GB",
+   "fp": "b53ac15cc1afb6e2ac06828f555bb3bf5bad8b2bac1733ce4cb7aafe729356de",
+   "not_after": "2038-01-18T23:59:59+00:00",
+   "in_macos_system_store": false
+  },
+  {
+   "name": "freetsa",
+   "subject": "C=DE,ST=Bayern,L=Wuerzburg,1.2.840.113549.1.9.1=busilezas@gmail.com,CN=www.freetsa.org,OU=Root CA,O=Free TSA",
+   "fp": "a6379e7cecc05faa3cbf076013d745e327bbbaa38c0b9af22469d4701d18aabc",
+   "not_after": "2041-03-07T01:52:13+00:00",
+   "in_macos_system_store": false
+  },
+  {
+   "name": "globalsign",
+   "subject": "CN=GlobalSign,O=GlobalSign,OU=GlobalSign Root CA - R6",
+   "fp": "2cabeafe37d06ca22aba7391c0033d25982952c453647349763a3ab5ad6ccf69",
+   "not_after": "2034-12-10T00:00:00+00:00",
+   "in_macos_system_store": true
+  },
+  {
+   "name": "sectigo",
+   "subject": "CN=Sectigo Public Time Stamping Root R46,O=Sectigo Limited,C=GB",
+   "fp": "b53ac15cc1afb6e2ac06828f555bb3bf5bad8b2bac1733ce4cb7aafe729356de",
+   "not_after": "2038-01-18T23:59:59+00:00",
+   "in_macos_system_store": false
+  },
+  {
+   "name": "swisssign",
+   "subject": "2.5.4.97=NTRCH-CHE-109.357.012,CN=SwissSign Signature Services Root 2020 - 2,O=SwissSign AG,C=CH",
+   "fp": "b87f292a4d9feace2d669159eb26f56d85ec77c19e01098cd754e8abb310cde5",
+   "not_after": "2050-09-30T10:19:32+00:00",
+   "in_macos_system_store": false
+  }
+ ],
+ "revocation": {
+  "globalsign": {
+   "signer": "CN=Globalsign R45 TSA for CodeSign 202510,O=GlobalSign nv-sa,C=BE",
+   "ocsp_urls": [
+    "http://ocsp.globalsign.com/gsoffliner45timestampca2025"
+   ],
+   "crl_urls": [
+    "http://crl.globalsign.com/gsoffliner45timestampca2025.crl"
+   ],
+   "signer_validity_days": 4104,
+   "ocsp_status": "good",
+   "ocsp_this_update": "Oct 27 03:07:12 2026 GMT"
+  },
+  "swisssign": {
+   "signer": "CN=SwissSign ZertES TSA UNIT A 2024 - 2,O=SwissSign AG,C=CH",
+   "ocsp_urls": [
+    "http://ocsp.swisssign.net/38995732EEEB8ECFF77504172EE72987224326A6"
+   ],
+   "crl_urls": [
+    "http://crl.swisssign.net/38995732EEEB8ECFF77504172EE72987224326A6",
+    "ldap://directory.swisssign.com/CN=38995732EEEB8ECFF77504172EE72987224326A6%2CO=SwissSign%20AG%2CC=CH?certificateRevocationList?base?objectClass=cRLDistributionPoint"
+   ],
+   "signer_validity_days": 1095,
+   "ocsp_status": "good",
+   "ocsp_this_update": "Oct 27 03:07:14 2026 GMT"
+  },
+  "aimoda": {
+   "signer": "CN=DigiCert SHA256 RSA4096 Timestamp Responder 2026 1,O=DigiCert\\, Inc.,C=US",
+   "ocsp_urls": [
+    "http://ocsp.digicert.com"
+   ],
+   "crl_urls": [
+    "http://crl3.digicert.com/DigiCertTrustedG4TimeStampingRSA4096SHA2562025CA1.crl"
+   ],
+   "signer_validity_days": 4109,
+   "ocsp_status": "good",
+   "ocsp_this_update": "Aug  5 00:00:00 2026 GMT"
+  },
+  "apple": {
+   "signer": "C=US,O=Apple Inc.,CN=Timestamp Signer PV01",
+   "ocsp_urls": [],
+   "crl_urls": [
+    "http://crl.apple.com/timestamp.crl"
+   ],
+   "signer_validity_days": 41
+  },
+  "entrust": {
+   "signer": "CN=Sectigo Public Time Stamping Signer R37,O=Sectigo Limited,ST=Greater London,C=GB",
+   "ocsp_urls": [
+    "http://ocsp.sectigo.com"
+   ],
+   "crl_urls": [
+    "http://crl.sectigo.com/SectigoPublicTimeStampingCAR41.crl"
+   ],
+   "signer_validity_days": 4109,
+   "ocsp_status": "good",
+   "ocsp_this_update": "Oct 26 10:51:59 2026 GMT"
+  },
+  "freetsa": {
+   "signer": "ST=Bayern,C=DE,L=Wuerzburg,1.2.840.113549.1.9.1=busilezas@mailbox.org,CN=www.freetsa.org,2.5.4.13=This certificate digit",
+   "ocsp_urls": [
+    "http://www.freetsa.org:2560"
+   ],
+   "crl_urls": [
+    "http://www.freetsa.org/crl/root_ca.crl"
+   ],
+   "signer_validity_days": 5100,
+   "ocsp_status": "good",
+   "ocsp_this_update": "Oct 27 03:07:16 2026 GMT"
+  },
+  "certum": {
+   "signer": "CN=Certum Timestamp 2026,O=Asseco Data Systems S.A.,C=PL",
+   "ocsp_urls": [
+    "http://subca.ocsp-certum.com"
+   ],
+   "crl_urls": [
+    "http://subca.crl.certum.pl/ctsca2021.crl"
+   ],
+   "signer_validity_days": 3640,
+   "ocsp_status": "unknown",
+   "ocsp_this_update": "Oct 27 03:07:16 2026 GMT"
+  }
+ }
+}

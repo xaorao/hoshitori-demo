@@ -1,0 +1,286 @@
+{
+ "digicert": {
+  "url": "http://timestamp.digicert.com",
+  "chain": [
+   {
+    "sha256": "2da09da7f4131f9fe72db6c5e6e9c9656755af043f1ea742cc0d2120e141ebfc",
+    "subject_issuer": "subject= /C=US/O=DigiCert, Inc./CN=DigiCert SHA256 RSA4096 Timestamp Responder 2026 1 | issuer= /C=US/O=DigiCert, Inc./CN=DigiCert Trusted G4 TimeStamping RSA4096 SHA256 2025 CA1",
+    "ccadb": null
+   },
+   {
+    "sha256": "ca0b1554ecd901ea19dcad8749e9f2648c8d6dfcea1add9d2c2109415bb82ccd",
+    "subject_issuer": "subject= /C=US/O=DigiCert, Inc./CN=DigiCert Trusted G4 TimeStamping RSA4096 SHA256 2025 CA1 | issuer= /C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Trusted Root G4",
+    "ccadb": {
+     "ca_owner": "DigiCert",
+     "certificate_name": "DigiCert Trusted G4 TimeStamping RSA4096 SHA256 2025 CA1",
+     "record_type": "Intermediate Certificate",
+     "subordinate_ca_owner": "",
+     "salesforce_record_id": "A012292",
+     "mozilla": "Not Trusted",
+     "parent": "DigiCert Trusted Root G4"
+    }
+   },
+   {
+    "sha256": "33846b545a49c9be4903c60e01713c1bd4e4ef31ea65cd95d69e62794f30b941",
+    "subject_issuer": "subject= /C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Trusted Root G4 | issuer= /C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Assured ID Root CA",
+    "ccadb": {
+     "ca_owner": "DigiCert",
+     "certificate_name": "DigiCert Trusted Root G4",
+     "record_type": "Intermediate Certificate",
+     "subordinate_ca_owner": "",
+     "salesforce_record_id": "A010438",
+     "mozilla": "Trusted",
+     "parent": "DigiCert Assured ID Root CA"
+    }
+   }
+  ]
+ },
+ "sectigo": {
+  "url": "http://timestamp.sectigo.com",
+  "chain": [
+   {
+    "sha256": "d14751ba71cd8883e560166406cf62cd229a5fe91e308d301976feb23ea90156",
+    "subject_issuer": "subject= /C=GB/ST=Greater London/O=Sectigo Limited/CN=Sectigo Public Time Stamping Signer R37 | issuer= /C=GB/O=Sectigo Limited/CN=Sectigo Public Time Stamping CA R41",
+    "ccadb": null
+   },
+   {
+    "sha256": "38b52fe70bdde4ecf34d77498d7cbfe48efd83294dca04de01868f7735d2db79",
+    "subject_issuer": "subject= /C=GB/O=Sectigo Limited/CN=Sectigo Public Time Stamping CA R41 | issuer= /C=GB/O=Sectigo Limited/CN=Sectigo Public Time Stamping Root R46",
+    "ccadb": {
+     "ca_owner": "Sectigo",
+     "certificate_name": "Sectigo Public Time Stamping CA R41",
+     "record_type": "Intermediate Certificate",
+     "subordinate_ca_owner": "",
+     "salesforce_record_id": "A013069",
+     "mozilla": "Not Trusted",
+     "parent": "Sectigo Public Time Stamping Root R46"
+    }
+   },
+   {
+    "sha256": "b53ac15cc1afb6e2ac06828f555bb3bf5bad8b2bac1733ce4cb7aafe729356de",
+    "subject_issuer": "subject= /C=GB/O=Sectigo Limited/CN=Sectigo Public Time Stamping Root R46 | issuer= /C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority",
+    "ccadb": {
+     "ca_owner": "Sectigo",
+     "certificate_name": "Sectigo Public Time Stamping Root R46",
+     "record_type": "Intermediate Certificate",
+     "subordinate_ca_owner": "",
+     "salesforce_record_id": "A011359",
+     "mozilla": "Not Trusted",
+     "parent": "USERTrust RSA Certification Authority"
+    }
+   }
+  ]
+ },
+ "globalsign": {
+  "url": "http://timestamp.globalsign.com/tsa/r6advanced1",
+  "chain": [
+   {
+    "sha256": "832ad72e523fdeac83fa4694bce7c6cc261764882866566588c8adca3a838551",
+    "subject_issuer": "subject= /C=BE/O=GlobalSign nv-sa/CN=Globalsign R45 TSA for CodeSign 202510 | issuer= /C=BE/O=GlobalSign nv-sa/CN=GlobalSign Offline R45 Timestamping CA 2025",
+    "ccadb": null
+   },
+   {
+    "sha256": "52373a21b95b5e6de12a2bcf0ffb7d6a633b4caad725f64f6236fbe989dbc29e",
+    "subject_issuer": "subject= /C=BE/O=GlobalSign nv-sa/CN=GlobalSign Offline R45 Timestamping CA 2025 | issuer= /C=BE/O=GlobalSign nv-sa/CN=GlobalSign Timestamping Root R45",
+    "ccadb": {
+     "ca_owner": "GlobalSign nv-sa",
+     "certificate_name": "GlobalSign Offline R45 Timestamping CA 2025",
+     "record_type": "Intermediate Certificate",
+     "subordinate_ca_owner": "",
+     "salesforce_record_id": "A012541",
+     "mozilla": "Not Trusted",
+     "parent": "GlobalSign Timestamping Root R45"
+    }
+   },
+   {
+    "sha256": "6afbc07c724c6f75c7743392f32bf5780bd5dd39268544d4882e7aec1add0282",
+    "subject_issuer": "subject= /C=BE/O=GlobalSign nv-sa/CN=GlobalSign Timestamping Root R45 | issuer= /OU=GlobalSign Root CA - R6/O=GlobalSign/CN=GlobalSign",
+    "ccadb": {
+     "ca_owner": "GlobalSign nv-sa",
+     "certificate_name": "GlobalSign Timestamping Root R45",
+     "record_type": "Intermediate Certificate",
+     "subordinate_ca_owner": "",
+     "salesforce_record_id": "A007488",
+     "mozilla": "Not Trusted",
+     "parent": "GlobalSign"
+    }
+   },
+   {
+    "sha256": "2cabeafe37d06ca22aba7391c0033d25982952c453647349763a3ab5ad6ccf69",
+    "subject_issuer": "subject= /OU=GlobalSign Root CA - R6/O=GlobalSign/CN=GlobalSign | issuer= /OU=GlobalSign Root CA - R6/O=GlobalSign/CN=GlobalSign",
+    "ccadb": {
+     "ca_owner": "GlobalSign nv-sa",
+     "certificate_name": "GlobalSign",
+     "record_type": "Root Certificate",
+     "subordinate_ca_owner": "",
+     "salesforce_record_id": "A002469",
+     "mozilla": "Included",
+     "parent": "GlobalSign nv-sa"
+    }
+   }
+  ]
+ },
+ "swisssign": {
+  "url": "http://tsa.swisssign.net",
+  "chain": [
+   {
+    "sha256": "b87f292a4d9feace2d669159eb26f56d85ec77c19e01098cd754e8abb310cde5",
+    "subject_issuer": "subject= /C=CH/O=SwissSign AG/CN=SwissSign Signature Services Root 2020 - 2/2.5.4.97=NTRCH-CHE-109.357.012 | issuer= /C=CH/O=SwissSign AG/CN=SwissSign Signature Services Root 2020 - 2/2.5.4.97=NTRCH-CHE-109.357.012",
+    "ccadb": null
+   },
+   {
+    "sha256": "715dbaf62f04ea1ec8c04fb7cfdc3526b86daf8635eeff4376e49984c1971a7a",
+    "subject_issuer": "subject= /C=CH/O=SwissSign AG/CN=SwissSign Qualified TSA ICA 2021 - 1/2.5.4.97=NTRCH-CHE-109.357.012 | issuer= /C=CH/O=SwissSign AG/CN=SwissSign Signature Services Root 2020 - 2/2.5.4.97=NTRCH-CHE-109.357.012",
+    "ccadb": null
+   },
+   {
+    "sha256": "d81b7ad55e61c2b04a67bb28c6b490c06d32c5f937c2ed49ce875f850b639312",
+    "subject_issuer": "subject= /C=CH/O=SwissSign AG/CN=SwissSign ZertES TSA UNIT A 2024 - 2 | issuer= /C=CH/O=SwissSign AG/CN=SwissSign Qualified TSA ICA 2021 - 1/2.5.4.97=NTRCH-CHE-109.357.012",
+    "ccadb": null
+   }
+  ]
+ },
+ "apple": {
+  "url": "http://timestamp.apple.com/ts01",
+  "chain": [
+   {
+    "sha256": "ee159bb70898fc37459e374f0f9095bf2761b2b989f64c6f94aab471085377d9",
+    "subject_issuer": "subject= /CN=Timestamp Signer PV02/O=Apple Inc./C=US | issuer= /CN=Apple Timestamp Certification Authority/OU=Apple Certification Authority/O=Apple Inc./C=US",
+    "ccadb": null
+   },
+   {
+    "sha256": "66285e2e374d00a8ba3d8d3d04393a48bd16554b284bc88dabec85b479adcd6b",
+    "subject_issuer": "subject= /CN=Apple Timestamp Certification Authority/OU=Apple Certification Authority/O=Apple Inc./C=US | issuer= /C=US/O=Apple Inc./OU=Apple Certification Authority/CN=Apple Root CA",
+    "ccadb": null
+   },
+   {
+    "sha256": "b0b1730ecbc7ff4505142c49f1295e6eda6bcaed7e2c68c5be91b5a11001f024",
+    "subject_issuer": "subject= /C=US/O=Apple Inc./OU=Apple Certification Authority/CN=Apple Root CA | issuer= /C=US/O=Apple Inc./OU=Apple Certification Authority/CN=Apple Root CA",
+    "ccadb": null
+   }
+  ]
+ },
+ "freetsa": {
+  "url": "https://freetsa.org/tsr",
+  "chain": [
+   {
+    "sha256": "32e841a95cc1164101ffde41298ef2fc75c1c4372ef095e88a6bbd47dfb191fc",
+    "subject_issuer": "subject= /O=Free TSA/OU=TSA/description=This certificate digitally signs documents and time stamp requests made using the freetsa.org online services/CN=www.freetsa.org/emailAddress=busilezas@mailbox.org/L=Wuerzburg/C=DE/ST=Bayern | issuer= /O=Free TSA/OU=Root CA/CN=www.freetsa.org/emailAddress=busilezas@gmail.com/L=Wuerzburg/ST=Bayern/C=DE",
+    "ccadb": null
+   },
+   {
+    "sha256": "a6379e7cecc05faa3cbf076013d745e327bbbaa38c0b9af22469d4701d18aabc",
+    "subject_issuer": "subject= /O=Free TSA/OU=Root CA/CN=www.freetsa.org/emailAddress=busilezas@gmail.com/L=Wuerzburg/ST=Bayern/C=DE | issuer= /O=Free TSA/OU=Root CA/CN=www.freetsa.org/emailAddress=busilezas@gmail.com/L=Wuerzburg/ST=Bayern/C=DE",
+    "ccadb": null
+   }
+  ]
+ },
+ "entrust": {
+  "url": "http://timestamp.entrust.net/TSS/RFC3161sha2TS",
+  "chain": [
+   {
+    "sha256": "d14751ba71cd8883e560166406cf62cd229a5fe91e308d301976feb23ea90156",
+    "subject_issuer": "subject= /C=GB/ST=Greater London/O=Sectigo Limited/CN=Sectigo Public Time Stamping Signer R37 | issuer= /C=GB/O=Sectigo Limited/CN=Sectigo Public Time Stamping CA R41",
+    "ccadb": null
+   },
+   {
+    "sha256": "38b52fe70bdde4ecf34d77498d7cbfe48efd83294dca04de01868f7735d2db79",
+    "subject_issuer": "subject= /C=GB/O=Sectigo Limited/CN=Sectigo Public Time Stamping CA R41 | issuer= /C=GB/O=Sectigo Limited/CN=Sectigo Public Time Stamping Root R46",
+    "ccadb": {
+     "ca_owner": "Sectigo",
+     "certificate_name": "Sectigo Public Time Stamping CA R41",
+     "record_type": "Intermediate Certificate",
+     "subordinate_ca_owner": "",
+     "salesforce_record_id": "A013069",
+     "mozilla": "Not Trusted",
+     "parent": "Sectigo Public Time Stamping Root R46"
+    }
+   },
+   {
+    "sha256": "b53ac15cc1afb6e2ac06828f555bb3bf5bad8b2bac1733ce4cb7aafe729356de",
+    "subject_issuer": "subject= /C=GB/O=Sectigo Limited/CN=Sectigo Public Time Stamping Root R46 | issuer= /C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority",
+    "ccadb": {
+     "ca_owner": "Sectigo",
+     "certificate_name": "Sectigo Public Time Stamping Root R46",
+     "record_type": "Intermediate Certificate",
+     "subordinate_ca_owner": "",
+     "salesforce_record_id": "A011359",
+     "mozilla": "Not Trusted",
+     "parent": "USERTrust RSA Certification Authority"
+    }
+   }
+  ]
+ },
+ "aimoda": {
+  "url": "https://rfc3161.ai.moda",
+  "chain": [
+   {
+    "sha256": "d14751ba71cd8883e560166406cf62cd229a5fe91e308d301976feb23ea90156",
+    "subject_issuer": "subject= /C=GB/ST=Greater London/O=Sectigo Limited/CN=Sectigo Public Time Stamping Signer R37 | issuer= /C=GB/O=Sectigo Limited/CN=Sectigo Public Time Stamping CA R41",
+    "ccadb": null
+   },
+   {
+    "sha256": "38b52fe70bdde4ecf34d77498d7cbfe48efd83294dca04de01868f7735d2db79",
+    "subject_issuer": "subject= /C=GB/O=Sectigo Limited/CN=Sectigo Public Time Stamping CA R41 | issuer= /C=GB/O=Sectigo Limited/CN=Sectigo Public Time Stamping Root R46",
+    "ccadb": {
+     "ca_owner": "Sectigo",
+     "certificate_name": "Sectigo Public Time Stamping CA R41",
+     "record_type": "Intermediate Certificate",
+     "subordinate_ca_owner": "",
+     "salesforce_record_id": "A013069",
+     "mozilla": "Not Trusted",
+     "parent": "Sectigo Public Time Stamping Root R46"
+    }
+   },
+   {
+    "sha256": "b53ac15cc1afb6e2ac06828f555bb3bf5bad8b2bac1733ce4cb7aafe729356de",
+    "subject_issuer": "subject= /C=GB/O=Sectigo Limited/CN=Sectigo Public Time Stamping Root R46 | issuer= /C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority",
+    "ccadb": {
+     "ca_owner": "Sectigo",
+     "certificate_name": "Sectigo Public Time Stamping Root R46",
+     "record_type": "Intermediate Certificate",
+     "subordinate_ca_owner": "",
+     "salesforce_record_id": "A011359",
+     "mozilla": "Not Trusted",
+     "parent": "USERTrust RSA Certification Authority"
+    }
+   }
+  ]
+ },
+ "certum": {
+  "url": "http://time.certum.pl",
+  "chain": [
+   {
+    "sha256": "85be90e10ad2438d7cc928b6af48b09ab208177cecf8b0126c58d3910525c43c",
+    "subject_issuer": "subject= /C=PL/O=Asseco Data Systems S.A./CN=Certum Timestamp 2026 | issuer= /C=PL/O=Asseco Data Systems S.A./CN=Certum Timestamping 2021 CA",
+    "ccadb": null
+   },
+   {
+    "sha256": "f882effc16de28d508c092e35825b00242cf963071c279ef09310d9d95784b35",
+    "subject_issuer": "subject= /C=PL/O=Asseco Data Systems S.A./CN=Certum Timestamping 2021 CA | issuer= /C=PL/O=Unizeto Technologies S.A./OU=Certum Certification Authority/CN=Certum Trusted Network CA 2",
+    "ccadb": {
+     "ca_owner": "Asseco Data Systems S.A.",
+     "certificate_name": "Certum Timestamping 2021 CA",
+     "record_type": "Intermediate Certificate",
+     "subordinate_ca_owner": "",
+     "salesforce_record_id": "A007776",
+     "mozilla": "Not Trusted",
+     "parent": "Certum Trusted Network CA 2"
+    }
+   },
+   {
+    "sha256": "08e7eac998a62c4155cc4cbc5eda32f5b41a12c012f29ab3433bd366348149f0",
+    "subject_issuer": "subject= /C=PL/O=Unizeto Technologies S.A./OU=Certum Certification Authority/CN=Certum Trusted Network CA 2 | issuer= /C=PL/O=Unizeto Technologies S.A./OU=Certum Certification Authority/CN=Certum Trusted Network CA",
+    "ccadb": {
+     "ca_owner": "Asseco Data Systems S.A.",
+     "certificate_name": "Certum Trusted Network CA 2",
+     "record_type": "Intermediate Certificate",
+     "subordinate_ca_owner": "",
+     "salesforce_record_id": "A007780",
+     "mozilla": "Trusted",
+     "parent": "Certum Trusted Network CA"
+    }
+   }
+  ]
+ }
+}

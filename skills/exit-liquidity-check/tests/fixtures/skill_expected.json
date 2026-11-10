@@ -1,0 +1,3234 @@
+{
+ "quoted_ok": {
+  "schema_version": "1.0",
+  "tool": "exit_liquidity_check",
+  "status": "ok",
+  "data_mode": "live",
+  "as_of": "2026-11-09T12:00:00Z",
+  "request": {
+   "token": "BONK",
+   "size_usd": 5000.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0
+  },
+  "data": {
+   "token": "BONK",
+   "chain": "solana",
+   "contract": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+   "measured_as": null,
+   "verdict": "ok",
+   "basis": "quoted",
+   "confidence": "high",
+   "requested_size_usd": 5000.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0,
+   "estimate": {
+    "size_usd": 5000.0,
+    "slippage_pct": 0.9901,
+    "cost_usd": 49.5,
+    "proceeds_usd": 4950.5,
+    "pool_fraction_pct": 1.0,
+    "basis": "modelled",
+    "model": "cpmm_v1",
+    "within_model_validity": true
+   },
+   "quote": {
+    "venue": "jupiter",
+    "basis": "quoted",
+    "size_usd": 5000.0,
+    "out_usd": 4950.0,
+    "effective_cost_pct": 1.0,
+    "venue_price_impact_pct": 0.4,
+    "route_hops": 2,
+    "source": "jupiter:DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263->USDC"
+   },
+   "model_check": {
+    "modelled_cost_pct": 0.9901,
+    "quoted_cost_pct": 1.0,
+    "model_over_quote": 0.99,
+    "note": "the model is kept beside the quote so its error is visible; the verdict rests on the quote"
+   },
+   "max_size_usd": {
+    "1pct": 5050.51,
+    "3pct": 15463.92,
+    "at_ceiling": 15463.92
+   },
+   "hours_to_exit": 2.4,
+   "hourly_capacity_usd": 2083.33,
+   "curve": [
+    {
+     "size_usd": 2500.0,
+     "slippage_pct": 0.4975,
+     "cost_usd": 12.44,
+     "proceeds_usd": 2487.56,
+     "pool_fraction_pct": 0.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 5000.0,
+     "slippage_pct": 0.9901,
+     "cost_usd": 49.5,
+     "proceeds_usd": 4950.5,
+     "pool_fraction_pct": 1.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 12500.0,
+     "slippage_pct": 2.439,
+     "cost_usd": 304.88,
+     "proceeds_usd": 12195.12,
+     "pool_fraction_pct": 2.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 25000.0,
+     "slippage_pct": 4.7619,
+     "cost_usd": 1190.48,
+     "proceeds_usd": 23809.52,
+     "pool_fraction_pct": 5.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 50000.0,
+     "slippage_pct": 9.0909,
+     "cost_usd": 4545.45,
+     "proceeds_usd": 45454.55,
+     "pool_fraction_pct": 10.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 125000.0,
+     "slippage_pct": 20.0,
+     "cost_usd": 25000.0,
+     "proceeds_usd": 100000.0,
+     "pool_fraction_pct": 25.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    }
+   ],
+   "pool_depth": {
+    "token": "BONK",
+    "chain": "solana",
+    "address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+    "via": null,
+    "deepest_pool": {
+     "dex": "dex",
+     "pair": "P1",
+     "quote": "USDC",
+     "liquidity_usd": 1000000.0,
+     "volume_24h_usd": 500000.0,
+     "price_usd": 2e-05
+    },
+    "pools_used": 1,
+    "pools_rejected": [],
+    "price_usd": 2e-05,
+    "total_liquidity_usd": 1000000.0,
+    "total_volume_24h_usd": 500000.0,
+    "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+   },
+   "model": {
+    "id": "cpmm_v1",
+    "assumptions": [
+     "the pool behaves as constant-product (x*y=k)",
+     "reported liquidity is total value locked, twice one side",
+     "all liquidity is reachable in a single route",
+     "no fees, no MEV, no price movement during the exit",
+     "mid price at the time of the reading"
+    ],
+    "validity_limit_pct": 25.0
+   },
+   "inputs": [
+    {
+     "name": "liquidity_usd",
+     "value": 1000000.0,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    },
+    {
+     "name": "volume_24h_usd",
+     "value": 500000.0,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    },
+    {
+     "name": "price_usd",
+     "value": 2e-05,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    }
+   ],
+   "gaps": [],
+   "notes": [
+    "depth is the sum of 1 on-chain pools for the canonical contract; centralised-exchange depth and volume are not included",
+    "confidence is high only because an executable quote for this exact size was observed; it holds for this moment and venue"
+   ],
+   "source_calls": [
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 228,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    },
+    {
+     "source": "jupiter",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 50,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    },
+    {
+     "source": "jupiter",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 101,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    }
+   ]
+  },
+  "summary": {
+   "headline": "BONK: exiting $5,000 costs 1.00% (quoted); the exit fits inside the ceiling.",
+   "key_points": [
+    "Jupiter quoted $4,950 back for the sale: a cost of 1.00%, fees included.",
+    "Modelled from pool depth: 0.99% ($49.50); the exit is 1.00% of the pool.",
+    "Largest exit at 1%: $5,051; at 3%: $15,464; at your ceiling: $15,464.",
+    "A patient exit at 10% of daily volume takes 2.4 hours."
+   ]
+  },
+  "availability": {
+   "pool_depth": "available",
+   "volume": "available",
+   "executable_quote": "available"
+  },
+  "warnings": []
+ },
+ "quoted_tight": {
+  "schema_version": "1.0",
+  "tool": "exit_liquidity_check",
+  "status": "ok",
+  "data_mode": "live",
+  "as_of": "2026-11-09T12:00:00Z",
+  "request": {
+   "token": "BONK",
+   "size_usd": 5000.0,
+   "max_slippage_pct": 0.8,
+   "participation_pct": 10.0
+  },
+  "data": {
+   "token": "BONK",
+   "chain": "solana",
+   "contract": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+   "measured_as": null,
+   "verdict": "tight",
+   "basis": "quoted",
+   "confidence": "high",
+   "requested_size_usd": 5000.0,
+   "max_slippage_pct": 0.8,
+   "participation_pct": 10.0,
+   "estimate": {
+    "size_usd": 5000.0,
+    "slippage_pct": 0.9901,
+    "cost_usd": 49.5,
+    "proceeds_usd": 4950.5,
+    "pool_fraction_pct": 1.0,
+    "basis": "modelled",
+    "model": "cpmm_v1",
+    "within_model_validity": true
+   },
+   "quote": {
+    "venue": "jupiter",
+    "basis": "quoted",
+    "size_usd": 5000.0,
+    "out_usd": 4950.0,
+    "effective_cost_pct": 1.0,
+    "venue_price_impact_pct": 0.4,
+    "route_hops": 2,
+    "source": "jupiter:DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263->USDC"
+   },
+   "model_check": {
+    "modelled_cost_pct": 0.9901,
+    "quoted_cost_pct": 1.0,
+    "model_over_quote": 0.99,
+    "note": "the model is kept beside the quote so its error is visible; the verdict rests on the quote"
+   },
+   "max_size_usd": {
+    "1pct": 5050.51,
+    "3pct": 15463.92,
+    "at_ceiling": 4032.26
+   },
+   "hours_to_exit": 2.4,
+   "hourly_capacity_usd": 2083.33,
+   "curve": [
+    {
+     "size_usd": 2500.0,
+     "slippage_pct": 0.4975,
+     "cost_usd": 12.44,
+     "proceeds_usd": 2487.56,
+     "pool_fraction_pct": 0.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 5000.0,
+     "slippage_pct": 0.9901,
+     "cost_usd": 49.5,
+     "proceeds_usd": 4950.5,
+     "pool_fraction_pct": 1.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 12500.0,
+     "slippage_pct": 2.439,
+     "cost_usd": 304.88,
+     "proceeds_usd": 12195.12,
+     "pool_fraction_pct": 2.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 25000.0,
+     "slippage_pct": 4.7619,
+     "cost_usd": 1190.48,
+     "proceeds_usd": 23809.52,
+     "pool_fraction_pct": 5.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 50000.0,
+     "slippage_pct": 9.0909,
+     "cost_usd": 4545.45,
+     "proceeds_usd": 45454.55,
+     "pool_fraction_pct": 10.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 125000.0,
+     "slippage_pct": 20.0,
+     "cost_usd": 25000.0,
+     "proceeds_usd": 100000.0,
+     "pool_fraction_pct": 25.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    }
+   ],
+   "pool_depth": {
+    "token": "BONK",
+    "chain": "solana",
+    "address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+    "via": null,
+    "deepest_pool": {
+     "dex": "dex",
+     "pair": "P1",
+     "quote": "USDC",
+     "liquidity_usd": 1000000.0,
+     "volume_24h_usd": 500000.0,
+     "price_usd": 2e-05
+    },
+    "pools_used": 1,
+    "pools_rejected": [],
+    "price_usd": 2e-05,
+    "total_liquidity_usd": 1000000.0,
+    "total_volume_24h_usd": 500000.0,
+    "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+   },
+   "model": {
+    "id": "cpmm_v1",
+    "assumptions": [
+     "the pool behaves as constant-product (x*y=k)",
+     "reported liquidity is total value locked, twice one side",
+     "all liquidity is reachable in a single route",
+     "no fees, no MEV, no price movement during the exit",
+     "mid price at the time of the reading"
+    ],
+    "validity_limit_pct": 25.0
+   },
+   "inputs": [
+    {
+     "name": "liquidity_usd",
+     "value": 1000000.0,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    },
+    {
+     "name": "volume_24h_usd",
+     "value": 500000.0,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    },
+    {
+     "name": "price_usd",
+     "value": 2e-05,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    }
+   ],
+   "gaps": [],
+   "notes": [
+    "depth is the sum of 1 on-chain pools for the canonical contract; centralised-exchange depth and volume are not included",
+    "confidence is high only because an executable quote for this exact size was observed; it holds for this moment and venue"
+   ],
+   "source_calls": [
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 228,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    },
+    {
+     "source": "jupiter",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 50,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    },
+    {
+     "source": "jupiter",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 101,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    }
+   ]
+  },
+  "summary": {
+   "headline": "BONK: exiting $5,000 costs 1.00% (quoted); the exit is above the ceiling.",
+   "key_points": [
+    "Jupiter quoted $4,950 back for the sale: a cost of 1.00%, fees included.",
+    "Modelled from pool depth: 0.99% ($49.50); the exit is 1.00% of the pool.",
+    "Largest exit at 1%: $5,051; at 3%: $15,464; at your ceiling: $4,032.",
+    "A patient exit at 10% of daily volume takes 2.4 hours."
+   ]
+  },
+  "availability": {
+   "pool_depth": "available",
+   "volume": "available",
+   "executable_quote": "available"
+  },
+  "warnings": []
+ },
+ "quoted_illiquid": {
+  "schema_version": "1.0",
+  "tool": "exit_liquidity_check",
+  "status": "ok",
+  "data_mode": "live",
+  "as_of": "2026-11-09T12:00:00Z",
+  "request": {
+   "token": "BONK",
+   "size_usd": 5000.0,
+   "max_slippage_pct": 0.4,
+   "participation_pct": 10.0
+  },
+  "data": {
+   "token": "BONK",
+   "chain": "solana",
+   "contract": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+   "measured_as": null,
+   "verdict": "illiquid",
+   "basis": "quoted",
+   "confidence": "high",
+   "requested_size_usd": 5000.0,
+   "max_slippage_pct": 0.4,
+   "participation_pct": 10.0,
+   "estimate": {
+    "size_usd": 5000.0,
+    "slippage_pct": 0.9901,
+    "cost_usd": 49.5,
+    "proceeds_usd": 4950.5,
+    "pool_fraction_pct": 1.0,
+    "basis": "modelled",
+    "model": "cpmm_v1",
+    "within_model_validity": true
+   },
+   "quote": {
+    "venue": "jupiter",
+    "basis": "quoted",
+    "size_usd": 5000.0,
+    "out_usd": 4950.0,
+    "effective_cost_pct": 1.0,
+    "venue_price_impact_pct": 0.4,
+    "route_hops": 2,
+    "source": "jupiter:DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263->USDC"
+   },
+   "model_check": {
+    "modelled_cost_pct": 0.9901,
+    "quoted_cost_pct": 1.0,
+    "model_over_quote": 0.99,
+    "note": "the model is kept beside the quote so its error is visible; the verdict rests on the quote"
+   },
+   "max_size_usd": {
+    "1pct": 5050.51,
+    "3pct": 15463.92,
+    "at_ceiling": 2008.03
+   },
+   "hours_to_exit": 2.4,
+   "hourly_capacity_usd": 2083.33,
+   "curve": [
+    {
+     "size_usd": 2500.0,
+     "slippage_pct": 0.4975,
+     "cost_usd": 12.44,
+     "proceeds_usd": 2487.56,
+     "pool_fraction_pct": 0.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 5000.0,
+     "slippage_pct": 0.9901,
+     "cost_usd": 49.5,
+     "proceeds_usd": 4950.5,
+     "pool_fraction_pct": 1.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 12500.0,
+     "slippage_pct": 2.439,
+     "cost_usd": 304.88,
+     "proceeds_usd": 12195.12,
+     "pool_fraction_pct": 2.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 25000.0,
+     "slippage_pct": 4.7619,
+     "cost_usd": 1190.48,
+     "proceeds_usd": 23809.52,
+     "pool_fraction_pct": 5.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 50000.0,
+     "slippage_pct": 9.0909,
+     "cost_usd": 4545.45,
+     "proceeds_usd": 45454.55,
+     "pool_fraction_pct": 10.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 125000.0,
+     "slippage_pct": 20.0,
+     "cost_usd": 25000.0,
+     "proceeds_usd": 100000.0,
+     "pool_fraction_pct": 25.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    }
+   ],
+   "pool_depth": {
+    "token": "BONK",
+    "chain": "solana",
+    "address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+    "via": null,
+    "deepest_pool": {
+     "dex": "dex",
+     "pair": "P1",
+     "quote": "USDC",
+     "liquidity_usd": 1000000.0,
+     "volume_24h_usd": 500000.0,
+     "price_usd": 2e-05
+    },
+    "pools_used": 1,
+    "pools_rejected": [],
+    "price_usd": 2e-05,
+    "total_liquidity_usd": 1000000.0,
+    "total_volume_24h_usd": 500000.0,
+    "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+   },
+   "model": {
+    "id": "cpmm_v1",
+    "assumptions": [
+     "the pool behaves as constant-product (x*y=k)",
+     "reported liquidity is total value locked, twice one side",
+     "all liquidity is reachable in a single route",
+     "no fees, no MEV, no price movement during the exit",
+     "mid price at the time of the reading"
+    ],
+    "validity_limit_pct": 25.0
+   },
+   "inputs": [
+    {
+     "name": "liquidity_usd",
+     "value": 1000000.0,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    },
+    {
+     "name": "volume_24h_usd",
+     "value": 500000.0,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    },
+    {
+     "name": "price_usd",
+     "value": 2e-05,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    }
+   ],
+   "gaps": [],
+   "notes": [
+    "depth is the sum of 1 on-chain pools for the canonical contract; centralised-exchange depth and volume are not included",
+    "confidence is high only because an executable quote for this exact size was observed; it holds for this moment and venue"
+   ],
+   "source_calls": [
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 228,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    },
+    {
+     "source": "jupiter",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 50,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    },
+    {
+     "source": "jupiter",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 101,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    }
+   ]
+  },
+  "summary": {
+   "headline": "BONK: exiting $5,000 costs 1.00% (quoted); the exit is severe at this size.",
+   "key_points": [
+    "Jupiter quoted $4,950 back for the sale: a cost of 1.00%, fees included.",
+    "Modelled from pool depth: 0.99% ($49.50); the exit is 1.00% of the pool.",
+    "Largest exit at 1%: $5,051; at 3%: $15,464; at your ceiling: $2,008.",
+    "A patient exit at 10% of daily volume takes 2.4 hours."
+   ]
+  },
+  "availability": {
+   "pool_depth": "available",
+   "volume": "available",
+   "executable_quote": "available"
+  },
+  "warnings": []
+ },
+ "quoted_free": {
+  "schema_version": "1.0",
+  "tool": "exit_liquidity_check",
+  "status": "ok",
+  "data_mode": "live",
+  "as_of": "2026-11-09T12:00:00Z",
+  "request": {
+   "token": "BONK",
+   "size_usd": 5000.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0
+  },
+  "data": {
+   "token": "BONK",
+   "chain": "solana",
+   "contract": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+   "measured_as": null,
+   "verdict": "ok",
+   "basis": "quoted",
+   "confidence": "high",
+   "requested_size_usd": 5000.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0,
+   "estimate": {
+    "size_usd": 5000.0,
+    "slippage_pct": 0.9901,
+    "cost_usd": 49.5,
+    "proceeds_usd": 4950.5,
+    "pool_fraction_pct": 1.0,
+    "basis": "modelled",
+    "model": "cpmm_v1",
+    "within_model_validity": true
+   },
+   "quote": {
+    "venue": "jupiter",
+    "basis": "quoted",
+    "size_usd": 5000.0,
+    "out_usd": 5100.0,
+    "effective_cost_pct": 0.0,
+    "venue_price_impact_pct": null,
+    "route_hops": 0,
+    "source": "jupiter:DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263->USDC"
+   },
+   "model_check": null,
+   "max_size_usd": {
+    "1pct": 5050.51,
+    "3pct": 15463.92,
+    "at_ceiling": 15463.92
+   },
+   "hours_to_exit": 2.4,
+   "hourly_capacity_usd": 2083.33,
+   "curve": [
+    {
+     "size_usd": 2500.0,
+     "slippage_pct": 0.4975,
+     "cost_usd": 12.44,
+     "proceeds_usd": 2487.56,
+     "pool_fraction_pct": 0.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 5000.0,
+     "slippage_pct": 0.9901,
+     "cost_usd": 49.5,
+     "proceeds_usd": 4950.5,
+     "pool_fraction_pct": 1.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 12500.0,
+     "slippage_pct": 2.439,
+     "cost_usd": 304.88,
+     "proceeds_usd": 12195.12,
+     "pool_fraction_pct": 2.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 25000.0,
+     "slippage_pct": 4.7619,
+     "cost_usd": 1190.48,
+     "proceeds_usd": 23809.52,
+     "pool_fraction_pct": 5.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 50000.0,
+     "slippage_pct": 9.0909,
+     "cost_usd": 4545.45,
+     "proceeds_usd": 45454.55,
+     "pool_fraction_pct": 10.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 125000.0,
+     "slippage_pct": 20.0,
+     "cost_usd": 25000.0,
+     "proceeds_usd": 100000.0,
+     "pool_fraction_pct": 25.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    }
+   ],
+   "pool_depth": {
+    "token": "BONK",
+    "chain": "solana",
+    "address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+    "via": null,
+    "deepest_pool": {
+     "dex": "dex",
+     "pair": "P1",
+     "quote": "USDC",
+     "liquidity_usd": 1000000.0,
+     "volume_24h_usd": 500000.0,
+     "price_usd": 2e-05
+    },
+    "pools_used": 1,
+    "pools_rejected": [],
+    "price_usd": 2e-05,
+    "total_liquidity_usd": 1000000.0,
+    "total_volume_24h_usd": 500000.0,
+    "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+   },
+   "model": {
+    "id": "cpmm_v1",
+    "assumptions": [
+     "the pool behaves as constant-product (x*y=k)",
+     "reported liquidity is total value locked, twice one side",
+     "all liquidity is reachable in a single route",
+     "no fees, no MEV, no price movement during the exit",
+     "mid price at the time of the reading"
+    ],
+    "validity_limit_pct": 25.0
+   },
+   "inputs": [
+    {
+     "name": "liquidity_usd",
+     "value": 1000000.0,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    },
+    {
+     "name": "volume_24h_usd",
+     "value": 500000.0,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    },
+    {
+     "name": "price_usd",
+     "value": 2e-05,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    }
+   ],
+   "gaps": [],
+   "notes": [
+    "depth is the sum of 1 on-chain pools for the canonical contract; centralised-exchange depth and volume are not included",
+    "confidence is high only because an executable quote for this exact size was observed; it holds for this moment and venue"
+   ],
+   "source_calls": [
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 228,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    },
+    {
+     "source": "jupiter",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 50,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    },
+    {
+     "source": "jupiter",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 53,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    }
+   ]
+  },
+  "summary": {
+   "headline": "BONK: exiting $5,000 costs under 0.01% (quoted); the exit fits inside the ceiling.",
+   "key_points": [
+    "Jupiter quoted $5,100 back for the sale: a cost of under 0.01%, fees included.",
+    "Modelled from pool depth: 0.99% ($49.50); the exit is 1.00% of the pool.",
+    "Largest exit at 1%: $5,051; at 3%: $15,464; at your ceiling: $15,464.",
+    "A patient exit at 10% of daily volume takes 2.4 hours."
+   ]
+  },
+  "availability": {
+   "pool_depth": "available",
+   "volume": "available",
+   "executable_quote": "available"
+  },
+  "warnings": []
+ },
+ "quoted_odd": {
+  "schema_version": "1.0",
+  "tool": "exit_liquidity_check",
+  "status": "ok",
+  "data_mode": "live",
+  "as_of": "2026-11-09T12:00:00Z",
+  "request": {
+   "token": "BONK",
+   "size_usd": 7777.77,
+   "max_slippage_pct": 1.2346,
+   "participation_pct": 7.6543
+  },
+  "data": {
+   "token": "BONK",
+   "chain": "solana",
+   "contract": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+   "measured_as": null,
+   "verdict": "ok",
+   "basis": "quoted",
+   "confidence": "high",
+   "requested_size_usd": 7777.77,
+   "max_slippage_pct": 1.2346,
+   "participation_pct": 7.6543,
+   "estimate": {
+    "size_usd": 7777.77,
+    "slippage_pct": 1.2443,
+    "cost_usd": 96.78,
+    "proceeds_usd": 7680.99,
+    "pool_fraction_pct": 1.26,
+    "basis": "modelled",
+    "model": "cpmm_v1",
+    "within_model_validity": true
+   },
+   "quote": {
+    "venue": "jupiter",
+    "basis": "quoted",
+    "size_usd": 7777.77,
+    "out_usd": 7700.12,
+    "effective_cost_pct": 0.9983,
+    "venue_price_impact_pct": 0.1235,
+    "route_hops": 0,
+    "source": "jupiter:DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263->USDC"
+   },
+   "model_check": {
+    "modelled_cost_pct": 1.2443,
+    "quoted_cost_pct": 0.9983,
+    "model_over_quote": 1.246,
+    "note": "the model is kept beside the quote so its error is visible; the verdict rests on the quote"
+   },
+   "max_size_usd": {
+    "1pct": 6235.19,
+    "3pct": 19091.26,
+    "at_ceiling": 7716.05
+   },
+   "hours_to_exit": 4.49,
+   "hourly_capacity_usd": 1732.46,
+   "curve": [
+    {
+     "size_usd": 3086.42,
+     "slippage_pct": 0.4975,
+     "cost_usd": 15.36,
+     "proceeds_usd": 3071.06,
+     "pool_fraction_pct": 0.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 6172.84,
+     "slippage_pct": 0.9901,
+     "cost_usd": 61.12,
+     "proceeds_usd": 6111.72,
+     "pool_fraction_pct": 1.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 15432.1,
+     "slippage_pct": 2.439,
+     "cost_usd": 376.39,
+     "proceeds_usd": 15055.71,
+     "pool_fraction_pct": 2.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 30864.2,
+     "slippage_pct": 4.7619,
+     "cost_usd": 1469.72,
+     "proceeds_usd": 29394.48,
+     "pool_fraction_pct": 5.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 61728.39,
+     "slippage_pct": 9.0909,
+     "cost_usd": 5611.67,
+     "proceeds_usd": 56116.72,
+     "pool_fraction_pct": 10.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 154320.99,
+     "slippage_pct": 20.0,
+     "cost_usd": 30864.2,
+     "proceeds_usd": 123456.79,
+     "pool_fraction_pct": 25.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": false
+    }
+   ],
+   "pool_depth": {
+    "token": "BONK",
+    "chain": "solana",
+    "address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+    "via": null,
+    "deepest_pool": {
+     "dex": "dex",
+     "pair": "P1",
+     "quote": "USDC",
+     "liquidity_usd": 1234567.89,
+     "volume_24h_usd": 543210.99,
+     "price_usd": 2e-05
+    },
+    "pools_used": 1,
+    "pools_rejected": [],
+    "price_usd": 2e-05,
+    "total_liquidity_usd": 1234567.89,
+    "total_volume_24h_usd": 543210.99,
+    "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+   },
+   "model": {
+    "id": "cpmm_v1",
+    "assumptions": [
+     "the pool behaves as constant-product (x*y=k)",
+     "reported liquidity is total value locked, twice one side",
+     "all liquidity is reachable in a single route",
+     "no fees, no MEV, no price movement during the exit",
+     "mid price at the time of the reading"
+    ],
+    "validity_limit_pct": 25.0
+   },
+   "inputs": [
+    {
+     "name": "liquidity_usd",
+     "value": 1234567.89,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    },
+    {
+     "name": "volume_24h_usd",
+     "value": 543210.99,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    },
+    {
+     "name": "price_usd",
+     "value": 2e-05,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    }
+   ],
+   "gaps": [],
+   "notes": [
+    "depth is the sum of 1 on-chain pools for the canonical contract; centralised-exchange depth and volume are not included",
+    "confidence is high only because an executable quote for this exact size was observed; it holds for this moment and venue"
+   ],
+   "source_calls": [
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 236,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    },
+    {
+     "source": "jupiter",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 50,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    },
+    {
+     "source": "jupiter",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 85,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    }
+   ]
+  },
+  "summary": {
+   "headline": "BONK: exiting $7,778 costs 1.00% (quoted); the exit fits inside the ceiling.",
+   "key_points": [
+    "Jupiter quoted $7,700 back for the sale: a cost of 1.00%, fees included.",
+    "Modelled from pool depth: 1.24% ($96.78); the exit is 1.26% of the pool.",
+    "Largest exit at 1%: $6,235; at 3%: $19,091; at your ceiling: $7,716.",
+    "A patient exit at 7.65432% of daily volume takes 4.5 hours."
+   ]
+  },
+  "availability": {
+   "pool_depth": "available",
+   "volume": "available",
+   "executable_quote": "available"
+  },
+  "warnings": []
+ },
+ "modelled_illiquid": {
+  "schema_version": "1.0",
+  "tool": "exit_liquidity_check",
+  "status": "ok",
+  "data_mode": "live",
+  "as_of": "2026-11-09T12:00:00Z",
+  "request": {
+   "token": "ETH",
+   "size_usd": 1000000.0,
+   "max_slippage_pct": 2.0,
+   "participation_pct": 5.0
+  },
+  "data": {
+   "token": "ETH",
+   "chain": "ethereum",
+   "contract": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+   "measured_as": "WETH on Ethereum",
+   "verdict": "illiquid",
+   "basis": "modelled",
+   "confidence": "moderate",
+   "requested_size_usd": 1000000.0,
+   "max_slippage_pct": 2.0,
+   "participation_pct": 5.0,
+   "estimate": {
+    "size_usd": 1000000.0,
+    "slippage_pct": 6.25,
+    "cost_usd": 62500.0,
+    "proceeds_usd": 937500.0,
+    "pool_fraction_pct": 6.667,
+    "basis": "modelled",
+    "model": "cpmm_v1",
+    "within_model_validity": true
+   },
+   "quote": null,
+   "model_check": null,
+   "max_size_usd": {
+    "1pct": 151515.15,
+    "3pct": 463917.53,
+    "at_ceiling": 306122.45
+   },
+   "hours_to_exit": 9.6,
+   "hourly_capacity_usd": 104166.67,
+   "curve": [
+    {
+     "size_usd": 75000.0,
+     "slippage_pct": 0.4975,
+     "cost_usd": 373.13,
+     "proceeds_usd": 74626.87,
+     "pool_fraction_pct": 0.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 150000.0,
+     "slippage_pct": 0.9901,
+     "cost_usd": 1485.15,
+     "proceeds_usd": 148514.85,
+     "pool_fraction_pct": 1.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 375000.0,
+     "slippage_pct": 2.439,
+     "cost_usd": 9146.34,
+     "proceeds_usd": 365853.66,
+     "pool_fraction_pct": 2.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 750000.0,
+     "slippage_pct": 4.7619,
+     "cost_usd": 35714.29,
+     "proceeds_usd": 714285.71,
+     "pool_fraction_pct": 5.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 1500000.0,
+     "slippage_pct": 9.0909,
+     "cost_usd": 136363.64,
+     "proceeds_usd": 1363636.36,
+     "pool_fraction_pct": 10.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 3750000.0,
+     "slippage_pct": 20.0,
+     "cost_usd": 750000.0,
+     "proceeds_usd": 3000000.0,
+     "pool_fraction_pct": 25.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    }
+   ],
+   "pool_depth": {
+    "token": "ETH",
+    "chain": "ethereum",
+    "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "via": "WETH on Ethereum",
+    "deepest_pool": {
+     "dex": "dex",
+     "pair": "A",
+     "quote": "USDC",
+     "liquidity_usd": 20000000.0,
+     "volume_24h_usd": 40000000.0,
+     "price_usd": 3000.0
+    },
+    "pools_used": 2,
+    "pools_rejected": [],
+    "price_usd": 3000.0,
+    "total_liquidity_usd": 30000000.0,
+    "total_volume_24h_usd": 50000000.0,
+    "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+   },
+   "model": {
+    "id": "cpmm_v1",
+    "assumptions": [
+     "the pool behaves as constant-product (x*y=k)",
+     "reported liquidity is total value locked, twice one side",
+     "all liquidity is reachable in a single route",
+     "no fees, no MEV, no price movement during the exit",
+     "mid price at the time of the reading"
+    ],
+    "validity_limit_pct": 25.0
+   },
+   "inputs": [
+    {
+     "name": "liquidity_usd",
+     "value": 30000000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    },
+    {
+     "name": "volume_24h_usd",
+     "value": 50000000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    },
+    {
+     "name": "price_usd",
+     "value": 3000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    }
+   ],
+   "gaps": [],
+   "notes": [
+    "no keyless executable-quote venue exists for this token on its home chain, so the cost is modelled from on-chain depth",
+    "depth is the sum of 2 on-chain pools for the canonical contract; centralised-exchange depth and volume are not included",
+    "confidence never exceeds moderate for a modelled figure: no venue quote was observed for this size"
+   ],
+   "source_calls": [
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 450,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    }
+   ]
+  },
+  "summary": {
+   "headline": "ETH: exiting $1,000,000 costs 6.25% (modelled); the exit is severe at this size.",
+   "key_points": [
+    "Modelled from pool depth: 6.25% ($62,500); the exit is 6.67% of the pool.",
+    "Largest exit at 1%: $151,515; at 3%: $463,918; at your ceiling: $306,122.",
+    "A patient exit at 5% of daily volume takes 9.6 hours."
+   ]
+  },
+  "availability": {
+   "pool_depth": "available",
+   "volume": "available",
+   "executable_quote": "not_requested"
+  },
+  "warnings": []
+ },
+ "modelled_tight": {
+  "schema_version": "1.0",
+  "tool": "exit_liquidity_check",
+  "status": "ok",
+  "data_mode": "live",
+  "as_of": "2026-11-09T12:00:00Z",
+  "request": {
+   "token": "ETH",
+   "size_usd": 10000.0,
+   "max_slippage_pct": 1.5,
+   "participation_pct": 10.0
+  },
+  "data": {
+   "token": "ETH",
+   "chain": "ethereum",
+   "contract": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+   "measured_as": "WETH on Ethereum",
+   "verdict": "tight",
+   "basis": "modelled",
+   "confidence": "moderate",
+   "requested_size_usd": 10000.0,
+   "max_slippage_pct": 1.5,
+   "participation_pct": 10.0,
+   "estimate": {
+    "size_usd": 10000.0,
+    "slippage_pct": 1.9608,
+    "cost_usd": 196.08,
+    "proceeds_usd": 9803.92,
+    "pool_fraction_pct": 2.0,
+    "basis": "modelled",
+    "model": "cpmm_v1",
+    "within_model_validity": true
+   },
+   "quote": null,
+   "model_check": null,
+   "max_size_usd": {
+    "1pct": 5050.51,
+    "3pct": 15463.92,
+    "at_ceiling": 7614.21
+   },
+   "hours_to_exit": 0.48,
+   "hourly_capacity_usd": 20833.33,
+   "curve": [
+    {
+     "size_usd": 2500.0,
+     "slippage_pct": 0.4975,
+     "cost_usd": 12.44,
+     "proceeds_usd": 2487.56,
+     "pool_fraction_pct": 0.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 5000.0,
+     "slippage_pct": 0.9901,
+     "cost_usd": 49.5,
+     "proceeds_usd": 4950.5,
+     "pool_fraction_pct": 1.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 12500.0,
+     "slippage_pct": 2.439,
+     "cost_usd": 304.88,
+     "proceeds_usd": 12195.12,
+     "pool_fraction_pct": 2.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 25000.0,
+     "slippage_pct": 4.7619,
+     "cost_usd": 1190.48,
+     "proceeds_usd": 23809.52,
+     "pool_fraction_pct": 5.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 50000.0,
+     "slippage_pct": 9.0909,
+     "cost_usd": 4545.45,
+     "proceeds_usd": 45454.55,
+     "pool_fraction_pct": 10.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 125000.0,
+     "slippage_pct": 20.0,
+     "cost_usd": 25000.0,
+     "proceeds_usd": 100000.0,
+     "pool_fraction_pct": 25.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    }
+   ],
+   "pool_depth": {
+    "token": "ETH",
+    "chain": "ethereum",
+    "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "via": "WETH on Ethereum",
+    "deepest_pool": {
+     "dex": "dex",
+     "pair": "A",
+     "quote": "USDC",
+     "liquidity_usd": 1000000.0,
+     "volume_24h_usd": 5000000.0,
+     "price_usd": 3000.0
+    },
+    "pools_used": 1,
+    "pools_rejected": [],
+    "price_usd": 3000.0,
+    "total_liquidity_usd": 1000000.0,
+    "total_volume_24h_usd": 5000000.0,
+    "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+   },
+   "model": {
+    "id": "cpmm_v1",
+    "assumptions": [
+     "the pool behaves as constant-product (x*y=k)",
+     "reported liquidity is total value locked, twice one side",
+     "all liquidity is reachable in a single route",
+     "no fees, no MEV, no price movement during the exit",
+     "mid price at the time of the reading"
+    ],
+    "validity_limit_pct": 25.0
+   },
+   "inputs": [
+    {
+     "name": "liquidity_usd",
+     "value": 1000000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    },
+    {
+     "name": "volume_24h_usd",
+     "value": 5000000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    },
+    {
+     "name": "price_usd",
+     "value": 3000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    }
+   ],
+   "gaps": [],
+   "notes": [
+    "no keyless executable-quote venue exists for this token on its home chain, so the cost is modelled from on-chain depth",
+    "depth is the sum of 1 on-chain pools for the canonical contract; centralised-exchange depth and volume are not included",
+    "confidence never exceeds moderate for a modelled figure: no venue quote was observed for this size"
+   ],
+   "source_calls": [
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 223,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    }
+   ]
+  },
+  "summary": {
+   "headline": "ETH: exiting $10,000 costs 1.96% (modelled); the exit is above the ceiling.",
+   "key_points": [
+    "Modelled from pool depth: 1.96% ($196); the exit is 2.00% of the pool.",
+    "Largest exit at 1%: $5,051; at 3%: $15,464; at your ceiling: $7,614.",
+    "A patient exit at 10% of daily volume takes 29 minutes."
+   ]
+  },
+  "availability": {
+   "pool_depth": "available",
+   "volume": "available",
+   "executable_quote": "not_requested"
+  },
+  "warnings": []
+ },
+ "modelled_ok": {
+  "schema_version": "1.0",
+  "tool": "exit_liquidity_check",
+  "status": "ok",
+  "data_mode": "live",
+  "as_of": "2026-11-09T12:00:00Z",
+  "request": {
+   "token": "ETH",
+   "size_usd": 10000.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0
+  },
+  "data": {
+   "token": "ETH",
+   "chain": "ethereum",
+   "contract": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+   "measured_as": "WETH on Ethereum",
+   "verdict": "ok",
+   "basis": "modelled",
+   "confidence": "moderate",
+   "requested_size_usd": 10000.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0,
+   "estimate": {
+    "size_usd": 10000.0,
+    "slippage_pct": 1.9608,
+    "cost_usd": 196.08,
+    "proceeds_usd": 9803.92,
+    "pool_fraction_pct": 2.0,
+    "basis": "modelled",
+    "model": "cpmm_v1",
+    "within_model_validity": true
+   },
+   "quote": null,
+   "model_check": null,
+   "max_size_usd": {
+    "1pct": 5050.51,
+    "3pct": 15463.92,
+    "at_ceiling": 15463.92
+   },
+   "hours_to_exit": 0.48,
+   "hourly_capacity_usd": 20833.33,
+   "curve": [
+    {
+     "size_usd": 2500.0,
+     "slippage_pct": 0.4975,
+     "cost_usd": 12.44,
+     "proceeds_usd": 2487.56,
+     "pool_fraction_pct": 0.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 5000.0,
+     "slippage_pct": 0.9901,
+     "cost_usd": 49.5,
+     "proceeds_usd": 4950.5,
+     "pool_fraction_pct": 1.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 12500.0,
+     "slippage_pct": 2.439,
+     "cost_usd": 304.88,
+     "proceeds_usd": 12195.12,
+     "pool_fraction_pct": 2.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 25000.0,
+     "slippage_pct": 4.7619,
+     "cost_usd": 1190.48,
+     "proceeds_usd": 23809.52,
+     "pool_fraction_pct": 5.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 50000.0,
+     "slippage_pct": 9.0909,
+     "cost_usd": 4545.45,
+     "proceeds_usd": 45454.55,
+     "pool_fraction_pct": 10.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 125000.0,
+     "slippage_pct": 20.0,
+     "cost_usd": 25000.0,
+     "proceeds_usd": 100000.0,
+     "pool_fraction_pct": 25.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    }
+   ],
+   "pool_depth": {
+    "token": "ETH",
+    "chain": "ethereum",
+    "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "via": "WETH on Ethereum",
+    "deepest_pool": {
+     "dex": "dex",
+     "pair": "A",
+     "quote": "USDC",
+     "liquidity_usd": 1000000.0,
+     "volume_24h_usd": 5000000.0,
+     "price_usd": 3000.0
+    },
+    "pools_used": 1,
+    "pools_rejected": [],
+    "price_usd": 3000.0,
+    "total_liquidity_usd": 1000000.0,
+    "total_volume_24h_usd": 5000000.0,
+    "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+   },
+   "model": {
+    "id": "cpmm_v1",
+    "assumptions": [
+     "the pool behaves as constant-product (x*y=k)",
+     "reported liquidity is total value locked, twice one side",
+     "all liquidity is reachable in a single route",
+     "no fees, no MEV, no price movement during the exit",
+     "mid price at the time of the reading"
+    ],
+    "validity_limit_pct": 25.0
+   },
+   "inputs": [
+    {
+     "name": "liquidity_usd",
+     "value": 1000000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    },
+    {
+     "name": "volume_24h_usd",
+     "value": 5000000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    },
+    {
+     "name": "price_usd",
+     "value": 3000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    }
+   ],
+   "gaps": [],
+   "notes": [
+    "no keyless executable-quote venue exists for this token on its home chain, so the cost is modelled from on-chain depth",
+    "depth is the sum of 1 on-chain pools for the canonical contract; centralised-exchange depth and volume are not included",
+    "confidence never exceeds moderate for a modelled figure: no venue quote was observed for this size"
+   ],
+   "source_calls": [
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 223,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    }
+   ]
+  },
+  "summary": {
+   "headline": "ETH: exiting $10,000 costs 1.96% (modelled); the exit fits inside the ceiling.",
+   "key_points": [
+    "Modelled from pool depth: 1.96% ($196); the exit is 2.00% of the pool.",
+    "Largest exit at 1%: $5,051; at 3%: $15,464; at your ceiling: $15,464.",
+    "A patient exit at 10% of daily volume takes 29 minutes."
+   ]
+  },
+  "availability": {
+   "pool_depth": "available",
+   "volume": "available",
+   "executable_quote": "not_requested"
+  },
+  "warnings": []
+ },
+ "outside_model": {
+  "schema_version": "1.0",
+  "tool": "exit_liquidity_check",
+  "status": "ok",
+  "data_mode": "live",
+  "as_of": "2026-11-09T12:00:00Z",
+  "request": {
+   "token": "ETH",
+   "size_usd": 400000.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0
+  },
+  "data": {
+   "token": "ETH",
+   "chain": "ethereum",
+   "contract": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+   "measured_as": "WETH on Ethereum",
+   "verdict": "illiquid",
+   "basis": "modelled",
+   "confidence": "low",
+   "requested_size_usd": 400000.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0,
+   "estimate": {
+    "size_usd": 400000.0,
+    "slippage_pct": 44.4444,
+    "cost_usd": 177777.78,
+    "proceeds_usd": 222222.22,
+    "pool_fraction_pct": 80.0,
+    "basis": "modelled",
+    "model": "cpmm_v1",
+    "within_model_validity": false
+   },
+   "quote": null,
+   "model_check": null,
+   "max_size_usd": {
+    "1pct": 5050.51,
+    "3pct": 15463.92,
+    "at_ceiling": 15463.92
+   },
+   "hours_to_exit": 9.6,
+   "hourly_capacity_usd": 41666.67,
+   "curve": [
+    {
+     "size_usd": 2500.0,
+     "slippage_pct": 0.4975,
+     "cost_usd": 12.44,
+     "proceeds_usd": 2487.56,
+     "pool_fraction_pct": 0.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 5000.0,
+     "slippage_pct": 0.9901,
+     "cost_usd": 49.5,
+     "proceeds_usd": 4950.5,
+     "pool_fraction_pct": 1.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 12500.0,
+     "slippage_pct": 2.439,
+     "cost_usd": 304.88,
+     "proceeds_usd": 12195.12,
+     "pool_fraction_pct": 2.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 25000.0,
+     "slippage_pct": 4.7619,
+     "cost_usd": 1190.48,
+     "proceeds_usd": 23809.52,
+     "pool_fraction_pct": 5.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 50000.0,
+     "slippage_pct": 9.0909,
+     "cost_usd": 4545.45,
+     "proceeds_usd": 45454.55,
+     "pool_fraction_pct": 10.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 125000.0,
+     "slippage_pct": 20.0,
+     "cost_usd": 25000.0,
+     "proceeds_usd": 100000.0,
+     "pool_fraction_pct": 25.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    }
+   ],
+   "pool_depth": {
+    "token": "ETH",
+    "chain": "ethereum",
+    "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "via": "WETH on Ethereum",
+    "deepest_pool": {
+     "dex": "dex",
+     "pair": "A",
+     "quote": "USDC",
+     "liquidity_usd": 1000000.0,
+     "volume_24h_usd": 10000000.0,
+     "price_usd": 3000.0
+    },
+    "pools_used": 1,
+    "pools_rejected": [],
+    "price_usd": 3000.0,
+    "total_liquidity_usd": 1000000.0,
+    "total_volume_24h_usd": 10000000.0,
+    "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+   },
+   "model": {
+    "id": "cpmm_v1",
+    "assumptions": [
+     "the pool behaves as constant-product (x*y=k)",
+     "reported liquidity is total value locked, twice one side",
+     "all liquidity is reachable in a single route",
+     "no fees, no MEV, no price movement during the exit",
+     "mid price at the time of the reading"
+    ],
+    "validity_limit_pct": 25.0
+   },
+   "inputs": [
+    {
+     "name": "liquidity_usd",
+     "value": 1000000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    },
+    {
+     "name": "volume_24h_usd",
+     "value": 10000000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    },
+    {
+     "name": "price_usd",
+     "value": 3000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    }
+   ],
+   "gaps": [],
+   "notes": [
+    "no keyless executable-quote venue exists for this token on its home chain, so the cost is modelled from on-chain depth",
+    "depth is the sum of 1 on-chain pools for the canonical contract; centralised-exchange depth and volume are not included",
+    "confidence never exceeds moderate for a modelled figure: no venue quote was observed for this size"
+   ],
+   "source_calls": [
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 224,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    }
+   ]
+  },
+  "summary": {
+   "headline": "ETH: exiting $400,000 costs 44.4% (modelled); the exit is severe at this size.",
+   "key_points": [
+    "Modelled from pool depth: 44.4% ($177,778); the exit is 80.0% of the pool.",
+    "Largest exit at 1%: $5,051; at 3%: $15,464; at your ceiling: $15,464.",
+    "A patient exit at 10% of daily volume takes 9.6 hours."
+   ]
+  },
+  "availability": {
+   "pool_depth": "available",
+   "volume": "available",
+   "executable_quote": "not_requested"
+  },
+  "warnings": [
+   "this exit is 80.0% of the pool, past the 25% point where a constant-product curve stops describing a real venue; treat the modelled cost as a floor"
+  ]
+ },
+ "no_size_solana": {
+  "schema_version": "1.0",
+  "tool": "exit_liquidity_check",
+  "status": "ok",
+  "data_mode": "live",
+  "as_of": "2026-11-09T12:00:00Z",
+  "request": {
+   "token": "BONK",
+   "size_usd": null,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0
+  },
+  "data": {
+   "token": "BONK",
+   "chain": "solana",
+   "contract": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+   "measured_as": null,
+   "verdict": "unknown",
+   "basis": null,
+   "confidence": "none",
+   "requested_size_usd": null,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0,
+   "estimate": null,
+   "quote": null,
+   "model_check": null,
+   "max_size_usd": {
+    "1pct": 5050.51,
+    "3pct": 15463.92,
+    "at_ceiling": 15463.92
+   },
+   "hours_to_exit": null,
+   "hourly_capacity_usd": 2083.33,
+   "curve": [
+    {
+     "size_usd": 2500.0,
+     "slippage_pct": 0.4975,
+     "cost_usd": 12.44,
+     "proceeds_usd": 2487.56,
+     "pool_fraction_pct": 0.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 5000.0,
+     "slippage_pct": 0.9901,
+     "cost_usd": 49.5,
+     "proceeds_usd": 4950.5,
+     "pool_fraction_pct": 1.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 12500.0,
+     "slippage_pct": 2.439,
+     "cost_usd": 304.88,
+     "proceeds_usd": 12195.12,
+     "pool_fraction_pct": 2.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 25000.0,
+     "slippage_pct": 4.7619,
+     "cost_usd": 1190.48,
+     "proceeds_usd": 23809.52,
+     "pool_fraction_pct": 5.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 50000.0,
+     "slippage_pct": 9.0909,
+     "cost_usd": 4545.45,
+     "proceeds_usd": 45454.55,
+     "pool_fraction_pct": 10.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 125000.0,
+     "slippage_pct": 20.0,
+     "cost_usd": 25000.0,
+     "proceeds_usd": 100000.0,
+     "pool_fraction_pct": 25.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    }
+   ],
+   "pool_depth": {
+    "token": "BONK",
+    "chain": "solana",
+    "address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+    "via": null,
+    "deepest_pool": {
+     "dex": "dex",
+     "pair": "P1",
+     "quote": "USDC",
+     "liquidity_usd": 1000000.0,
+     "volume_24h_usd": 500000.0,
+     "price_usd": 2e-05
+    },
+    "pools_used": 1,
+    "pools_rejected": [],
+    "price_usd": 2e-05,
+    "total_liquidity_usd": 1000000.0,
+    "total_volume_24h_usd": 500000.0,
+    "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+   },
+   "model": {
+    "id": "cpmm_v1",
+    "assumptions": [
+     "the pool behaves as constant-product (x*y=k)",
+     "reported liquidity is total value locked, twice one side",
+     "all liquidity is reachable in a single route",
+     "no fees, no MEV, no price movement during the exit",
+     "mid price at the time of the reading"
+    ],
+    "validity_limit_pct": 25.0
+   },
+   "inputs": [
+    {
+     "name": "liquidity_usd",
+     "value": 1000000.0,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    },
+    {
+     "name": "volume_24h_usd",
+     "value": 500000.0,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    },
+    {
+     "name": "price_usd",
+     "value": 2e-05,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    }
+   ],
+   "gaps": [],
+   "notes": [
+    "depth is the sum of 1 on-chain pools for the canonical contract; centralised-exchange depth and volume are not included",
+    "no size was given, so the ceilings and the cost curve are answered without a verdict"
+   ],
+   "source_calls": [
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 228,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    }
+   ]
+  },
+  "summary": {
+   "headline": "BONK: a $15,464 exit stays within 3% (modelled); no size was given, so there is no verdict.",
+   "key_points": [
+    "Largest exit at 1%: $5,051; at 3%: $15,464; at your ceiling: $15,464.",
+    "At 10% of daily volume the market absorbs about $2,083 an hour."
+   ]
+  },
+  "availability": {
+   "pool_depth": "available",
+   "volume": "available",
+   "executable_quote": "not_requested"
+  },
+  "warnings": []
+ },
+ "no_size_ethereum": {
+  "schema_version": "1.0",
+  "tool": "exit_liquidity_check",
+  "status": "ok",
+  "data_mode": "live",
+  "as_of": "2026-11-09T12:00:00Z",
+  "request": {
+   "token": "ETH",
+   "size_usd": null,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0
+  },
+  "data": {
+   "token": "ETH",
+   "chain": "ethereum",
+   "contract": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+   "measured_as": "WETH on Ethereum",
+   "verdict": "unknown",
+   "basis": null,
+   "confidence": "none",
+   "requested_size_usd": null,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0,
+   "estimate": null,
+   "quote": null,
+   "model_check": null,
+   "max_size_usd": {
+    "1pct": 5050.51,
+    "3pct": 15463.92,
+    "at_ceiling": 15463.92
+   },
+   "hours_to_exit": null,
+   "hourly_capacity_usd": 20833.33,
+   "curve": [
+    {
+     "size_usd": 2500.0,
+     "slippage_pct": 0.4975,
+     "cost_usd": 12.44,
+     "proceeds_usd": 2487.56,
+     "pool_fraction_pct": 0.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 5000.0,
+     "slippage_pct": 0.9901,
+     "cost_usd": 49.5,
+     "proceeds_usd": 4950.5,
+     "pool_fraction_pct": 1.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 12500.0,
+     "slippage_pct": 2.439,
+     "cost_usd": 304.88,
+     "proceeds_usd": 12195.12,
+     "pool_fraction_pct": 2.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 25000.0,
+     "slippage_pct": 4.7619,
+     "cost_usd": 1190.48,
+     "proceeds_usd": 23809.52,
+     "pool_fraction_pct": 5.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 50000.0,
+     "slippage_pct": 9.0909,
+     "cost_usd": 4545.45,
+     "proceeds_usd": 45454.55,
+     "pool_fraction_pct": 10.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 125000.0,
+     "slippage_pct": 20.0,
+     "cost_usd": 25000.0,
+     "proceeds_usd": 100000.0,
+     "pool_fraction_pct": 25.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    }
+   ],
+   "pool_depth": {
+    "token": "ETH",
+    "chain": "ethereum",
+    "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "via": "WETH on Ethereum",
+    "deepest_pool": {
+     "dex": "dex",
+     "pair": "A",
+     "quote": "USDC",
+     "liquidity_usd": 1000000.0,
+     "volume_24h_usd": 5000000.0,
+     "price_usd": 3000.0
+    },
+    "pools_used": 1,
+    "pools_rejected": [],
+    "price_usd": 3000.0,
+    "total_liquidity_usd": 1000000.0,
+    "total_volume_24h_usd": 5000000.0,
+    "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+   },
+   "model": {
+    "id": "cpmm_v1",
+    "assumptions": [
+     "the pool behaves as constant-product (x*y=k)",
+     "reported liquidity is total value locked, twice one side",
+     "all liquidity is reachable in a single route",
+     "no fees, no MEV, no price movement during the exit",
+     "mid price at the time of the reading"
+    ],
+    "validity_limit_pct": 25.0
+   },
+   "inputs": [
+    {
+     "name": "liquidity_usd",
+     "value": 1000000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    },
+    {
+     "name": "volume_24h_usd",
+     "value": 5000000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    },
+    {
+     "name": "price_usd",
+     "value": 3000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    }
+   ],
+   "gaps": [],
+   "notes": [
+    "depth is the sum of 1 on-chain pools for the canonical contract; centralised-exchange depth and volume are not included",
+    "no size was given, so the ceilings and the cost curve are answered without a verdict"
+   ],
+   "source_calls": [
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 223,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    }
+   ]
+  },
+  "summary": {
+   "headline": "ETH: a $15,464 exit stays within 3% (modelled); no size was given, so there is no verdict.",
+   "key_points": [
+    "Largest exit at 1%: $5,051; at 3%: $15,464; at your ceiling: $15,464.",
+    "At 10% of daily volume the market absorbs about $20,833 an hour."
+   ]
+  },
+  "availability": {
+   "pool_depth": "available",
+   "volume": "available",
+   "executable_quote": "not_requested"
+  },
+  "warnings": []
+ },
+ "depth_dead": {
+  "schema_version": "1.0",
+  "tool": "exit_liquidity_check",
+  "status": "unavailable",
+  "data_mode": "unknown",
+  "as_of": "2026-11-09T12:00:00Z",
+  "request": {
+   "token": "BONK",
+   "size_usd": 50000.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0
+  },
+  "data": {
+   "token": "BONK",
+   "chain": "solana",
+   "contract": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+   "measured_as": null,
+   "verdict": "unknown",
+   "basis": null,
+   "confidence": "none",
+   "requested_size_usd": 50000.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0,
+   "estimate": null,
+   "quote": null,
+   "model_check": null,
+   "max_size_usd": {
+    "1pct": null,
+    "3pct": null,
+    "at_ceiling": null
+   },
+   "hours_to_exit": null,
+   "hourly_capacity_usd": null,
+   "curve": [],
+   "pool_depth": null,
+   "model": {
+    "id": "cpmm_v1",
+    "assumptions": [
+     "the pool behaves as constant-product (x*y=k)",
+     "reported liquidity is total value locked, twice one side",
+     "all liquidity is reachable in a single route",
+     "no fees, no MEV, no price movement during the exit",
+     "mid price at the time of the reading"
+    ],
+    "validity_limit_pct": 25.0
+   },
+   "inputs": [
+    {
+     "name": "liquidity_usd",
+     "value": null,
+     "source": null
+    },
+    {
+     "name": "volume_24h_usd",
+     "value": null,
+     "source": null
+    },
+    {
+     "name": "price_usd",
+     "value": null,
+     "source": null
+    }
+   ],
+   "gaps": [
+    "pool liquidity unavailable; the exit cost cannot be modelled and is reported as null, not zero",
+    "24 hour volume unavailable; the time to exit cannot be estimated"
+   ],
+   "notes": [
+    "no price was read, so no quote was sized"
+   ],
+   "source_calls": [
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 503,
+     "bytes": 2,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": "server_error"
+    },
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "method": "GET",
+     "attempt": 2,
+     "http_status": 503,
+     "bytes": 2,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": "server_error"
+    },
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "method": "GET",
+     "attempt": 3,
+     "http_status": 503,
+     "bytes": 2,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": "server_error"
+    }
+   ]
+  },
+  "summary": {
+   "headline": "BONK: no exit cost could be stated; no source answered. This is not a liquidity rating.",
+   "key_points": [
+    "pool liquidity unavailable; the exit cost cannot be modelled and is reported as null, not zero",
+    "24 hour volume unavailable; the time to exit cannot be estimated"
+   ]
+  },
+  "availability": {
+   "pool_depth": "unavailable",
+   "volume": "unavailable",
+   "executable_quote": "unavailable"
+  },
+  "warnings": [
+   "dexscreener: the source returned a server error"
+  ]
+ },
+ "depth_junk": {
+  "schema_version": "1.0",
+  "tool": "exit_liquidity_check",
+  "status": "unavailable",
+  "data_mode": "unknown",
+  "as_of": "2026-11-09T12:00:00Z",
+  "request": {
+   "token": "BONK",
+   "size_usd": 1.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0
+  },
+  "data": {
+   "token": "BONK",
+   "chain": "solana",
+   "contract": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+   "measured_as": null,
+   "verdict": "unknown",
+   "basis": null,
+   "confidence": "none",
+   "requested_size_usd": 1.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0,
+   "estimate": null,
+   "quote": null,
+   "model_check": null,
+   "max_size_usd": {
+    "1pct": null,
+    "3pct": null,
+    "at_ceiling": null
+   },
+   "hours_to_exit": null,
+   "hourly_capacity_usd": null,
+   "curve": [],
+   "pool_depth": null,
+   "model": {
+    "id": "cpmm_v1",
+    "assumptions": [
+     "the pool behaves as constant-product (x*y=k)",
+     "reported liquidity is total value locked, twice one side",
+     "all liquidity is reachable in a single route",
+     "no fees, no MEV, no price movement during the exit",
+     "mid price at the time of the reading"
+    ],
+    "validity_limit_pct": 25.0
+   },
+   "inputs": [
+    {
+     "name": "liquidity_usd",
+     "value": null,
+     "source": null
+    },
+    {
+     "name": "volume_24h_usd",
+     "value": null,
+     "source": null
+    },
+    {
+     "name": "price_usd",
+     "value": null,
+     "source": null
+    }
+   ],
+   "gaps": [
+    "pool liquidity unavailable; the exit cost cannot be modelled and is reported as null, not zero",
+    "24 hour volume unavailable; the time to exit cannot be estimated"
+   ],
+   "notes": [
+    "no price was read, so no quote was sized"
+   ],
+   "source_calls": [
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 6,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    }
+   ]
+  },
+  "summary": {
+   "headline": "BONK: no exit cost could be stated; no source answered. This is not a liquidity rating.",
+   "key_points": [
+    "pool liquidity unavailable; the exit cost cannot be modelled and is reported as null, not zero",
+    "24 hour volume unavailable; the time to exit cannot be estimated"
+   ]
+  },
+  "availability": {
+   "pool_depth": "unavailable",
+   "volume": "unavailable",
+   "executable_quote": "unavailable"
+  },
+  "warnings": [
+   "dexscreener: the source returned a reply that could not be used"
+  ]
+ },
+ "depth_empty": {
+  "schema_version": "1.0",
+  "tool": "exit_liquidity_check",
+  "status": "unavailable",
+  "data_mode": "live",
+  "as_of": "2026-11-09T12:00:00Z",
+  "request": {
+   "token": "BONK",
+   "size_usd": 1.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0
+  },
+  "data": {
+   "token": "BONK",
+   "chain": "solana",
+   "contract": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+   "measured_as": null,
+   "verdict": "unknown",
+   "basis": null,
+   "confidence": "none",
+   "requested_size_usd": 1.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0,
+   "estimate": null,
+   "quote": null,
+   "model_check": null,
+   "max_size_usd": {
+    "1pct": null,
+    "3pct": null,
+    "at_ceiling": null
+   },
+   "hours_to_exit": null,
+   "hourly_capacity_usd": null,
+   "curve": [],
+   "pool_depth": {
+    "token": "BONK",
+    "chain": "solana",
+    "address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+    "via": null,
+    "deepest_pool": null,
+    "pools_used": 0,
+    "pools_rejected": [],
+    "price_usd": null,
+    "total_liquidity_usd": null,
+    "total_volume_24h_usd": null,
+    "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+   },
+   "model": {
+    "id": "cpmm_v1",
+    "assumptions": [
+     "the pool behaves as constant-product (x*y=k)",
+     "reported liquidity is total value locked, twice one side",
+     "all liquidity is reachable in a single route",
+     "no fees, no MEV, no price movement during the exit",
+     "mid price at the time of the reading"
+    ],
+    "validity_limit_pct": 25.0
+   },
+   "inputs": [
+    {
+     "name": "liquidity_usd",
+     "value": null,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    },
+    {
+     "name": "volume_24h_usd",
+     "value": null,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    },
+    {
+     "name": "price_usd",
+     "value": null,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    }
+   ],
+   "gaps": [
+    "no pool passed the filters, so there is no depth to model",
+    "pool liquidity unavailable; the exit cost cannot be modelled and is reported as null, not zero",
+    "24 hour volume unavailable; the time to exit cannot be estimated"
+   ],
+   "notes": [
+    "no price was read, so no quote was sized"
+   ],
+   "source_calls": [
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 2,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    }
+   ]
+  },
+  "summary": {
+   "headline": "BONK: no exit cost could be stated; no source answered. This is not a liquidity rating.",
+   "key_points": [
+    "no pool passed the filters, so there is no depth to model",
+    "pool liquidity unavailable; the exit cost cannot be modelled and is reported as null, not zero",
+    "24 hour volume unavailable; the time to exit cannot be estimated"
+   ]
+  },
+  "availability": {
+   "pool_depth": "unavailable",
+   "volume": "unavailable",
+   "executable_quote": "unavailable"
+  },
+  "warnings": [
+   "dexscreener: no pool passed the filters for this token's contract"
+  ]
+ },
+ "depth_no_size_dead": {
+  "schema_version": "1.0",
+  "tool": "exit_liquidity_check",
+  "status": "unavailable",
+  "data_mode": "unknown",
+  "as_of": "2026-11-09T12:00:00Z",
+  "request": {
+   "token": "BONK",
+   "size_usd": null,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0
+  },
+  "data": {
+   "token": "BONK",
+   "chain": "solana",
+   "contract": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+   "measured_as": null,
+   "verdict": "unknown",
+   "basis": null,
+   "confidence": "none",
+   "requested_size_usd": null,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0,
+   "estimate": null,
+   "quote": null,
+   "model_check": null,
+   "max_size_usd": {
+    "1pct": null,
+    "3pct": null,
+    "at_ceiling": null
+   },
+   "hours_to_exit": null,
+   "hourly_capacity_usd": null,
+   "curve": [],
+   "pool_depth": null,
+   "model": {
+    "id": "cpmm_v1",
+    "assumptions": [
+     "the pool behaves as constant-product (x*y=k)",
+     "reported liquidity is total value locked, twice one side",
+     "all liquidity is reachable in a single route",
+     "no fees, no MEV, no price movement during the exit",
+     "mid price at the time of the reading"
+    ],
+    "validity_limit_pct": 25.0
+   },
+   "inputs": [
+    {
+     "name": "liquidity_usd",
+     "value": null,
+     "source": null
+    },
+    {
+     "name": "volume_24h_usd",
+     "value": null,
+     "source": null
+    },
+    {
+     "name": "price_usd",
+     "value": null,
+     "source": null
+    }
+   ],
+   "gaps": [
+    "pool liquidity unavailable; the exit cost cannot be modelled and is reported as null, not zero",
+    "24 hour volume unavailable; the time to exit cannot be estimated"
+   ],
+   "notes": [],
+   "source_calls": [
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 503,
+     "bytes": 2,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": "server_error"
+    },
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "method": "GET",
+     "attempt": 2,
+     "http_status": 503,
+     "bytes": 2,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": "server_error"
+    },
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "method": "GET",
+     "attempt": 3,
+     "http_status": 503,
+     "bytes": 2,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": "server_error"
+    }
+   ]
+  },
+  "summary": {
+   "headline": "BONK: no exit cost could be stated from what was read.",
+   "key_points": [
+    "pool liquidity unavailable; the exit cost cannot be modelled and is reported as null, not zero",
+    "24 hour volume unavailable; the time to exit cannot be estimated"
+   ]
+  },
+  "availability": {
+   "pool_depth": "unavailable",
+   "volume": "unavailable",
+   "executable_quote": "not_requested"
+  },
+  "warnings": [
+   "dexscreener: the source returned a server error"
+  ]
+ },
+ "quote_dead": {
+  "schema_version": "1.0",
+  "tool": "exit_liquidity_check",
+  "status": "ok",
+  "data_mode": "live",
+  "as_of": "2026-11-09T12:00:00Z",
+  "request": {
+   "token": "BONK",
+   "size_usd": 5000.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0
+  },
+  "data": {
+   "token": "BONK",
+   "chain": "solana",
+   "contract": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+   "measured_as": null,
+   "verdict": "ok",
+   "basis": "modelled",
+   "confidence": "moderate",
+   "requested_size_usd": 5000.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0,
+   "estimate": {
+    "size_usd": 5000.0,
+    "slippage_pct": 0.9901,
+    "cost_usd": 49.5,
+    "proceeds_usd": 4950.5,
+    "pool_fraction_pct": 1.0,
+    "basis": "modelled",
+    "model": "cpmm_v1",
+    "within_model_validity": true
+   },
+   "quote": null,
+   "model_check": null,
+   "max_size_usd": {
+    "1pct": 5050.51,
+    "3pct": 15463.92,
+    "at_ceiling": 15463.92
+   },
+   "hours_to_exit": 2.4,
+   "hourly_capacity_usd": 2083.33,
+   "curve": [
+    {
+     "size_usd": 2500.0,
+     "slippage_pct": 0.4975,
+     "cost_usd": 12.44,
+     "proceeds_usd": 2487.56,
+     "pool_fraction_pct": 0.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 5000.0,
+     "slippage_pct": 0.9901,
+     "cost_usd": 49.5,
+     "proceeds_usd": 4950.5,
+     "pool_fraction_pct": 1.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 12500.0,
+     "slippage_pct": 2.439,
+     "cost_usd": 304.88,
+     "proceeds_usd": 12195.12,
+     "pool_fraction_pct": 2.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 25000.0,
+     "slippage_pct": 4.7619,
+     "cost_usd": 1190.48,
+     "proceeds_usd": 23809.52,
+     "pool_fraction_pct": 5.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 50000.0,
+     "slippage_pct": 9.0909,
+     "cost_usd": 4545.45,
+     "proceeds_usd": 45454.55,
+     "pool_fraction_pct": 10.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 125000.0,
+     "slippage_pct": 20.0,
+     "cost_usd": 25000.0,
+     "proceeds_usd": 100000.0,
+     "pool_fraction_pct": 25.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    }
+   ],
+   "pool_depth": {
+    "token": "BONK",
+    "chain": "solana",
+    "address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+    "via": null,
+    "deepest_pool": {
+     "dex": "dex",
+     "pair": "P1",
+     "quote": "USDC",
+     "liquidity_usd": 1000000.0,
+     "volume_24h_usd": 500000.0,
+     "price_usd": 2e-05
+    },
+    "pools_used": 1,
+    "pools_rejected": [],
+    "price_usd": 2e-05,
+    "total_liquidity_usd": 1000000.0,
+    "total_volume_24h_usd": 500000.0,
+    "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+   },
+   "model": {
+    "id": "cpmm_v1",
+    "assumptions": [
+     "the pool behaves as constant-product (x*y=k)",
+     "reported liquidity is total value locked, twice one side",
+     "all liquidity is reachable in a single route",
+     "no fees, no MEV, no price movement during the exit",
+     "mid price at the time of the reading"
+    ],
+    "validity_limit_pct": 25.0
+   },
+   "inputs": [
+    {
+     "name": "liquidity_usd",
+     "value": 1000000.0,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    },
+    {
+     "name": "volume_24h_usd",
+     "value": 500000.0,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    },
+    {
+     "name": "price_usd",
+     "value": 2e-05,
+     "source": "dexscreener:solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+    }
+   ],
+   "gaps": [],
+   "notes": [
+    "depth is the sum of 1 on-chain pools for the canonical contract; centralised-exchange depth and volume are not included",
+    "confidence never exceeds moderate for a modelled figure: no venue quote was observed for this size"
+   ],
+   "source_calls": [
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/solana/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 228,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    },
+    {
+     "source": "jupiter",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 400,
+     "bytes": 2,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": "bad_response"
+    }
+   ]
+  },
+  "summary": {
+   "headline": "BONK: exiting $5,000 costs 0.99% (modelled); the exit fits inside the ceiling.",
+   "key_points": [
+    "Modelled from pool depth: 0.99% ($49.50); the exit is 1.00% of the pool.",
+    "Largest exit at 1%: $5,051; at 3%: $15,464; at your ceiling: $15,464.",
+    "A patient exit at 10% of daily volume takes 2.4 hours."
+   ]
+  },
+  "availability": {
+   "pool_depth": "available",
+   "volume": "available",
+   "executable_quote": "unavailable"
+  },
+  "warnings": [
+   "jupiter: the source returned a reply that could not be used"
+  ]
+ },
+ "quiet_pool": {
+  "schema_version": "1.0",
+  "tool": "exit_liquidity_check",
+  "status": "ok",
+  "data_mode": "live",
+  "as_of": "2026-11-09T12:00:00Z",
+  "request": {
+   "token": "ETH",
+   "size_usd": 1000.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0
+  },
+  "data": {
+   "token": "ETH",
+   "chain": "ethereum",
+   "contract": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+   "measured_as": "WETH on Ethereum",
+   "verdict": "ok",
+   "basis": "modelled",
+   "confidence": "moderate",
+   "requested_size_usd": 1000.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0,
+   "estimate": {
+    "size_usd": 1000.0,
+    "slippage_pct": 0.1996,
+    "cost_usd": 2.0,
+    "proceeds_usd": 998.0,
+    "pool_fraction_pct": 0.2,
+    "basis": "modelled",
+    "model": "cpmm_v1",
+    "within_model_validity": true
+   },
+   "quote": null,
+   "model_check": null,
+   "max_size_usd": {
+    "1pct": 5050.51,
+    "3pct": 15463.92,
+    "at_ceiling": 15463.92
+   },
+   "hours_to_exit": 12.0,
+   "hourly_capacity_usd": 83.33,
+   "curve": [
+    {
+     "size_usd": 2500.0,
+     "slippage_pct": 0.4975,
+     "cost_usd": 12.44,
+     "proceeds_usd": 2487.56,
+     "pool_fraction_pct": 0.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 5000.0,
+     "slippage_pct": 0.9901,
+     "cost_usd": 49.5,
+     "proceeds_usd": 4950.5,
+     "pool_fraction_pct": 1.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 12500.0,
+     "slippage_pct": 2.439,
+     "cost_usd": 304.88,
+     "proceeds_usd": 12195.12,
+     "pool_fraction_pct": 2.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 25000.0,
+     "slippage_pct": 4.7619,
+     "cost_usd": 1190.48,
+     "proceeds_usd": 23809.52,
+     "pool_fraction_pct": 5.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 50000.0,
+     "slippage_pct": 9.0909,
+     "cost_usd": 4545.45,
+     "proceeds_usd": 45454.55,
+     "pool_fraction_pct": 10.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 125000.0,
+     "slippage_pct": 20.0,
+     "cost_usd": 25000.0,
+     "proceeds_usd": 100000.0,
+     "pool_fraction_pct": 25.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    }
+   ],
+   "pool_depth": {
+    "token": "ETH",
+    "chain": "ethereum",
+    "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "via": "WETH on Ethereum",
+    "deepest_pool": {
+     "dex": "dex",
+     "pair": "A",
+     "quote": "USDC",
+     "liquidity_usd": 1000000.0,
+     "volume_24h_usd": 19999.0,
+     "price_usd": 3000.0
+    },
+    "pools_used": 1,
+    "pools_rejected": [],
+    "price_usd": 3000.0,
+    "total_liquidity_usd": 1000000.0,
+    "total_volume_24h_usd": 19999.0,
+    "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+   },
+   "model": {
+    "id": "cpmm_v1",
+    "assumptions": [
+     "the pool behaves as constant-product (x*y=k)",
+     "reported liquidity is total value locked, twice one side",
+     "all liquidity is reachable in a single route",
+     "no fees, no MEV, no price movement during the exit",
+     "mid price at the time of the reading"
+    ],
+    "validity_limit_pct": 25.0
+   },
+   "inputs": [
+    {
+     "name": "liquidity_usd",
+     "value": 1000000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    },
+    {
+     "name": "volume_24h_usd",
+     "value": 19999.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    },
+    {
+     "name": "price_usd",
+     "value": 3000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    }
+   ],
+   "gaps": [],
+   "notes": [
+    "no keyless executable-quote venue exists for this token on its home chain, so the cost is modelled from on-chain depth",
+    "depth is the sum of 1 on-chain pools for the canonical contract; centralised-exchange depth and volume are not included",
+    "confidence never exceeds moderate for a modelled figure: no venue quote was observed for this size"
+   ],
+   "source_calls": [
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 221,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    }
+   ]
+  },
+  "summary": {
+   "headline": "ETH: exiting $1,000 costs 0.20% (modelled); the exit fits inside the ceiling.",
+   "key_points": [
+    "Modelled from pool depth: 0.20% ($2.00); the exit is 0.20% of the pool.",
+    "Largest exit at 1%: $5,051; at 3%: $15,464; at your ceiling: $15,464.",
+    "A patient exit at 10% of daily volume takes 12.0 hours."
+   ]
+  },
+  "availability": {
+   "pool_depth": "available",
+   "volume": "available",
+   "executable_quote": "not_requested"
+  },
+  "warnings": [
+   "24 hour volume is under 2% of pool liquidity: the pool may be deep but inactive, and a patient exit may take far longer than modelled"
+  ]
+ },
+ "edge_quiet_pool": {
+  "schema_version": "1.0",
+  "tool": "exit_liquidity_check",
+  "status": "ok",
+  "data_mode": "live",
+  "as_of": "2026-11-09T12:00:00Z",
+  "request": {
+   "token": "ETH",
+   "size_usd": 1000.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0
+  },
+  "data": {
+   "token": "ETH",
+   "chain": "ethereum",
+   "contract": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+   "measured_as": "WETH on Ethereum",
+   "verdict": "ok",
+   "basis": "modelled",
+   "confidence": "moderate",
+   "requested_size_usd": 1000.0,
+   "max_slippage_pct": 3.0,
+   "participation_pct": 10.0,
+   "estimate": {
+    "size_usd": 1000.0,
+    "slippage_pct": 0.1996,
+    "cost_usd": 2.0,
+    "proceeds_usd": 998.0,
+    "pool_fraction_pct": 0.2,
+    "basis": "modelled",
+    "model": "cpmm_v1",
+    "within_model_validity": true
+   },
+   "quote": null,
+   "model_check": null,
+   "max_size_usd": {
+    "1pct": 5050.51,
+    "3pct": 15463.92,
+    "at_ceiling": 15463.92
+   },
+   "hours_to_exit": 12.0,
+   "hourly_capacity_usd": 83.33,
+   "curve": [
+    {
+     "size_usd": 2500.0,
+     "slippage_pct": 0.4975,
+     "cost_usd": 12.44,
+     "proceeds_usd": 2487.56,
+     "pool_fraction_pct": 0.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 5000.0,
+     "slippage_pct": 0.9901,
+     "cost_usd": 49.5,
+     "proceeds_usd": 4950.5,
+     "pool_fraction_pct": 1.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 12500.0,
+     "slippage_pct": 2.439,
+     "cost_usd": 304.88,
+     "proceeds_usd": 12195.12,
+     "pool_fraction_pct": 2.5,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 25000.0,
+     "slippage_pct": 4.7619,
+     "cost_usd": 1190.48,
+     "proceeds_usd": 23809.52,
+     "pool_fraction_pct": 5.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 50000.0,
+     "slippage_pct": 9.0909,
+     "cost_usd": 4545.45,
+     "proceeds_usd": 45454.55,
+     "pool_fraction_pct": 10.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    },
+    {
+     "size_usd": 125000.0,
+     "slippage_pct": 20.0,
+     "cost_usd": 25000.0,
+     "proceeds_usd": 100000.0,
+     "pool_fraction_pct": 25.0,
+     "basis": "modelled",
+     "model": "cpmm_v1",
+     "within_model_validity": true
+    }
+   ],
+   "pool_depth": {
+    "token": "ETH",
+    "chain": "ethereum",
+    "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "via": "WETH on Ethereum",
+    "deepest_pool": {
+     "dex": "dex",
+     "pair": "A",
+     "quote": "USDC",
+     "liquidity_usd": 1000000.0,
+     "volume_24h_usd": 20000.0,
+     "price_usd": 3000.0
+    },
+    "pools_used": 1,
+    "pools_rejected": [],
+    "price_usd": 3000.0,
+    "total_liquidity_usd": 1000000.0,
+    "total_volume_24h_usd": 20000.0,
+    "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+   },
+   "model": {
+    "id": "cpmm_v1",
+    "assumptions": [
+     "the pool behaves as constant-product (x*y=k)",
+     "reported liquidity is total value locked, twice one side",
+     "all liquidity is reachable in a single route",
+     "no fees, no MEV, no price movement during the exit",
+     "mid price at the time of the reading"
+    ],
+    "validity_limit_pct": 25.0
+   },
+   "inputs": [
+    {
+     "name": "liquidity_usd",
+     "value": 1000000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    },
+    {
+     "name": "volume_24h_usd",
+     "value": 20000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    },
+    {
+     "name": "price_usd",
+     "value": 3000.0,
+     "source": "dexscreener:ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    }
+   ],
+   "gaps": [],
+   "notes": [
+    "no keyless executable-quote venue exists for this token on its home chain, so the cost is modelled from on-chain depth",
+    "depth is the sum of 1 on-chain pools for the canonical contract; centralised-exchange depth and volume are not included",
+    "confidence never exceeds moderate for a modelled figure: no venue quote was observed for this size"
+   ],
+   "source_calls": [
+    {
+     "source": "dexscreener",
+     "url": "https://api.dexscreener.com/token-pairs/v1/ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+     "method": "GET",
+     "attempt": 1,
+     "http_status": 200,
+     "bytes": 221,
+     "sha256": true,
+     "fetched_at": "2026-11-09T12:00:00Z",
+     "error_kind": null
+    }
+   ]
+  },
+  "summary": {
+   "headline": "ETH: exiting $1,000 costs 0.20% (modelled); the exit fits inside the ceiling.",
+   "key_points": [
+    "Modelled from pool depth: 0.20% ($2.00); the exit is 0.20% of the pool.",
+    "Largest exit at 1%: $5,051; at 3%: $15,464; at your ceiling: $15,464.",
+    "A patient exit at 10% of daily volume takes 12.0 hours."
+   ]
+  },
+  "availability": {
+   "pool_depth": "available",
+   "volume": "available",
+   "executable_quote": "not_requested"
+  },
+  "warnings": []
+ }
+}

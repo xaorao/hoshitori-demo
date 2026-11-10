@@ -1,0 +1,76 @@
+{
+ "basis": null,
+ "expected": {
+  "contract": "D",
+  "flags": [],
+  "outcome": null,
+  "outcome_price": "100.000",
+  "p0": "100.005",
+  "reason": "VOID_TIE",
+  "state": "VOID",
+  "touch_open_ms": null
+ },
+ "finer": {},
+ "forecast": {
+  "forecast_id": "f-D-tie-half-even-low",
+  "horizon_ms": 3600000,
+  "origin_ms": 1793268120000,
+  "quote_class": "USDT"
+ },
+ "id": "D-tie-half-even-low",
+ "kind": "directional",
+ "note": "100.005 is 10000.5 ticks: half-even rounds to 10000, so it ties with 100.000.",
+ "pair": {
+  "pair_id": "A",
+  "primary": {
+   "bars": [
+    [
+     1793268060000,
+     "100.005",
+     "100.005",
+     "100.005",
+     "100.005"
+    ],
+    [
+     1793271660000,
+     "100.000",
+     "100.000",
+     "100.000",
+     "100.000"
+    ]
+   ],
+   "instrument": "BTCUSDT",
+   "multiplier": "1",
+   "quote_class": "USDT",
+   "server_time_ms": 1793271840000,
+   "tick": "0.01",
+   "venue": "binance-spot"
+  },
+  "second": {
+   "bars": [
+    [
+     1793268060000,
+     "100.005",
+     "100.005",
+     "100.005",
+     "100.005"
+    ],
+    [
+     1793271660000,
+     "100.000",
+     "100.000",
+     "100.000",
+     "100.000"
+    ]
+   ],
+   "instrument": "BTC-USDT",
+   "multiplier": "1",
+   "quote_class": "USDT",
+   "server_time_ms": 1793271840000,
+   "tick": "0.01",
+   "venue": "okx"
+  }
+ },
+ "retries_exhausted": false,
+ "section": "2"
+}

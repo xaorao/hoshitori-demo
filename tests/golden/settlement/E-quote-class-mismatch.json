@@ -1,0 +1,69 @@
+{
+ "basis": null,
+ "expected": {
+  "error": "invalid"
+ },
+ "finer": {},
+ "forecast": {
+  "forecast_id": "f-E-quote-class-mismatch",
+  "horizon_ms": 3600000,
+  "origin_ms": 1793268120000,
+  "quote_class": "USD"
+ },
+ "id": "E-quote-class-mismatch",
+ "kind": "directional",
+ "note": "A forecast made on USD cannot be settled on a USDT pair: the identity chain is broken.",
+ "pair": {
+  "pair_id": "A",
+  "primary": {
+   "bars": [
+    [
+     1793268060000,
+     "100.00",
+     "100.00",
+     "100.00",
+     "100.00"
+    ],
+    [
+     1793271660000,
+     "101.00",
+     "101.00",
+     "101.00",
+     "101.00"
+    ]
+   ],
+   "instrument": "BTCUSDT",
+   "multiplier": "1",
+   "quote_class": "USDT",
+   "server_time_ms": 1793271840000,
+   "tick": "0.01",
+   "venue": "binance-spot"
+  },
+  "second": {
+   "bars": [
+    [
+     1793268060000,
+     "100.00",
+     "100.00",
+     "100.00",
+     "100.00"
+    ],
+    [
+     1793271660000,
+     "101.00",
+     "101.00",
+     "101.00",
+     "101.00"
+    ]
+   ],
+   "instrument": "BTC-USDT",
+   "multiplier": "1",
+   "quote_class": "USDT",
+   "server_time_ms": 1793271840000,
+   "tick": "0.01",
+   "venue": "okx"
+  }
+ },
+ "retries_exhausted": false,
+ "section": "7"
+}

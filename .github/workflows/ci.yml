@@ -1,0 +1,111 @@
+name: ci
+
+on:
+  push:
+    paths-ignore:  # a change of pictures, the packed record or the submission form runs no test
+      - "docs/images/**"
+      - "docs/record/**"
+      - "docs/submission/**"
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * 1"
+
+permissions:
+  contents: read
+
+# a newer push to the same branch cancels the run of the one before it, so minutes are spent only on the code as it now is
+concurrency:
+  group: ci-${{ github.event_name }}-${{ github.ref }}  # a scheduled or manual run is never cancelled by a push
+  cancel-in-progress: true
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install
+        run: uv sync --python 3.12 --extra dev
+      - name: Secret scan
+        run: uv run python scripts/secret_scan.py .
+      - name: Format
+        run: uv run ruff format --check src tests scripts
+      - name: Lint
+        run: uv run ruff check src tests scripts
+      - name: Types
+        run: uv run mypy
+      - name: Tests (offline, no keys; the sweeps run in their own job)
+        run: env -i PATH="$PATH" HOME="$HOME" uv run pytest -k "not every_change"
+
+  node:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Offline verifier
+        run: cd verifier-js && node --test test/*.test.mjs
+      - name: Settlement implementation
+        run: cd settlement-js && node --test test/*.test.mjs
+
+  web:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Install
+        run: cd web && npm ci
+      - name: Types
+        run: cd web && npx tsc --noEmit
+      - name: Tests
+        run: cd web && npm test
+      - name: Build
+        run: cd web && npm run build
+
+  skills:
+    # each skill is a standalone package: installed alone, in its own environment, as its README says, and tested there
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        skill: [indicator-condition-check, address-flag-check, exit-liquidity-check, evidence-delta, ryo-verdict-record, evidence-sensitivity, research-integrity-check]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: Install
+        working-directory: skills/${{ matrix.skill }}
+        run: |
+          uv venv --python 3.12 .venv
+          if [ "${{ matrix.skill }}" = indicator-condition-check ]; then uv pip install -e ".[dev,reference]"; else uv pip install -e ".[dev]"; fi
+      - name: Tests (offline; the sweeps and the live calls are not part of this job)
+        working-directory: skills/${{ matrix.skill }}
+        run: env -i PATH="$PATH" HOME="$HOME" .venv/bin/python -m pytest -k "not every_change"
+
+  sweeps:
+    # Every module's checks are run against every small change of its code; this is the slow part of the suite.
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install
+        run: uv sync --python 3.12 --extra dev
+      - name: Sweeps and the kill-and-restart rounds
+        run: env -i PATH="$PATH" HOME="$HOME" uv run pytest -k "every_change" && env -i PATH="$PATH" HOME="$HOME" uv run pytest -m slow

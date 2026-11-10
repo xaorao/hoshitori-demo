@@ -1,0 +1,19 @@
+{
+ "contract": "D",
+ "expected": {
+  "contract": "D",
+  "flags": [],
+  "outcome": null,
+  "outcome_price": null,
+  "p0": null,
+  "reason": "VOID_OUTAGE",
+  "state": "VOID",
+  "touch_open_ms": null
+ },
+ "forecast_id": "f-v-D-VOID_OUTAGE",
+ "id": "V-D-void_outage",
+ "kind": "void",
+ "note": "The venue was down across the window.",
+ "pair_id": "A",
+ "section": "7"
+}

@@ -1,0 +1,14 @@
+{
+ "label": "recorded by B5A from https://mempool.space/api/address/1BitcoinEaterAddressDontSendf59kuF",
+ "source_url": "https://mempool.space/api/address/1BitcoinEaterAddressDontSendf59kuF",
+ "method": "GET",
+ "request_body": null,
+ "status": 400,
+ "headers": {
+  "content-type": "text/plain",
+  "date": "Sun, 01 Nov 2026 08:25:43 GMT"
+ },
+ "body_sha256": "e61fbf7eb4e753b48a925defce19e301165b962d2b29980a6071dba112df0c15",
+ "body_bytes": 23,
+ "body": "Invalid Bitcoin address"
+}

@@ -1,0 +1,36 @@
+{
+ "trials": 1992,
+ "detected": 1701,
+ "undetected": [],
+ "per_attack_trials_and_detected": {
+  "replace": [
+   268,
+   268
+  ],
+  "reorder": [
+   270,
+   270
+  ],
+  "truncate_tail": [
+   299,
+   299
+  ],
+  "insert_middle": [
+   310,
+   310
+  ],
+  "duplicate": [
+   285,
+   285
+  ],
+  "drop_middle": [
+   269,
+   269
+  ],
+  "append_fork": [
+   291,
+   0
+  ]
+ },
+ "note": "truncate_tail below the held checkpoint size is detected; truncation of records newer than every held checkpoint is not detectable from the log alone, which is why the cycle heartbeat, the outbox and the independent tokens exist (ledger spec, section 7)"
+}

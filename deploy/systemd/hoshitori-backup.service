@@ -1,0 +1,27 @@
+# One backup of the league folder, taken while the league runs (src/hoshitori/backup.py: the index through SQLite's online backup API,
+# the append-only files up to their last newline, in the order that makes the copy a prefix of the log), then verified and pruned.
+# Started by hoshitori-backup.timer. The copy to another host or account is not here: it depends on the provider (an owner decision).
+[Unit]
+Description=Hoshitori backup of the league folder
+Documentation=file:///opt/hoshitori/app/docs/RUNBOOK.md
+
+[Service]
+Type=oneshot
+User=hoshitori
+Group=hoshitori
+WorkingDirectory=/var/lib/hoshitori
+ExecStart=/opt/hoshitori/venv/bin/python -m hoshitori.backup take /var/lib/hoshitori/league/settings.json /var/lib/hoshitori/backups
+# Run only after the backup succeeded (systemd.service: ExecStartPost= follows a successful ExecStart= of a oneshot). 72 hourly backups.
+ExecStartPost=/opt/hoshitori/venv/bin/python -m hoshitori.backup prune /var/lib/hoshitori/backups --keep 72
+StateDirectory=hoshitori hoshitori/backups
+StateDirectoryMode=0700
+UMask=0077
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+# Below the writer: the writer's p99 commit latency was measured rising from 0.05 ms to 0.47 ms during a backup (OPERATIONS_ARCHITECTURE
+# section 2); the backup may wait.
+Nice=10
+IOSchedulingClass=idle

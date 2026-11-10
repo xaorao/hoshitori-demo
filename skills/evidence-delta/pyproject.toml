@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evidence-delta"
+version = "0.1.0"
+description = "Read-only research skill: what changed between two reads of the same evidence, field by field. A missing value is never read as no change."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0", "jsonschema==4.26.0", "ruff==0.17.3", "mypy==2.4.1"]
+
+[project.scripts]
+evidence-delta = "evidence_delta.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+evidence_delta = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q -ra -m 'not live'"
+markers = []
+
+[tool.ruff]
+line-length = 140
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S", "C4", "SIM", "RUF"]
+ignore = ["S101"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S105", "S106", "S108", "S311", "E501", "S603", "S310"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+files = ["src/evidence_delta"]

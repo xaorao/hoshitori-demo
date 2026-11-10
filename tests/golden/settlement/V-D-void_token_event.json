@@ -1,0 +1,19 @@
+{
+ "contract": "D",
+ "expected": {
+  "contract": "D",
+  "flags": [],
+  "outcome": null,
+  "outcome_price": null,
+  "p0": null,
+  "reason": "VOID_TOKEN_EVENT",
+  "state": "VOID",
+  "touch_open_ms": null
+ },
+ "forecast_id": "f-v-D-VOID_TOKEN_EVENT",
+ "id": "V-D-void_token_event",
+ "kind": "void",
+ "note": "A token event changed what the price means.",
+ "pair_id": "A",
+ "section": "7"
+}

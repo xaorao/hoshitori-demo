@@ -1,0 +1,54 @@
+{
+ "same_seed": [
+  {
+   "verdict": "CALL",
+   "p": "0.64",
+   "calls": 1,
+   "digest": "2be15725aa96"
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.54",
+   "calls": 1,
+   "digest": "505616e2bc81"
+  },
+  {
+   "verdict": "NO_CALL",
+   "p": "None",
+   "calls": 1,
+   "digest": "db41e5c7fbac"
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.61",
+   "calls": 1,
+   "digest": "58afc4750c70"
+  }
+ ],
+ "diff_seed": [
+  {
+   "verdict": "CALL",
+   "p": "0.52",
+   "calls": 1,
+   "digest": "3ee055449e74"
+  },
+  {
+   "verdict": "NO_CALL",
+   "p": "None",
+   "calls": 1,
+   "digest": "db41e5c7fbac"
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.54",
+   "calls": 1,
+   "digest": "505616e2bc81"
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.53",
+   "calls": 1,
+   "digest": "37bec6a37434"
+  }
+ ]
+}

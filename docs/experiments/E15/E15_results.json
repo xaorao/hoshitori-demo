@@ -1,0 +1,35 @@
+{
+ "returncode": 0,
+ "seconds": 0.9,
+ "stdout_tail": "",
+ "stderr_tail": "",
+ "log_files": [
+  "2026-10-27T04-09-57-00-00_abstention_5UpCjav8wHguuYAzmqDQQX.eval"
+ ],
+ "log_read": {
+  "status": "success",
+  "n_samples": 12,
+  "results_total": 12,
+  "completed": 11,
+  "scores": {
+   "action_match": {
+    "accuracy": 1.0
+   }
+  },
+  "coverage_from_log": 0.9166666666666666,
+  "errors": [
+   [
+    "s09",
+    "RuntimeError('planted operational failure in the solver')"
+   ]
+  ],
+  "sample_metadata_kept": {
+   "agent_version": "rules-v1",
+   "cycle_id": "c-s01"
+  },
+  "eval_has_task_args_and_model": [
+   "abstention",
+   "mockllm/model"
+  ]
+ }
+}

@@ -1,0 +1,82 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "type": "string"
+    },
+    "availability": {
+      "additionalProperties": {
+        "enum": [
+          "available",
+          "unavailable",
+          "not_requested"
+        ]
+      },
+      "type": "object"
+    },
+    "data": {
+      "type": "object"
+    },
+    "data_mode": {
+      "enum": [
+        "live",
+        "mixed",
+        "simulated",
+        "unknown"
+      ]
+    },
+    "request": {
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "1.0"
+    },
+    "status": {
+      "enum": [
+        "ok",
+        "partial",
+        "unavailable"
+      ]
+    },
+    "summary": {
+      "properties": {
+        "headline": {
+          "type": "string"
+        },
+        "key_points": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "headline",
+        "key_points"
+      ],
+      "type": "object"
+    },
+    "tool": {
+      "const": "exit_liquidity_sources"
+    },
+    "warnings": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "tool",
+    "status",
+    "data_mode",
+    "as_of",
+    "request",
+    "data",
+    "summary",
+    "availability",
+    "warnings"
+  ],
+  "type": "object"
+}

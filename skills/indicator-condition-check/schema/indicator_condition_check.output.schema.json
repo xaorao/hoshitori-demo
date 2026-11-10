@@ -1,0 +1,239 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "type": "string"
+    },
+    "availability": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "data": {
+      "properties": {
+        "candles": {
+          "properties": {
+            "count": {
+              "minimum": 1,
+              "type": "integer"
+            },
+            "forming_bar_excluded": {
+              "type": "boolean"
+            },
+            "gap_count": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "gaps": {
+              "type": "array"
+            },
+            "last_closed_ts": {
+              "type": "string"
+            },
+            "timeframe": {
+              "enum": [
+                "1h",
+                "4h",
+                "1d"
+              ]
+            }
+          },
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "history": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "methods": {
+          "type": "object"
+        },
+        "pair": {
+          "properties": {
+            "alternatives_tried": {
+              "items": {
+                "required": [
+                  "venue",
+                  "outcome"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "resolved": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue_used": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "resolved",
+            "venue_used",
+            "alternatives_tried"
+          ],
+          "type": "object"
+        },
+        "result": {
+          "properties": {
+            "clauses": {
+              "items": {
+                "properties": {
+                  "expr": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "string"
+                  },
+                  "null_reason": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "satisfied": {
+                    "type": [
+                      "boolean",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "id",
+                  "expr",
+                  "left",
+                  "right",
+                  "satisfied",
+                  "null_reason",
+                  "bars_since_last_true",
+                  "true_count",
+                  "defined_bars"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "satisfied": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "satisfied",
+            "clauses"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "source_calls": {
+          "items": {
+            "required": [
+              "venue",
+              "url",
+              "attempt",
+              "http_status",
+              "latency_ms",
+              "bytes",
+              "sha256",
+              "fetched_at"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "warmup": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "pair",
+        "candles",
+        "result",
+        "history",
+        "warmup",
+        "methods",
+        "source_calls"
+      ],
+      "type": "object"
+    },
+    "data_mode": {
+      "enum": [
+        "live",
+        "mixed",
+        "simulated",
+        "unknown"
+      ]
+    },
+    "request": {
+      "type": "object"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "ok",
+        "partial",
+        "unavailable"
+      ]
+    },
+    "summary": {
+      "properties": {
+        "headline": {
+          "type": "string"
+        },
+        "key_points": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "headline",
+        "key_points"
+      ],
+      "type": "object"
+    },
+    "tool": {
+      "const": "indicator_condition_check"
+    },
+    "warnings": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "tool",
+    "status",
+    "data_mode",
+    "as_of",
+    "request",
+    "data",
+    "summary",
+    "availability",
+    "warnings"
+  ],
+  "type": "object"
+}

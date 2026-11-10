@@ -1,0 +1,69 @@
+{
+ "basis": null,
+ "expected": {
+  "error": "invalid"
+ },
+ "finer": {},
+ "forecast": {
+  "forecast_id": "f-e-pair",
+  "horizon_ms": 3600000,
+  "origin_ms": 1793268120000,
+  "quote_class": "USDT"
+ },
+ "id": "E-pair-quote-classes-differ",
+ "kind": "directional",
+ "note": "The two oracles of a pair must share a quote class: a USDT price is never compared with a USD one.",
+ "pair": {
+  "pair_id": "A",
+  "primary": {
+   "bars": [
+    [
+     1793268060000,
+     "100.00",
+     "100.00",
+     "100.00",
+     "100.00"
+    ],
+    [
+     1793271660000,
+     "101.00",
+     "101.00",
+     "101.00",
+     "101.00"
+    ]
+   ],
+   "instrument": "BTCUSDT",
+   "multiplier": "1",
+   "quote_class": "USDT",
+   "server_time_ms": 1793271780000,
+   "tick": "0.01",
+   "venue": "binance-spot"
+  },
+  "second": {
+   "bars": [
+    [
+     1793268060000,
+     "100.00",
+     "100.00",
+     "100.00",
+     "100.00"
+    ],
+    [
+     1793271660000,
+     "101.00",
+     "101.00",
+     "101.00",
+     "101.00"
+    ]
+   ],
+   "instrument": "XBTUSD",
+   "multiplier": "1",
+   "quote_class": "USD",
+   "server_time_ms": 1793271780000,
+   "tick": "0.01",
+   "venue": "kraken"
+  }
+ },
+ "retries_exhausted": false,
+ "section": "7"
+}

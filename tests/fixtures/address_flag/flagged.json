@@ -1,0 +1,243 @@
+{
+  "as_of": "2026-11-01T08:24:36Z",
+  "availability": {
+    "chain_facts": "available",
+    "issuer_freeze": "available",
+    "sanctions_list": "available"
+  },
+  "data": {
+    "address": {
+      "chain": "ethereum",
+      "checksum": "eip55_valid",
+      "display": "0xE950DC316b836e4EeFb8308bf32Bf7C72a1358FF",
+      "format": "evm_hex",
+      "normalized": "0xe950dc316b836e4eefb8308bf32bf7c72a1358ff"
+    },
+    "chain_facts": {
+      "block": 26318704,
+      "chain": "ethereum",
+      "code_bytes": 0,
+      "code_kind": "no_code",
+      "delegate": null,
+      "sent_tx_count": 5,
+      "source_url": "https://ethereum-rpc.publicnode.com",
+      "state": "observed"
+    },
+    "checks": [
+      {
+        "block": null,
+        "entries": [
+          {
+            "entry_id": "47635",
+            "family": "evm",
+            "format_ok": true,
+            "label": "ETH",
+            "party_type": "entity",
+            "programs": [
+              "SDGT"
+            ],
+            "published_string": "0xE950DC316b836e4EeFb8308bf32Bf7C72a1358FF",
+            "reliability": "Confirmed"
+          }
+        ],
+        "entry": {
+          "entry_id": "47635",
+          "family": "evm",
+          "format_ok": true,
+          "label": "ETH",
+          "party_type": "entity",
+          "programs": [
+            "SDGT"
+          ],
+          "published_string": "0xE950DC316b836e4EeFb8308bf32Bf7C72a1358FF",
+          "reliability": "Confirmed"
+        },
+        "kind": "sanctions_list",
+        "list": {
+          "address_strings": 63,
+          "confirmed_current_age_seconds": 3540,
+          "copy": "recent",
+          "issued": "2026-10-28",
+          "issued_age_days": 4,
+          "max_age_hours": 24,
+          "name": "OFAC SDN list (advanced XML)",
+          "sha256": "85286df87285e903760b31b53a605a699dea1e30cd930537ad348b60239d38cd"
+        },
+        "raw_value": null,
+        "reason": null,
+        "source_id": "ofac_sdn",
+        "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN_ADVANCED.ZIP",
+        "stale": false,
+        "state": "listed"
+      },
+      {
+        "block": {
+          "age_seconds": 13,
+          "chain": "ethereum",
+          "number": 26318704,
+          "pinned": true
+        },
+        "entries": [],
+        "entry": null,
+        "kind": "issuer_freeze",
+        "list": null,
+        "raw_value": true,
+        "reason": null,
+        "source_id": "usdt_freeze_ethereum",
+        "source_url": "https://ethereum-rpc.publicnode.com",
+        "stale": false,
+        "state": "listed"
+      },
+      {
+        "block": {
+          "age_seconds": 13,
+          "chain": "ethereum",
+          "number": 26318704,
+          "pinned": true
+        },
+        "entries": [],
+        "entry": null,
+        "kind": "issuer_freeze",
+        "list": null,
+        "raw_value": true,
+        "reason": null,
+        "source_id": "usdc_freeze_ethereum",
+        "source_url": "https://ethereum-rpc.publicnode.com",
+        "stale": false,
+        "state": "listed"
+      }
+    ],
+    "counts": {
+      "in_scope": 3,
+      "listed": 3,
+      "not_listed": 0,
+      "stale": 0,
+      "unavailable": 0
+    },
+    "not_covered": [],
+    "sent_to": [
+      "ethereum-rpc.publicnode.com"
+    ],
+    "source_calls": [
+      {
+        "attempt": 1,
+        "bytes": 40,
+        "error_kind": null,
+        "fetched_at": "2026-11-01T08:24:36Z",
+        "http_status": 200,
+        "latency_ms": 0,
+        "method": "POST",
+        "sha256": "208c0be5a34cd9b241311e625b3035aa89cb237969cbc1a0c9cbd8c8517087eb",
+        "source": "evm_rpc_ethereum",
+        "url": "https://ethereum-rpc.publicnode.com"
+      },
+      {
+        "attempt": 1,
+        "bytes": 46,
+        "error_kind": null,
+        "fetched_at": "2026-11-01T08:24:36Z",
+        "http_status": 200,
+        "latency_ms": 0,
+        "method": "POST",
+        "sha256": "d453553160c3a8748671a42ab55fc3c90a709ff91a3a1b38af1c678453d8f5d0",
+        "source": "evm_rpc_ethereum",
+        "url": "https://ethereum-rpc.publicnode.com"
+      },
+      {
+        "attempt": 1,
+        "bytes": 16295,
+        "error_kind": null,
+        "fetched_at": "2026-11-01T08:24:36Z",
+        "http_status": 200,
+        "latency_ms": 0,
+        "method": "POST",
+        "sha256": "1d662f7e29b2b406b66da93be265866c9119136d6d302ee76eb15f3cc07d2b88",
+        "source": "evm_rpc_ethereum",
+        "url": "https://ethereum-rpc.publicnode.com"
+      },
+      {
+        "attempt": 1,
+        "bytes": 102,
+        "error_kind": null,
+        "fetched_at": "2026-11-01T08:24:36Z",
+        "http_status": 200,
+        "latency_ms": 0,
+        "method": "POST",
+        "sha256": "43bb48af84101e24072bdc58907a817fca6bbc333e713fb55af4356a9f74013a",
+        "source": "evm_rpc_ethereum",
+        "url": "https://ethereum-rpc.publicnode.com"
+      },
+      {
+        "attempt": 1,
+        "bytes": 102,
+        "error_kind": null,
+        "fetched_at": "2026-11-01T08:24:36Z",
+        "http_status": 200,
+        "latency_ms": 0,
+        "method": "POST",
+        "sha256": "d77f8d499000ff878249a6208ff0e85352c332f4c060aff7b35531b258f9590e",
+        "source": "evm_rpc_ethereum",
+        "url": "https://ethereum-rpc.publicnode.com"
+      },
+      {
+        "attempt": 1,
+        "bytes": 38,
+        "error_kind": null,
+        "fetched_at": "2026-11-01T08:24:36Z",
+        "http_status": 200,
+        "latency_ms": 0,
+        "method": "POST",
+        "sha256": "47bb4db4e2048a2dfd5efc310d13bacd23e67cff1d7e0ff6d4ab5bc0ad2b4944",
+        "source": "evm_rpc_ethereum",
+        "url": "https://ethereum-rpc.publicnode.com"
+      },
+      {
+        "attempt": 1,
+        "bytes": 39,
+        "error_kind": null,
+        "fetched_at": "2026-11-01T08:24:36Z",
+        "http_status": 200,
+        "latency_ms": 0,
+        "method": "POST",
+        "sha256": "335ecd05544903cfd38a4956dc8f323a99d33ff476041190875a31105b5e9c31",
+        "source": "evm_rpc_ethereum",
+        "url": "https://ethereum-rpc.publicnode.com"
+      }
+    ],
+    "verdict": "flagged"
+  },
+  "data_mode": "unknown",
+  "request": {
+    "address": "0xE950DC316b836e4EeFb8308bf32Bf7C72a1358FF",
+    "chain": "ethereum",
+    "checks": [
+      "ofac_sdn",
+      "usdt_freeze",
+      "usdc_freeze",
+      "chain_facts"
+    ],
+    "defaults_applied": [
+      "checks",
+      "max_list_age_hours"
+    ],
+    "max_list_age_hours": 24,
+    "notes": []
+  },
+  "schema_version": "1.0",
+  "status": "ok",
+  "summary": {
+    "headline": "0xE950…58FF on ethereum: flagged by 3 of 3 sources that answered (OFAC SDN list, USDT freeze, USDC freeze).",
+    "key_points": [
+      "OFAC SDN list issued 4 days ago, confirmed current 59 minutes ago: this address is listed on entry 47635 (entity; programmes SDGT) under 'Digital Currency Address - ETH'.",
+      "Tether USDT contract on ethereum, block 26318704: isBlackListed is true for this address. The issuer has frozen it; the contract does not say why.",
+      "Circle USDC contract on ethereum, block 26318704: isBlacklisted is true for this address. The issuer has frozen it; the contract does not say why.",
+      "On ethereum at block 26318704: no code at this address; 5 transactions sent from this address."
+    ]
+  },
+  "tool": "address_flag_check",
+  "warnings": [
+    "This tool reports published lists and issuer freezes only. It does not analyse transactions, counterparties or behaviour.",
+    "This call sent the address to: ethereum-rpc.publicnode.com.",
+    "Answers came from an injected source (recorded or test data), not a live fetch in this call; data_mode is therefore unknown."
+  ]
+}

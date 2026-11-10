@@ -1,0 +1,25 @@
+{
+ "label": "recorded by B5A from https://ethereum-rpc.publicnode.com",
+ "source_url": "https://ethereum-rpc.publicnode.com",
+ "method": "POST",
+ "request_body": {
+  "jsonrpc": "2.0",
+  "id": 4,
+  "method": "eth_call",
+  "params": [
+   {
+    "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "data": "0xe47d6060000000000000000000000000000000000000000000000000000000000000dead"
+   },
+   "0x1919770"
+  ]
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json",
+  "date": "Sun, 01 Nov 2026 08:24:36 GMT"
+ },
+ "body_sha256": "3331cfd1203858c17e581e4c1268a9c54b722a79867524840f56adc52b11d524",
+ "body_bytes": 103,
+ "body": "{\"jsonrpc\":\"2.0\",\"id\":4,\"result\":\"0x0000000000000000000000000000000000000000000000000000000000000000\"}\n"
+}

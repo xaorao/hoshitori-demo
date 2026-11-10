@@ -1,0 +1,88 @@
+{
+ "symbol": "ETH",
+ "hours": 24,
+ "original": "UP",
+ "pairs": 40,
+ "members": [
+  {
+   "group": "RYO, this token",
+   "items": 2,
+   "outcome": "EFFECT_UNCERTAIN",
+   "mechanism": null,
+   "raw_p": 0.548828125,
+   "adjusted_p": 0.603515625,
+   "treated": {
+    "same_same": 27,
+    "same_changed": 7,
+    "changed_same": 4,
+    "changed_changed": 2
+   },
+   "control": {
+    "same_same": 29,
+    "same_changed": 5,
+    "changed_same": 4,
+    "changed_changed": 2
+   },
+   "shift": 0.075,
+   "low": -0.09555247299558176,
+   "high": 0.24552498672588935,
+   "note": "too few runs to say",
+   "failed": 0
+  },
+  {
+   "group": "RYO, whole market",
+   "items": 2,
+   "outcome": "EFFECT_UNCERTAIN",
+   "mechanism": null,
+   "raw_p": 0.3017578125,
+   "adjusted_p": 0.603515625,
+   "treated": {
+    "same_same": 25,
+    "same_changed": 5,
+    "changed_same": 10,
+    "changed_changed": 0
+   },
+   "control": {
+    "same_same": 25,
+    "same_changed": 5,
+    "changed_same": 9,
+    "changed_changed": 1
+   },
+   "shift": -0.125,
+   "low": -0.3119676190433749,
+   "high": 0.06874663109842968,
+   "note": "too few runs to say",
+   "failed": 0
+  },
+  {
+   "group": "Computed measures",
+   "items": 1,
+   "outcome": "EVIDENCE_REQUIRED",
+   "mechanism": null,
+   "raw_p": null,
+   "adjusted_p": null,
+   "treated": null,
+   "control": null,
+   "shift": null,
+   "low": null,
+   "high": null,
+   "note": null,
+   "failed": 0
+  },
+  {
+   "group": "Exchange candles",
+   "items": 2,
+   "outcome": "EVIDENCE_REQUIRED",
+   "mechanism": null,
+   "raw_p": null,
+   "adjusted_p": null,
+   "treated": null,
+   "control": null,
+   "shift": null,
+   "low": null,
+   "high": null,
+   "note": null,
+   "failed": 0
+  }
+ ]
+}

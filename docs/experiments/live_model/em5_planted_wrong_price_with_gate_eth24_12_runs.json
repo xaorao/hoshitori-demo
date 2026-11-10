@@ -1,0 +1,150 @@
+{
+ "control": [
+  {
+   "verdict": "CALL",
+   "p": "0.54",
+   "reason": null,
+   "model_calls": 1
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.55",
+   "reason": null,
+   "model_calls": 1
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.54",
+   "reason": null,
+   "model_calls": 1
+  },
+  {
+   "verdict": "NO_CALL",
+   "p": null,
+   "reason": "OUT_OF_SCOPE",
+   "model_calls": 1
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.55",
+   "reason": null,
+   "model_calls": 1
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.52",
+   "reason": null,
+   "model_calls": 1
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.54",
+   "reason": null,
+   "model_calls": 1
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.53",
+   "reason": null,
+   "model_calls": 1
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.55",
+   "reason": null,
+   "model_calls": 1
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.55",
+   "reason": null,
+   "model_calls": 1
+  },
+  {
+   "verdict": "NO_CALL",
+   "p": null,
+   "reason": "OUT_OF_SCOPE",
+   "model_calls": 1
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.52",
+   "reason": null,
+   "model_calls": 1
+  }
+ ],
+ "planted": [
+  {
+   "verdict": "NO_CALL",
+   "p": null,
+   "reason": "EVIDENCE_CONFLICT_UNRESOLVED",
+   "model_calls": 0
+  },
+  {
+   "verdict": "NO_CALL",
+   "p": null,
+   "reason": "EVIDENCE_CONFLICT_UNRESOLVED",
+   "model_calls": 0
+  },
+  {
+   "verdict": "NO_CALL",
+   "p": null,
+   "reason": "EVIDENCE_CONFLICT_UNRESOLVED",
+   "model_calls": 0
+  },
+  {
+   "verdict": "NO_CALL",
+   "p": null,
+   "reason": "EVIDENCE_CONFLICT_UNRESOLVED",
+   "model_calls": 0
+  },
+  {
+   "verdict": "NO_CALL",
+   "p": null,
+   "reason": "EVIDENCE_CONFLICT_UNRESOLVED",
+   "model_calls": 0
+  },
+  {
+   "verdict": "NO_CALL",
+   "p": null,
+   "reason": "EVIDENCE_CONFLICT_UNRESOLVED",
+   "model_calls": 0
+  },
+  {
+   "verdict": "NO_CALL",
+   "p": null,
+   "reason": "EVIDENCE_CONFLICT_UNRESOLVED",
+   "model_calls": 0
+  },
+  {
+   "verdict": "NO_CALL",
+   "p": null,
+   "reason": "EVIDENCE_CONFLICT_UNRESOLVED",
+   "model_calls": 0
+  },
+  {
+   "verdict": "NO_CALL",
+   "p": null,
+   "reason": "EVIDENCE_CONFLICT_UNRESOLVED",
+   "model_calls": 0
+  },
+  {
+   "verdict": "NO_CALL",
+   "p": null,
+   "reason": "EVIDENCE_CONFLICT_UNRESOLVED",
+   "model_calls": 0
+  },
+  {
+   "verdict": "NO_CALL",
+   "p": null,
+   "reason": "EVIDENCE_CONFLICT_UNRESOLVED",
+   "model_calls": 0
+  },
+  {
+   "verdict": "NO_CALL",
+   "p": null,
+   "reason": "EVIDENCE_CONFLICT_UNRESOLVED",
+   "model_calls": 0
+  }
+ ]
+}

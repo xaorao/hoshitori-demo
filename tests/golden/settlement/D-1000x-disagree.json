@@ -1,0 +1,76 @@
+{
+ "basis": null,
+ "expected": {
+  "contract": "D",
+  "flags": [],
+  "outcome": null,
+  "outcome_price": "100500.00",
+  "p0": "100000.00",
+  "reason": "UNSETTLEABLE_DISAGREE",
+  "state": "UNSETTLEABLE",
+  "touch_open_ms": null
+ },
+ "finer": {},
+ "forecast": {
+  "forecast_id": "f-D-1000x-disagree",
+  "horizon_ms": 3600000,
+  "origin_ms": 1793268120000,
+  "quote_class": "USDT"
+ },
+ "id": "D-1000x-disagree",
+ "kind": "directional",
+ "note": "The same pair with the second oracle 0.7 percent off after scaling.",
+ "pair": {
+  "pair_id": "A",
+  "primary": {
+   "bars": [
+    [
+     1793268060000,
+     "100000.00",
+     "100000.00",
+     "100000.00",
+     "100000.00"
+    ],
+    [
+     1793271660000,
+     "100500.00",
+     "100500.00",
+     "100500.00",
+     "100500.00"
+    ]
+   ],
+   "instrument": "BTCUSDT",
+   "multiplier": "1000",
+   "quote_class": "USDT",
+   "server_time_ms": 1793271840000,
+   "tick": "0.01",
+   "venue": "binance-spot"
+  },
+  "second": {
+   "bars": [
+    [
+     1793268060000,
+     "100.70",
+     "100.70",
+     "100.70",
+     "100.70"
+    ],
+    [
+     1793271660000,
+     "100.50",
+     "100.50",
+     "100.50",
+     "100.50"
+    ]
+   ],
+   "instrument": "BTC-USDT",
+   "multiplier": "1",
+   "quote_class": "USDT",
+   "server_time_ms": 1793271840000,
+   "tick": "0.01",
+   "venue": "okx"
+  }
+ },
+ "retries_exhausted": false,
+ "section": "7"
+}

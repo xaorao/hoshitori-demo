@@ -1,0 +1,19 @@
+{
+ "contract": "D",
+ "expected": {
+  "contract": "D",
+  "flags": [],
+  "outcome": null,
+  "outcome_price": null,
+  "p0": null,
+  "reason": "VOID_REDENOMINATION",
+  "state": "VOID",
+  "touch_open_ms": null
+ },
+ "forecast_id": "f-v-D-VOID_REDENOMINATION",
+ "id": "V-D-void_redenomination",
+ "kind": "void",
+ "note": "The token was redenominated.",
+ "pair_id": "A",
+ "section": "7"
+}

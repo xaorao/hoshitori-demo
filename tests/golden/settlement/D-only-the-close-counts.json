@@ -1,0 +1,76 @@
+{
+ "basis": null,
+ "expected": {
+  "contract": "D",
+  "flags": [],
+  "outcome": "0",
+  "outcome_price": "99.50",
+  "p0": "100.00",
+  "reason": null,
+  "state": "SETTLED",
+  "touch_open_ms": null
+ },
+ "finer": {},
+ "forecast": {
+  "forecast_id": "f-D-only-the-close-counts",
+  "horizon_ms": 3600000,
+  "origin_ms": 1793268120000,
+  "quote_class": "USDT"
+ },
+ "id": "D-only-the-close-counts",
+ "kind": "directional",
+ "note": "The open, high and low of the two candles are irrelevant: the outcome close is below the reference close although the outcome candle's high is far above.",
+ "pair": {
+  "pair_id": "A",
+  "primary": {
+   "bars": [
+    [
+     1793268060000,
+     "101.00",
+     "150.00",
+     "99.00",
+     "100.00"
+    ],
+    [
+     1793271660000,
+     "101.00",
+     "150.00",
+     "99.00",
+     "99.50"
+    ]
+   ],
+   "instrument": "BTCUSDT",
+   "multiplier": "1",
+   "quote_class": "USDT",
+   "server_time_ms": 1793271840000,
+   "tick": "0.01",
+   "venue": "binance-spot"
+  },
+  "second": {
+   "bars": [
+    [
+     1793268060000,
+     "100.00",
+     "100.00",
+     "100.00",
+     "100.00"
+    ],
+    [
+     1793271660000,
+     "99.50",
+     "99.50",
+     "99.50",
+     "99.50"
+    ]
+   ],
+   "instrument": "BTC-USDT",
+   "multiplier": "1",
+   "quote_class": "USDT",
+   "server_time_ms": 1793271840000,
+   "tick": "0.01",
+   "venue": "okx"
+  }
+ },
+ "retries_exhausted": false,
+ "section": "2"
+}

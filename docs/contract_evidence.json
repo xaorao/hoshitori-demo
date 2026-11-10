@@ -1,0 +1,290 @@
+{
+ "0": [
+  "scoring_checks",
+  "settlement_checks",
+  "forecast_checks"
+ ],
+ "1": [
+  "forecast_checks",
+  "canonical_checks"
+ ],
+ "2": [
+  "settlement_checks",
+  "timing_checks",
+  "timeline_checks",
+  "test_settlement_differential"
+ ],
+ "3": [
+  "barrier_arm_checks",
+  "barrier_rates_checks",
+  "settlement_checks"
+ ],
+ "4": [
+  "book_checks",
+  "fills_checks",
+  "practice_checks",
+  "risk_kernel_checks"
+ ],
+ "5": [
+  "lifecycle_checks",
+  "cycle_checks"
+ ],
+ "6": [
+  "manifest_checks",
+  "arm_input_checks",
+  "league_all_checks"
+ ],
+ "7": [
+  "oracle_checks",
+  "settlement_checks",
+  "test_settlement_differential"
+ ],
+ "8": [
+  "attest_checks",
+  "tsa_checks",
+  "commit_checks",
+  "verify_checks",
+  "timing_checks"
+ ],
+ "9": [
+  "protocol_checks"
+ ],
+ "10": [
+  "paired_stats_checks",
+  "scoring_checks",
+  "test_paired_stats_independent"
+ ],
+ "11": [
+  "verify_checks",
+  "replay_checks",
+  "forgery_checks"
+ ],
+ "12": [
+  "manifest_checks",
+  "scheduler_checks"
+ ],
+ "13": [
+  "intervention_checks",
+  "model_challenge_checks",
+  "rules_challenge_checks",
+  "challenge_view_checks"
+ ],
+ "14": [
+  "timing_checks",
+  "settlement_checks",
+  "timeline_checks"
+ ],
+ "15": [
+  "registry_checks",
+  "registry_job_checks"
+ ],
+ "16": [
+  "recovery_checks",
+  "ledger_checks",
+  "test_sigkill_recovery",
+  "snapshot_checks"
+ ],
+ "17": [
+  "lifecycle_checks"
+ ],
+ "18": [
+  "grounding_checks",
+  "evidence_checks",
+  "assertions_checks",
+  "claim_graph_checks"
+ ],
+ "19": {
+  "verdict": "NOT BUILT",
+  "reason": "the whale collector is not built"
+ },
+ "20": {
+  "verdict": "NOT BUILT",
+  "reason": "calibration models and their versions are not built; no calibrated arm exists"
+ },
+ "21": [
+  "venue_survey_checks",
+  "ryo_fields_checks"
+ ],
+ "22": {
+  "verdict": "PARTLY BUILT",
+  "reason": "the deterministic research-impact ranking (impact/1) with printed reasons, a reserved row and an overlap limit with a high-severity exception is built and labelled provisional, together with a validation harness that scores it against chronological, price-move and manifest orders; the 30 pilot cases from primary sources, two independent reviewers, discovery recall against an independent event list, the Personal Updates policy and counterfactual movement reasons are not built or not run",
+  "checks": [
+   "changes_checks",
+   "move_check_checks",
+   "claim_move_checks",
+   "impact_checks",
+   "impact_validation_checks"
+  ]
+ },
+ "23": [
+  "proof_checks",
+  "test_proof_matrix"
+ ],
+ "24": [
+  "verify_checks",
+  "forgery_checks"
+ ],
+ "25": [
+  "commit_checks",
+  "cycle_checks",
+  "post_snapshot_checks",
+  "post_snapshot_job_checks",
+  "runner_checks",
+  "snapshot_checks",
+  "timeline_checks"
+ ],
+ "26": [
+  "timing_checks",
+  "tsa_checks"
+ ],
+ "27": [
+  "scoring_checks",
+  "test_evaluation_report"
+ ],
+ "28": {
+  "verdict": "NOT BUILT",
+  "reason": "social content and its provenance levels are not built"
+ },
+ "29": [
+  "intervention_checks",
+  "lineage_checks"
+ ],
+ "30": [
+  "canonical_checks",
+  "jsonnum_checks",
+  "test_canonical_differential",
+  "unicode15_checks"
+ ],
+ "31": [
+  "ryo_fields_checks",
+  "test_cli_and_fixtures"
+ ],
+ "32": {
+  "verdict": "NOT BUILT",
+  "reason": "people's evidence challenges, arenas and reputation are not built"
+ },
+ "33": {
+  "verdict": "PARTLY BUILT",
+  "reason": "all five item states are built from real records and shown (not yet checked, being checked, no reliable conclusion, investigated, changed after the call), ordered by a provisional impact score; on-demand commitments are built on a separate ledger; Follow alerts are not built",
+  "checks": [
+   "view_models_checks",
+   "labels_checks",
+   "today_items_checks",
+   "ondemand_checks",
+   "impact_checks"
+  ]
+ },
+ "34": [
+  "claim_graph_checks",
+  "claim_extract_checks",
+  "claim_segmenter_checks",
+  "claim_stability_checks",
+  "claim_sketch_checks"
+ ],
+ "35": [
+  "claim_preliminary_checks",
+  "card_lint_checks"
+ ],
+ "36": {
+  "verdict": "NOT BUILT",
+  "reason": "private user submissions and publishing are not built; there is no user account"
+ },
+ "37": {
+  "verdict": "NOT BUILT",
+  "reason": "the page that audits RYO's own read as a thesis (one stored answer, five questions, the track record of arm R) is not built; RYO's answers are read into cycles as evidence and recorded (section 6), which is a different thing"
+ },
+ "38": {
+  "verdict": "PARTLY BUILT",
+  "reason": "the reserved row beneath the featured item and the score reasons of each item are built; movement reasons found by neutralising features in turn (item moved because of its own features, or because others moved) are not built, and the ranking's validation against expert cases is not run",
+  "checks": [
+   "move_check_checks",
+   "changes_checks",
+   "impact_checks"
+  ]
+ },
+ "39": [
+  "ids_checks",
+  "registry_checks"
+ ],
+ "40": [
+  "evidence_checks",
+  "desk_record_checks"
+ ],
+ "41": {
+  "verdict": "OUTSIDE THIS REPOSITORY",
+  "reason": "the test registry is built and checked by a planning tool that is not published"
+ },
+ "42": [
+  "gateway_checks",
+  "ryo_gateway_checks",
+  "governor_checks",
+  "breaker_checks"
+ ],
+ "43": [
+  "desk_menu_checks",
+  "desk_plan_checks",
+  "desk_acquire_checks"
+ ],
+ "44": [
+  "claim_next_check_checks",
+  "desk_plan_checks"
+ ],
+ "45": {
+  "verdict": "NOT BUILT",
+  "reason": "the labelled reasoning cases need people to label them"
+ },
+ "46": [
+  "triggers_checks",
+  "manifest_checks",
+  "desk_checks"
+ ],
+ "47": [
+  "grounding_checks",
+  "assertions_checks",
+  "rejudge_checks"
+ ],
+ "48": [
+  "falsify_checks",
+  "falsify_calibration_checks"
+ ],
+ "49": [
+  "changes_checks"
+ ],
+ "50": {
+  "verdict": "NOT BUILT",
+  "reason": "the minimal-sufficient-evidence search is not built"
+ },
+ "51": {
+  "verdict": "NOT BUILT",
+  "reason": "the panel that contrasts the model with a person's own reading is not built"
+ },
+ "52": {
+  "verdict": "PARTLY BUILT",
+  "reason": "a thesis revision is recorded for a changed oracle instrument and never edits the thesis; revisions that need a model to re-read a thesis against new evidence, and the belief-revision benchmark, are not built",
+  "checks": [
+   "belief_revision_checks",
+   "post_snapshot_checks",
+   "post_snapshot_job_checks"
+  ]
+ },
+ "53": [
+  "injection_checks"
+ ],
+ "54": {
+  "verdict": "NOT BUILT",
+  "reason": "no chart is built; the pages show tables"
+ },
+ "55": [
+  "outcome_review_checks",
+  "lessons_checks",
+  "lessons_store_checks"
+ ],
+ "56": [
+  "test_e2e_league",
+  "proof_checks"
+ ],
+ "57": [
+  "desk_record_checks",
+  "desk_view_checks"
+ ]
+}

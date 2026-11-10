@@ -1,0 +1,1009 @@
+{
+ "SECURITY_MODEL 1": {
+  "checks": [
+   "test_network_boundary",
+   "gateway_checks"
+  ],
+  "note": "only the static rule that no module opens a connection outside the gateway; a network policy on a host does not exist"
+ },
+ "SECURITY_MODEL 2": {
+  "checks": [
+   "test_secret_scan",
+   "test_log_privacy",
+   "test_export_privacy"
+  ],
+  "note": "the secret scan runs in a CI workflow file that cannot be pushed to the public repository yet, and there is no pre-commit hook; key storage in a host's secret store, rotation and escrow are not built"
+ },
+ "SECURITY_MODEL 3": {
+  "verdict": "NOT BUILT",
+  "reason": "there are no identities, browser keys or per-key rate limits: nobody but the operator uses the product"
+ },
+ "SECURITY_MODEL 4": {
+  "checks": [
+   "injection_checks",
+   "safe_fetch_checks",
+   "grounding_checks"
+  ],
+  "note": "a scripted worst-case model stands in for a real one; no run against a real model"
+ },
+ "SECURITY_MODEL 5": {
+  "checks": [
+   "safe_fetch_checks",
+   "safe_fetch_net_checks",
+   "test_safe_fetch_loopback"
+  ],
+  "note": "the checks use loopback and recorded resolver answers; DNS pinning on a real host is not tested"
+ },
+ "SECURITY_MODEL 6": {
+  "checks": [
+   "test_security_headers",
+   "page_test"
+  ],
+  "note": "no host sends the headers yet; cookies and CORS have nothing to check because the site sets none"
+ },
+ "SECURITY_MODEL 7": {
+  "checks": [
+   "test_the_lock_pins_the_runtime_dependencies_at_the_versions_the_suite_ran_with"
+  ],
+  "note": "no dependency review, SBOM or remediation time frames; the lockfile is made for one platform"
+ },
+ "SECURITY_MODEL 8": {
+  "checks": [
+   "test_log_privacy"
+  ],
+  "note": "no structured logs with trace ids exist, no separate security event stream and no alerts"
+ },
+ "SECURITY_MODEL 9": {
+  "verdict": "NOT BUILT",
+  "reason": "the mapping of each applicable ASVS level-1 requirement to a check is not written"
+ },
+ "SECURITY_MODEL 10": {
+  "checks": [
+   "test_secret_scan",
+   "injection_checks",
+   "test_network_boundary"
+  ],
+  "note": "the private-item exposure and hostile-provider rows have nothing to test because those parts are not built"
+ },
+ "PRIVACY_DATA_FLOWS 1": {
+  "verdict": "NOT BUILT",
+  "reason": "private user submissions, their store and the data classes they need are not built"
+ },
+ "PRIVACY_DATA_FLOWS 2": {
+  "verdict": "NOT TESTED",
+  "reason": "no test lists what each recipient receives; a time-stamp request carries a digest by construction and the RYO route is off"
+ },
+ "PRIVACY_DATA_FLOWS 3": {
+  "verdict": "NOT BUILT",
+  "reason": "private payload deletion and retention are not built"
+ },
+ "PRIVACY_DATA_FLOWS 4": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the product has no accounts and collects no identity: the league has one operator"
+ },
+ "PRIVACY_DATA_FLOWS 5": {
+  "verdict": "OUTSIDE THIS REPOSITORY",
+  "reason": "the terms of the venues and the organisers' answer about redistributing RYO payloads are open questions to others, not code"
+ },
+ "PRIVACY_DATA_FLOWS 6": {
+  "checks": [
+   "test_export_privacy",
+   "test_log_privacy"
+  ],
+  "note": "the sentinel tests for private items, search queries built from private text and deletion from backups need the private store that is not built"
+ },
+ "PRIVACY_DATA_FLOWS 7": {
+  "verdict": "NOT BUILT",
+  "reason": "provider outage during a private investigation and the publish action are not built"
+ },
+ "OPERATIONS_SLOS 1": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section states how objectives are set; it asks for no code"
+ },
+ "OPERATIONS_SLOS 2": {
+  "verdict": "NOT BUILT",
+  "reason": "there is no host and no probe of the page, the on-demand path or the verifier, so no user-facing indicator is measured"
+ },
+ "OPERATIONS_SLOS 3": {
+  "checks": [
+   "host_probe_checks",
+   "test_host_probe"
+  ],
+  "note": "the probe reports a few facts (heartbeat, free disk, backup age); the indicators as ratios of good to valid events with objectives are not computed"
+ },
+ "OPERATIONS_SLOS 4": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "a policy for people about what to do when a budget is spent"
+ },
+ "OPERATIONS_SLOS 5": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section states what the objectives do not cover"
+ },
+ "OPERATIONS_SLOS 6": {
+  "verdict": "NOT BUILT",
+  "reason": "no second-host synthetic probe, no alert test and no budget arithmetic exist"
+ },
+ "OPERATIONS_ARCHITECTURE 1": {
+  "checks": [
+   "test_deploy_files"
+  ],
+  "note": "the shape is checked as text and by running the units' commands on loopback; no virtual machine exists"
+ },
+ "OPERATIONS_ARCHITECTURE 2": {
+  "checks": [
+   "backup_checks",
+   "test_restore_drill",
+   "test_backup"
+  ],
+  "note": "object-store and replica copies, private-item encryption and key escrow are not built; the restore drill was run on loopback only"
+ },
+ "OPERATIONS_ARCHITECTURE 3": {
+  "checks": [
+   "scheduler_checks",
+   "test_sigkill_recovery",
+   "failover_checks",
+   "recovery_checks"
+  ],
+  "note": "failover is modelled and tested as code; no two-host drill or pointer store exists"
+ },
+ "OPERATIONS_ARCHITECTURE 4": {
+  "verdict": "NOT TESTED",
+  "reason": "the deploy files are checked as text; no deploy, rollback or database migration has been run on a host"
+ },
+ "OPERATIONS_ARCHITECTURE 5": {
+  "verdict": "NOT BUILT",
+  "reason": "no OpenTelemetry traces or per-source metrics exist; the host probe reports a few facts"
+ },
+ "OPERATIONS_ARCHITECTURE 6": {
+  "checks": [
+   "test_deploy_files",
+   "test_restore_drill"
+  ],
+  "note": "the runbook says which procedures were run on loopback and which were not; several are not run"
+ },
+ "OPERATIONS_ARCHITECTURE 7": {
+  "verdict": "NOT BUILT",
+  "reason": "no load test was run"
+ },
+ "OPERATIONS_ARCHITECTURE 8": {
+  "checks": [
+   "test_sigkill_recovery",
+   "recovery_checks",
+   "failover_checks",
+   "backup_checks"
+  ],
+  "note": "clock jump, region loss and pending-command rows depend on a host or are not built"
+ },
+ "LEDGER_SPEC 1": {
+  "checks": [
+   "ledger_checks",
+   "test_ledger_mutants"
+  ],
+  "note": "the guarantees are stated against the verifier's threat model, not proven; durability after a power loss is not measured"
+ },
+ "LEDGER_SPEC 2": [
+  "canonical_checks",
+  "jsonnum_checks",
+  "test_canonical_differential",
+  "unicode15_checks"
+ ],
+ "LEDGER_SPEC 3": [
+  "merkle_checks",
+  "test_merkle_differential"
+ ],
+ "LEDGER_SPEC 4": {
+  "checks": [
+   "segment_checks",
+   "ledger_checks",
+   "recovery_checks"
+  ],
+  "note": "behaviour on the target host's disk is not measured"
+ },
+ "LEDGER_SPEC 5": [
+  "test_checkpoint",
+  "note_checks",
+  "test_note_differential"
+ ],
+ "LEDGER_SPEC 6": [
+  "verify_checks",
+  "test_verify_differential"
+ ],
+ "LEDGER_SPEC 7": [
+  "proof_checks",
+  "test_ledger_stateful"
+ ],
+ "LEDGER_SPEC 8": {
+  "checks": [
+   "test_ledger_kill",
+   "test_sigkill_recovery",
+   "recovery_checks"
+  ],
+  "note": "kills are process kills on one machine, not power loss"
+ },
+ "LEDGER_SPEC 9": [
+  "test_ledger_mutants",
+  "test_merkle",
+  "test_ledger_stateful"
+ ],
+ "TRANSPARENCY_LOG_SPEC 1": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section records a decision"
+ },
+ "TRANSPARENCY_LOG_SPEC 2": {
+  "checks": [
+   "test_export_privacy"
+  ],
+  "note": "what a bundle holds is checked by the verifier tests; the split of public and private items has nothing to check because private items are not built"
+ },
+ "TRANSPARENCY_LOG_SPEC 3": [
+  "test_trusted_root",
+  "root_checks"
+ ],
+ "TRANSPARENCY_LOG_SPEC 4": {
+  "verdict": "NOT BUILT",
+  "reason": "no witnesses cosign the checkpoints and no public log is joined, so level C4 is not reached"
+ },
+ "TRANSPARENCY_LOG_SPEC 5": [
+  "test_tlog_proof",
+  "test_note",
+  "test_checkpoint"
+ ],
+ "TRANSPARENCY_LOG_SPEC 6": {
+  "checks": [
+   "failover_checks",
+   "test_failover",
+   "test_ledger_kill"
+  ],
+  "note": "a two-host drill and a real pointer store do not exist"
+ },
+ "TRANSPARENCY_LOG_SPEC 7": [
+  "test_ledger_mutants",
+  "test_tlog_proof"
+ ],
+ "VERIFICATION_SPEC 1": [
+  "verify_checks",
+  "test_verify_differential"
+ ],
+ "VERIFICATION_SPEC 2": {
+  "checks": [
+   "test_trusted_root",
+   "test_trusted_root_differential",
+   "root_checks"
+  ],
+  "note": "the root-update channels are files given to the verifier; no independent publication channel exists"
+ },
+ "VERIFICATION_SPEC 3": [
+  "verify_checks",
+  "test_verify_differential",
+  "test_tsa_openssl"
+ ],
+ "VERIFICATION_SPEC 4": [
+  "timing_checks",
+  "test_timing",
+  "tsa_checks"
+ ],
+ "VERIFICATION_SPEC 5": {
+  "verdict": "NOT BUILT",
+  "reason": "revocation checking of the time-stamp certificates is not implemented"
+ },
+ "VERIFICATION_SPEC 6": {
+  "checks": [
+   "replay_checks",
+   "test_replay"
+  ],
+  "note": "fresh-run agreement needs a model run and has no result"
+ },
+ "VERIFICATION_SPEC 7": [
+  "test_ss08_attacks",
+  "test_verify",
+  "test_forgery"
+ ],
+ "VERIFICATION_SPEC 8": [
+  "test_ss08_attacks",
+  "forgery_checks"
+ ],
+ "VERIFIER_THREAT_MODEL 1": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section names the assets and adversaries"
+ },
+ "VERIFIER_THREAT_MODEL 2": [
+  "test_ss08_attacks",
+  "forgery_checks",
+  "verify_checks"
+ ],
+ "VERIFIER_THREAT_MODEL 3": [
+  "forgery_checks",
+  "test_forgery"
+ ],
+ "VERIFIER_THREAT_MODEL 4": {
+  "verdict": "NOT BUILT",
+  "reason": "records submitted by third parties (Verify submissions) are not built"
+ },
+ "VERIFIER_THREAT_MODEL 5": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section states the residual risks"
+ },
+ "VERIFIER_THREAT_MODEL 6": {
+  "verdict": "OUTSIDE THIS REPOSITORY",
+  "reason": "an independent review needs a person who did not write the code or the attack suite"
+ },
+ "CLAIM_GRAPH_SPEC 1": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section defines what a claim graph is"
+ },
+ "CLAIM_GRAPH_SPEC 2": [
+  "claim_graph_checks"
+ ],
+ "CLAIM_GRAPH_SPEC 3": {
+  "checks": [
+   "claim_extract_checks",
+   "claim_segmenter_checks"
+  ],
+  "note": "extraction was exercised on recorded readings of a model; there is no accuracy against labelled claims"
+ },
+ "CLAIM_GRAPH_SPEC 4": {
+  "checks": [
+   "claim_stability_checks"
+  ],
+  "note": "the threshold is a prior, not set from a labelled set"
+ },
+ "CLAIM_GRAPH_SPEC 5": {
+  "verdict": "NOT BUILT",
+  "reason": "the labelled set of composite claims needs two annotators, who are people, and does not exist"
+ },
+ "CLAIM_GRAPH_SPEC 6": [
+  "claim_checks_checks",
+  "claim_assumptions_checks"
+ ],
+ "CLAIM_GRAPH_SPEC 7": {
+  "checks": [
+   "claims_file_checks"
+  ],
+  "note": "private storage of a person's claims and the entry points of the other surfaces are not built"
+ },
+ "CLAIM_GRAPH_SPEC 8": [
+  "claim_graph_checks",
+  "claim_preliminary_checks"
+ ],
+ "GROUNDING_CONTRACT 1": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section states the problem with an example"
+ },
+ "GROUNDING_CONTRACT 2": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section reviews other systems"
+ },
+ "GROUNDING_CONTRACT 3": [
+  "assertions_checks"
+ ],
+ "GROUNDING_CONTRACT 4": {
+  "checks": [
+   "grounding_checks"
+  ],
+  "note": "the semantic layer has no validated judge and is not part of the checks"
+ },
+ "GROUNDING_CONTRACT 5": [
+  "grounding_checks",
+  "assertions_checks"
+ ],
+ "GROUNDING_CONTRACT 6": {
+  "verdict": "NOT BUILT",
+  "reason": "the semantic support judge and its validation set (about 550 labelled pairs) are not built"
+ },
+ "GROUNDING_CONTRACT 7": [
+  "grounding_checks"
+ ],
+ "GROUNDING_CONTRACT 8": [
+  "grounding_checks",
+  "injection_checks"
+ ],
+ "EVIDENCE_CHALLENGE_SPEC 1": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section states what a challenge is and is not"
+ },
+ "EVIDENCE_CHALLENGE_SPEC 2": [
+  "intervention_checks",
+  "rules_challenge_checks",
+  "model_challenge_checks"
+ ],
+ "EVIDENCE_CHALLENGE_SPEC 3": [
+  "intervention_checks",
+  "lineage_checks"
+ ],
+ "EVIDENCE_CHALLENGE_SPEC 4": [
+  "paired_stats_checks",
+  "test_paired_stats_independent"
+ ],
+ "EVIDENCE_CHALLENGE_SPEC 5": {
+  "checks": [
+   "model_challenge_checks"
+  ],
+  "note": "the live model run that gave a result is not repeated; the recorded ones are replayed"
+ },
+ "EVIDENCE_CHALLENGE_SPEC 6": {
+  "checks": [
+   "challenge_view_checks",
+   "model_challenge_file_checks"
+  ],
+  "note": "public live challenges with a visitor budget and the safe input of a person's own evidence are not built"
+ },
+ "EVIDENCE_CHALLENGE_SPEC 7": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section compares the design with its sources"
+ },
+ "EVIDENCE_CHALLENGE_SPEC 8": [
+  "intervention_checks",
+  "model_challenge_checks"
+ ],
+ "FALSIFICATION_PROTOCOL 1": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section separates three things in words"
+ },
+ "FALSIFICATION_PROTOCOL 2": [
+  "falsify_checks"
+ ],
+ "FALSIFICATION_PROTOCOL 3": [
+  "falsify_checks",
+  "falsify_calibration_checks"
+ ],
+ "FALSIFICATION_PROTOCOL 4": {
+  "checks": [
+   "falsify_calibration_checks"
+  ],
+  "note": "planted synthetic scenarios only; no real series"
+ },
+ "FALSIFICATION_PROTOCOL 5": {
+  "verdict": "NOT BUILT",
+  "reason": "no register of competing explanations exists"
+ },
+ "FALSIFICATION_PROTOCOL 6": {
+  "checks": [
+   "page_test"
+  ],
+  "note": "the page test checks the Desk page for accessibility and layout, not the wording of its falsification block"
+ },
+ "FALSIFICATION_PROTOCOL 7": [
+  "falsify_checks"
+ ],
+ "AGENT_PROTOCOL 1": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section records a decision"
+ },
+ "AGENT_PROTOCOL 2": {
+  "checks": [
+   "desk_checks",
+   "desk_harness_checks"
+  ],
+  "note": "the runs on recorded data use a scripted model; a live assembly (`desk_live`) reads the real gateway and asks no model, so a live run is flat"
+ },
+ "AGENT_PROTOCOL 3": [
+  "model_client_checks",
+  "model_gateway_checks",
+  "arm_input_checks"
+ ],
+ "AGENT_PROTOCOL 4": [
+  "desk_menu_checks",
+  "desk_acquire_checks"
+ ],
+ "AGENT_PROTOCOL 5": [
+  "desk_plan_checks",
+  "claim_next_check_checks"
+ ],
+ "AGENT_PROTOCOL 6": [
+  "desk_record_checks",
+  "desk_view_checks"
+ ],
+ "AGENT_PROTOCOL 7": {
+  "verdict": "NOT BUILT",
+  "reason": "`desk_live` runs the Desk on the real gateway, but that the league's arms and the Desk share one code path in a running cycle is not shown"
+ },
+ "AGENT_PROTOCOL 8": {
+  "verdict": "NOT BUILT",
+  "reason": "the fixed-order baseline is built (`desk_baselines`, on planted worlds) but not run live against the adaptive rule, and no independent scorer exists"
+ },
+ "AGENT_PROTOCOL 9": [
+  "desk_checks",
+  "desk_recovery_checks",
+  "desk_gates_checks"
+ ],
+ "LEAGUE_EXPERIMENT 1": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section states what the experiment is for"
+ },
+ "LEAGUE_EXPERIMENT 2": [
+  "arm_input_checks",
+  "arm_l1_checks",
+  "arm_l2_checks",
+  "arm_l1x_checks"
+ ],
+ "LEAGUE_EXPERIMENT 3": {
+  "checks": [
+   "league_all_checks"
+  ],
+  "note": "no comparison has settled calls to compare"
+ },
+ "LEAGUE_EXPERIMENT 4": [
+  "cycle_checks",
+  "runner_checks",
+  "league_checks"
+ ],
+ "LEAGUE_EXPERIMENT 5": [
+  "arm_l1x_checks",
+  "model_arms_checks"
+ ],
+ "LEAGUE_EXPERIMENT 6": [
+  "arm_l2_checks"
+ ],
+ "LEAGUE_EXPERIMENT 7": {
+  "checks": [
+   "model_arms_checks"
+  ],
+  "note": "per-arm latency from a real model over many cycles and the attrition table are not measured"
+ },
+ "LEAGUE_EXPERIMENT 8": {
+  "checks": [
+   "arm_run_record_checks"
+  ],
+  "note": "the report that lists the cases where the debate changed the action is not built; the record it would read is"
+ },
+ "LEAGUE_EXPERIMENT 9": {
+  "checks": [
+   "intervention_checks"
+  ],
+  "note": "the held-out removal study of RYO's contribution is not run: the RYO route is off"
+ },
+ "LEAGUE_EXPERIMENT 10": {
+  "checks": [
+   "model_call_record_checks"
+  ],
+  "note": "each call's tokens are recorded; there is no per-cycle cost model"
+ },
+ "LEAGUE_EXPERIMENT 11": [
+  "test_models_never_stop_the_rules_arm",
+  "arm_input_checks"
+ ],
+ "RULES_ARM_SPEC 1": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section states what the arm is for"
+ },
+ "RULES_ARM_SPEC 2": [
+  "arm_input_checks",
+  "rules_arm_checks"
+ ],
+ "RULES_ARM_SPEC 3": [
+  "rules_arm_checks",
+  "features_checks"
+ ],
+ "RULES_ARM_SPEC 4": [
+  "rules_arm_checks",
+  "barrier_rates_checks"
+ ],
+ "RULES_ARM_SPEC 5": [
+  "rules_arm_checks"
+ ],
+ "RULES_ARM_SPEC 6": [
+  "rules_arm_checks",
+  "test_rules_arm"
+ ],
+ "RULES_ARM_SPEC 7": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section states the arm's weaknesses"
+ },
+ "EVALUATION_PROTOCOL 1": [
+  "scoring_checks"
+ ],
+ "EVALUATION_PROTOCOL 2": [
+  "scoring_checks",
+  "forecast_checks"
+ ],
+ "EVALUATION_PROTOCOL 3": [
+  "paired_stats_checks"
+ ],
+ "EVALUATION_PROTOCOL 4": [
+  "test_paired_stats_independent",
+  "paired_stats_checks"
+ ],
+ "EVALUATION_PROTOCOL 5": {
+  "verdict": "NOT TESTED",
+  "reason": "no test holds the exploratory and the held-out period apart; the model benchmark's rules are in the decision record"
+ },
+ "EVALUATION_PROTOCOL 6": [
+  "protocol_checks"
+ ],
+ "EVALUATION_PROTOCOL 7": [
+  "test_evaluation_report",
+  "scoring_checks"
+ ],
+ "DATA_PROVENANCE 1": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section states principles"
+ },
+ "DATA_PROVENANCE 2": [
+  "evidence_checks",
+  "capture_checks"
+ ],
+ "DATA_PROVENANCE 3": [
+  "evidence_checks",
+  "desk_record_checks"
+ ],
+ "DATA_PROVENANCE 4": [
+  "lineage_checks"
+ ],
+ "DATA_PROVENANCE 5": [
+  "snapshot_checks",
+  "history_checks"
+ ],
+ "DATA_PROVENANCE 6": {
+  "checks": [
+   "ryo_fields_checks",
+   "ryo_envelope_checks"
+  ],
+  "note": "the field contracts are those of the recorded RYO responses; the live shapes are unconfirmed"
+ },
+ "DATA_PROVENANCE 7": {
+  "checks": [
+   "venue_survey_checks",
+   "bar_coverage_checks"
+  ],
+  "note": "a source-by-source coverage auditor that says how much of what was asked was checked is not built"
+ },
+ "DATA_PROVENANCE 8": {
+  "verdict": "NOT TESTED",
+  "reason": "no check names the last-good rule; the states test covers the interface's old-document notice only"
+ },
+ "DATA_PROVENANCE 9": {
+  "verdict": "NOT BUILT",
+  "reason": "retention and redistribution rules are not built; raw venue payloads are stored privately and the organisers' answer on RYO payloads is open"
+ },
+ "DATA_PROVENANCE 10": [
+  "evidence_checks",
+  "collect_checks"
+ ],
+ "GATEWAY_DESIGN 1": [
+  "gateway_checks"
+ ],
+ "GATEWAY_DESIGN 2": {
+  "checks": [
+   "governor_checks",
+   "ryo_gateway_checks"
+  ],
+  "note": "the RYO limit and cost are unmeasured: no metered probe has been run"
+ },
+ "GATEWAY_DESIGN 3": [
+  "governor_checks",
+  "gateway_checks"
+ ],
+ "GATEWAY_DESIGN 4": [
+  "breaker_checks"
+ ],
+ "GATEWAY_DESIGN 5": {
+  "checks": [
+   "desk_acquire_checks"
+  ],
+  "note": "shown only on recorded runs: no live Desk runs beside a league cycle"
+ },
+ "GATEWAY_DESIGN 6": [
+  "safe_fetch_checks",
+  "safe_fetch_net_checks"
+ ],
+ "GATEWAY_DESIGN 7": {
+  "verdict": "NOT BUILT",
+  "reason": "no traces or per-source metrics exist"
+ },
+ "GATEWAY_DESIGN 8": [
+  "gateway_checks",
+  "breaker_checks",
+  "retry_checks"
+ ],
+ "GATEWAY_DESIGN 9": [
+  "safe_fetch_checks",
+  "http_transport_checks"
+ ],
+ "DOMAIN_MODEL 1": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section assigns components to facts"
+ },
+ "DOMAIN_MODEL 2": [
+  "timeline_checks",
+  "timing_checks"
+ ],
+ "DOMAIN_MODEL 3": [
+  "ids_checks"
+ ],
+ "DOMAIN_MODEL 4": [
+  "canonical_checks",
+  "ledger_checks"
+ ],
+ "DOMAIN_MODEL 5": {
+  "checks": [
+   "forecast_checks",
+   "cycle_checks",
+   "lifecycle_checks"
+  ],
+  "note": "entities of the parts not built (claims on a person's account, challenges, contributions) have no checks"
+ },
+ "DOMAIN_MODEL 6": [
+  "ledger_checks",
+  "commit_checks"
+ ],
+ "DOMAIN_MODEL 7": [
+  "recovery_checks",
+  "commitment_store_checks",
+  "test_sigkill_recovery"
+ ],
+ "DOMAIN_MODEL 8": [
+  "test_network_boundary"
+ ],
+ "DOMAIN_MODEL 9": {
+  "checks": [
+   "test_e2e_league",
+   "proof_checks"
+  ],
+  "note": "the journey from a pasted claim to a settled outcome is not run: the Desk has no live assembly"
+ },
+ "ASSET_REGISTRY_SPEC 1": [
+  "ids_checks",
+  "registry_checks"
+ ],
+ "ASSET_REGISTRY_SPEC 2": [
+  "registry_checks"
+ ],
+ "ASSET_REGISTRY_SPEC 3": [
+  "venue_survey_checks"
+ ],
+ "ASSET_REGISTRY_SPEC 4": [
+  "registry_checks"
+ ],
+ "ASSET_REGISTRY_SPEC 5": [
+  "oracle_checks"
+ ],
+ "ASSET_REGISTRY_SPEC 6": [
+  "registry_checks"
+ ],
+ "ASSET_REGISTRY_SPEC 7": [
+  "registry_checks",
+  "proof_checks"
+ ],
+ "ASSET_REGISTRY_SPEC 8": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section lists what is not verified"
+ },
+ "ASSET_REGISTRY_SPEC 9": [
+  "registry_job_checks",
+  "test_registry_live"
+ ],
+ "UX_SPEC 1": [
+  "view_models_checks",
+  "card_lint_checks"
+ ],
+ "UX_SPEC 2": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section records the stack decision"
+ },
+ "UX_SPEC 3": [
+  "card_lint_checks",
+  "labels_checks",
+  "page_test"
+ ],
+ "UX_SPEC 4": {
+  "checks": [
+   "states_test"
+  ],
+  "note": "the model-challenge case of the states test needs a model run"
+ },
+ "UX_SPEC 5": {
+  "checks": [
+   "verify_flow_test"
+  ],
+  "note": "results of checks arriving while a person reads are not built; the Verify page's result is the one update tested"
+ },
+ "UX_SPEC 6": [
+  "labels_checks",
+  "page_test"
+ ],
+ "UX_SPEC 7": {
+  "checks": [
+   "budget_test"
+  ],
+  "note": "load time on a real network is not measured and the budgets are not a CI gate"
+ },
+ "UX_SPEC 8": [
+  "states_test",
+  "page_test"
+ ],
+ "SIMULATOR_SPEC 1": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section states what the simulator is"
+ },
+ "SIMULATOR_SPEC 2": [
+  "fills_checks",
+  "timeline_checks"
+ ],
+ "SIMULATOR_SPEC 3": [
+  "fills_checks"
+ ],
+ "SIMULATOR_SPEC 4": [
+  "risk_kernel_checks"
+ ],
+ "SIMULATOR_SPEC 5": [
+  "book_checks"
+ ],
+ "SIMULATOR_SPEC 6": [
+  "fills_checks",
+  "practice_checks"
+ ],
+ "SIMULATOR_SPEC 7": {
+  "checks": [
+   "test_settlement_differential"
+  ],
+  "note": "the second implementation covers settlement; a second implementation of the simulator is not built"
+ },
+ "SIMULATOR_SPEC 8": [
+  "book_checks",
+  "practice_checks"
+ ],
+ "DISCOVERY_MANIFEST_SPEC 1": [
+  "cycle_checks",
+  "lifecycle_checks"
+ ],
+ "DISCOVERY_MANIFEST_SPEC 2": [
+  "manifest_checks"
+ ],
+ "DISCOVERY_MANIFEST_SPEC 3": {
+  "checks": [
+   "manifest_checks",
+   "triggers_checks"
+  ],
+  "note": "the announcement trigger source is not collected, so the event route has no input on a real run"
+ },
+ "DISCOVERY_MANIFEST_SPEC 4": {
+  "checks": [
+   "manifest_checks"
+  ],
+  "note": "the per-route tables over settled calls do not exist"
+ },
+ "DISCOVERY_MANIFEST_SPEC 5": {
+  "verdict": "NOT BUILT",
+  "reason": "discovery recall needs an independent event list and a run; neither exists"
+ },
+ "DISCOVERY_MANIFEST_SPEC 6": [
+  "scheduler_checks",
+  "host_probe_checks"
+ ],
+ "DISCOVERY_MANIFEST_SPEC 7": [
+  "scheduler_checks"
+ ],
+ "DISCOVERY_MANIFEST_SPEC 8": [
+  "scheduler_checks",
+  "cycle_checks"
+ ],
+ "CYCLE_RUNNER_SPEC 1": [
+  "protocol_checks"
+ ],
+ "CYCLE_RUNNER_SPEC 2": [
+  "cycle_checks",
+  "runner_checks"
+ ],
+ "CYCLE_RUNNER_SPEC 3": [
+  "settle_job_checks"
+ ],
+ "CYCLE_RUNNER_SPEC 4": [
+  "scheduler_checks"
+ ],
+ "CYCLE_RUNNER_SPEC 5": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section states what the runner does not do"
+ },
+ "CYCLE_RUNNER_SPEC 6": [
+  "runner_checks",
+  "test_e2e_league"
+ ],
+ "CYCLE_RUNNER_SPEC 7": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section records where the build differs from the text"
+ },
+ "CYCLE_RUNNER_SPEC 8": [
+  "league_cli_checks",
+  "test_league_cli"
+ ],
+ "ARCHITECTURE 1": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section is a summary"
+ },
+ "ARCHITECTURE 2": {
+  "checks": [
+   "test_deploy_files"
+  ],
+  "note": "no virtual machine exists"
+ },
+ "ARCHITECTURE 3": [
+  "test_proof_matrix",
+  "proof_checks"
+ ],
+ "ARCHITECTURE 4": {
+  "checks": [
+   "test_e2e_league"
+  ],
+  "note": "the on-demand, evidence-challenge and verification flows are not run end to end"
+ },
+ "ARCHITECTURE 5": {
+  "verdict": "NOT BUILT",
+  "reason": "the flagship journey (a pasted claim to a settled outcome) has no end-to-end run: the Desk has no live assembly"
+ },
+ "ARCHITECTURE 6": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section states what the architecture does not settle"
+ },
+ "ARCHITECTURE 7": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section is a reading order"
+ },
+ "INTEGRATION_PROOF 1": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section states what counts as evidence"
+ },
+ "INTEGRATION_PROOF 2": [
+  "proof_checks"
+ ],
+ "INTEGRATION_PROOF 3": [
+  "proof_checks"
+ ],
+ "INTEGRATION_PROOF 4": {
+  "verdict": "NOT BUILT",
+  "reason": "the genuine proof needs the RYO route and a model run together in one cycle; the RYO key and a model key exist and the route is switched on by settings, but no such cycle was run end to end"
+ },
+ "INTEGRATION_PROOF 5": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section states what the fixture harness shows"
+ },
+ "INTEGRATION_PROOF 6": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section is about recording a result"
+ },
+ "LICENSE_REGISTER 1": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "generated facts about the studied sources"
+ },
+ "LICENSE_REGISTER 2": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section classifies licences"
+ },
+ "LICENSE_REGISTER 3": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section records decisions with their licence basis"
+ },
+ "LICENSE_REGISTER 4": {
+  "verdict": "OUTSIDE THIS REPOSITORY",
+  "reason": "open licence questions are read and decided by a person"
+ },
+ "LICENSE_REGISTER 5": {
+  "verdict": "NOT APPLICABLE",
+  "reason": "the section describes a process"
+ },
+ "CONNECTOR_CONTRACTS 1": [
+  "connector_checks"
+ ],
+ "CONNECTOR_CONTRACTS 2": [
+  "connector_checks",
+  "retry_checks"
+ ],
+ "CONNECTOR_CONTRACTS 3": {
+  "checks": [
+   "ryo_catalogue_checks",
+   "venue_base_checks",
+   "test_venue_stack"
+  ],
+  "note": "the RYO contract is read from recorded responses of a first pass; its live behaviour is unmeasured"
+ },
+ "CONNECTOR_CONTRACTS 4": [
+  "retry_checks",
+  "gateway_checks"
+ ],
+ "CONNECTOR_CONTRACTS 5": [
+  "test_venue_binance",
+  "test_venue_kraken",
+  "test_venue_coinbase",
+  "test_venue_okx",
+  "test_venue_hyperliquid"
+ ]
+}

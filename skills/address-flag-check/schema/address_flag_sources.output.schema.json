@@ -1,0 +1,121 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "type": "string"
+    },
+    "availability": {
+      "additionalProperties": {
+        "enum": [
+          "available",
+          "stale",
+          "partial",
+          "unavailable",
+          "not_covered",
+          "not_requested"
+        ]
+      },
+      "type": "object"
+    },
+    "data": {
+      "properties": {
+        "chain": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sources": {
+          "items": {
+            "required": [
+              "source_id",
+              "name",
+              "kind",
+              "chains",
+              "maintained",
+              "maintained_basis",
+              "used",
+              "not_used_reason",
+              "endpoint",
+              "terms_url",
+              "terms_note",
+              "list_issued",
+              "list_issued_age_days",
+              "confirmed_current_age_seconds",
+              "address_strings",
+              "families"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "chain",
+        "sources"
+      ],
+      "type": "object"
+    },
+    "data_mode": {
+      "enum": [
+        "live",
+        "mixed",
+        "simulated",
+        "unknown"
+      ]
+    },
+    "request": {
+      "type": "object"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "ok",
+        "partial",
+        "unavailable"
+      ]
+    },
+    "summary": {
+      "properties": {
+        "headline": {
+          "type": "string"
+        },
+        "key_points": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "headline",
+        "key_points"
+      ],
+      "type": "object"
+    },
+    "tool": {
+      "const": "address_flag_sources"
+    },
+    "warnings": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "tool",
+    "status",
+    "data_mode",
+    "as_of",
+    "request",
+    "data",
+    "summary",
+    "availability",
+    "warnings"
+  ],
+  "type": "object"
+}

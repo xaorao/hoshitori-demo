@@ -1,0 +1,32 @@
+{
+ "symbol": "ETH",
+ "hours": 24,
+ "source": "placebo-neutral-item",
+ "original": "UP",
+ "pairs": 40,
+ "outcome": "EFFECT_UNCERTAIN",
+ "mechanism": null,
+ "failed": 1,
+ "attempted": 120,
+ "treated": {
+  "same_same": 29,
+  "same_changed": 6,
+  "changed_same": 3,
+  "changed_changed": 2
+ },
+ "control": {
+  "same_same": 27,
+  "same_changed": 8,
+  "changed_same": 4,
+  "changed_changed": 1
+ },
+ "verdict": {
+  "n": 40,
+  "shift": 0.075,
+  "low": -0.08157482174080638,
+  "high": 0.2347511304812835,
+  "p": 0.8671875,
+  "note": "too few runs to say (NO_CALL, UP)"
+ },
+ "placebo_chars": 341
+}

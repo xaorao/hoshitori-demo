@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Sanctions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="3" xsi:schemaLocation="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ADVANCED_XML https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ADVANCED_XML.xsd" xmlns="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ADVANCED_XML">
+  <DateOfIssue CalendarTypeID="1">
+    <Year>2026</Year>
+    <Month>10</Month>
+    <Day>28</Day>
+  </DateOfIssue>
+  <ReferenceValueSets>
+    <FeatureTypeValues>
+      <FeatureType ID="1" FeatureTypeGroupID="1">Vessel Call Sign</FeatureType>
+      <FeatureType ID="2" FeatureTypeGroupID="1">VESSEL TYPE</FeatureType>
+      <FeatureType ID="3" FeatureTypeGroupID="1">Vessel Flag</FeatureType>
+      <FeatureType ID="4" FeatureTypeGroupID="1">Vessel Owner</FeatureType>
+      <FeatureType ID="5" FeatureTypeGroupID="1">Vessel Tonnage</FeatureType>
+      <FeatureType ID="6" FeatureTypeGroupID="1">Vessel Gross Registered Tonnage</FeatureType>
+      <FeatureType ID="8" FeatureTypeGroupID="1">Birthdate</FeatureType>
+      <FeatureType ID="9" FeatureTypeGroupID="1">Place of Birth</FeatureType>
+      <FeatureType ID="10" FeatureTypeGroupID="1">Nationality Country</FeatureType>
+      <FeatureType ID="11" FeatureTypeGroupID="1">Citizenship Country</FeatureType>
+      <FeatureType ID="13" FeatureTypeGroupID="1">SWIFT/BIC</FeatureType>
+      <FeatureType ID="14" FeatureTypeGroupID="1">Website</FeatureType>
+      <FeatureType ID="21" FeatureTypeGroupID="1">Email Address</FeatureType>
+      <FeatureType ID="24" FeatureTypeGroupID="1">Former Vessel Flag</FeatureType>
+      <FeatureType ID="25" FeatureTypeGroupID="1">Location</FeatureType>
+      <FeatureType ID="26" FeatureTypeGroupID="1">Title</FeatureType>
+      <FeatureType ID="44" FeatureTypeGroupID="1">Aircraft Construction Number (also called L/N or S/N or F/N)</FeatureType>
+      <FeatureType ID="45" FeatureTypeGroupID="1">Aircraft Manufacture Date</FeatureType>
+      <FeatureType ID="46" FeatureTypeGroupID="1">Aircraft Mode S Transponder Code</FeatureType>
+      <FeatureType ID="47" FeatureTypeGroupID="1">Aircraft Model</FeatureType>
+      <FeatureType ID="48" FeatureTypeGroupID="1">Aircraft Operator</FeatureType>
+      <FeatureType ID="49" FeatureTypeGroupID="1">Previous Aircraft Tail Number</FeatureType>
+      <FeatureType ID="50" FeatureTypeGroupID="1">Aircraft Manufacturer's Serial Number (MSN)</FeatureType>
+      <FeatureType ID="64" FeatureTypeGroupID="1">Aircraft Tail Number</FeatureType>
+      <FeatureType ID="104" FeatureTypeGroupID="1">IFCA Determination -</FeatureType>
+      <FeatureType ID="125" FeatureTypeGroupID="1">Additional Sanctions Information -</FeatureType>
+      <FeatureType ID="164" FeatureTypeGroupID="1">BIK (RU)</FeatureType>
+      <FeatureType ID="204" FeatureTypeGroupID="1">Executive Order 13662 Directive Determination -</FeatureType>
+      <FeatureType ID="224" FeatureTypeGroupID="1">Gender</FeatureType>
+      <FeatureType ID="264" FeatureTypeGroupID="1">UN/LOCODE</FeatureType>
+      <FeatureType ID="304" FeatureTypeGroupID="1">MICEX Code</FeatureType>
+      <FeatureType ID="344" FeatureTypeGroupID="1">Digital Currency Address - XBT</FeatureType>
+      <FeatureType ID="345" FeatureTypeGroupID="1">Digital Currency Address - ETH</FeatureType>
+      <FeatureType ID="364" FeatureTypeGroupID="1">D-U-N-S Number</FeatureType>
+      <FeatureType ID="365" FeatureTypeGroupID="1">Nationality of Registration</FeatureType>
+      <FeatureType ID="404" FeatureTypeGroupID="1">Registration Country</FeatureType>
+      <FeatureType ID="424" FeatureTypeGroupID="1">Other Vessel Flag</FeatureType>
+      <FeatureType ID="425" FeatureTypeGroupID="1">Other Vessel Call Sign</FeatureType>
+      <FeatureType ID="444" FeatureTypeGroupID="1">Digital Currency Address - XMR</FeatureType>
+      <FeatureType ID="504" FeatureTypeGroupID="1">Secondary sanctions risk:</FeatureType>
+      <FeatureType ID="524" FeatureTypeGroupID="1">Phone Number</FeatureType>
+      <FeatureType ID="525" FeatureTypeGroupID="1">CAATSA Section 235 Information:</FeatureType>
+      <FeatureType ID="526" FeatureTypeGroupID="1">Other Vessel Type</FeatureType>
+      <FeatureType ID="566" FeatureTypeGroupID="1">Digital Currency Address - LTC</FeatureType>
+      <FeatureType ID="586" FeatureTypeGroupID="1">Executive Order 13846 information:</FeatureType>
+      <FeatureType ID="626" FeatureTypeGroupID="1">Transactions Prohibited For Persons Owned or Controlled By U.S. Financial Institutions:</FeatureType>
+      <FeatureType ID="646" FeatureTypeGroupID="1">Organization Established Date</FeatureType>
+      <FeatureType ID="647" FeatureTypeGroupID="1">Organization Type:</FeatureType>
+      <FeatureType ID="686" FeatureTypeGroupID="1">Digital Currency Address - ZEC</FeatureType>
+      <FeatureType ID="687" FeatureTypeGroupID="1">Digital Currency Address - DASH</FeatureType>
+      <FeatureType ID="688" FeatureTypeGroupID="1">Digital Currency Address - BTG</FeatureType>
+      <FeatureType ID="689" FeatureTypeGroupID="1">Digital Currency Address - ETC</FeatureType>
+      <FeatureType ID="706" FeatureTypeGroupID="1">Digital Currency Address - BSV</FeatureType>
+      <FeatureType ID="726" FeatureTypeGroupID="1">Digital Currency Address - BCH</FeatureType>
+      <FeatureType ID="746" FeatureTypeGroupID="1">Digital Currency Address - XVG</FeatureType>
+      <FeatureType ID="766" FeatureTypeGroupID="1">Equity Ticker</FeatureType>
+      <FeatureType ID="806" FeatureTypeGroupID="1">ISIN</FeatureType>
+      <FeatureType ID="826" FeatureTypeGroupID="1">Target Type</FeatureType>
+      <FeatureType ID="827" FeatureTypeGroupID="1">PEESA Information:</FeatureType>
+      <FeatureType ID="887" FeatureTypeGroupID="1">Digital Currency Address - USDT</FeatureType>
+      <FeatureType ID="907" FeatureTypeGroupID="1">Digital Currency Address - XRP</FeatureType>
+      <FeatureType ID="947" FeatureTypeGroupID="1">Executive Order 14024 Directive Information -</FeatureType>
+      <FeatureType ID="948" FeatureTypeGroupID="1">Executive Order 14024 Directive Information</FeatureType>
+      <FeatureType ID="951" FeatureTypeGroupID="1">Listing Date (EO 14024 Directive 2):</FeatureType>
+      <FeatureType ID="952" FeatureTypeGroupID="1">Effective Date (EO 14024 Directive 2):</FeatureType>
+      <FeatureType ID="953" FeatureTypeGroupID="1">Listing Date (EO 14024 Directive 3):</FeatureType>
+      <FeatureType ID="954" FeatureTypeGroupID="1">Effective Date (EO 14024 Directive 3):</FeatureType>
+      <FeatureType ID="967" FeatureTypeGroupID="1">Vessel Year of Build</FeatureType>
+      <FeatureType ID="989" FeatureTypeGroupID="1">Digital Currency Address - BNB</FeatureType>
+      <FeatureType ID="992" FeatureTypeGroupID="1">Digital Currency Address - TRX</FeatureType>
+      <FeatureType ID="996" FeatureTypeGroupID="1">Digital Currency Address - DOGE</FeatureType>
+      <FeatureType ID="998" FeatureTypeGroupID="1">Digital Currency Address - USDC</FeatureType>
+      <FeatureType ID="1007" FeatureTypeGroupID="1">Digital Currency Address - ARB</FeatureType>
+      <FeatureType ID="1008" FeatureTypeGroupID="1">Digital Currency Address - BSC</FeatureType>
+      <FeatureType ID="1167" FeatureTypeGroupID="1">Digital Currency Address - SOL</FeatureType>
+      <FeatureType ID="1187" FeatureTypeGroupID="1">PAIPA Section 2 Information:</FeatureType>
+    </FeatureTypeValues>
+    <ListValues>
+      <List ID="1550">SDN List</List>
+      <List ID="91243">Non-SDN Palestinian Legislative Council List</List>
+      <List ID="91507">Sectoral Sanctions Identifications List</List>
+      <List ID="91512">Consolidated List</List>
+    </ListValues>
+    <PartySubTypeValues>
+      <PartySubType ID="1" PartyTypeID="4">Vessel</PartySubType>
+      <PartySubType ID="2" PartyTypeID="4">Aircraft</PartySubType>
+      <PartySubType ID="3" PartyTypeID="2">Unknown</PartySubType>
+      <PartySubType ID="4" PartyTypeID="1">Unknown</PartySubType>
+    </PartySubTypeValues>
+    <PartyTypeValues>
+      <PartyType ID="1">Individual</PartyType>
+      <PartyType ID="2">Entity</PartyType>
+      <PartyType ID="3">Location</PartyType>
+      <PartyType ID="4">Transport</PartyType>
+      <PartyType ID="5">Other Entity</PartyType>
+    </PartyTypeValues>
+    <ReliabilityValues>
+      <Reliability ID="1560">Confirmed</Reliability>
+      <Reliability ID="1561">False</Reliability>
+      <Reliability ID="91479">Reported</Reliability>
+      <Reliability ID="1">Unknown</Reliability>
+    </ReliabilityValues>
+    <SanctionsTypeValues>
+      <SanctionsType ID="1705">Block</SanctionsType>
+      <SanctionsType ID="1706">Reject</SanctionsType>
+      <SanctionsType ID="91419">NDAA Special Conditions</SanctionsType>
+      <SanctionsType ID="91505">13662 Sectoral Directive 1</SanctionsType>
+      <SanctionsType ID="91506">13662 Sectoral Directive 2</SanctionsType>
+      <SanctionsType ID="91513">13662 Sectoral Directive 3</SanctionsType>
+      <SanctionsType ID="91514">13662 Sectoral Directive 4</SanctionsType>
+      <SanctionsType ID="91867">CAATSA Section 231/235 Sanctions</SanctionsType>
+      <SanctionsType ID="92087">Executive Order 14024 Directive 3</SanctionsType>
+      <SanctionsType ID="92093">Executive Order 14024 Directive 2</SanctionsType>
+      <SanctionsType ID="1">Program</SanctionsType>
+    </SanctionsTypeValues>
+  </ReferenceValueSets>
+  <DistinctParties>
+    <DistinctParty FixedRef="30518">
+      <Profile ID="30518" PartySubTypeID="3">
+        <Feature ID="38213" FeatureTypeID="344">
+          <FeatureVersion ID="35932" ReliabilityID="1">
+            <Comment>This address is associated with only one fork: BCH.</Comment>
+            <VersionDetail DetailTypeID="1432">1NE2NiGhhbkFPSEyNWwj7hKGhGDedBtSrQ</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="22202" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="38214" FeatureTypeID="344">
+          <FeatureVersion ID="35933" ReliabilityID="1">
+            <Comment>This address is also associated with two forks: BCH and BSV.</Comment>
+            <VersionDetail DetailTypeID="1432">19D8PHBjZH29uS1uPZ4m3sVyqqfF8UFG9o</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="22202" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="38215" FeatureTypeID="344">
+          <FeatureVersion ID="35934" ReliabilityID="1">
+            <Comment>This address is also associated with BCH and BSV.</Comment>
+            <VersionDetail DetailTypeID="1432">1EYitrwBYNWuTBcjZFbEUdqHppe2raLpaF</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="22202" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="38216" FeatureTypeID="344">
+          <FeatureVersion ID="35935" ReliabilityID="1">
+            <Comment>This address is also associated with BCH and BSV forks.</Comment>
+            <VersionDetail DetailTypeID="1432">1G9CKRHA3mx22DoT1QyNYrh85VSQ19Y1em</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="22202" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="38217" FeatureTypeID="344">
+          <FeatureVersion ID="35936" ReliabilityID="1">
+            <Comment>This address is also associated with BCH and BSV forks.</Comment>
+            <VersionDetail DetailTypeID="1432">182NGZbPJXwg2WDrhrPpR7tpiGQkNPF844</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="22202" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="38218" FeatureTypeID="344">
+          <FeatureVersion ID="35937" ReliabilityID="1">
+            <Comment>No associated forks.</Comment>
+            <VersionDetail DetailTypeID="1432">1NayLEVF3bEEbDtdF2Cwso1VdEtvVNh2qX</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="22202" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="38219" FeatureTypeID="344">
+          <FeatureVersion ID="35938" ReliabilityID="1">
+            <Comment>No associated forks.</Comment>
+            <VersionDetail DetailTypeID="1432">16PhXY3hNNMTo8kpuJx2emh713KbWpkqci</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="22202" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="38220" FeatureTypeID="344">
+          <FeatureVersion ID="35939" ReliabilityID="1">
+            <Comment>No associated forks.</Comment>
+            <VersionDetail DetailTypeID="1432">1GqChmWqGtsaLrGbHfgdrV5Nkvahtjjuxr</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="22202" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="38221" FeatureTypeID="344">
+          <FeatureVersion ID="35940" ReliabilityID="1">
+            <Comment>No associated forks.</Comment>
+            <VersionDetail DetailTypeID="1432">18Ke1QWE9nQfXuhJijHggZuPJ5ZYxapoBK</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="22202" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="38222" FeatureTypeID="344">
+          <FeatureVersion ID="35941" ReliabilityID="1">
+            <Comment>No associated forks.</Comment>
+            <VersionDetail DetailTypeID="1432">1QJUiNsNfji6mR1FjAwf6Eg9NxxHPoxpWL</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="22202" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="38223" FeatureTypeID="344">
+          <FeatureVersion ID="35942" ReliabilityID="1">
+            <Comment>This address is associated with two forks: BCG and BSV.</Comment>
+            <VersionDetail DetailTypeID="1432">1DtGgdCi9VPKz2Bpq8GQhUQEPnQ5HwaT9n</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="22202" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="38238" FeatureTypeID="726">
+          <FeatureVersion ID="35957" ReliabilityID="1">
+            <Comment>This address is only active on the BCH blockchain.</Comment>
+            <VersionDetail DetailTypeID="1432">18M8bJWMzWHDBMxoLqjHHAffdRy4SrzkfB</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="22202" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="38239" FeatureTypeID="345">
+          <FeatureVersion ID="35958" ReliabilityID="1">
+            <Comment>No tokens associated.</Comment>
+            <VersionDetail DetailTypeID="1432">0x1da5821544e25c636c1417ba96ade4cf6d2f9b5a</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="22202" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="38264" FeatureTypeID="345">
+          <FeatureVersion ID="35983" ReliabilityID="1">
+            <Comment>No tokens.</Comment>
+            <VersionDetail DetailTypeID="1432">0x7Db418b5D567A4e0E8c59Ad71BE1FcE48f3E6107</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="22202" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="38267" FeatureTypeID="345">
+          <FeatureVersion ID="35986" ReliabilityID="1">
+            <Comment>ETH +1 token (PAX)</Comment>
+            <VersionDetail DetailTypeID="1432">0x72a5843cc08275C8171E582972Aa4fDa8C397B2A</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="22202" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="38268" FeatureTypeID="345">
+          <FeatureVersion ID="35987" ReliabilityID="1">
+            <Comment>ETH +2 tokens (EBK, SLV)</Comment>
+            <VersionDetail DetailTypeID="1432">0x7F19720A857F834887FC9A7bC0a0fBe7Fc7f8102</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="22202" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="38269" FeatureTypeID="566">
+          <FeatureVersion ID="35988" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">LQAhYwwK5AR1JQiQPr7vu8Pu4b6qcxxvNB</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="22202" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="38270" FeatureTypeID="566">
+          <FeatureVersion ID="35989" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">LgwmgYnraU2uBWHVFUDgAmFCPYj5Yw8C9L</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="22202" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="38271" FeatureTypeID="566">
+          <FeatureVersion ID="35990" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">LeKvNdNEzgQkzVVnRdV3fAu2DSF1nLsNw6</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="22202" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+      </Profile>
+    </DistinctParty>
+    <DistinctParty FixedRef="33854">
+      <Profile ID="33854" PartySubTypeID="3">
+        <Feature ID="44716" FeatureTypeID="344">
+          <FeatureVersion ID="42435" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">3E7YbpXuhh3CWFks1jmvWoV8y5DvsfzE6n</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44717" FeatureTypeID="345">
+          <FeatureVersion ID="42436" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">0x67d40EE1A85bf4a4Bb7Ffae16De985e8427B6b45</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44718" FeatureTypeID="887">
+          <FeatureVersion ID="42437" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">3LtcaPbCj87CwJHnRX3vh7c2y9RZQqeSy8</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44719" FeatureTypeID="345">
+          <FeatureVersion ID="42438" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">0x6f1ca141a28907f78ebaa64fb83a9088b02a8352</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44720" FeatureTypeID="344">
+          <FeatureVersion ID="42439" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">3NRJ8aXdUiZdHaiFX9ePX3DhGHzcEi14Fq</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44722" FeatureTypeID="344">
+          <FeatureVersion ID="42441" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">3K7PMJyMNVnxqsfpmK9r9nJDtzDw9wNwNV</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44723" FeatureTypeID="344">
+          <FeatureVersion ID="42442" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">3H3rh85qPaGLy2w6618yZNaH7i8asHv46B</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44724" FeatureTypeID="344">
+          <FeatureVersion ID="42443" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">3MTrJTFhYK9v1C6pjHtuweZSopfZa4b1wb</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44725" FeatureTypeID="345">
+          <FeatureVersion ID="42444" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">0x48549a34ae37b12f6a30566245176994e17c6b4a</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44726" FeatureTypeID="344">
+          <FeatureVersion ID="42445" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">347QFbejDBdMZFTxpmn6evvvqyXiqZTCd7</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44727" FeatureTypeID="345">
+          <FeatureVersion ID="42446" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">0x5512d943ed1f7c8a43f3435c85f7ab68b30121b0</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44728" FeatureTypeID="344">
+          <FeatureVersion ID="42447" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">33xWfziVZesgo83U5izdNCBVTnrtBpSwK7</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44729" FeatureTypeID="344">
+          <FeatureVersion ID="42448" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">32wdqwX3zCEX3DhAVEcKwXCEGdzgBnx1R9</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44730" FeatureTypeID="344">
+          <FeatureVersion ID="42449" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">3N9YcPBDky9UsMx1RTk33tL4jDkZfSnsPk</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44731" FeatureTypeID="344">
+          <FeatureVersion ID="42450" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">bc1q90zrdysy4flyacw7hsury3ajs9yzwtwp6guqpypx94w0d3p58hysvz6pde</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44732" FeatureTypeID="344">
+          <FeatureVersion ID="42451" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">bc1qw7vfgv3r5vnehafl0y95sclg3uqsj87wxs9ad628yjjcq33cwessr6ndyw</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44733" FeatureTypeID="344">
+          <FeatureVersion ID="42452" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">bc1q86tl9255vg5wldamfymaaz36uqxzm30gs7fhkljvzdlt9t38s3lqgdwdfq</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44734" FeatureTypeID="344">
+          <FeatureVersion ID="42453" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">3M7CGBPUJwXXSroWuZ6H5jiprdKCyf7V5M</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44735" FeatureTypeID="344">
+          <FeatureVersion ID="42454" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">34kWCKF2wCbe6uinit2uL4ND6d8yxsuxKM</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44736" FeatureTypeID="344">
+          <FeatureVersion ID="42455" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">bc1qe95l438kzjcvnsm3kn8n5augf9gpctdlhsq7f7hpnkyvlr7rc7cqupapf7</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44737" FeatureTypeID="344">
+          <FeatureVersion ID="42456" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">32VgTk8kGvBsqkHhkvtNooGdtqZm46jTVo</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44738" FeatureTypeID="344">
+          <FeatureVersion ID="42457" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">3NPognMSbzyA2JYW2fpkVKWyBMi2XTq2Zt</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44739" FeatureTypeID="344">
+          <FeatureVersion ID="42458" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">3MzLtBQ4Lz9J6w4Qu55TktgxFKZwxYWrP6</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44740" FeatureTypeID="344">
+          <FeatureVersion ID="42459" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">36YGN5dGzqrxMomTHdkT6cYVMnWBw8S7hD</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44741" FeatureTypeID="345">
+          <FeatureVersion ID="42460" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">0xc455f7fd3e0e12afd51fba5c106909934d8a0e4a</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44742" FeatureTypeID="344">
+          <FeatureVersion ID="42461" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">bc1q4rzdtlt0uslyw86cp29sctl6ct29g9a95cuup7pn5md9ddj7xgmqpp5m73</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44743" FeatureTypeID="344">
+          <FeatureVersion ID="42462" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">39KQvziHwUe2vddbpfC5WkQEV72qbQhxuh</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44744" FeatureTypeID="344">
+          <FeatureVersion ID="42463" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">3Qw9Fn19gCnga9LfHfpM99aGzuqxBNjR2i</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="44746" FeatureTypeID="907">
+          <FeatureVersion ID="42465" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">rnXyVQzgxZe7TR1EPzTkGj2jxH4LMJYh66</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="25478" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+      </Profile>
+    </DistinctParty>
+    <DistinctParty FixedRef="47635">
+      <Profile ID="47635" PartySubTypeID="3">
+        <Feature ID="70190" FeatureTypeID="345">
+          <FeatureVersion ID="67869" ReliabilityID="1560">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">0xE950DC316b836e4EeFb8308bf32Bf7C72a1358FF</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="39259" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="70191" FeatureTypeID="345">
+          <FeatureVersion ID="67870" ReliabilityID="1560">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">0x21B8d56BDA776bbE68655A16895afd96F5534feD</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="39259" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="70192" FeatureTypeID="344">
+          <FeatureVersion ID="67871" ReliabilityID="1560">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">3Q8H2ZWMtc4R1M3mkmhnTjCoYKTeCFigDP</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="39259" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="70193" FeatureTypeID="887">
+          <FeatureVersion ID="67872" ReliabilityID="1560">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">TTgcTTNbNuFdbrhvbjMZVrdU5KALyzDaPw</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="39259" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="70211" FeatureTypeID="887">
+          <FeatureVersion ID="67890" ReliabilityID="1560">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">TGJVc32ig2u8tQsYMLE7KXHT5NDQroaVNU</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="39259" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="70212" FeatureTypeID="887">
+          <FeatureVersion ID="67891" ReliabilityID="1560">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">TXEsK1sEsKjZ1xtHitnyAAoqw3WLdYdRNW</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="39259" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="70213" FeatureTypeID="887">
+          <FeatureVersion ID="67892" ReliabilityID="1560">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">TH96tFMn8KGiYSLiwcV3E2UiaJc8jmcbz3</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="39259" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="70604" FeatureTypeID="887">
+          <FeatureVersion ID="68283" ReliabilityID="1560">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">0x175d44451403Edf28469dF03A9280c1197ADb92c</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="39259" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+      </Profile>
+    </DistinctParty>
+    <DistinctParty FixedRef="55045">
+      <Profile ID="55045" PartySubTypeID="3">
+        <Feature ID="91889" FeatureTypeID="992">
+          <FeatureVersion ID="89508" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">TL1k1U6SHohxBqb68kCodxHc9y2LXoDSep</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="46432" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="91890" FeatureTypeID="992">
+          <FeatureVersion ID="89509" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">TNZxGWCwvsHr6JxQxzoeDXV597Yf7Zb7nV</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="46432" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="91891" FeatureTypeID="992">
+          <FeatureVersion ID="89510" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">TC8axQvzJEVR3NKN6mZnJtGy7537GEmh38</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="46432" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="91892" FeatureTypeID="992">
+          <FeatureVersion ID="89511" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">TEcuHDQthTmULe8fFLUccBPpjfXaTmJuuD</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="46432" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="91893" FeatureTypeID="992">
+          <FeatureVersion ID="89512" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">TAYhjpL8pPs8T84FSM329nffQpc6jD8GBM</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="46432" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="91894" FeatureTypeID="992">
+          <FeatureVersion ID="89513" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">TMuCgBejD5RsNANZdjGtaM3YyKGNgDoy7N</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="46432" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+        <Feature ID="91895" FeatureTypeID="992">
+          <FeatureVersion ID="89514" ReliabilityID="1">
+            <Comment />
+            <VersionDetail DetailTypeID="1432">TGckaiamj5NzaYx6Qp6Zu7kahuHArzUo99</VersionDetail>
+          </FeatureVersion>
+          <IdentityReference IdentityID="46432" IdentityFeatureLinkTypeID="1" />
+        </Feature>
+      </Profile>
+    </DistinctParty>
+  </DistinctParties>
+  <SanctionsEntries>
+    <SanctionsEntry ID="30518" ProfileID="30518" ListID="1550">
+      <EntryEvent ID="30518" EntryEventTypeID="1" LegalBasisID="91711">
+        <Comment />
+        <Date CalendarTypeID="1">
+          <Year>2021</Year>
+          <Month>4</Month>
+          <Day>15</Day>
+        </Date>
+      </EntryEvent>
+      <EntryEvent ID="1030518" EntryEventTypeID="1" LegalBasisID="91870">
+        <Comment />
+        <Date CalendarTypeID="1">
+          <Year>2021</Year>
+          <Month>4</Month>
+          <Day>15</Day>
+        </Date>
+      </EntryEvent>
+      <SanctionsMeasure ID="22676" SanctionsTypeID="1705">
+        <DatePeriod CalendarTypeID="1" YearFixed="true" MonthFixed="true" DayFixed="true" />
+      </SanctionsMeasure>
+      <SanctionsMeasure ID="158053" SanctionsTypeID="1">
+        <Comment>CYBER2</Comment>
+        <DatePeriod CalendarTypeID="1" YearFixed="true" MonthFixed="true" DayFixed="true" />
+      </SanctionsMeasure>
+      <SanctionsMeasure ID="158054" SanctionsTypeID="1">
+        <Comment>ELECTION-EO13848</Comment>
+        <DatePeriod CalendarTypeID="1" YearFixed="true" MonthFixed="true" DayFixed="true" />
+      </SanctionsMeasure>
+    </SanctionsEntry>
+    <SanctionsEntry ID="33854" ProfileID="33854" ListID="1550">
+      <EntryEvent ID="33854" EntryEventTypeID="1" LegalBasisID="91742">
+        <Comment />
+        <Date CalendarTypeID="1">
+          <Year>2021</Year>
+          <Month>11</Month>
+          <Day>8</Day>
+        </Date>
+      </EntryEvent>
+      <SanctionsMeasure ID="26092" SanctionsTypeID="1705">
+        <DatePeriod CalendarTypeID="1" YearFixed="true" MonthFixed="true" DayFixed="true" />
+      </SanctionsMeasure>
+      <SanctionsMeasure ID="161637" SanctionsTypeID="1">
+        <Comment>CYBER2</Comment>
+        <DatePeriod CalendarTypeID="1" YearFixed="true" MonthFixed="true" DayFixed="true" />
+      </SanctionsMeasure>
+    </SanctionsEntry>
+    <SanctionsEntry ID="47635" ProfileID="47635" ListID="1550">
+      <EntryEvent ID="47635" EntryEventTypeID="1" LegalBasisID="1828">
+        <Comment />
+        <Date CalendarTypeID="1">
+          <Year>2024</Year>
+          <Month>3</Month>
+          <Day>27</Day>
+        </Date>
+      </EntryEvent>
+      <SanctionsMeasure ID="40219" SanctionsTypeID="1705">
+        <DatePeriod CalendarTypeID="1" YearFixed="true" MonthFixed="true" DayFixed="true" />
+      </SanctionsMeasure>
+      <SanctionsMeasure ID="176001" SanctionsTypeID="1">
+        <Comment>SDGT</Comment>
+        <DatePeriod CalendarTypeID="1" YearFixed="true" MonthFixed="true" DayFixed="true" />
+      </SanctionsMeasure>
+    </SanctionsEntry>
+    <SanctionsEntry ID="55045" ProfileID="55045" ListID="1550">
+      <EntryEvent ID="55045" EntryEventTypeID="1" LegalBasisID="92824">
+        <Comment />
+        <Date CalendarTypeID="1">
+          <Year>2025</Year>
+          <Month>8</Month>
+          <Day>14</Day>
+        </Date>
+      </EntryEvent>
+      <SanctionsMeasure ID="47658" SanctionsTypeID="1705">
+        <DatePeriod CalendarTypeID="1" YearFixed="true" MonthFixed="true" DayFixed="true" />
+      </SanctionsMeasure>
+      <SanctionsMeasure ID="184564" SanctionsTypeID="1">
+        <Comment>CYBER4</Comment>
+        <DatePeriod CalendarTypeID="1" YearFixed="true" MonthFixed="true" DayFixed="true" />
+      </SanctionsMeasure>
+    </SanctionsEntry>
+  </SanctionsEntries>
+</Sanctions>

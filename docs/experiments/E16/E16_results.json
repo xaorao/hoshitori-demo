@@ -1,0 +1,26 @@
+{
+ "baseline": "passed (2500 examples x 70 steps, derandomized)",
+ "states_reached": {
+  "CREATED": 30263,
+  "EVIDENCE_FROZEN": 17578,
+  "DECIDED": 14565,
+  "COMMITTED": 23179,
+  "FAILED": 23643,
+  "AWAITING_ORIGIN": 11983,
+  "OPEN": 9660,
+  "SETTLING": 2888,
+  "UNSETTLEABLE": 2889,
+  "SETTLED": 14816,
+  "VOID": 4887
+ },
+ "mutants": {
+  "early_settle": "CAUGHT: 'settled before the window closed'",
+  "no_u": "CAUGHT: 'eligible_after is not attested_at plus u'",
+  "fail_after_commit": "CAUGHT: 'terminal state left'",
+  "amend_committed": "CAUGHT: 'committed content changed'",
+  "attest_earlier": "CAUGHT: 'attested_at moved earlier'",
+  "accept_any_token_time": "CAUGHT: 'token earlier than the commit'",
+  "origin_before_close": "CAUGHT: 'origin set before the attestation window closed'",
+  "close_early": "CAUGHT: 'attestation closed early without two tokens'"
+ }
+}

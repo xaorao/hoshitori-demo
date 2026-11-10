@@ -1,0 +1,374 @@
+{
+ "cases": 23,
+ "failures": 0,
+ "results": [
+  {
+   "case": "honest chain v1 to v3",
+   "python": {
+    "status": "CURRENT",
+    "version": 3,
+    "code": "OK"
+   },
+   "node": {
+    "status": "CURRENT",
+    "version": 3,
+    "code": "OK"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "no newer root, fresh",
+   "python": {
+    "status": "CURRENT",
+    "version": 1,
+    "code": "OK"
+   },
+   "node": {
+    "status": "CURRENT",
+    "version": 1,
+    "code": "OK"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "v2 signed only by its own new keys",
+   "python": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "OLD_THRESHOLD"
+   },
+   "node": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "OLD_THRESHOLD"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "v2 signed only by the old keys",
+   "python": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "NEW_THRESHOLD"
+   },
+   "node": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "NEW_THRESHOLD"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "v2 with one of two required old signatures",
+   "python": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "OLD_THRESHOLD"
+   },
+   "node": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "OLD_THRESHOLD"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "v2 with one old key signing twice",
+   "python": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "OLD_THRESHOLD"
+   },
+   "node": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "OLD_THRESHOLD"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "file for v2 actually holds v3 (skip)",
+   "python": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "OLD_THRESHOLD"
+   },
+   "node": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "OLD_THRESHOLD"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "v3 validly signed by v1 and v3 keys offered as v2 (skip)",
+   "python": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "VERSION_STEP"
+   },
+   "node": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "VERSION_STEP"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "rollback: trusted v2, channels offer only v1 and v2",
+   "python": {
+    "status": "CURRENT",
+    "version": 2,
+    "code": "OK"
+   },
+   "node": {
+    "status": "CURRENT",
+    "version": 2,
+    "code": "OK"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "channels disagree on v2",
+   "python": {
+    "status": "FORK",
+    "version": 1,
+    "code": "FORK"
+   },
+   "node": {
+    "status": "FORK",
+    "version": 1,
+    "code": "FORK"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "only one of two channels serves v2",
+   "python": {
+    "status": "CURRENT",
+    "version": 2,
+    "code": "OK"
+   },
+   "node": {
+    "status": "CURRENT",
+    "version": 2,
+    "code": "OK"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "freeze: trusted root expired and nothing newer",
+   "python": {
+    "status": "EXPIRED",
+    "version": 1,
+    "code": "EXPIRED"
+   },
+   "node": {
+    "status": "EXPIRED",
+    "version": 1,
+    "code": "EXPIRED"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "intermediate root expired, final fresh",
+   "python": {
+    "status": "CURRENT",
+    "version": 3,
+    "code": "OK"
+   },
+   "node": {
+    "status": "CURRENT",
+    "version": 3,
+    "code": "OK"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "chain ends at an expired root",
+   "python": {
+    "status": "EXPIRED",
+    "version": 2,
+    "code": "EXPIRED"
+   },
+   "node": {
+    "status": "EXPIRED",
+    "version": 2,
+    "code": "EXPIRED"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "chain of 19 updates with a bound of 16",
+   "python": {
+    "status": "REJECTED",
+    "version": 17,
+    "code": "CHAIN_BOUND"
+   },
+   "node": {
+    "status": "REJECTED",
+    "version": 17,
+    "code": "CHAIN_BOUND"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "v2 payload is not a root document",
+   "python": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "MALFORMED"
+   },
+   "node": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "MALFORMED"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "era acceptance on the honest chain",
+   "python": {
+    "status": "CURRENT",
+    "version": 3,
+    "code": "OK"
+   },
+   "node": {
+    "status": "CURRENT",
+    "version": 3,
+    "code": "OK"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "verifier stuck on v1 (no newer root reachable) accepts the old era beyond its real closing size",
+   "python": {
+    "status": "CURRENT",
+    "version": 1,
+    "code": "OK"
+   },
+   "node": {
+    "status": "CURRENT",
+    "version": 1,
+    "code": "OK"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "stuck on a root that expires soon: freeze caught once time passes",
+   "python": {
+    "status": "EXPIRED",
+    "version": 1,
+    "code": "EXPIRED"
+   },
+   "node": {
+    "status": "EXPIRED",
+    "version": 1,
+    "code": "EXPIRED"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "one stolen old root key signs a new root alone",
+   "python": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "OLD_THRESHOLD"
+   },
+   "node": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "OLD_THRESHOLD"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "whole channel rolled back to v1 while the verifier holds v3",
+   "python": {
+    "status": "CURRENT",
+    "version": 3,
+    "code": "OK"
+   },
+   "node": {
+    "status": "CURRENT",
+    "version": 3,
+    "code": "OK"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "document of the wrong type",
+   "python": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "MALFORMED"
+   },
+   "node": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "MALFORMED"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  },
+  {
+   "case": "payload edited after signing",
+   "python": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "OLD_THRESHOLD"
+   },
+   "node": {
+    "status": "REJECTED",
+    "version": 1,
+    "code": "OLD_THRESHOLD"
+   },
+   "expected_met_python": true,
+   "expected_met_node": true,
+   "implementations_agree": true
+  }
+ ]
+}

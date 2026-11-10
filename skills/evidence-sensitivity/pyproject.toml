@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evidence-sensitivity"
+version = "0.1.0"
+description = "Read-only research skill: which pieces of evidence does a rule-based call rest on, and does it survive losing a source?"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0", "jsonschema==4.26.0", "ruff==0.17.3", "mypy==2.4.1"]
+
+[project.scripts]
+evidence-sensitivity = "evidence_sensitivity.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+evidence_sensitivity = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q -ra"
+
+[tool.ruff]
+line-length = 140
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S", "C4", "SIM", "RUF"]
+ignore = ["S101"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S105", "S106", "S108", "S311", "E501", "S603", "S310"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+files = ["src/evidence_sensitivity"]

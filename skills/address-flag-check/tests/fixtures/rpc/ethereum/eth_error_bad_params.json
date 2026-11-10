@@ -1,0 +1,22 @@
+{
+ "label": "recorded by B5A from https://ethereum-rpc.publicnode.com",
+ "source_url": "https://ethereum-rpc.publicnode.com",
+ "method": "POST",
+ "request_body": {
+  "jsonrpc": "2.0",
+  "id": 16,
+  "method": "eth_getCode",
+  "params": [
+   "0x1234",
+   "0x1919770"
+  ]
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json",
+  "date": "Sun, 01 Nov 2026 08:24:41 GMT"
+ },
+ "body_sha256": "e768272f73ccf32588981b02ac9fd45e23c5f4c426ab57746f2a528f8f20aba6",
+ "body_bytes": 126,
+ "body": "{\"jsonrpc\":\"2.0\",\"id\":16,\"error\":{\"code\":-32602,\"message\":\"Invalid params\",\"data\":\"invalid string length at line 1 column 8\"}}"
+}

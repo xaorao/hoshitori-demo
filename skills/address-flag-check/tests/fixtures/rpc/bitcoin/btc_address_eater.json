@@ -1,0 +1,14 @@
+{
+ "label": "recorded by B5A from https://mempool.space/api/address/1BitcoinEaterAddressDontSendf59kuE",
+ "source_url": "https://mempool.space/api/address/1BitcoinEaterAddressDontSendf59kuE",
+ "method": "GET",
+ "request_body": null,
+ "status": 200,
+ "headers": {
+  "content-type": "application/json",
+  "date": "Sun, 01 Nov 2026 08:25:43 GMT"
+ },
+ "body_sha256": "154df63c197f061b6fbe0f4181541e4db85d83a975f494a6582800b9c5e9c01a",
+ "body_bytes": 279,
+ "body": "{\"address\":\"1BitcoinEaterAddressDontSendf59kuE\",\"chain_stats\":{\"funded_txo_count\":5854,\"funded_txo_sum\":1341869667,\"spent_txo_count\":0,\"spent_txo_sum\":0,\"tx_count\":5672},\"mempool_stats\":{\"funded_txo_count\":0,\"funded_txo_sum\":0,\"spent_txo_count\":0,\"spent_txo_sum\":0,\"tx_count\":0}}"
+}

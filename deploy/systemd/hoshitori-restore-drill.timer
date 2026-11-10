@@ -1,0 +1,10 @@
+# Once a week, on Sunday at 03:30 (systemd.time weekday form, as in "weekly → Mon *-*-* 00:00:00"); caught up after downtime.
+[Unit]
+Description=Weekly Hoshitori restore drill
+
+[Timer]
+OnCalendar=Sun *-*-* 03:30:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

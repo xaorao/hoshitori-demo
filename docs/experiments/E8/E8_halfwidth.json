@@ -1,0 +1,254 @@
+[
+ {
+  "n": 20,
+  "copula_corr": 0.5,
+  "p": 0.5,
+  "median_half_width": 0.224,
+  "share_within_0.15": 0.025
+ },
+ {
+  "n": 20,
+  "copula_corr": 0.5,
+  "p": 0.8,
+  "median_half_width": 0.211,
+  "share_within_0.15": 0.027
+ },
+ {
+  "n": 20,
+  "copula_corr": 0.5,
+  "p": 0.95,
+  "median_half_width": 0.176,
+  "share_within_0.15": 0.055
+ },
+ {
+  "n": 20,
+  "copula_corr": 0.8,
+  "p": 0.5,
+  "median_half_width": 0.178,
+  "share_within_0.15": 0.222
+ },
+ {
+  "n": 20,
+  "copula_corr": 0.8,
+  "p": 0.8,
+  "median_half_width": 0.174,
+  "share_within_0.15": 0.255
+ },
+ {
+  "n": 20,
+  "copula_corr": 0.8,
+  "p": 0.95,
+  "median_half_width": 0.161,
+  "share_within_0.15": 0.173
+ },
+ {
+  "n": 40,
+  "copula_corr": 0.5,
+  "p": 0.5,
+  "median_half_width": 0.167,
+  "share_within_0.15": 0.2
+ },
+ {
+  "n": 40,
+  "copula_corr": 0.5,
+  "p": 0.8,
+  "median_half_width": 0.149,
+  "share_within_0.15": 0.528
+ },
+ {
+  "n": 40,
+  "copula_corr": 0.5,
+  "p": 0.95,
+  "median_half_width": 0.112,
+  "share_within_0.15": 0.998
+ },
+ {
+  "n": 40,
+  "copula_corr": 0.8,
+  "p": 0.5,
+  "median_half_width": 0.132,
+  "share_within_0.15": 0.83
+ },
+ {
+  "n": 40,
+  "copula_corr": 0.8,
+  "p": 0.8,
+  "median_half_width": 0.122,
+  "share_within_0.15": 0.943
+ },
+ {
+  "n": 40,
+  "copula_corr": 0.8,
+  "p": 0.95,
+  "median_half_width": 0.1,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 60,
+  "copula_corr": 0.5,
+  "p": 0.5,
+  "median_half_width": 0.141,
+  "share_within_0.15": 0.757
+ },
+ {
+  "n": 60,
+  "copula_corr": 0.5,
+  "p": 0.8,
+  "median_half_width": 0.121,
+  "share_within_0.15": 0.992
+ },
+ {
+  "n": 60,
+  "copula_corr": 0.5,
+  "p": 0.95,
+  "median_half_width": 0.084,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 60,
+  "copula_corr": 0.8,
+  "p": 0.5,
+  "median_half_width": 0.11,
+  "share_within_0.15": 0.998
+ },
+ {
+  "n": 60,
+  "copula_corr": 0.8,
+  "p": 0.8,
+  "median_half_width": 0.099,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 60,
+  "copula_corr": 0.8,
+  "p": 0.95,
+  "median_half_width": 0.076,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 80,
+  "copula_corr": 0.5,
+  "p": 0.5,
+  "median_half_width": 0.122,
+  "share_within_0.15": 0.998
+ },
+ {
+  "n": 80,
+  "copula_corr": 0.5,
+  "p": 0.8,
+  "median_half_width": 0.105,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 80,
+  "copula_corr": 0.5,
+  "p": 0.95,
+  "median_half_width": 0.071,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 80,
+  "copula_corr": 0.8,
+  "p": 0.5,
+  "median_half_width": 0.096,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 80,
+  "copula_corr": 0.8,
+  "p": 0.8,
+  "median_half_width": 0.085,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 80,
+  "copula_corr": 0.8,
+  "p": 0.95,
+  "median_half_width": 0.063,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 120,
+  "copula_corr": 0.5,
+  "p": 0.5,
+  "median_half_width": 0.101,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 120,
+  "copula_corr": 0.5,
+  "p": 0.8,
+  "median_half_width": 0.085,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 120,
+  "copula_corr": 0.5,
+  "p": 0.95,
+  "median_half_width": 0.056,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 120,
+  "copula_corr": 0.8,
+  "p": 0.5,
+  "median_half_width": 0.079,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 120,
+  "copula_corr": 0.8,
+  "p": 0.8,
+  "median_half_width": 0.069,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 120,
+  "copula_corr": 0.8,
+  "p": 0.95,
+  "median_half_width": 0.048,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 200,
+  "copula_corr": 0.5,
+  "p": 0.5,
+  "median_half_width": 0.079,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 200,
+  "copula_corr": 0.5,
+  "p": 0.8,
+  "median_half_width": 0.066,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 200,
+  "copula_corr": 0.5,
+  "p": 0.95,
+  "median_half_width": 0.041,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 200,
+  "copula_corr": 0.8,
+  "p": 0.5,
+  "median_half_width": 0.062,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 200,
+  "copula_corr": 0.8,
+  "p": 0.8,
+  "median_half_width": 0.053,
+  "share_within_0.15": 1.0
+ },
+ {
+  "n": 200,
+  "copula_corr": 0.8,
+  "p": 0.95,
+  "median_half_width": 0.035,
+  "share_within_0.15": 1.0
+ }
+]

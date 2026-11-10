@@ -1,0 +1,255 @@
+{
+ "REDUNDANT": {
+  "m=30": {
+   "set": [
+    0
+   ],
+   "search_precision": 1.0,
+   "held_out_precision": 1.0,
+   "optimism": 0.0,
+   "disjoint_sufficient_sets_found_at_this_size": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "members_all_necessary": true,
+   "confirmed": true,
+   "subsets_tried": 9
+  },
+  "m=100": {
+   "set": [
+    0
+   ],
+   "search_precision": 1.0,
+   "held_out_precision": 1.0,
+   "optimism": 0.0,
+   "disjoint_sufficient_sets_found_at_this_size": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "members_all_necessary": true,
+   "confirmed": true,
+   "subsets_tried": 9
+  },
+  "m=400": {
+   "set": [
+    0
+   ],
+   "search_precision": 1.0,
+   "held_out_precision": 1.0,
+   "optimism": 0.0,
+   "disjoint_sufficient_sets_found_at_this_size": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "members_all_necessary": true,
+   "confirmed": true,
+   "subsets_tried": 9
+  }
+ },
+ "COMBO": {
+  "m=30": {
+   "set": [
+    2,
+    3
+   ],
+   "search_precision": 1.0,
+   "held_out_precision": 1.0,
+   "optimism": 0.0,
+   "disjoint_sufficient_sets_found_at_this_size": [
+    [
+     2,
+     3
+    ]
+   ],
+   "members_all_necessary": true,
+   "confirmed": true,
+   "subsets_tried": 37
+  },
+  "m=100": {
+   "set": [
+    2,
+    3
+   ],
+   "search_precision": 1.0,
+   "held_out_precision": 1.0,
+   "optimism": 0.0,
+   "disjoint_sufficient_sets_found_at_this_size": [
+    [
+     2,
+     3
+    ]
+   ],
+   "members_all_necessary": true,
+   "confirmed": true,
+   "subsets_tried": 37
+  },
+  "m=400": {
+   "set": [
+    2,
+    3
+   ],
+   "search_precision": 1.0,
+   "held_out_precision": 1.0,
+   "optimism": 0.0,
+   "disjoint_sufficient_sets_found_at_this_size": [
+    [
+     2,
+     3
+    ]
+   ],
+   "members_all_necessary": true,
+   "confirmed": true,
+   "subsets_tried": 37
+  }
+ },
+ "DECOY": {
+  "m=30": {
+   "set": [
+    4
+   ],
+   "search_precision": 1.0,
+   "held_out_precision": 1.0,
+   "optimism": 0.0,
+   "disjoint_sufficient_sets_found_at_this_size": [
+    [
+     4
+    ]
+   ],
+   "members_all_necessary": true,
+   "confirmed": true,
+   "subsets_tried": 9
+  },
+  "m=100": {
+   "set": [
+    4
+   ],
+   "search_precision": 1.0,
+   "held_out_precision": 1.0,
+   "optimism": 0.0,
+   "disjoint_sufficient_sets_found_at_this_size": [
+    [
+     4
+    ]
+   ],
+   "members_all_necessary": true,
+   "confirmed": true,
+   "subsets_tried": 9
+  },
+  "m=400": {
+   "set": [
+    4
+   ],
+   "search_precision": 1.0,
+   "held_out_precision": 1.0,
+   "optimism": 0.0,
+   "disjoint_sufficient_sets_found_at_this_size": [
+    [
+     4
+    ]
+   ],
+   "members_all_necessary": true,
+   "confirmed": true,
+   "subsets_tried": 9
+  }
+ },
+ "MAJORITY": {
+  "m=30": {
+   "result": "NO_SMALL_SET",
+   "subsets_tried": 163
+  },
+  "m=100": {
+   "result": "NO_SMALL_SET",
+   "subsets_tried": 163
+  },
+  "m=400": {
+   "result": "NO_SMALL_SET",
+   "subsets_tried": 163
+  }
+ },
+ "MAJORITY5": {
+  "m=30": {
+   "set": [
+    0,
+    2,
+    5,
+    7
+   ],
+   "search_precision": 1.0,
+   "held_out_precision": 0.935,
+   "optimism": 0.065,
+   "disjoint_sufficient_sets_found_at_this_size": [
+    [
+     0,
+     2,
+     5,
+     7
+    ]
+   ],
+   "members_all_necessary": true,
+   "confirmed": true,
+   "subsets_tried": 163
+  },
+  "m=100": {
+   "set": [
+    0,
+    1,
+    6,
+    7
+   ],
+   "search_precision": 0.99,
+   "held_out_precision": 0.935,
+   "optimism": 0.055,
+   "disjoint_sufficient_sets_found_at_this_size": [
+    [
+     0,
+     1,
+     6,
+     7
+    ]
+   ],
+   "members_all_necessary": true,
+   "confirmed": true,
+   "subsets_tried": 163
+  },
+  "m=400": {
+   "set": [
+    2,
+    3,
+    5,
+    6
+   ],
+   "search_precision": 0.962,
+   "held_out_precision": 0.952,
+   "optimism": 0.01,
+   "disjoint_sufficient_sets_found_at_this_size": [
+    [
+     2,
+     3,
+     5,
+     6
+    ],
+    [
+     0,
+     1,
+     4,
+     7
+    ]
+   ],
+   "members_all_necessary": true,
+   "confirmed": true,
+   "subsets_tried": 163
+  }
+ }
+}

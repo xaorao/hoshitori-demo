@@ -1,0 +1,16 @@
+{
+ "label": "recorded by B5A from https://api.trongrid.io/wallet/getblock",
+ "source_url": "https://api.trongrid.io/wallet/getblock",
+ "method": "POST",
+ "request_body": {
+  "detail": false
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json; charset=utf-8",
+  "date": "Sun, 01 Nov 2026 08:25:22 GMT"
+ },
+ "body_sha256": "8929c10ddc2d59a0ca6491661b85d65c79acff46b7762befdfa9a396c510c28b",
+ "body_bytes": 542,
+ "body": "{\"blockID\":\"000000000538ea1a596e41439a98cc4aba0b8eb8a0f4bb2f0892382704bf547c\",\"block_header\":{\"raw_data\":{\"timestamp\":1793521521000,\"txTrieRoot\":\"6dfd72859ecc0809527254534af867cd0646b7ab7022dc232204a5eeeab2e384\",\"parentHash\":\"000000000538ea19693ff1735665ab05865b8c3e6bfb244c292c52d2cd657425\",\"number\":87616026,\"witness_address\":\"4162398d516b555ac64af24416e05c199c01823048\",\"version\":39},\"witness_signature\":\"28f57cb7942bd84443467c31b459a9e4108b9bd52166bb183d490ab91639fa6f04743473fc27d598bb1d8065a130b2e4750132ec913288a899886ab6a97b2dcb00\"}}\n"
+}

@@ -1,0 +1,126 @@
+{
+ "control": [
+  {
+   "verdict": "CALL",
+   "p": "0.525",
+   "reason": null
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.56",
+   "reason": null
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.54",
+   "reason": null
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.53",
+   "reason": null
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.53",
+   "reason": null
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.52",
+   "reason": null
+  },
+  {
+   "verdict": "NO_CALL",
+   "p": null,
+   "reason": "OUT_OF_SCOPE"
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.62",
+   "reason": null
+  },
+  {
+   "verdict": "NO_CALL",
+   "p": null,
+   "reason": "ESSENTIAL_PREMISE_UNPROVEN"
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.56",
+   "reason": null
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.54",
+   "reason": null
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.55",
+   "reason": null
+  }
+ ],
+ "planted": [
+  {
+   "verdict": "CALL",
+   "p": "0.52",
+   "reason": null
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.52",
+   "reason": null
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.56",
+   "reason": null
+  },
+  {
+   "verdict": "NO_CALL",
+   "p": null,
+   "reason": "ESSENTIAL_PREMISE_UNPROVEN"
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.53",
+   "reason": null
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.56",
+   "reason": null
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.55",
+   "reason": null
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.53",
+   "reason": null
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.52",
+   "reason": null
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.54",
+   "reason": null
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.54",
+   "reason": null
+  },
+  {
+   "verdict": "CALL",
+   "p": "0.58",
+   "reason": null
+  }
+ ]
+}

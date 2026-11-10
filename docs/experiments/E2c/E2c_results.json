@@ -1,0 +1,1123 @@
+{
+ "cases": 48,
+ "verifier_disagreements": 0,
+ "expectation_failures": [],
+ "rows": [
+  {
+   "case": "happy: globalsign + certum (both have ownership evidence)",
+   "expect": "C3",
+   "python": {
+    "integrity_ok": true,
+    "level": "C3",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "C3",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "happy: digicert + globalsign",
+   "expect": "C3",
+   "python": {
+    "integrity_ok": true,
+    "level": "C3",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "C3",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "happy: sectigo + certum",
+   "expect": "C3",
+   "python": {
+    "integrity_ok": true,
+    "level": "C3",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "C3",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "three operators, one without evidence (swisssign)",
+   "expect": "C3",
+   "python": {
+    "integrity_ok": true,
+    "level": "C3",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "C3",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "globalsign + swisssign: swisssign has no ownership evidence in the registry",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "globalsign + freetsa: freetsa has no ownership evidence in the registry",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "alias pair: sectigo + entrust (same signer)",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "alias pair: digicert + aimoda (same signer)",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "single token",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "no token",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (no valid timely token)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (no valid timely token)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "sha-1 CMS signer (apple) + globalsign",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "same token twice",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "token of another checkpoint replaces one",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "record tampered (p 0.52 -> 0.99)",
+   "expect": "INTEGRITY",
+   "python": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "record not canonical (space added)",
+   "expect": "INTEGRITY",
+   "python": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "raw response modified",
+   "expect": "INTEGRITY",
+   "python": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "raw response missing",
+   "expect": "INTEGRITY",
+   "python": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "checkpoint size edited",
+   "expect": "INTEGRITY",
+   "python": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "checkpoint root edited",
+   "expect": "INTEGRITY",
+   "python": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "signature line removed",
+   "expect": "INTEGRITY",
+   "python": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "inclusion path element flipped",
+   "expect": "INTEGRITY",
+   "python": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "inclusion path truncated",
+   "expect": "INTEGRITY",
+   "python": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "index edited",
+   "expect": "INTEGRITY",
+   "python": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "origin renamed",
+   "expect": "INTEGRITY",
+   "python": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "signed committed_at edited after stamping",
+   "expect": "INTEGRITY",
+   "python": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "signed outcome window edited after stamping (hide a late commit)",
+   "expect": "INTEGRITY",
+   "python": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "committed_at an hour after the tokens (tokens predate the stated commit)",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (no valid timely token)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (no valid timely token)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "committed_at an hour earlier (tokens too late)",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (no valid timely token)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (no valid timely token)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "tokens 30 s before the stated commit (outside the asymmetric window)",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (no valid timely token)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (no valid timely token)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "tokens 55 s after the stated commit (inside the window)",
+   "expect": "C3",
+   "python": {
+    "integrity_ok": true,
+    "level": "C3",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "C3",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "tokens 64 s after the stated commit (outside the window)",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (no valid timely token)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (no valid timely token)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "outcome window opened before the tokens",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (no valid timely token)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (no valid timely token)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "policy pins only one operator",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "two roots, one parent in the operator registry",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "operator entry without ownership evidence",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "evidence is a bare string (the earlier placeholder form)",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "evidence kind not accepted by the trusted policy",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "evidence without a reference",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "evidence is about another root (copied from a different operator)",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 1,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "kind accepted list empty in the trusted policy",
+   "expect": "BELOW",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (fewer than two independent operators)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "WHOLE BUNDLE SUBSTITUTED (attacker log key and policy, real fresh tokens), pinned trusted root",
+   "expect": "INTEGRITY",
+   "python": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "WHOLE BUNDLE SUBSTITUTED (same bundle), NO trusted root supplied",
+   "expect": "UNAUTH",
+   "python": {
+    "integrity_ok": true,
+    "level": "C3-if-authentic (UNAUTHENTICATED: no trusted root supplied)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "BUNDLE_ASSERTED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "C3-if-authentic (UNAUTHENTICATED: no trusted root supplied)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "BUNDLE_ASSERTED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "FORGED OFFLINE with two self-made time-stamp authorities, pinned trusted root",
+   "expect": "INTEGRITY_OR_BELOW",
+   "python": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": false,
+    "level": "none (integrity failed)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "FORGED OFFLINE with two self-made time-stamp authorities, NO trusted root supplied",
+   "expect": "UNAUTH",
+   "python": {
+    "integrity_ok": true,
+    "level": "C3-if-authentic (UNAUTHENTICATED: no trusted root supplied)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "BUNDLE_ASSERTED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "C3-if-authentic (UNAUTHENTICATED: no trusted root supplied)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "BUNDLE_ASSERTED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "only the bundle's policy.json replaced by another log key (honest records), pinned trusted root",
+   "expect": "C3_POLICY_DIFFERS",
+   "python": {
+    "integrity_ok": true,
+    "level": "C3",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "C3",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": true,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "honest bundle, NO trusted root supplied",
+   "expect": "UNAUTH",
+   "python": {
+    "integrity_ok": true,
+    "level": "C3-if-authentic (UNAUTHENTICATED: no trusted root supplied)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "BUNDLE_ASSERTED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "C3-if-authentic (UNAUTHENTICATED: no trusted root supplied)",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "BUNDLE_ASSERTED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "forged publication claims in the bundle",
+   "expect": "C3_PUBLIC_NOT_AUTH",
+   "python": {
+    "integrity_ok": true,
+    "level": "C3",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "C3",
+    "independent_operators": 2,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  },
+  {
+   "case": "FULL OPERATOR REWRITE: same key re-signs a different history, original tokens kept",
+   "expect": "BELOW_BUT_INTEGRITY_OK",
+   "python": {
+    "integrity_ok": true,
+    "level": "below C3 (no valid timely token)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "javascript": {
+    "integrity_ok": true,
+    "level": "below C3 (no valid timely token)",
+    "independent_operators": 0,
+    "scorable": false,
+    "root_of_trust": "PINNED",
+    "bundle_policy_differs": false,
+    "public_authenticated": 0
+   },
+   "agree": true
+  }
+ ],
+ "tokens_on_wide_bundle": [
+  "aimoda",
+  "apple",
+  "certum",
+  "digicert",
+  "entrust",
+  "freetsa",
+  "globalsign",
+  "sectigo",
+  "swisssign"
+ ],
+ "note": "bundle contents are synthetic; tokens are real except the two self-made authorities of the offline forgery"
+}

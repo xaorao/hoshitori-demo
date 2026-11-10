@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hoshitori: RYO-CHAN Hackathon project submission form</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  body { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; color: #0a0a0a; font-size: 10.5pt; line-height: 1.45; }
+  h1 { font-size: 18pt; margin: 0 0 2mm; letter-spacing: -0.01em; }
+  h2 { font-size: 12.5pt; margin: 7mm 0 2mm; border-bottom: 1px solid #e5e7eb; padding-bottom: 1mm; }
+  p.sub { color: #4b5563; margin: 0 0 4mm; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; vertical-align: top; padding: 2mm 2.5mm; border: 1px solid #e5e7eb; }
+  th { width: 33mm; background: #f8fafc; font-weight: 600; }
+  td ul { margin: 0; padding-left: 4.5mm; }
+  code { font-family: ui-monospace, Menlo, monospace; font-size: 9pt; background: #f8fafc; padding: 0 1mm; border-radius: 1mm; }
+  .fill { color: #b45309; }
+  tr { break-inside: avoid; }
+</style>
+</head>
+<body>
+<h1>Hoshitori</h1>
+<p class="sub">RYO-CHAN Virtual Hackathon: project submission form. Generated from <code>docs/submission/form.html</code> by <code>scripts/make_submission_form.py</code>.</p>
+
+<h2>Members</h2>
+<table>
+  <tr><th>Total members</th><td class="fill">To be completed by the team.</td></tr>
+  <tr><th>Name, role, email</th><td class="fill">To be completed by the team.</td></tr>
+</table>
+
+<h2>Overview</h2>
+<table>
+  <tr><th>Project</th><td>Hoshitori: agents forecast crypto markets in public; every call is time-stamped by two independent authorities before its outcome is known, settled on real exchange prices, and recorded so that anyone can check it without trusting the people who made it.</td></tr>
+  <tr><th>Track</th><td>Track 1, Autonomous Agents; Track 2, Dashboards and Interfaces; Track 3, New Skills. Each is judgeable on its own (README, "Hackathon tracks").</td></tr>
+  <tr><th>Problem</th><td>Market calls, by people and by AI agents, arrive as a screenshot or a confident paragraph. A reader cannot tell when a call was made, whether it was edited afterwards, or whether the losing calls were quietly dropped, so trust goes to whoever sounds most certain.</td></tr>
+  <tr><th>Solution</th><td>A forward-only league. Each cycle the agents read the same frozen snapshot of real exchange data (and RYO's tools when enabled), state a chance or a target-or-stop call, and the whole batch is signed into a hash-chained log and time-stamped by two independent RFC 3161 authorities before the forecast window opens. Calls are settled on real bars from two exchanges. Every cycle exports a bundle that two independent verifiers (Python and Node) and the browser check offline. The interface says what changed, ranks it, shows each call's evidence and what would prove it wrong, and states what has not been shown.</td></tr>
+  <tr><th>Key features</th><td><ul>
+    <li>A rules agent and three model agents (a single judgment, a bull, bear and judge debate, and a same-budget control) on one snapshot, one clock and one settlement.</li>
+    <li>The Desk: an investigation agent that picks each check from a menu, tries to disprove its own call, and passes it through gates that can only shrink it.</li>
+    <li>Independent time-stamps, a signed log, offline verification in two languages and in the browser, a forged-record demonstration.</li>
+    <li>Failure drills (RYO down, rate limited, exchanges down, model down, time-stamp authority unreachable, a crash mid-run) with the recorded behaviour of each.</li>
+    <li>A claim reader that cuts a claim into typed parts tied to its exact words, without saying whether it is true.</li>
+    <li>Seven standalone skills: address flags (OFAC SDN list, USDT and USDC issuer freezes), indicator conditions on the last closed candle, evidence sensitivity, research integrity, exit cost, evidence delta and a scorecard of RYO's own verdicts.</li>
+  </ul></td></tr>
+  <tr><th>Target users</th><td>A crypto trader or researcher who is shown a market call, by a person or an agent, and must decide whether to rely on it; and the builders of RYO-style agents, who can adopt the skills and the verification format.</td></tr>
+  <tr><th>Scope</th><td>Practice only: nothing buys, sells or moves an asset. RYO's six read-only tools are used through the published builder interface; the model is brought by the operator (an OpenAI-compatible endpoint; NVIDIA's in the recorded runs).</td></tr>
+  <tr><th>Limitations</th><td><ul>
+    <li>Forecast skill is not measured: too few calls have settled for any agent to be ranked.</li>
+    <li>The impact ranking on Today has not been compared with independent expert labels.</li>
+    <li>No independent human review, comprehension study, screen-reader study or Japanese-reader study has been run.</li>
+    <li>RYO's monthly call allowance limits how often RYO evidence can enter a cycle.</li>
+    <li><code>docs/STATUS.md</code> lists every unit with its evidence and its limit.</li>
+  </ul></td></tr>
+</table>
+
+<h2>Tech stack</h2>
+<table>
+  <tr><th>Frontend</th><td>React 19, TypeScript, Vite; a static site; <code>@noble/hashes</code> and <code>@noble/curves</code> for in-browser verification.</td></tr>
+  <tr><th>Backend</th><td>Python 3.12 (standard library plus <code>cryptography</code> and <code>asn1crypto</code>); an append-only, hash-chained ledger with signed checkpoints; RFC 3161 time-stamps; a second verifier and a second settlement implementation in Node.</td></tr>
+  <tr><th>AI model(s)</th><td>Any OpenAI-compatible endpoint chosen by the operator; recorded runs used <code>nvidia/nemotron-3.5-super-vl-120b-a12b</code>. The rules agent uses no model.</td></tr>
+  <tr><th>Other technologies</th><td>RYO MCP builder tools (REST); Binance, Kraken and Coinbase public market data; DigiCert and GlobalSign time-stamp authorities; pytest, Hypothesis and mutation sweeps; Playwright and axe-core page tests; GitHub Actions CI.</td></tr>
+</table>
+
+<h2>Repository and demo</h2>
+<table>
+  <tr><th>GitHub repository</th><td><code>https://github.com/RYO-Digital/ryochan-hackathon_repository-388</code> (branch <code>main</code>)</td></tr>
+  <tr><th>Demo video</th><td class="fill">To be added by the team.</td></tr>
+  <tr><th>Documentation</th><td><code>README.md</code> (overview, run, verify, tracks, tests); <code>docs/STATUS.md</code> (every unit, its evidence and its limit); <code>docs/specs/</code> (specifications); each skill's own README under <code>skills/</code>.</td></tr>
+</table>
+
+<h2>Testing information</h2>
+<table>
+  <tr><th>How to run</th><td>Create the environment, run the quickstart (about seven minutes; it reads public market data and asks two public time-stamp authorities for a token), build the interface and serve it. No key and no account are needed.</td></tr>
+  <tr><th>Prerequisites</th><td>Python 3.12 (through <code>uv</code> or a plain venv), Node 22.12 or later, network access to Binance, Kraken, DigiCert and GlobalSign.</td></tr>
+  <tr><th>Installation</th><td><code>uv venv --python 3.12 .venv &amp;&amp; uv pip install -e ".[dev]" ./skills/indicator-condition-check</code></td></tr>
+  <tr><th>Environment variables</th><td>None for the quickstart. <code>.env.example</code> lists the optional ones: <code>RYO_MCP_KEY</code> (RYO tools), <code>LLM_BASE_URL</code> and <code>LLM_API_KEY</code> (a model), <code>X_BEARER_TOKEN</code> (public posts for the Voices page).</td></tr>
+  <tr><th>Build</th><td><code>cd web &amp;&amp; npm ci &amp;&amp; npm run build</code></td></tr>
+  <tr><th>Run</th><td><code>.venv/bin/python scripts/quickstart.py ../hoshitori-work</code>, then copy <code>../hoshitori-work/site</code> to <code>web/dist/data</code> and serve <code>web/dist</code> (for example <code>python3 -m http.server -d web/dist 8000</code>).</td></tr>
+  <tr><th>Test</th><td><code>.venv/bin/python -m pytest -k "not every_change"</code>; <code>(cd verifier-js &amp;&amp; node --test test/*.test.mjs)</code>; <code>(cd settlement-js &amp;&amp; node --test test/*.test.mjs)</code>; <code>(cd web &amp;&amp; npm test)</code>.</td></tr>
+  <tr><th>Test accounts</th><td>None needed: there is no login. The skills install and answer without a key.</td></tr>
+</table>
+</body>
+</html>

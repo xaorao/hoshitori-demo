@@ -1,0 +1,130 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "type": "string"
+    },
+    "availability": {
+      "additionalProperties": {
+        "enum": [
+          "available",
+          "partial",
+          "unavailable"
+        ]
+      },
+      "type": "object"
+    },
+    "data": {
+      "properties": {
+        "baseline": {
+          "required": [
+            "score",
+            "action",
+            "available"
+          ],
+          "type": "object"
+        },
+        "groups": {
+          "items": {
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "items": {
+          "items": {
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "missing": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "required_items": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "sufficient_set": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "baseline",
+        "items",
+        "groups",
+        "required_items",
+        "sufficient_set",
+        "missing"
+      ],
+      "type": "object"
+    },
+    "data_mode": {
+      "enum": [
+        "live",
+        "mixed",
+        "simulated",
+        "unknown"
+      ]
+    },
+    "request": {
+      "type": "object"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "ok",
+        "partial",
+        "unavailable"
+      ]
+    },
+    "summary": {
+      "properties": {
+        "headline": {
+          "type": "string"
+        },
+        "key_points": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "headline",
+        "key_points"
+      ],
+      "type": "object"
+    },
+    "tool": {
+      "const": "evidence_sensitivity"
+    },
+    "warnings": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "tool",
+    "status",
+    "data_mode",
+    "as_of",
+    "request",
+    "data",
+    "summary",
+    "availability",
+    "warnings"
+  ],
+  "type": "object"
+}

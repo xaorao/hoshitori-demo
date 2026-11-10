@@ -1,0 +1,19 @@
+{
+ "label": "recorded by B5A from https://bsc-rpc.publicnode.com",
+ "source_url": "https://bsc-rpc.publicnode.com",
+ "method": "POST",
+ "request_body": {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "eth_chainId",
+  "params": []
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json",
+  "date": "Sun, 01 Nov 2026 08:24:58 GMT"
+ },
+ "body_sha256": "7c7ca3f8749c429839490413a34f1b23784b90f18ac1d8638aef1864f3a127b3",
+ "body_bytes": 41,
+ "body": "{\"jsonrpc\":\"2.0\",\"result\":\"0x38\",\"id\":1}\n"
+}

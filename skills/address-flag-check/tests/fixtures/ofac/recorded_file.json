@@ -1,0 +1,83 @@
+{
+ "label": "recorded by B5A from https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN_ADVANCED.ZIP",
+ "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN_ADVANCED.ZIP",
+ "redirect": {
+  "status": 302,
+  "host": "wc2h-sls-prod-public-published.s3.us-gov-west-1.amazonaws.com",
+  "note": "pre-signed link; its path and query are not recorded"
+ },
+ "range_reply": {
+  "request_range": "bytes=0-0",
+  "status": 206,
+  "headers": {
+   "content-type": "application/zip",
+   "content-length": "1",
+   "content-range": "bytes 0-0/5741026",
+   "last-modified": "Wed, 28 Oct 2026 14:03:09 GMT",
+   "etag": "\"7417b80d9c4142f5a8624c6ad06c5f3f\"",
+   "date": "Sun, 01 Nov 2026 08:20:29 GMT",
+   "accept-ranges": "bytes",
+   "server": "AmazonS3"
+  },
+  "body_bytes": 1
+ },
+ "full_reply": {
+  "status": 200,
+  "headers": {
+   "content-type": "application/zip",
+   "content-length": "5741026",
+   "last-modified": "Wed, 28 Oct 2026 14:03:09 GMT",
+   "etag": "\"7417b80d9c4142f5a8624c6ad06c5f3f\"",
+   "date": "Sun, 01 Nov 2026 08:20:32 GMT",
+   "accept-ranges": "bytes",
+   "server": "AmazonS3"
+  },
+  "body_bytes": 5741026,
+  "body_sha256": "d9ba068720ec19b4a13eb011a586bf76a4034621fdee8382911447089da30202"
+ },
+ "zip_member": "SDN_ADVANCED.XML",
+ "xml_bytes": 127776518,
+ "xml_sha256": "c1279a38fa180fe79fe1ed263618d1ceb63f5bcca3bc24771f2e69fd1d0b5eb9",
+ "extract": {
+  "file": "sdn_advanced_extract.xml",
+  "sha256": "85286df87285e903760b31b53a605a699dea1e30cd930537ad348b60239d38cd",
+  "how": "every line is a byte-identical line of SDN_ADVANCED.XML (CRLF line ends kept; one final newline added). Kept: the XML declaration, the root, DateOfIssue, the reference value sets FeatureTypeValues, PartySubTypeValues, PartyTypeValues, ReliabilityValues, SanctionsTypeValues and ListValues, and for the entity entries 30518, 33854, 47635 and 55045 only: the DistinctParty and Profile lines, their digital-currency Feature blocks and their SanctionsEntry blocks. Removed: every name (the Identity blocks), every other feature, every other entry and every other reference set.",
+  "entity_entries": [
+   "30518",
+   "33854",
+   "47635",
+   "55045"
+  ]
+ },
+ "full_file_counts": {
+  "how": "counted by B5A's separate scratch analysis of the whole recorded XML with xml.etree.ElementTree (not this package's parser)",
+  "digital_currency_labels": 20,
+  "address_features": 1075,
+  "distinct_strings": 1058,
+  "entries": 109,
+  "entity_entries": 33,
+  "individual_entries": 76,
+  "features_by_label": {
+   "ARB": 1,
+   "BCH": 7,
+   "BNB": 1,
+   "BSC": 1,
+   "BSV": 1,
+   "BTG": 1,
+   "DASH": 5,
+   "DOGE": 2,
+   "ETC": 1,
+   "ETH": 124,
+   "LTC": 14,
+   "SOL": 4,
+   "TRX": 266,
+   "USDC": 2,
+   "USDT": 94,
+   "XBT": 534,
+   "XMR": 11,
+   "XRP": 1,
+   "XVG": 1,
+   "ZEC": 4
+  }
+ }
+}

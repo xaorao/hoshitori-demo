@@ -1,0 +1,19 @@
+{
+ "contract": "B",
+ "expected": {
+  "contract": "B",
+  "flags": [],
+  "outcome": null,
+  "outcome_price": null,
+  "p0": null,
+  "reason": "VOID_GAP",
+  "state": "VOID",
+  "touch_open_ms": null
+ },
+ "forecast_id": "f-v-B-VOID_GAP",
+ "id": "V-B-void_gap",
+ "kind": "void",
+ "note": "The frozen evidence waited too long for the origin.",
+ "pair_id": "A",
+ "section": "7"
+}

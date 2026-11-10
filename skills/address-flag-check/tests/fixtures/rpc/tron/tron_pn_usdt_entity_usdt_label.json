@@ -1,0 +1,20 @@
+{
+ "label": "recorded by B5A from https://tron-rpc.publicnode.com/wallet/triggerconstantcontract",
+ "source_url": "https://tron-rpc.publicnode.com/wallet/triggerconstantcontract",
+ "method": "POST",
+ "request_body": {
+  "owner_address": "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+  "contract_address": "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+  "function_selector": "isBlackListed(address)",
+  "parameter": "000000000000000000000000c24ec5a84cae3d3418b34a1e30b3372c4b25bd0f",
+  "visible": true
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json",
+  "date": "Sun, 01 Nov 2026 08:25:21 GMT"
+ },
+ "body_sha256": "de4eefb57a2135ad40d8ec63f2345cf56ad6ad781c3b5ef0fb96713bdddddd96",
+ "body_bytes": 1085,
+ "body": "{\"transaction\":{\"raw_data\":{\"ref_block_bytes\":\"ea08\",\"ref_block_hash\":\"fc3f849a535987ea\",\"expiration\":1793521581000,\"contract\":[{\"parameter\":{\"value\":{\"owner_address\":\"TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t\",\"contract_address\":\"TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t\",\"data\":\"e47d6060000000000000000000000000c24ec5a84cae3d3418b34a1e30b3372c4b25bd0f\"},\"type_url\":\"type.googleapis.com/protocol.TriggerSmartContract\"},\"type\":\"TriggerSmartContract\"}],\"timestamp\":1793521521599},\"ret\":[{}],\"raw_data_hex\":\"0a02ea082208fc3f849a535987ea40c8f7ddb199345a8e01081f1289010a31747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e54726967676572536d617274436f6e747261637412540a1541a614f803b6fd780986a42c78ec9c7f77e6ded13c121541a614f803b6fd780986a42c78ec9c7f77e6ded13c2224e47d6060000000000000000000000000c24ec5a84cae3d3418b34a1e30b3372c4b25bd0f70bfa7dab19934\",\"txID\":\"2c5f8ee9d0fa949a866f4548b422c3cf434e3e8973be7008913f057a2202d091\",\"visible\":true},\"constant_result\":[\"0000000000000000000000000000000000000000000000000000000000000001\"],\"result\":{\"result\":true},\"energy_used\":4658,\"energy_penalty\":3587}\n"
+}

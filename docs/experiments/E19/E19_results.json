@@ -1,0 +1,19 @@
+{
+ "trials": 2000,
+ "old": {
+  "trials_where_an_observation_was_lost": 1934,
+  "trials_with_a_rejected_conflict": 1934,
+  "trials_with_a_wrong_point_in_time_read": 1004,
+  "trials_where_a_replay_created_a_row": 0,
+  "trials_with_more_than_one_blob_per_content": 0,
+  "of": 2000
+ },
+ "new": {
+  "trials_where_an_observation_was_lost": 0,
+  "trials_with_a_rejected_conflict": 0,
+  "trials_with_a_wrong_point_in_time_read": 0,
+  "trials_where_a_replay_created_a_row": 0,
+  "trials_with_more_than_one_blob_per_content": 0,
+  "of": 2000
+ }
+}

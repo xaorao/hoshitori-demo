@@ -1,0 +1,58 @@
+{
+ "alpha": 0.05,
+ "streams": 4000,
+ "max_observations": 2000,
+ "mixing_variance": 0.25000000000000006,
+ "null": {
+  "naive_p_checked_every_observation": {
+   "share_crossing_alpha": 0.5645,
+   "mean_stopping_time_if_crossed": 218.0
+  },
+  "mixture_sprt_always_valid_p": {
+   "share_crossing_alpha": 0.0305,
+   "mean_stopping_time_if_crossed": 262.3
+  },
+  "fixed_horizon_at_M": {
+   "share_crossing_alpha": 0.0527
+  }
+ },
+ "effect_0.05_sigma": {
+  "naive_p_checked_every_observation": {
+   "share_crossing_alpha": 0.8802,
+   "mean_stopping_time_if_crossed": 409.4
+  },
+  "mixture_sprt_always_valid_p": {
+   "share_crossing_alpha": 0.225,
+   "mean_stopping_time_if_crossed": 923.6
+  },
+  "fixed_horizon_at_M": {
+   "share_crossing_alpha": 0.605
+  }
+ },
+ "effect_0.1_sigma": {
+  "naive_p_checked_every_observation": {
+   "share_crossing_alpha": 0.9988,
+   "mean_stopping_time_if_crossed": 228.8
+  },
+  "mixture_sprt_always_valid_p": {
+   "share_crossing_alpha": 0.8985,
+   "mean_stopping_time_if_crossed": 843.2
+  },
+  "fixed_horizon_at_M": {
+   "share_crossing_alpha": 0.9915
+  }
+ },
+ "effect_0.2_sigma": {
+  "naive_p_checked_every_observation": {
+   "share_crossing_alpha": 1.0,
+   "mean_stopping_time_if_crossed": 70.9
+  },
+  "mixture_sprt_always_valid_p": {
+   "share_crossing_alpha": 1.0,
+   "mean_stopping_time_if_crossed": 236.0
+  },
+  "fixed_horizon_at_M": {
+   "share_crossing_alpha": 1.0
+  }
+ }
+}

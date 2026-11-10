@@ -1,0 +1,15 @@
+{
+ "copies": 60,
+ "ok": 20,
+ "integrity_not_ok": 5,
+ "open_error": 35,
+ "chain_broken": 0,
+ "behind_live_rows": {
+  "min": -1196,
+  "median": 0,
+  "max": 617
+ },
+ "error_kinds": {
+  "DatabaseError: database disk image is malformed": 35
+ }
+}

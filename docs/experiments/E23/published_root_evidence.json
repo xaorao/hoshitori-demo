@@ -1,0 +1,11 @@
+{
+ "apple": {
+  "url": "https://www.apple.com/appleca/AppleIncRootCertificate.cer",
+  "listing_page": "https://www.apple.com/certificateauthority/",
+  "downloaded_sha256": "b0b1730ecbc7ff4505142c49f1295e6eda6bcaed7e2c68c5be91b5a11001f024",
+  "pinned_sha256": "b0b1730ecbc7ff4505142c49f1295e6eda6bcaed7e2c68c5be91b5a11001f024",
+  "matches_pinned": true,
+  "subject": "subject= /C=US/O=Apple Inc./OU=Apple Certification Authority/CN=Apple Root CA",
+  "organisation": "Apple Inc."
+ }
+}

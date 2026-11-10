@@ -1,0 +1,194 @@
+{
+ "1440x900-light": {
+  "first_viewport_words": 167,
+  "first_viewport_words_fully_visible": 167,
+  "page_words": 257,
+  "console_errors": [],
+  "axe": {
+   "violations": [],
+   "incomplete": [],
+   "passes": 42
+  },
+  "small_targets": [
+   {
+    "tag": "A",
+    "w": 102.734375,
+    "h": 23.1875,
+    "text": "Skip to the list"
+   }
+  ],
+  "horizontal_overflow": false,
+  "tab_order": [
+   {
+    "el": "A:Skip to the list",
+    "visible": true,
+    "outline": "solid 3px"
+   },
+   {
+    "el": "INPUT:Paste a claim to check",
+    "visible": true,
+    "outline": "solid 3px"
+   },
+   {
+    "el": "BUTTON:Check this claim",
+    "visible": true,
+    "outline": "solid 3px"
+   },
+   {
+    "el": "A:See why this call is shaky",
+    "visible": true,
+    "outline": "solid 3px"
+   },
+   {
+    "el": "BUTTON:Check this notice",
+    "visible": true,
+    "outline": "solid 3px"
+   },
+   {
+    "el": "A:Read the correction",
+    "visible": true,
+    "outline": "solid 3px"
+   },
+   {
+    "el": "A:See what supports this",
+    "visible": true,
+    "outline": "solid 3px"
+   },
+   {
+    "el": "A:See which checks are affecte",
+    "visible": true,
+    "outline": "solid 3px"
+   },
+   {
+    "el": "A:See what changed this week",
+    "visible": true,
+    "outline": "solid 3px"
+   },
+   {
+    "el": "A:Check the wallet evidence",
+    "visible": true,
+    "outline": "solid 3px"
+   },
+   {
+    "el": "BODY:Skip to the listHoshitoriPra",
+    "visible": false,
+    "outline": "none 3px"
+   },
+   {
+    "el": "A:Skip to the list",
+    "visible": true,
+    "outline": "solid 3px"
+   },
+   {
+    "el": "INPUT:Paste a claim to check",
+    "visible": true,
+    "outline": "solid 3px"
+   },
+   {
+    "el": "BUTTON:Check this claim",
+    "visible": true,
+    "outline": "solid 3px"
+   }
+  ]
+ },
+ "1440x900-dark": {
+  "first_viewport_words": 167,
+  "first_viewport_words_fully_visible": 167,
+  "page_words": 257,
+  "console_errors": [],
+  "axe": {
+   "violations": [],
+   "incomplete": [],
+   "passes": 42
+  },
+  "small_targets": [
+   {
+    "tag": "A",
+    "w": 102.734375,
+    "h": 23.1875,
+    "text": "Skip to the list"
+   }
+  ],
+  "horizontal_overflow": false
+ },
+ "390x844-light": {
+  "first_viewport_words": 106,
+  "first_viewport_words_fully_visible": 95,
+  "page_words": 257,
+  "console_errors": [],
+  "axe": {
+   "violations": [],
+   "incomplete": [],
+   "passes": 42
+  },
+  "small_targets": [
+   {
+    "tag": "A",
+    "w": 102.734375,
+    "h": 23.1875,
+    "text": "Skip to the list"
+   }
+  ],
+  "horizontal_overflow": false
+ },
+ "390x844-dark": {
+  "first_viewport_words": 106,
+  "first_viewport_words_fully_visible": 95,
+  "page_words": 257,
+  "console_errors": [],
+  "axe": {
+   "violations": [],
+   "incomplete": [],
+   "passes": 42
+  },
+  "small_targets": [
+   {
+    "tag": "A",
+    "w": 102.734375,
+    "h": 23.1875,
+    "text": "Skip to the list"
+   }
+  ],
+  "horizontal_overflow": false
+ },
+ "320x640-light": {
+  "first_viewport_words": 73,
+  "first_viewport_words_fully_visible": 73,
+  "page_words": 257,
+  "console_errors": [],
+  "axe": {
+   "violations": [],
+   "incomplete": [],
+   "passes": 42
+  },
+  "small_targets": [
+   {
+    "tag": "A",
+    "w": 102.734375,
+    "h": 23.1875,
+    "text": "Skip to the list"
+   }
+  ],
+  "horizontal_overflow": false
+ },
+ "320x640-dark": {
+  "first_viewport_words": 73,
+  "first_viewport_words_fully_visible": 73,
+  "page_words": 257,
+  "console_errors": [],
+  "axe": {
+   "violations": [],
+   "incomplete": [],
+   "passes": 42
+  },
+  "small_targets": [
+   {
+    "tag": "A",
+    "w": 102.734375,
+    "h": 23.1875,
+    "text": "Skip to the list"
+   }
+  ],
+  "horizontal_overflow": false
+ }
+}

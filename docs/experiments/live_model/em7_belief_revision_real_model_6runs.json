@@ -1,0 +1,107 @@
+{
+ "runs_per_case": 6,
+ "spearman": 0.705363952236,
+ "model_calls_ok": 120,
+ "model_call_failures": 0,
+ "distinct_asks": 120,
+ "classes": [
+  {
+   "class": "DECISIVE",
+   "total": 12,
+   "revised": 12,
+   "right_way": 12,
+   "under": 0,
+   "over": 0,
+   "labels": [
+    "EFFECT_UNCERTAIN",
+    "EFFECT_UNCERTAIN"
+   ],
+   "consistency": 1.0,
+   "verdict": "PASS"
+  },
+  {
+   "class": "IRRELEVANT",
+   "total": 12,
+   "revised": 1,
+   "right_way": 0,
+   "under": 0,
+   "over": 1,
+   "labels": [
+    "EFFECT_UNCERTAIN",
+    "EFFECT_UNCERTAIN"
+   ],
+   "consistency": 1.0,
+   "verdict": "PASS"
+  },
+  {
+   "class": "ECHO",
+   "total": 12,
+   "revised": 5,
+   "right_way": 0,
+   "under": 0,
+   "over": 5,
+   "labels": [
+    "EFFECT_UNCERTAIN",
+    "EFFECT_UNCERTAIN"
+   ],
+   "consistency": 0.75,
+   "verdict": "FAIL"
+  },
+  {
+   "class": "LOW_QUALITY",
+   "total": 12,
+   "revised": 11,
+   "right_way": 0,
+   "under": 0,
+   "over": 11,
+   "labels": [
+    "EFFECT_UNCERTAIN",
+    "EFFECT_UNCERTAIN"
+   ],
+   "consistency": 1.0,
+   "verdict": "FAIL"
+  },
+  {
+   "class": "RETRACTION",
+   "total": 12,
+   "revised": 6,
+   "right_way": 6,
+   "under": 6,
+   "over": 0,
+   "labels": [
+    "EFFECT_UNCERTAIN",
+    "EFFECT_UNCERTAIN"
+   ],
+   "consistency": 1.0,
+   "verdict": "FAIL"
+  },
+  {
+   "class": "NONE",
+   "total": 12,
+   "revised": 0,
+   "right_way": 0,
+   "under": 0,
+   "over": 0,
+   "labels": [
+    "EFFECT_UNCERTAIN",
+    "EFFECT_UNCERTAIN"
+   ],
+   "consistency": 0.8333333333333333,
+   "verdict": "PASS"
+  },
+  {
+   "class": "ASTROTURF",
+   "total": 12,
+   "revised": 11,
+   "right_way": 0,
+   "under": 0,
+   "over": 11,
+   "labels": [
+    "EFFECT_UNCERTAIN",
+    "EFFECT_UNCERTAIN"
+   ],
+   "consistency": 0.75,
+   "verdict": "FAIL"
+  }
+ ]
+}

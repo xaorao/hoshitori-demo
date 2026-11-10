@@ -1,0 +1,97 @@
+{
+ "basis": null,
+ "expected": {
+  "contract": "D",
+  "flags": [],
+  "outcome": "1",
+  "outcome_price": "100.50",
+  "p0": "100.00",
+  "reason": null,
+  "state": "SETTLED",
+  "touch_open_ms": null
+ },
+ "finer": {},
+ "forecast": {
+  "forecast_id": "f-D-planted-future",
+  "horizon_ms": 3600000,
+  "origin_ms": 1793268120000,
+  "quote_class": "USDT"
+ },
+ "id": "D-planted-future",
+ "kind": "directional",
+ "note": "A candle after the horizon (and one before the reference) with absurd prices changes nothing: look-ahead is impossible by construction.",
+ "pair": {
+  "pair_id": "A",
+  "primary": {
+   "bars": [
+    [
+     1793268060000,
+     "100.00",
+     "100.00",
+     "100.00",
+     "100.00"
+    ],
+    [
+     1793271660000,
+     "100.50",
+     "100.50",
+     "100.50",
+     "100.50"
+    ],
+    [
+     1793271720000,
+     "1000000.00",
+     "1000000.00",
+     "1000000.00",
+     "1000000.00"
+    ],
+    [
+     1793268000000,
+     "0.01",
+     "0.01",
+     "0.01",
+     "0.01"
+    ],
+    [
+     1793271780000,
+     "1000000.00",
+     "1000000.00",
+     "1000000.00",
+     "1000000.00"
+    ]
+   ],
+   "instrument": "BTCUSDT",
+   "multiplier": "1",
+   "quote_class": "USDT",
+   "server_time_ms": 1793271840000,
+   "tick": "0.01",
+   "venue": "binance-spot"
+  },
+  "second": {
+   "bars": [
+    [
+     1793268060000,
+     "100.00",
+     "100.00",
+     "100.00",
+     "100.00"
+    ],
+    [
+     1793271660000,
+     "100.50",
+     "100.50",
+     "100.50",
+     "100.50"
+    ]
+   ],
+   "instrument": "BTC-USDT",
+   "multiplier": "1",
+   "quote_class": "USDT",
+   "server_time_ms": 1793271840000,
+   "tick": "0.01",
+   "venue": "okx"
+  }
+ },
+ "retries_exhausted": false,
+ "section": "2, 14"
+}

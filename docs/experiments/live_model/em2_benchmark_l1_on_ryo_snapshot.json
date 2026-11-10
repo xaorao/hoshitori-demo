@@ -1,0 +1,52 @@
+{
+ "cases": {
+  "candidates": [
+   "ETH",
+   "BTC",
+   "SOL"
+  ],
+  "horizons_hours": [
+   1,
+   4
+  ],
+  "repeats": 3
+ },
+ "models": {
+  "nvidia/nemotron-3.5-super-vl-120b-a12b [thinking off]": {
+   "seconds_for_everything": 76.2,
+   "single_judgment": {
+    "billed_tokens": {
+     "max": 7406,
+     "mean": 6733.4
+    },
+    "calls": 18,
+    "decisions": 18,
+    "first_attempt_outcomes": {
+     "VALID": 18
+    },
+    "grounding_stopped": 1,
+    "latency_ms": {
+     "max": 75087,
+     "p50": 6162.0,
+     "p95": 75087.0
+    },
+    "reasoning_tokens_mean": 0.0,
+    "reasons": {
+     "ESSENTIAL_PREMISE_UNPROVEN": 1
+    },
+    "repaired": 0,
+    "valid_first_attempt": 1.0,
+    "verdicts": {
+     "CALL": 17,
+     "NO_CALL": 1
+    }
+   },
+   "stability": {
+    "cases_asked_more_than_once": 6,
+    "largest_probability_range": 0.0,
+    "mean_probability_range": 0.0,
+    "same_verdict_every_time": 0.833
+   }
+  }
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "seed_rows": 300000,
+ "db_mb": 410.6,
+ "writer_alone": {
+  "commits": 225123,
+  "p50_ms": 0.028,
+  "p99_ms": 0.05,
+  "max_ms": 2.863,
+  "last_seq": 525123
+ },
+ "writer_during_backup": {
+  "commits": 242835,
+  "p50_ms": 0.033,
+  "p99_ms": 0.47,
+  "max_ms": 25.48,
+  "last_seq": 767958
+ },
+ "backup": {
+  "seconds": 10.9,
+  "rows_in_backup": 767958,
+  "rows_before": 562704,
+  "rows_after": 767958,
+  "between_counts": true,
+  "hash_chain_ok": true,
+  "integrity_check": "ok"
+ },
+ "naive_main_file_copy": {
+  "rows": 789289,
+  "rows_live_at_copy_time_at_least": 789593,
+  "hash_chain_ok": true,
+  "integrity_check": "ok"
+ }
+}

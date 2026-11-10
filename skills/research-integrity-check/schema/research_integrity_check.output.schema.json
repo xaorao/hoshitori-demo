@@ -1,0 +1,121 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "type": "string"
+    },
+    "availability": {
+      "additionalProperties": {
+        "enum": [
+          "available",
+          "partial",
+          "unavailable"
+        ]
+      },
+      "type": "object"
+    },
+    "data": {
+      "properties": {
+        "assets": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "clauses": {
+          "items": {
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "findings": {
+          "items": {
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "marks": {
+          "items": {
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "triage": {
+          "enum": [
+            "INVESTIGATE",
+            "NOT_MARKET_TESTABLE"
+          ]
+        }
+      },
+      "required": [
+        "triage",
+        "clauses",
+        "marks",
+        "findings",
+        "assets"
+      ],
+      "type": "object"
+    },
+    "data_mode": {
+      "enum": [
+        "live",
+        "mixed",
+        "simulated",
+        "unknown"
+      ]
+    },
+    "request": {
+      "type": "object"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "ok",
+        "partial",
+        "unavailable"
+      ]
+    },
+    "summary": {
+      "properties": {
+        "headline": {
+          "type": "string"
+        },
+        "key_points": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "headline",
+        "key_points"
+      ],
+      "type": "object"
+    },
+    "tool": {
+      "const": "research_integrity_check"
+    },
+    "warnings": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "tool",
+    "status",
+    "data_mode",
+    "as_of",
+    "request",
+    "data",
+    "summary",
+    "availability",
+    "warnings"
+  ],
+  "type": "object"
+}

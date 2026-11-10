@@ -1,0 +1,23 @@
+{
+  "directory": "run",
+  "protocol": "protocol.json",
+  "mappings": {"L0": "mapping.json"},
+  "barrier_mappings": {"L0": "barrier.json"},
+  "trusted_root": "root.json",
+  "log_key": "/etc/hoshitori/log.key",
+  "source": "urn:hoshitori:league:main",
+  "venues": {"binance-spot": null, "kraken": null},
+  "authorities": [
+    {"name": "digicert", "url": "http://timestamp.digicert.com"},
+    {"name": "globalsign", "url": "http://timestamp.globalsign.com/tsa/r6advanced1"}
+  ],
+  "lists": [{"venue": "binance-spot", "scope": "spot"}, {"venue": "kraken", "scope": "spot"}],
+  "tick_every_s": 30,
+  "start_grace_ms": 600000,
+  "finish_within_ms": 1200000,
+  "wait_s": 60,
+  "allow_insecure_loopback": false,
+  "allow_plain_http_authorities": true,
+  "practice": true,
+  "models": null
+}

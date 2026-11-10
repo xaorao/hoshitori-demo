@@ -1,0 +1,11 @@
+# JSON.parse key integrity (json_parse_key_integrity.py); one line per seed
+## Node 25.5.0 (Homebrew)
+20261026 {"node":"v25.5.0","v8":"14.1.146.11-node.18","docs":5000,"json_parse_wrong_keys":["fz-jcs-398","fz-jcs-1691"]}
+101 {"node":"v25.5.0","v8":"14.1.146.11-node.18","docs":5000,"json_parse_wrong_keys":["fz-jcs-308","fz-jcs-648","fz-jcs-843","fz-jcs-1906","fz-jcs-2045"]}
+102 {"node":"v25.5.0","v8":"14.1.146.11-node.18","docs":5000,"json_parse_wrong_keys":[]}
+103 {"node":"v25.5.0","v8":"14.1.146.11-node.18","docs":5000,"json_parse_wrong_keys":["fz-jcs-4871","fz-jcs-4874"]}
+## Node 22.23.4 (official tarball, SHA-256 verified)
+20261026 {"node":"v22.23.4","v8":"12.4.254.21-node.57","docs":5000,"json_parse_wrong_keys":[]}
+101 {"node":"v22.23.4","v8":"12.4.254.21-node.57","docs":5000,"json_parse_wrong_keys":[]}
+102 {"node":"v22.23.4","v8":"12.4.254.21-node.57","docs":5000,"json_parse_wrong_keys":[]}
+103 {"node":"v22.23.4","v8":"12.4.254.21-node.57","docs":5000,"json_parse_wrong_keys":[]}

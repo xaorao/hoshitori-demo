@@ -1,0 +1,22 @@
+{
+ "label": "recorded by B5A from https://ethereum-rpc.publicnode.com",
+ "source_url": "https://ethereum-rpc.publicnode.com",
+ "method": "POST",
+ "request_body": {
+  "jsonrpc": "2.0",
+  "id": 11,
+  "method": "eth_getTransactionCount",
+  "params": [
+   "0xe950dc316b836e4eefb8308bf32bf7c72a1358ff",
+   "0x1919770"
+  ]
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json",
+  "date": "Sun, 01 Nov 2026 08:24:39 GMT"
+ },
+ "body_sha256": "121d16aec9a3b3280e1bf4de45c5df56c19a07cfa6eb31eee66da843c79d36e5",
+ "body_bytes": 41,
+ "body": "{\"jsonrpc\":\"2.0\",\"id\":11,\"result\":\"0x5\"}\n"
+}

@@ -1,0 +1,128 @@
+{
+ "recorded_at": "2026-11-10T04:16:19Z",
+ "note": "two live Jupiter quotes for BONK, unmodified: a reference quote of about $100 and a larger one, sized with the price of the first pool of the DexScreener reply recorded beside it (that pool was not the volume-weighted median price, so the larger amount is not $50,000 at the median)",
+ "reference": {
+  "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+  "inAmount": "3561253561253",
+  "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+  "outAmount": "100082800",
+  "otherAmountThreshold": "97080316",
+  "swapMode": "ExactIn",
+  "slippageBps": 300,
+  "platformFee": null,
+  "priceImpactPct": "0.0013238159169605889422544591",
+  "routePlan": [
+   {
+    "swapInfo": {
+     "ammKey": "5ZWCKP2E8LqTUmo98xhq1YELjcqvxpNsv4xfzVbKGswc",
+     "label": "Scorch",
+     "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+     "inAmount": "3561253561253",
+     "outAmount": "100082800",
+     "updateContextSlot": "467582580"
+    },
+    "percent": 100,
+    "bps": null
+   }
+  ],
+  "contextSlot": 467582580,
+  "timeTaken": 0.005684045,
+  "swapUsdValue": "100.0249781737608967548",
+  "mostReliableAmmsQuoteReport": {
+   "info": {
+    "8B8KYcFPMjZyDtJ1BENsqhW3fEmMrB4ekoEQJiM6z3SC": "TesseraV has not received update within slot cutoff, delta: 11585107, cutoff: 20",
+    "BZtgQEyS6eXUXicYPHecYQ7PybqodXQMvkjUbP4R8mUU": "100073170"
+   }
+  },
+  "longtailMarketQuoteReport": null,
+  "useIncurredSlippageForQuoting": null,
+  "useRewards": null,
+  "otherRoutePlans": null,
+  "loadedLongtailToken": false,
+  "instructionVersion": null,
+  "transactionVersion": 0
+ },
+ "sized": {
+  "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+  "inAmount": "1780626780626780",
+  "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+  "outAmount": "48961906793",
+  "otherAmountThreshold": "47493049590",
+  "swapMode": "ExactIn",
+  "slippageBps": 300,
+  "platformFee": null,
+  "priceImpactPct": "0.0228455937743866274077731296",
+  "routePlan": [
+   {
+    "swapInfo": {
+     "ammKey": "31p1hptjhFo6ZD8oBqkfutNXQKGGPyi7YcEAfsyKW777",
+     "label": "Meteora DLMM",
+     "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+     "inAmount": "534188034188020",
+     "outAmount": "14696183892",
+     "updateContextSlot": "467582488"
+    },
+    "percent": 30,
+    "bps": null
+   },
+   {
+    "swapInfo": {
+     "ammKey": "5zpyutJu9ee6jFymDGoK7F6S5Kczqtc9FomP3ueKuyA9",
+     "label": "Whirlpool",
+     "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "outputMint": "So11111111111111111111111111111111111111112",
+     "inAmount": "676638176638184",
+     "outAmount": "214015894927",
+     "updateContextSlot": "467582588"
+    },
+    "percent": 38,
+    "bps": null
+   },
+   {
+    "swapInfo": {
+     "ammKey": "GMCJvYGf5Ex2ARiMquaBDqU6iKM8uiEQkB8jCnoNfHpC",
+     "label": "GoonFi V2",
+     "inputMint": "So11111111111111111111111111111111111111112",
+     "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+     "inAmount": "214015894927",
+     "outAmount": "18361202001",
+     "updateContextSlot": "467582590"
+    },
+    "percent": 100,
+    "bps": null
+   },
+   {
+    "swapInfo": {
+     "ammKey": "5ZWCKP2E8LqTUmo98xhq1YELjcqvxpNsv4xfzVbKGswc",
+     "label": "Scorch",
+     "inputMint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+     "inAmount": "569800569800576",
+     "outAmount": "15904520900",
+     "updateContextSlot": "467582591"
+    },
+    "percent": 32,
+    "bps": null
+   }
+  ],
+  "contextSlot": 467582591,
+  "timeTaken": 0.273088525,
+  "swapUsdValue": "48933.619546171174119595113",
+  "mostReliableAmmsQuoteReport": {
+   "info": {
+    "BZtgQEyS6eXUXicYPHecYQ7PybqodXQMvkjUbP4R8mUU": "6740851191",
+    "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE": "6740170785",
+    "8B8KYcFPMjZyDtJ1BENsqhW3fEmMrB4ekoEQJiM6z3SC": "TesseraV has not received update within slot cutoff, delta: 11585117, cutoff: 20"
+   }
+  },
+  "longtailMarketQuoteReport": null,
+  "useIncurredSlippageForQuoting": null,
+  "useRewards": null,
+  "otherRoutePlans": null,
+  "loadedLongtailToken": false,
+  "instructionVersion": null,
+  "transactionVersion": 0
+ }
+}

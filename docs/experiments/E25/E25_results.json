@@ -1,0 +1,102 @@
+{
+ "honest": {
+  "normal_run": {
+   "SAME_TRUTH": true,
+   "SAME_AUTHORITY": true,
+   "SAME_HISTORY": true,
+   "SAME_FAILURE": true,
+   "SAME_PRIVACY": true,
+   "SAME_OUTCOME": true,
+   "SAME_REASONING": true
+  },
+  "unavailable_source_run": {
+   "SAME_TRUTH": true,
+   "SAME_AUTHORITY": true,
+   "SAME_HISTORY": true,
+   "SAME_FAILURE": true,
+   "SAME_PRIVACY": true,
+   "SAME_OUTCOME": true,
+   "SAME_REASONING": true
+  },
+  "private_input_run": {
+   "SAME_TRUTH": true,
+   "SAME_AUTHORITY": true,
+   "SAME_HISTORY": true,
+   "SAME_FAILURE": true,
+   "SAME_PRIVACY": true,
+   "SAME_OUTCOME": true,
+   "SAME_REASONING": true
+  },
+  "all_pass": true
+ },
+ "mutants": {
+  "M1_asset_case": {
+   "property_expected_to_fail": "SAME_TRUTH",
+   "failed_properties": [
+    "SAME_TRUTH"
+   ],
+   "caught": true
+  },
+  "M2_own_origin_rule": {
+   "property_expected_to_fail": "SAME_AUTHORITY",
+   "failed_properties": [
+    "SAME_AUTHORITY"
+   ],
+   "caught": true
+  },
+  "M3_reserialised_hash": {
+   "property_expected_to_fail": "SAME_HISTORY",
+   "failed_properties": [
+    "SAME_HISTORY"
+   ],
+   "caught": true
+  },
+  "M4_null_to_zero": {
+   "property_expected_to_fail": "SAME_FAILURE",
+   "failed_properties": [
+    "SAME_FAILURE"
+   ],
+   "caught": true
+  },
+  "M5_leak_to_ledger": {
+   "property_expected_to_fail": "SAME_PRIVACY",
+   "failed_properties": [
+    "SAME_PRIVACY"
+   ],
+   "caught": true
+  },
+  "M5_leak_to_news": {
+   "property_expected_to_fail": "SAME_PRIVACY",
+   "failed_properties": [
+    "SAME_PRIVACY"
+   ],
+   "caught": true
+  },
+  "M6_rounded_p": {
+   "property_expected_to_fail": "SAME_OUTCOME",
+   "failed_properties": [
+    "SAME_OUTCOME"
+   ],
+   "caught": true
+  },
+  "M7_dropped_evidence": {
+   "property_expected_to_fail": "SAME_REASONING",
+   "failed_properties": [
+    "SAME_REASONING"
+   ],
+   "caught": true
+  },
+  "M8_wrong_quote_series": {
+   "property_expected_to_fail": "SAME_TRUTH",
+   "failed_properties": [
+    "SAME_TRUTH"
+   ],
+   "caught": true
+  }
+ },
+ "summary": {
+  "honest_all_pass": true,
+  "mutants": 9,
+  "caught": 9
+ }
+}

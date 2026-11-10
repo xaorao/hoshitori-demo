@@ -1,0 +1,5 @@
+{
+ "source": "C2SP signed-note v1.1.0 (editor's copy at commit fea9004f73fbec8cf7a8b1936430e2487eb23b55), example verifier key and signed note",
+ "vkey": "example.com/foo+530d903a+AekyeRrm56hApGFkyQR4ZCbV54Id2LKaANYcrnKv3U2k",
+ "note": "This is an example message.\n\n— example.com/foo Uw2QOkn8srV1yJGh2VYRlL1Tnagv1YEq6TfXppzi2ONncAlTgK7Ztg1ERYNZXsYjOBH3mFXmRKuwHjG1Yu72IneyaQM=\n"
+}

@@ -1,0 +1,19 @@
+{
+ "newey_west_se": {
+  "trials": 300,
+  "max_relative_difference": 1.7293232444572044e-15
+ },
+ "wilson": {
+  "cases": 7245,
+  "max_absolute_difference": 3.876218124254649e-09
+ },
+ "mcnemar_exact": {
+  "cases": 1599,
+  "max_absolute_difference": 5.551115123125783e-16
+ },
+ "not_cross_checkable": [
+  "Newcombe method 10 paired difference interval (E8)",
+  "normal-mixture sequential likelihood ratio (E10)",
+  "alpha-nDCG as implemented in E13"
+ ]
+}

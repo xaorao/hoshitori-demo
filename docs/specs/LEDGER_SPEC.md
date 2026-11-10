@@ -1,0 +1,92 @@
+# Ledger specification
+
+Scope: canonical serialisation, hashing, append-only events. Status: DESIGNED and spiked: the canonical form (E1), the tree and proofs (E2a), the checkpoint, bundle and verifiers (E2c) and the storage engine (E3) were built and run in `../experiments/`. Normative sources: RFC 8785, RFC 7493, RFC 8032, RFC 9162 section 2.1, C2SP `signed-note`, `tlog-checkpoint`, `tlog-proof`. Product-level commitment rules (levels C0 to C4, assurance classes) are the contract, section 8 and 26. Built since: segments, the ledger with recovery, the intent journal, replica restore and fenced failover are product code and TESTED (see `../STATUS.md`).
+
+## 1. What the ledger guarantees and what it does not
+
+| Guarantees (with the check that proves each) | Does not guarantee |
+|---|---|
+| Records are append-only and in a single total order (monotone sequence, tree size only grows) | That a record is true (a hash chain verifying is not evidence the source was right) |
+| A record's bytes are the bytes that were hashed (canonical form; leaf hash) | That nothing was omitted before the first append (completeness is claimed only relative to the published collection protocol, contract section 12) |
+| A checkpoint commits to every earlier record (Merkle root) and is signed by the log key | Time, by itself: a signed checkpoint carries none; time comes from independent tokens (verification spec) |
+| An inclusion proof ties one record to one signed checkpoint | The tree size: a proof does not authenticate the size; only the signed checkpoint does (E2a: a proof for size n verified for n±1 in 206 of 309 trials when the path shape was unchanged) |
+
+## 2. Canonical record form (E1)
+
+The **record profile** is RFC 8785 JCS restricted to the I-JSON subset the product needs:
+
+1. Input is UTF-8 without a byte-order mark; invalid UTF-8 (overlong forms, surrogate halves encoded as UTF-8, code points above U+10FFFF, truncated sequences) is rejected.
+2. The top-level value is an object. Members: strings, `true`, `false`, `null`, arrays, objects, and **integers within ±(2^53 − 1)**. A number with a fraction or an exponent, `-0`, `NaN`, `Infinity`, an integer spelled with a leading zero, or an integer outside the safe range is rejected. **Prices, sizes, probabilities, ratios and every other quantity are decimal strings.** (RFC 8785 appendix D: numbers without a natural place in the JSON ecosystem are wrapped as strings.)
+3. Object keys are unique after unescaping (`"a"` and `"a"` collide), sorted by UTF-16 code unit when serialised (RFC 8785 section 3.2.3).
+4. Every string, including keys, is NFC-normalised; a non-NFC string is rejected rather than normalised, so the bytes a producer hashed are the bytes it signed. Lone surrogates, in any escaped form, are rejected.
+5. Nesting depth ≤ 64.
+6. Serialisation: no insignificant whitespace; string escapes exactly as RFC 8785 section 3.2.2.2 (short escapes for backspace, tab, newline, form feed, carriage return, quote and backslash; lowercase `\u00xx` for the other controls; every other code point raw; solidus not escaped).
+
+The general `jcs` profile (all JSON the RFC allows, numbers as doubles) exists for the hostile-vector tests only; the product never hashes a float.
+
+**Raw third-party payloads are never canonicalised.** A RYO response contains JSON floats. The bytes are hashed as received (`raw_sha256`) and stored; the record carries decimal strings taken from the number tokens as spelled in those bytes (API compatibility, section 6), so no binary float ever enters a record.
+
+**Evidence from E1.** 146 hand-built vectors (RFC samples, Appendix B number table in two spellings, strings, controls, key-order cases, depth, 80 hostile inputs) and 5,000 random documents per profile were canonicalised by two independently written implementations (Python, JavaScript) and two third-party libraries: the two implementations agree on every case and on 10,000 mutated inputs (accept versus reject and output). The third-party libraries deviate where expected (they accept duplicate keys when fed by the ordinary parser; one rejects integers beyond 2^53 − 1 that the RFC serialises as doubles). **Runtime finding:** `JSON.parse` in Node 25.5.0 returned wrong property names for some documents (3 of 4 seeds, 2 to 5 of 5,000 documents) and never did on Node 22.23.4; therefore **no verifier uses `JSON.parse` on text that is hashed**, and Node is pinned to an LTS release with the key-integrity script in CI.
+
+## 3. Hashing and the tree
+
+- Leaf hash `SHA-256(0x00 ‖ canonical bytes)`; node hash `SHA-256(0x01 ‖ left ‖ right)`; empty tree `SHA-256("")`; split at the largest power of two below n (RFC 9162 section 2.1).
+- **Every hash on the wire is exactly 32 bytes**; a verifier rejects any other length. (The Go reference library rejects an empty or short hash in its own test data; the bare RFC arithmetic would accept two equal empty strings.)
+- Proofs are generated by recursive definitions and verified by the iterative algorithms of sections 2.1.3.2 and 2.1.4.2. **E2a:** three implementations (Python, JavaScript, the Go library `transparency-dev/merkle`) agree on every one of 2,485 inclusion and 2,485 consistency proofs for tree sizes 1 to 70, on sampled proofs up to size 4,097, on the CT reference roots (8 of 8), on the library's 196 test-data cases (one stricter-by-design difference, the hash-length rule), and on 15,128 mutated proofs (0 verifier disagreements; no mutation is accepted except the size±1 shape cases above).
+- **Rule:** the size and root used to check a proof are those of a checkpoint whose signature has already verified; the proof's own size is never trusted.
+
+## 4. Storage (ADR-001, ADR-007)
+
+- **Segments:** `ledger/segment-<first seq, 12 digits>.jsonl`, one line per record: `{"seq": N, "leaf": "<hex>", "rec": "<canonical record text>"}` with a trailing newline. A segment is closed after a fixed record count or size; closed segments are immutable, checksummed (SHA-256 recorded in a manifest line of the next segment) and the object that is backed up. A torn last line (crash during append) is detected by length and hash and truncated on restart (tested by the E3-style kill rounds).
+- **Index and operational state:** SQLite in WAL mode (E3), holding `outbox`, `ledger(seq, leaf_hash, segment, offset)`, the tree's frontier (compact range) and everything derived. It is rebuildable from the segments; the rebuild is a CI test.
+- **Rules from E3:** every write transaction is `BEGIN IMMEDIATE`; one ledger-writer process; read transactions are short (a read held for 3 s while writing grew the WAL to 1.37 GB with 9 of 333,357 frames checkpointed); a checkpointing job runs and WAL size is alarmed; SQLite files live on local disk, never a network filesystem (SQLite documentation).
+- **Throughput headroom (E3, this machine, process-kill durability only):** about 5,300 durable single-record commits per second; the expected load is orders of magnitude lower. Migration trigger and the re-run on the target host are in ADR-001.
+
+## 5. Checkpoints
+
+- Format: C2SP `tlog-checkpoint` note text `origin\nsize\nbase64(root)\n`, followed by an empty line and one or more `signed-note` signature lines. The origin is a schemaless URL-like name we control. The log signature is Ed25519 over the note text with key id `SHA-256(name ‖ 0x0A ‖ 0x01 ‖ public key)[:4]` (checked by E2c, both verifiers).
+- **Cadence:** one checkpoint per forecast batch (the cycle's single commitment, contract section 25 item 3), one on a timer for everything else, and one at shutdown. A checkpoint is never signed for a smaller size than any earlier one, and never for the same size with a different root (the writer refuses; this is also the invariant a witness enforces).
+- **Time:** a checkpoint that must carry independent time is sent, as its SHA-256 digest, to the time-stamp authorities; the tokens are stored beside it and referenced by the `Commitment` record. The note text itself is what is time-stamped, so the token covers origin, size and root and therefore every earlier record.
+- **Key management:** the log key is an Ed25519 key held encrypted at rest and decrypted into memory by the ledger writer only; it is published in the policy file before the first scored period. Rotation: a new key signs the first checkpoint of its era together with the old key (two signature lines), and the policy lists the validity window of each key. Compromise: the attacker can sign new checkpoints but cannot create tokens dated before the compromise, which is what the independent commitment is for (E2c case "full operator rewrite": integrity passes on the forged history and the tokens fail to match).
+
+## 6. Bundles (the outsider's object)
+
+A bundle is a directory (or zip) containing, per proven record, a C2SP `tlog-proof` (index, inclusion path, verbatim checkpoint), the record's canonical bytes, the raw payloads it cites where redistributable, the time-stamp tokens over the checkpoint with their chains and revocation evidence as archived at stamping, and a `policy.json` that is **metadata only**: the verifier takes its trust anchors (log key and key eras, pinned time-stamp roots, operator registry, algorithm allow-lists) from a **trusted root supplied from outside the bundle** (verification spec section 2), because anything inside a bundle can be replaced together with the records it vouches for. The signed records inside the tree carry their own committed time and any declared window; no unsigned file in the bundle is read for timing. Verification is `verify_bundle <dir> --trusted-root <file>` with no network. The verdict has four parts that are never merged (contract section 24): integrity, timing, eligibility, and a standing list of what is not proven. E2c implements both a Python and a JavaScript verifier and runs <!--n:e2c-->48<!--/n--> cases (happy paths with three operator pairs, alias pairs, a SHA-1 signer, duplicate and foreign tokens, 11 integrity attacks, edits to the signed committed time and window, 6 timing cases, an operator registry with a shared parent and with missing ownership evidence, a whole bundle substituted with an attacker's log key, a bundle forged offline with two self-made time-stamp authorities, a replaced bundle policy, forged publication claims and the full operator rewrite) with 0 disagreements and 0 expectation failures.
+
+## 7. Invariants (machine-checkable; see `INVARIANTS.md`)
+
+1. `seq` is gapless and strictly increasing; tree size equals the number of appended records.
+2. For every closed segment, SHA-256 of its bytes equals the value recorded in the next segment's manifest line.
+3. For every checkpoint, the root equals the tree head recomputed from the segments.
+4. Two checkpoints of the same log are consistent (a consistency proof exists), and sizes never decrease.
+5. For every record, `leaf = SHA-256(0x00 ‖ canonical(rec))` and `canonical(rec) = rec`.
+6. A conflicting record under an existing `(source, id)` is never appended.
+7. Rebuilding the SQLite database from the segments yields byte-identical derived tables.
+
+**Ledger-level hostile vectors (E17).** Against a checkpoint held by a witness or in a time-stamp token, 1,701 of 1,701 presented logs with a replaced, reordered, inserted, duplicated, deleted or truncated record inside the committed prefix were detected by recomputing the prefix root; a log that keeps the committed prefix and changes only what follows it is, by construction, not an alarm on the prefix, and truncation of records newer than every held checkpoint is not detectable from the log alone, which is why the heartbeat, the outbox and the independent tokens exist.
+
+8. **Recovery invariant (E20):** after any crash, recovery leaves no duplicate line in the segment, a gapless sequence, valid leaf hashes, an index equal to a rebuild from the segment and no stale index row beyond the segment; the segment is the source of truth and the index never is.
+
+9. **Attested-prefix invariant (E20b, ADR-026):** before any append the segment's first `n` lines hash to the root of the highest externally attested checkpoint of size `n`; if not, the log restores from a replica whose root matches or refuses writes (INTEGRITY_FAILURE). Recovery of an uncommitted tail is permitted only beyond `n`.
+10. **Epoch invariant (E21, ADR-025):** every record after a promotion carries its epoch; the epoch record fixes the closing size of the previous epoch; a checkpoint signed under an epoch's key is valid only up to that size.
+
+## 8. Failure modes
+
+| Failure | Behaviour | Test |
+|---|---|---|
+| Crash during append | recovery scans the segment tail first: a torn last line is truncated, a valid unindexed line is indexed, never appended again; stale index rows are removed and their outbox rows reopened | E20 (five crash points, 300 rounds, 0 violations; the first-written protocol failed 180 of 180 at three of them) |
+| Storage rolled back or rewritten below an attested checkpoint | restore from a replica whose root equals the attested root, else INTEGRITY_FAILURE with writes refused; never resume | E20b (600 rounds, six faults, 0 violations; reconciling alone resumed in 500) |
+| Replica promoted, stale primary alive | epoch compare-and-swap, continuity proof, acceptance rule; the stale primary cannot publish | E21 model |
+| Segment missing or corrupt | verifier and writer refuse to proceed past it; restore from replica; the product shows `NOT RECONSTRUCTIBLE` for affected records, never a pass | delete and corrupt fixtures |
+| Disk full | writer stops accepting, producers see back-pressure, nothing is dropped silently | fault injection |
+| Clock offset above 1 s | commits refused (domain model, section 2) | fault injection |
+| Key unavailable | no new checkpoints; reads and verification continue | fault injection |
+| Non-canonical or hostile record submitted | rejected before append with the exact rule that failed | E1 hostile vectors as unit tests |
+
+## 9. Test plan
+
+E1, E2a, E2b and E2c are the seed of the suite and are kept as re-runnable scripts. In the build: property tests (Hypothesis) over random record sets for invariants 1 to 7; crash tests at every transition of section 7 of the domain model; cross-language digest tests on every CI run for both runtimes; a replay test that rebuilds the whole derived state; a 24-hour soak at 10 times the expected rate on the target host.
+
+## Rules from an earlier study (reproduced)
+
+- **Corruption is not a torn tail.** A torn write can only damage the last line, because each line is fsynced before the next. A line that fails its check anywhere else, or a hash that does not match, is corruption: the log enters `INTEGRITY_FAILURE`, refuses writes and is repaired only from a replica whose root matches the attested checkpoint. Recovery never truncates valid later lines. Mutant: one flipped byte in a middle line with the completed outbox rows already pruned must lose nothing and must not reorder the file (the current spike destroyed six valid records in that case).

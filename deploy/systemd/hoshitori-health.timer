@@ -1,0 +1,10 @@
+# Every minute (systemd.time: minutely is "*-*-* *:*:00"); AccuracySec= defaults to a minute, so it is narrowed to a second.
+[Unit]
+Description=Hoshitori health probe every minute
+
+[Timer]
+OnCalendar=minutely
+AccuracySec=1s
+
+[Install]
+WantedBy=timers.target

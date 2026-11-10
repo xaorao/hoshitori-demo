@@ -1,0 +1,20 @@
+{
+ "label": "recorded by B5A from https://api.trongrid.io/wallet/triggerconstantcontract",
+ "source_url": "https://api.trongrid.io/wallet/triggerconstantcontract",
+ "method": "POST",
+ "request_body": {
+  "owner_address": "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+  "contract_address": "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+  "function_selector": "isBlackListed(address)",
+  "parameter": "0000000000000000000000000000000000000000000000000000000000000000",
+  "visible": true
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json; charset=utf-8",
+  "date": "Sun, 01 Nov 2026 08:25:22 GMT"
+ },
+ "body_sha256": "3554639c42f6a4471b590c453892db98f71bbee277bd26ae5bbfc6ff7f886c8b",
+ "body_bytes": 1085,
+ "body": "{\"transaction\":{\"raw_data\":{\"ref_block_bytes\":\"ea08\",\"ref_block_hash\":\"fc3f849a535987ea\",\"expiration\":1793521581000,\"contract\":[{\"parameter\":{\"value\":{\"owner_address\":\"TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t\",\"contract_address\":\"TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t\",\"data\":\"e47d60600000000000000000000000000000000000000000000000000000000000000000\"},\"type_url\":\"type.googleapis.com/protocol.TriggerSmartContract\"},\"type\":\"TriggerSmartContract\"}],\"timestamp\":1793521522467},\"ret\":[{}],\"raw_data_hex\":\"0a02ea082208fc3f849a535987ea40c8f7ddb199345a8e01081f1289010a31747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e54726967676572536d617274436f6e747261637412540a1541a614f803b6fd780986a42c78ec9c7f77e6ded13c121541a614f803b6fd780986a42c78ec9c7f77e6ded13c2224e47d6060000000000000000000000000000000000000000000000000000000000000000070a3aedab19934\",\"txID\":\"adf553fb91abde5f7574d18a40caebf841220fea71e5949d4caaf14801450c91\",\"visible\":true},\"constant_result\":[\"0000000000000000000000000000000000000000000000000000000000000000\"],\"result\":{\"result\":true},\"energy_used\":4658,\"energy_penalty\":3587}\n"
+}

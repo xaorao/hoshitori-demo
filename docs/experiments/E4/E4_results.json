@@ -1,0 +1,16 @@
+{
+ "rounds": 30,
+ "ledger_lines": 10814,
+ "unique_ids": 10814,
+ "duplicates_in_ledger": 0,
+ "torn_lines": 0,
+ "done_marks": 10815,
+ "done_unique": 10814,
+ "workflow_status_counts": {
+  "SUCCESS": 10814
+ },
+ "pending_after_final_recovery": 0,
+ "ledger_ids_without_done_mark": 0,
+ "done_marks_without_ledger_row": 0,
+ "approx_workflows_per_second_while_alive": 162.4
+}

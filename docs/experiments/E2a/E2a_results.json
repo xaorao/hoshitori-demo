@@ -1,0 +1,125 @@
+{
+ "known_answer": {
+  "leaf_inputs": 8,
+  "roots_checked": 8,
+  "python_match": 8,
+  "javascript_match": 8,
+  "empty_root_is_sha256_of_nothing": true
+ },
+ "exhaustive": {
+  "sizes": "1..70",
+  "inclusion_proofs": 2485,
+  "consistency_proofs": 2485
+ },
+ "sampled": {
+  "sizes": [
+   127,
+   128,
+   129,
+   255,
+   256,
+   257,
+   1000,
+   1023,
+   1024,
+   1025,
+   4097
+  ],
+  "proofs_checked": 252
+ },
+ "mutations": {
+  "mutated_proofs": 15128,
+  "verifier_disagreements": 0,
+  "mutated_but_accepted": 852,
+  "by_mutation_tried_accepted": {
+   "cons:append": [
+    309,
+    0
+   ],
+   "cons:drop-last": [
+    295,
+    0
+   ],
+   "cons:first+1": [
+    309,
+    0
+   ],
+   "cons:first-1": [
+    309,
+    0
+   ],
+   "cons:flip": [
+    1658,
+    0
+   ],
+   "cons:second+1": [
+    309,
+    206
+   ],
+   "cons:second-1": [
+    309,
+    220
+   ],
+   "cons:wrong-first": [
+    309,
+    0
+   ],
+   "cons:wrong-second": [
+    309,
+    0
+   ],
+   "incl:append": [
+    309,
+    0
+   ],
+   "incl:drop-last": [
+    308,
+    0
+   ],
+   "incl:empty": [
+    308,
+    0
+   ],
+   "incl:flip": [
+    6844,
+    0
+   ],
+   "incl:index+1": [
+    309,
+    0
+   ],
+   "incl:index-1": [
+    295,
+    0
+   ],
+   "incl:size+1": [
+    309,
+    206
+   ],
+   "incl:size-1": [
+    309,
+    220
+   ],
+   "incl:swap": [
+    1403,
+    0
+   ],
+   "incl:wrong-leaf": [
+    309,
+    0
+   ],
+   "incl:wrong-root": [
+    309,
+    0
+   ]
+  },
+  "note": "size+1 and size-1 are accepted when the path shape is unchanged: a Merkle proof does not authenticate the tree size, only the signed checkpoint does"
+ },
+ "library_testdata": {
+  "cases": 196,
+  "unexplained_differences": 0,
+  "stricter_by_design_hash_length_rule": 1
+ },
+ "disagreements": 0,
+ "disagreement_examples": []
+}

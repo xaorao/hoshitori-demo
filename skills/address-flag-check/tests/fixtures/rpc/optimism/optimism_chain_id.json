@@ -1,0 +1,19 @@
+{
+ "label": "recorded by B5A from https://optimism-rpc.publicnode.com",
+ "source_url": "https://optimism-rpc.publicnode.com",
+ "method": "POST",
+ "request_body": {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "eth_chainId",
+  "params": []
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json",
+  "date": "Sun, 01 Nov 2026 08:25:00 GMT"
+ },
+ "body_sha256": "30f888a61faf6834b77b24f6c2a6fed186db37b394aabc2fa88cf350a705913b",
+ "body_bytes": 40,
+ "body": "{\"jsonrpc\":\"2.0\",\"result\":\"0xa\",\"id\":1}\n"
+}

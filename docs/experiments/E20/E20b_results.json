@@ -1,0 +1,178 @@
+{
+ "RECONCILING+outbox_kept": {
+  "segment_rolled_back": {
+   "rounds": 100,
+   "violations": 0,
+   "integrity_failure_raised": 0,
+   "restored_from_replica": 0,
+   "resumed_writing": 100
+  },
+  "index_rolled_back_alone": {
+   "rounds": 100,
+   "violations": 0,
+   "integrity_failure_raised": 0,
+   "restored_from_replica": 0,
+   "resumed_writing": 100
+  },
+  "both_rolled_back_independently": {
+   "rounds": 100,
+   "violations": 100,
+   "integrity_failure_raised": 0,
+   "restored_from_replica": 0,
+   "resumed_writing": 100
+  },
+  "partial_power_loss": {
+   "rounds": 100,
+   "violations": 0,
+   "integrity_failure_raised": 0,
+   "restored_from_replica": 0,
+   "resumed_writing": 100
+  },
+  "flipped_byte_in_prefix": {
+   "rounds": 100,
+   "violations": 0,
+   "integrity_failure_raised": 0,
+   "restored_from_replica": 0,
+   "resumed_writing": 100
+  },
+  "prefix_rewritten_valid_chain": {
+   "rounds": 100,
+   "violations": 100,
+   "integrity_failure_raised": 0,
+   "restored_from_replica": 0,
+   "resumed_writing": 100
+  }
+ },
+ "RECONCILING+pruned_outbox": {
+  "segment_rolled_back": {
+   "rounds": 100,
+   "violations": 100,
+   "integrity_failure_raised": 0,
+   "restored_from_replica": 0,
+   "resumed_writing": 100
+  },
+  "index_rolled_back_alone": {
+   "rounds": 100,
+   "violations": 0,
+   "integrity_failure_raised": 0,
+   "restored_from_replica": 0,
+   "resumed_writing": 100
+  },
+  "both_rolled_back_independently": {
+   "rounds": 100,
+   "violations": 100,
+   "integrity_failure_raised": 0,
+   "restored_from_replica": 0,
+   "resumed_writing": 100
+  },
+  "partial_power_loss": {
+   "rounds": 100,
+   "violations": 100,
+   "integrity_failure_raised": 0,
+   "restored_from_replica": 0,
+   "resumed_writing": 100
+  },
+  "flipped_byte_in_prefix": {
+   "rounds": 100,
+   "violations": 100,
+   "integrity_failure_raised": 0,
+   "restored_from_replica": 0,
+   "resumed_writing": 100
+  },
+  "prefix_rewritten_valid_chain": {
+   "rounds": 100,
+   "violations": 100,
+   "integrity_failure_raised": 0,
+   "restored_from_replica": 0,
+   "resumed_writing": 100
+  }
+ },
+ "ATTESTED+pruned_outbox": {
+  "segment_rolled_back": {
+   "rounds": 100,
+   "violations": 0,
+   "integrity_failure_raised": 100,
+   "restored_from_replica": 0,
+   "resumed_writing": 0
+  },
+  "index_rolled_back_alone": {
+   "rounds": 100,
+   "violations": 0,
+   "integrity_failure_raised": 0,
+   "restored_from_replica": 0,
+   "resumed_writing": 100
+  },
+  "both_rolled_back_independently": {
+   "rounds": 100,
+   "violations": 0,
+   "integrity_failure_raised": 100,
+   "restored_from_replica": 0,
+   "resumed_writing": 0
+  },
+  "partial_power_loss": {
+   "rounds": 100,
+   "violations": 0,
+   "integrity_failure_raised": 100,
+   "restored_from_replica": 0,
+   "resumed_writing": 0
+  },
+  "flipped_byte_in_prefix": {
+   "rounds": 100,
+   "violations": 0,
+   "integrity_failure_raised": 100,
+   "restored_from_replica": 0,
+   "resumed_writing": 0
+  },
+  "prefix_rewritten_valid_chain": {
+   "rounds": 100,
+   "violations": 0,
+   "integrity_failure_raised": 100,
+   "restored_from_replica": 0,
+   "resumed_writing": 0
+  }
+ },
+ "ATTESTED+replica+pruned_outbox": {
+  "segment_rolled_back": {
+   "rounds": 100,
+   "violations": 0,
+   "integrity_failure_raised": 0,
+   "restored_from_replica": 100,
+   "resumed_writing": 100
+  },
+  "index_rolled_back_alone": {
+   "rounds": 100,
+   "violations": 0,
+   "integrity_failure_raised": 0,
+   "restored_from_replica": 0,
+   "resumed_writing": 100
+  },
+  "both_rolled_back_independently": {
+   "rounds": 100,
+   "violations": 0,
+   "integrity_failure_raised": 0,
+   "restored_from_replica": 100,
+   "resumed_writing": 100
+  },
+  "partial_power_loss": {
+   "rounds": 100,
+   "violations": 0,
+   "integrity_failure_raised": 0,
+   "restored_from_replica": 100,
+   "resumed_writing": 100
+  },
+  "flipped_byte_in_prefix": {
+   "rounds": 100,
+   "violations": 0,
+   "integrity_failure_raised": 0,
+   "restored_from_replica": 100,
+   "resumed_writing": 100
+  },
+  "prefix_rewritten_valid_chain": {
+   "rounds": 100,
+   "violations": 0,
+   "integrity_failure_raised": 0,
+   "restored_from_replica": 100,
+   "resumed_writing": 100
+  }
+ }
+}

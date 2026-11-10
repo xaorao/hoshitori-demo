@@ -1,0 +1,19 @@
+{
+ "contract": "B",
+ "expected": {
+  "contract": "B",
+  "flags": [],
+  "outcome": null,
+  "outcome_price": null,
+  "p0": null,
+  "reason": "VOID_DELISTED",
+  "state": "VOID",
+  "touch_open_ms": null
+ },
+ "forecast_id": "f-v-B-VOID_DELISTED",
+ "id": "V-B-void_delisted",
+ "kind": "void",
+ "note": "The instrument was delisted before the horizon ended.",
+ "pair_id": "A",
+ "section": "7"
+}

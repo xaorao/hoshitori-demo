@@ -1,0 +1,11 @@
+# Every hour at half past (systemd.time: "*-*-* *:30:00"), away from the cycles at the top of the hour. Persistent: a run missed while the
+# machine was off happens once at the next start (systemd.timer, Persistent=). A run still going when the next is due is left alone.
+[Unit]
+Description=Hourly Hoshitori backup
+
+[Timer]
+OnCalendar=*-*-* *:30:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

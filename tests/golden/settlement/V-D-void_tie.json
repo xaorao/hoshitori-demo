@@ -1,0 +1,19 @@
+{
+ "contract": "D",
+ "expected": {
+  "contract": "D",
+  "flags": [],
+  "outcome": null,
+  "outcome_price": null,
+  "p0": null,
+  "reason": "VOID_TIE",
+  "state": "VOID",
+  "touch_open_ms": null
+ },
+ "forecast_id": "f-v-D-VOID_TIE",
+ "id": "V-D-void_tie",
+ "kind": "void",
+ "note": "A tie recorded by the caller.",
+ "pair_id": "A",
+ "section": "7"
+}
