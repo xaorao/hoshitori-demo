@@ -640,12 +640,12 @@ export function ageWords(nowMs: number, iso: string): string {
 /** Documents older than this many hours are called old (a prior: a cycle is hourly, so three missed ones is a sign). */
 export const OLD_AFTER_HOURS = 3;
 
-/** A warning when the exported documents are old; nothing when they are not. */
+/** A line saying the exported documents are an older snapshot; nothing when they are fresh. */
 export function oldLine(generatedAt: string, nowMs: number): string | null {
   const then = Date.parse(generatedAt);
   if (Number.isNaN(then)) throw new Error(`not a time: ${generatedAt}`);
   if (nowMs - then <= OLD_AFTER_HOURS * 3_600_000) return null;
-  return `These documents were exported ${ageWords(nowMs, generatedAt)} ago. Nothing newer is shown, so the league may have moved on.`;
+  return `A snapshot of the record from ${ageWords(nowMs, generatedAt)} ago. Newer cycles are not shown.`;
 }
 
 /** A warning when part of the latest cycle did not finish; nothing when all of it did. */

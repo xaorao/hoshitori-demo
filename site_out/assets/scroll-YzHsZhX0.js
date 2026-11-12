@@ -1,0 +1,1 @@
+import{s as e}from"./index-XBW4C7MW.js";var t=e();function n({label:e,children:n}){return(0,t.jsx)(`div`,{className:`table-wrap`,role:`region`,"aria-label":e,tabIndex:0,children:n})}export{n as t};

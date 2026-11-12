@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Pack a league's public record into one file a reader can browse and verify offline.
 
-    python scripts/pack_record.py SETTINGS OUT.tar.gz [--status docs/STATUS.md] [--sweeps docs/SWEEP.md]
+    python scripts/pack_record.py SETTINGS OUT.tar.gz [--status docs/STATUS.md] [--sweeps docs/SWEEP.md] [--signals SIGNALS.json]
 
 It exports the interface's documents for the league named by SETTINGS (the same export as ``hoshitori-league site``: receipts, cycles,
 the record and a bundle per committed cycle, with exchange data listed by digest only), then writes them as one gzip-compressed tar in a
@@ -90,10 +90,13 @@ def main(argv: list[str] | None = None) -> int:
         help="add the drills (run on the scripted world of the tests) and the invented examples of the Claims, Desk and Laboratory pages, "
         "each labelled on its page, as the quickstart does",
     )
+    parser.add_argument(
+        "--signals", type=Path, default=None, help="the collected voices and wallets (hoshitori-league signals) for the Voices page"
+    )
     args = parser.parse_args(argv)
     with tempfile.TemporaryDirectory() as tmp:
         site = Path(tmp) / "site"
-        extra: list[str] = []
+        extra: list[str] = [] if args.signals is None else ["--signals", str(args.signals)]
         if args.with_examples:
             env = {**os.environ, "PYTHONPATH": os.pathsep.join([str(ROOT), *filter(None, [os.environ.get("PYTHONPATH")])])}
             for script, name, flag in (

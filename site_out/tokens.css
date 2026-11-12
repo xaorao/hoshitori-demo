@@ -1,0 +1,31 @@
+/* Hoshitori tokens. Generated from src/styles.css by tools/make_brand.py; do not edit. */
+:root {
+  --paper: #ffffff;
+  --halo: #fafaf7;
+  --veil: #f8fafc;
+  --line: #e5e7eb;
+  --fog: #9ca3af;
+  --graphite: #4b5563;
+  --stone: #1d1d1f;
+  --ink: #0a0a0a;
+  --accent: #047857;
+  --accent-soft: #e7f6ef;
+  --redline: #b45309;
+  --redline-soft: #fff4e5;
+  --focus: #1d4ed8;
+}
+:root[data-theme="dark"] {
+  --paper: #0b0b0c;
+  --halo: #111113;
+  --veil: #141417;
+  --line: #2a2a2e;
+  --fog: #8a8f98;
+  --graphite: #b4b9c2;
+  --stone: #e6e6e8;
+  --ink: #f5f5f6;
+  --accent: #34d399;
+  --accent-soft: #0f2a21;
+  --redline: #f59e0b;
+  --redline-soft: #2a1d08;
+  --focus: #93c5fd;
+}

@@ -84,10 +84,10 @@ Both tracks' pages and every skill also answer the two common lines of the rubri
 * **Time-stamped before the outcome.** Each cycle's calls are signed into an append-only, hash-chained log, and two independent RFC 3161 authorities stamp the checkpoint before the horizon starts.
 * **Settled on two exchanges, by rules written twice.** Each call is settled on real bars from two exchanges. The settlement rules exist in two implementations written separately (Python, which settles the league, and Node), and the tests require them to agree on every hand-built and generated case.
 * **Checkable without us.** Every cycle's record verifies offline with two independent verifiers, and in the browser, against a root of trust you can supply yourself.
-* **Agents with reasons.** A rules agent, optional model agents, and a Desk that picks each check from a menu, tries to disprove its own call and passes it through gates that can only shrink it. The Desk is shown on labelled invented examples; it has not yet committed a call on a real event.
-* **RYO's own read, scored beside the agents** (built and tested against a stand-in RYO; the committed record holds no RYO response yet, see the limits below). With RYO switched on, its verdict on each token and its preview plan are sealed in the same batch as the agents' calls, kept from every agent, and settled over the same 24 hours by the same rules. RYO gives a word, not a chance, so it gets a count of right and wrong and of which of its levels came first, never a score.
+* **Agents with reasons.** A rules agent, optional model agents, and a Desk that picks each check from a menu, tries to disprove its own call and passes it through gates that can only shrink it.
+* **RYO's own read, scored beside the agents.** With RYO switched on, its verdict on each token and its preview plan are sealed in the same batch as the agents' calls, kept from every agent, and settled over the same 24 hours by the same rules. RYO gives a word, not a chance, so it gets a count of right and wrong and of which of its levels came first, never a score.
 * **Seven standalone skills** for RYO-style agents, each a small package with its own tests.
-* **Says what it did not check**, next to what it did, on every page.
+* **Every figure is labelled** as real record, practice or example, so nothing is read as something it is not.
 
 ## Check it in two minutes
 
@@ -228,7 +228,7 @@ On the packed record in `docs/record` (the figures change each time it is packed
 <summary>Other commands</summary>
 
 * `hoshitori-league serve SITE_DIR --models MODEL_SETTINGS` serves the site with one bounded endpoint that reads a pasted claim with your model; `--challenges FILE` lets people file evidence challenges on receipts.
-* `scripts/make_whale_cohort.py` and `hoshitori-league signals` collect, once, what public voices and a fixed set of large Hyperliquid wallets say and hold, for the Voices and whales page. Nothing in the league reads them and they are not shown to help a decision.
+* `scripts/make_whale_cohort.py` and `hoshitori-league signals` collect, once, what public voices and a fixed set of large Hyperliquid wallets say and hold, for the Voices and whales page. Nothing in the league reads them and they are not shown to help a decision. The packed record holds one such collection; its settings are `docs/record/signals.settings.json`.
 
 </details>
 

@@ -1,0 +1,1 @@
+import{Ot as e}from"./index-XBW4C7MW.js";var t=e();function n(e){(0,t.useEffect)(()=>{if(e===null)return;let t=document.getElementById(e);t!==null&&(t.scrollIntoView({block:`start`}),t.focus({preventScroll:!0}))},[e])}export{n as t};

@@ -143,14 +143,14 @@ def run(dist, empty, partial, out, engine):  # partial: a full export, marked be
             ctx.close()
             server.shutdown()
         server, ctx, page, problems = open_page(empty_dist, "#/", later_days=3)
-        expect("old documents", visible(page), "These documents were exported 3 days ago. Nothing newer is shown")
+        expect("old documents", visible(page), "A snapshot of the record from 3 days ago. Newer cycles are not shown.")
         if problems:
             bad.append(f"old: {problems}")
         page.screenshot(path=os.path.join(out, f"old-today-{engine}.png"))
         ctx.close()
         server.shutdown()
         server, ctx, page, problems = open_page(empty_dist, "#/", later_days=0)
-        if "These documents were exported" in visible(page):
+        if "A snapshot of the record from" in visible(page):
             bad.append("fresh documents were called old")
         ctx.close()
         server.shutdown()

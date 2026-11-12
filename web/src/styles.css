@@ -165,6 +165,8 @@ code { font-family: var(--mono); font-size: 0.86em; overflow-wrap: anywhere; }
 ol.drills { list-style: none; padding: 0; }
 ol.drills li { border-top: 1px solid var(--line); padding-top: 0.2rem; }
 ol.drills h2 { margin-top: 1rem; }
+.notice > h2:first-child { margin-top: 0; } /* a heading that opens a notice sits at its top edge */
+.notice > p:last-child { margin-bottom: 0; }
 
 .wrap > .notice { margin-top: 1rem; }
 

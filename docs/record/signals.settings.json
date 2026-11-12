@@ -1,0 +1,103 @@
+{
+ "accounts": [
+  "coindesk.com",
+  "decrypt.co",
+  "vitalik.ca"
+ ],
+ "wallets": [
+  "0xa822a9ceb6d6cb5b565bd10098abcfa9cf18d748",
+  "0x1c498a93b145e7a73d69691e9023f6f308e1cc3f",
+  "0x24de6b77e8bc31c40aa452926daa6bbab7a71b0f",
+  "0x393d0b87ed38fc779fd9611144ae649ba6082109",
+  "0xaacda0c3abb5da3d13cd5c1429b0a7410aa481a6",
+  "0x8d68efbf06fb8cf932518bcb53705e674c4852dc",
+  "0xe6111266afdcdf0b1fe8505028cc1f7419d798a7",
+  "0x875783b13e6157e8fb70985c9602afa18e7a31d1",
+  "0x488d2a9b70cc18ef66057a48ab3d59da1c59fe08",
+  "0x4eb8d907136189a34c9b087950211b6a566f7819",
+  "0x05cafe987297448f21a3c7ae0ae815fddecac655",
+  "0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36",
+  "0x4ec8fe22a531a96c8a846aaf5cbef73202649a80",
+  "0x5b5d51203a0f9079f8aeb098a6523a13f298c060",
+  "0xdfc24b077bc1425ad1dea75bcb6f8158e10df303",
+  "0x85530f0ff6496c72a619f37a60f3c1a59077737f",
+  "0x1ab185be5ff61f7b678d6a871d439307cd0752e3",
+  "0x87f9cd15f5050a9283b8896300f7c8cf69ece2cf",
+  "0x469f690213c467c39a23efacfd2816896009d7d8",
+  "0xf5d81a135f756ca16544e53c20fc20643ec3ad53",
+  "0x3a401beab2dfd7a5da0012cd3b056c9bd8b3b123",
+  "0xf29c6bc1147a841519b382459a6d7a373c6b9971",
+  "0x1a44a6bc450d233049d629c27792c5309d9ca12d",
+  "0x6c5e21abd37fad075f4eed2843081ad882e147d4",
+  "0x33b7e8a405bfc66107726ed68019d4d10dcbf0af",
+  "0xd3b02d999c681bd8b75f340fa7e078ce9097bf23",
+  "0xbd334a55db91617545e8d1b09941e036ad8e4200",
+  "0xc966a8bd36494f25642b27822c7e0b2cd961f6b6",
+  "0xa0a1a22538ca412d9e66588676ace18e231971dd",
+  "0x5a106f5cf9fba6af5dda6bde1b8f3bacbd532c37",
+  "0x288ed4efc8fbd1e42a06fe083ea942d20c90b336",
+  "0xd0519272eaa0eb0d024b48342e83d237938a9450",
+  "0x0b5c8b0cf8cd2943ef546b5693987ae6ffa2e649",
+  "0xa4dedda59f2908b92ae192cfd494839373bcb3c4",
+  "0xb695651daa495f59dd2725c6fe98322d8b51a92d",
+  "0x00897e2d7168165b81558c3cd9257efb007f2410",
+  "0xbbbdbbfa1f754aea323af6cc56153e0605e89227",
+  "0x71038a3e5fd46ba4ca5edc81339a4d1e9e493104",
+  "0x627b21c82c46b349e053048659eb52c52e4bc007",
+  "0xfbe28a0bb38e52338dd5f1188cd22cebcdc3c8ea"
+ ],
+ "symbols": [
+  "BTC",
+  "ETH",
+  "SOL"
+ ],
+ "cohort_rule": {
+  "source": "https://stats-data.hyperliquid.xyz/Mainnet/leaderboard",
+  "snapshot_rows": 48158,
+  "snapshot_sha256": "b428c506066ff703c1cd6e6aebcf3e6b3b8676068cc9eef4a0820e15630598f8",
+  "chosen_at": "2026-11-12T00:38:38Z",
+  "top_by_account_value": 20,
+  "random_sample": 20,
+  "sample_floor_usd": 1000000,
+  "seed": 1,
+  "uses_performance": false
+ },
+ "feeds": [
+  {
+   "name": "CoinDesk",
+   "url": "https://www.coindesk.com/arc/outboundfeeds/rss/"
+  },
+  {
+   "name": "Cointelegraph",
+   "url": "https://cointelegraph.com/rss"
+  },
+  {
+   "name": "The Block",
+   "url": "https://www.theblock.co/rss.xml"
+  },
+  {
+   "name": "Bitcoin Magazine",
+   "url": "https://bitcoinmagazine.com/feed"
+  },
+  {
+   "name": "The Defiant",
+   "url": "https://thedefiant.io/api/feed"
+  },
+  {
+   "name": "Blockworks",
+   "url": "https://blockworks.co/feed"
+  },
+  {
+   "name": "CryptoSlate",
+   "url": "https://cryptoslate.com/feed/"
+  }
+ ],
+ "channels": [
+  "cointelegraph",
+  "WatcherGuru",
+  "whale_alert_io",
+  "binance_announcements",
+  "CoinDeskGlobal",
+  "wublockchainenglish"
+ ]
+}

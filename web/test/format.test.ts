@@ -581,11 +581,11 @@ test("old documents and partial cycles are said", async () => {
   assert.equal(oldLine(at, t + 3 * 3_600_000), null);
   assert.equal(
     oldLine(at, t + 3 * 3_600_000 + 1),
-    "These documents were exported 3 hours ago. Nothing newer is shown, so the league may have moved on.",
+    "A snapshot of the record from 3 hours ago. Newer cycles are not shown.",
   );
   assert.equal(
     oldLine(at, t + 72 * 3_600_000),
-    "These documents were exported 3 days ago. Nothing newer is shown, so the league may have moved on.",
+    "A snapshot of the record from 3 days ago. Newer cycles are not shown.",
   );
   assert.throws(() => oldLine("x", t), /not a time/);
   assert.equal(partialLine([["Open", 5]]), null);

@@ -1892,7 +1892,7 @@ export function Site(): ReactNode {
       {index.state === "ready" &&
       oldLine(index.value.generated_at, Date.now()) !== null ? (
         <div className="wrap">
-          <p className="notice error" role="status">
+          <p className="notice" role="status">
             {oldLine(index.value.generated_at, Date.now())}
           </p>
         </div>
